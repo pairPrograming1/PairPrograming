@@ -1,6 +1,8 @@
+// components/Contacto.js
 "use client";
 import { useState } from "react";
 import Link from "next/link";
+import { useSidebar } from "../context/SidebarContext";
 
 export default function Contacto() {
   const [formData, setFormData] = useState({
@@ -9,6 +11,7 @@ export default function Contacto() {
     message: "",
   });
   const [status, setStatus] = useState(null);
+  const { isSidebarExpanded } = useSidebar();
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -24,17 +27,29 @@ export default function Contacto() {
   };
 
   return (
-    <section className="py-16 bg-white dark:bg-gray-800 dark:text-gray-200">
-      <div className="container mx-auto px-4">
-        <h3 className="text-3xl font-semibold text-center mb-12">
+    <section className="compact-section bg-card-bg text-white">
+      <div
+        className={`container mx-auto px-4 transition-all duration-300 ${
+          isSidebarExpanded ? "max-w-4xl" : "max-w-6xl"
+        }`}
+      >
+        <h3
+          className={`font-semibold text-center mb-8 transition-all duration-300 ${
+            isSidebarExpanded ? "text-2xl" : "text-3xl"
+          }`}
+        >
           Contáctanos
         </h3>
-        <div className="max-w-lg mx-auto">
-          <form onSubmit={handleSubmit} className="space-y-6">
+        <div
+          className={`mx-auto transition-all duration-300 ${
+            isSidebarExpanded ? "max-w-lg" : "max-w-xl"
+          }`}
+        >
+          <form onSubmit={handleSubmit} className="space-y-4">
             <div>
               <label
                 htmlFor="name"
-                className="block text-gray-700 dark:text-gray-300 font-medium mb-2"
+                className="block text-secondary-text font-medium mb-2 text-sm"
               >
                 Nombre
               </label>
@@ -45,14 +60,14 @@ export default function Contacto() {
                 value={formData.name}
                 onChange={handleChange}
                 required
-                className="w-full p-3 border border-gray-300 dark:border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-900 dark:focus:ring-blue-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-200"
+                className="w-full p-2.5 border border-border-color rounded-md focus:outline-none focus:ring-2 focus:ring-primary bg-background text-white text-sm"
                 placeholder="Tu nombre"
               />
             </div>
             <div>
               <label
                 htmlFor="email"
-                className="block text-gray-700 dark:text-gray-300 font-medium mb-2"
+                className="block text-secondary-text font-medium mb-2 text-sm"
               >
                 Correo Electrónico
               </label>
@@ -63,14 +78,14 @@ export default function Contacto() {
                 value={formData.email}
                 onChange={handleChange}
                 required
-                className="w-full p-3 border border-gray-300 dark:border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-900 dark:focus:ring-blue-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-200"
+                className="w-full p-2.5 border border-border-color rounded-md focus:outline-none focus:ring-2 focus:ring-primary bg-background text-white text-sm"
                 placeholder="Tu correo electrónico"
               />
             </div>
             <div>
               <label
                 htmlFor="message"
-                className="block text-gray-700 dark:text-gray-300 font-medium mb-2"
+                className="block text-secondary-text font-medium mb-2 text-sm"
               >
                 Mensaje
               </label>
@@ -80,30 +95,30 @@ export default function Contacto() {
                 value={formData.message}
                 onChange={handleChange}
                 required
-                rows="5"
-                className="w-full p-3 border border-gray-300 dark:border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-900 dark:focus:ring-blue-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-200"
+                rows="4"
+                className="w-full p-2.5 border border-border-color rounded-md focus:outline-none focus:ring-2 focus:ring-primary bg-background text-white text-sm"
                 placeholder="Cuéntanos sobre tu proyecto"
               ></textarea>
             </div>
             <button
               type="submit"
-              className="w-full bg-blue-900 dark:bg-blue-700 text-white px-6 py-3 rounded-md font-semibold hover:bg-blue-800 dark:hover:bg-blue-600 transition"
+              className="w-full bg-primary text-white px-5 py-2.5 rounded-md font-semibold hover:bg-primary-dark transition text-sm"
             >
               Enviar Mensaje
             </button>
           </form>
           {status && (
-            <p className="mt-4 text-center text-green-600 dark:text-green-400 font-medium">
+            <p className="mt-4 text-center text-green-400 font-medium text-sm">
               {status}
             </p>
           )}
         </div>
-        <div className="text-center mt-8">
-          <p className="text-gray-700 dark:text-gray-300">
+        <div className="text-center mt-6">
+          <p className="text-secondary-text text-sm">
             ¿Prefieres otro medio? Escríbenos a{" "}
             <a
               href="mailto:info@pairprogramming.com"
-              className="text-blue-900 dark:text-blue-400 hover:underline"
+              className="text-primary hover:underline"
             >
               info@pairprogramming.com
             </a>

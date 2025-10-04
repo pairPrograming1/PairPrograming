@@ -1,16 +1,18 @@
+// app/contacto/page.js
 "use client";
 import Sidebar from "../components/Sidebar";
 import Contacto from "../components/Contacto";
 import Footer from "../components/Footer";
+import MainContainer from "../components/MainContainer";
 
 export default function ContactoPage() {
   return (
-    <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
+    <div className="min-h-screen bg-background">
       <Sidebar />
-      <main className="lg:ml-64 flex flex-col">
+      <MainContainer>
         <Contacto />
         <Footer />
-      </main>
+      </MainContainer>
     </div>
   );
 }

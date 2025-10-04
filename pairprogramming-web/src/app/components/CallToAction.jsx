@@ -1,19 +1,36 @@
+// components/CallToAction.js
+"use client";
 import Link from "next/link";
+import { useSidebar } from "../context/SidebarContext";
 
 export default function CallToAction() {
+  const { isSidebarExpanded } = useSidebar();
+
   return (
-    <section className="py-16 bg-blue-900 dark:bg-gray-800 text-white text-center">
-      <div className="container mx-auto">
-        <h3 className="text-3xl font-semibold mb-4">
+    <section className="compact-section bg-primary text-white text-center">
+      <div
+        className={`container mx-auto px-4 transition-all duration-300 ${
+          isSidebarExpanded ? "max-w-4xl" : "max-w-6xl"
+        }`}
+      >
+        <h3
+          className={`font-semibold mb-4 transition-all duration-300 ${
+            isSidebarExpanded ? "text-xl" : "text-2xl"
+          }`}
+        >
           ¿Listo para transformar tu idea?
         </h3>
-        <p className="text-lg mb-8 max-w-xl mx-auto">
+        <p
+          className={`mb-6 mx-auto transition-all duration-300 ${
+            isSidebarExpanded ? "text-base max-w-lg" : "text-lg max-w-xl"
+          }`}
+        >
           Co-creamos soluciones digitales que integran tecnología y estrategia.
           Contáctanos y empecemos a construir juntos.
         </p>
         <Link
           href="/contacto"
-          className="bg-white text-blue-900 dark:bg-gray-700 dark:text-gray-200 px-6 py-3 rounded-md font-semibold hover:bg-gray-200 dark:hover:bg-gray-600 transition"
+          className="inline-block bg-background text-white px-5 py-2 rounded-md font-semibold hover:bg-card-bg transition compact-button"
         >
           Contáctanos
         </Link>

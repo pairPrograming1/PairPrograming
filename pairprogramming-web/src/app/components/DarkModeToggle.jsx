@@ -1,16 +1,15 @@
+// components/DarkModeToggle.js
 "use client";
 import { useState, useEffect } from "react";
 
 export default function DarkModeToggle() {
-  const [darkMode, setDarkMode] = useState(false);
+  const [darkMode, setDarkMode] = useState(true); // Cambiado a true por defecto
 
   useEffect(() => {
-    const isDark =
-      localStorage.getItem("darkMode") === "true" ||
-      (!localStorage.getItem("darkMode") &&
-        window.matchMedia("(prefers-color-scheme: dark)").matches);
-    setDarkMode(isDark);
-    document.documentElement.classList.toggle("dark", isDark);
+    // Como nuestra paleta es oscura por defecto, forzamos dark mode
+    document.documentElement.classList.add("dark");
+    localStorage.setItem("darkMode", "true");
+    setDarkMode(true);
   }, []);
 
   const toggleDarkMode = () => {
@@ -23,7 +22,8 @@ export default function DarkModeToggle() {
   return (
     <button
       onClick={toggleDarkMode}
-      className="fixed top-4 right-4 z-50 p-2 rounded-full bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 hover:bg-gray-300 dark:hover:bg-gray-600 transition"
+      className="fixed top-4 right-4 z-50 p-2 rounded-full bg-card-bg text-white hover:bg-hover-bg transition compact-button"
+      aria-label="Alternar modo oscuro"
     >
       {darkMode ? "☀️" : "🌙"}
     </button>

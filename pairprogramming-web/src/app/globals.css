@@ -1,21 +1,32 @@
+/* app/globals.css - actualizado */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-  --primary: #1e3a8a;
-  --primary-dark: #1e40af;
-  --accent: #3b82f6;
+  --background: #2c3e50;
+  --foreground: #ffffff;
+  --primary: #e67e22;
+  --primary-dark: #d35400;
+  --accent: #f39c12;
+  --card-bg: #3a4a5c;
+  --hover-bg: #4a5a6c;
+  --secondary-text: #bdc3c7;
+  --border-color: #34495e;
 }
 
+/* Forzamos dark mode ya que nuestra paleta es oscura */
+:root,
 .dark {
-  --background: #1f2937;
-  --foreground: #e5e7eb;
-  --primary: #60a5fa;
-  --primary-dark: #3b82f6;
-  --accent: #93c5fd;
+  --background: #2c3e50;
+  --foreground: #ffffff;
+  --primary: #e67e22;
+  --primary-dark: #d35400;
+  --accent: #f39c12;
+  --card-bg: #3a4a5c;
+  --hover-bg: #4a5a6c;
+  --secondary-text: #bdc3c7;
+  --border-color: #34495e;
 }
 
 body {
@@ -25,16 +36,21 @@ body {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+/* Aseguramos que el html tenga la clase dark */
+html.dark {
+  color-scheme: dark;
+}
+
 /* Custom scrollbar for modern look */
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 6px;
 }
 ::-webkit-scrollbar-track {
   background: var(--background);
 }
 ::-webkit-scrollbar-thumb {
   background: var(--primary);
-  border-radius: 4px;
+  border-radius: 3px;
 }
 ::-webkit-scrollbar-thumb:hover {
   background: var(--primary-dark);
@@ -43,4 +59,20 @@ body {
 /* Animation for smooth transitions */
 .transition-transform {
   transition: transform 0.3s ease-in-out;
+}
+
+/* Compact styles */
+.compact-section {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+.compact-card {
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
+.compact-button {
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
 }
