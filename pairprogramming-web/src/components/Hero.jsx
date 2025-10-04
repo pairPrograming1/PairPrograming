@@ -1,9 +1,17 @@
+import Image from "next/image";
 import Link from "next/link";
 
 export default function Hero() {
   return (
     <section className="bg-gradient-to-r from-blue-900 to-blue-700 text-white py-20">
       <div className="container mx-auto text-center">
+        <Image
+          src="https://res.cloudinary.com/dmjusy7sn/image/upload/v1758981340/usuarios/xkajcqpxdbggr4q7ywjy.jpg"
+          alt="Imagen de Bienvenida"
+          width={800}
+          height={400}
+          className="mx-auto mb-8 rounded-lg shadow-lg"
+        />
         <h2 className="text-5xl font-bold mb-4">
           Transformamos Ideas en Soluciones Digitales
         </h2>
