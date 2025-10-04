@@ -17,7 +17,6 @@ export default function Contacto() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Simulate form submission (replace with actual API call in production)
     setTimeout(() => {
       setStatus("Mensaje enviado con éxito. ¡Te contactaremos pronto!");
       setFormData({ name: "", email: "", message: "" });
@@ -25,7 +24,7 @@ export default function Contacto() {
   };
 
   return (
-    <section className="py-16 bg-white">
+    <section className="py-16 bg-white dark:bg-gray-800 dark:text-gray-200">
       <div className="container mx-auto px-4">
         <h3 className="text-3xl font-semibold text-center mb-12">
           Contáctanos
@@ -35,7 +34,7 @@ export default function Contacto() {
             <div>
               <label
                 htmlFor="name"
-                className="block text-gray-700 font-medium mb-2"
+                className="block text-gray-700 dark:text-gray-300 font-medium mb-2"
               >
                 Nombre
               </label>
@@ -46,14 +45,14 @@ export default function Contacto() {
                 value={formData.name}
                 onChange={handleChange}
                 required
-                className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-900"
+                className="w-full p-3 border border-gray-300 dark:border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-900 dark:focus:ring-blue-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-200"
                 placeholder="Tu nombre"
               />
             </div>
             <div>
               <label
                 htmlFor="email"
-                className="block text-gray-700 font-medium mb-2"
+                className="block text-gray-700 dark:text-gray-300 font-medium mb-2"
               >
                 Correo Electrónico
               </label>
@@ -64,14 +63,14 @@ export default function Contacto() {
                 value={formData.email}
                 onChange={handleChange}
                 required
-                className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-900"
+                className="w-full p-3 border border-gray-300 dark:border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-900 dark:focus:ring-blue-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-200"
                 placeholder="Tu correo electrónico"
               />
             </div>
             <div>
               <label
                 htmlFor="message"
-                className="block text-gray-700 font-medium mb-2"
+                className="block text-gray-700 dark:text-gray-300 font-medium mb-2"
               >
                 Mensaje
               </label>
@@ -82,29 +81,29 @@ export default function Contacto() {
                 onChange={handleChange}
                 required
                 rows="5"
-                className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-900"
+                className="w-full p-3 border border-gray-300 dark:border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-900 dark:focus:ring-blue-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-200"
                 placeholder="Cuéntanos sobre tu proyecto"
               ></textarea>
             </div>
             <button
               type="submit"
-              className="w-full bg-blue-900 text-white px-6 py-3 rounded-md font-semibold hover:bg-blue-800 transition"
+              className="w-full bg-blue-900 dark:bg-blue-700 text-white px-6 py-3 rounded-md font-semibold hover:bg-blue-800 dark:hover:bg-blue-600 transition"
             >
               Enviar Mensaje
             </button>
           </form>
           {status && (
-            <p className="mt-4 text-center text-green-600 font-medium">
+            <p className="mt-4 text-center text-green-600 dark:text-green-400 font-medium">
               {status}
             </p>
           )}
         </div>
         <div className="text-center mt-8">
-          <p className="text-gray-700">
+          <p className="text-gray-700 dark:text-gray-300">
             ¿Prefieres otro medio? Escríbenos a{" "}
             <a
               href="mailto:info@pairprogramming.com"
-              className="text-blue-900 hover:underline"
+              className="text-blue-900 dark:text-blue-400 hover:underline"
             >
               info@pairprogramming.com
             </a>
