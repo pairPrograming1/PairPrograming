@@ -11,9 +11,7 @@ export default function Home() {
       <Sidebar />
       <main className="lg:ml-64 flex flex-col">
         <Hero />
-        <Services />
-        <Values />
-        <CallToAction />
+
         <Footer />
       </main>
     </div>
