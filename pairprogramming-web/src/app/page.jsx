@@ -1,10 +1,9 @@
-// app/page.js
-import Sidebar from "../components/Sidebar";
-import Hero from "../components/Hero";
-import Services from "../components/Services";
-import Values from "../components/Values";
-import CallToAction from "../components/CallToAction";
-import Footer from "../components/Footer";
+import Sidebar from "./components/Sidebar";
+import Hero from "./components/Hero";
+import Services from "./components/Services";
+import Values from "./components/Values";
+import CallToAction from "./components/CallToAction";
+import Footer from "./components/Footer";
 
 export default function Home() {
   return (
