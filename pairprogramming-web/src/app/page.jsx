@@ -1,5 +1,8 @@
 import Sidebar from "../components/Sidebar";
 import Hero from "../components/Hero";
+import Services from "../components/Services";
+import Values from "../components/Values";
+import CallToAction from "../components/CallToAction";
 import Footer from "../components/Footer";
 
 export default function Home() {
@@ -8,6 +11,9 @@ export default function Home() {
       <Sidebar />
       <main className="ml-64 flex flex-col">
         <Hero />
+        <Services />
+        <Values />
+        <CallToAction />
         <Footer />
       </main>
     </div>
