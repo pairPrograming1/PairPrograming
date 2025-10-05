@@ -1,4 +1,3 @@
-// components/Chatbot.jsx
 "use client";
 import { useState, useRef, useEffect } from "react";
 
@@ -153,7 +152,7 @@ export default function Chatbot() {
   const formatMessage = (text) => {
     return text.split("**").map((part, index) => {
       return index % 2 === 1 ? (
-        <strong key={index} className="text-primary">
+        <strong key={index} className="text-accent">
           {part}
         </strong>
       ) : (
@@ -186,9 +185,7 @@ export default function Chatbot() {
                 </div>
                 <div>
                   <h3 className="font-bold">Botie - PairProgramming</h3>
-                  <p className="text-primary-light text-xs">
-                    Asistente virtual
-                  </p>
+                  <p className="text-accent-light text-xs">Asistente virtual</p>
                 </div>
               </div>
               <button
@@ -242,13 +239,13 @@ export default function Chatbot() {
                 <div className="inline-block bg-card-bg text-foreground px-4 py-2 rounded-2xl rounded-bl-none border border-border-color">
                   <div className="flex items-center space-x-2">
                     <div className="flex space-x-1">
-                      <div className="w-2 h-2 bg-primary rounded-full animate-bounce"></div>
+                      <div className="w-2 h-2 bg-accent rounded-full animate-bounce"></div>
                       <div
-                        className="w-2 h-2 bg-primary rounded-full animate-bounce"
+                        className="w-2 h-2 bg-accent rounded-full animate-bounce"
                         style={{ animationDelay: "0.1s" }}
                       ></div>
                       <div
-                        className="w-2 h-2 bg-primary rounded-full animate-bounce"
+                        className="w-2 h-2 bg-accent rounded-full animate-bounce"
                         style={{ animationDelay: "0.2s" }}
                       ></div>
                     </div>
@@ -272,7 +269,7 @@ export default function Chatbot() {
                   <button
                     key={index}
                     onClick={() => handleQuickQuestion(question)}
-                    className="text-xs bg-background hover:bg-hover-bg text-secondary-text border border-border-color px-3 py-1 rounded-full transition-colors hover:text-primary hover:border-primary"
+                    className="text-xs bg-background hover:bg-hover-bg text-secondary-text border border-border-color px-3 py-1 rounded-full transition-colors hover:text-accent hover:border-accent"
                   >
                     {question}
                   </button>
@@ -287,13 +284,13 @@ export default function Chatbot() {
                 value={inputMessage}
                 onChange={(e) => setInputMessage(e.target.value)}
                 placeholder="Escribe tu mensaje..."
-                className="flex-1 px-3 py-2 border border-border-color rounded-lg focus:outline-none focus:ring-2 focus:ring-primary bg-background text-foreground placeholder-secondary-text text-sm"
+                className="flex-1 px-3 py-2 border border-border-color rounded-lg focus:outline-none focus:ring-2 focus:ring-accent bg-background text-foreground placeholder-secondary-text text-sm"
                 disabled={isTyping}
               />
               <button
                 type="submit"
                 disabled={!inputMessage.trim() || isTyping}
-                className="bg-primary hover:bg-primary-dark disabled:bg-gray-600 disabled:cursor-not-allowed text-white px-4 py-2 rounded-lg transition-colors"
+                className="bg-accent hover:bg-accent-dark disabled:bg-gray-600 disabled:cursor-not-allowed text-white px-4 py-2 rounded-lg transition-colors"
               >
                 →
               </button>
@@ -305,7 +302,7 @@ export default function Chatbot() {
       {/* Floating Button */}
       <button
         onClick={toggleChat}
-        className="w-14 h-14 bg-gradient-to-r from-primary to-accent hover:from-primary-dark hover:to-accent/90 rounded-full shadow-lg transition-all duration-300 hover:scale-110 flex items-center justify-center group pulse-glow hover-lift-sm"
+        className="w-14 h-14 bg-gradient-to-r from-primary to-accent hover:from-primary-dark hover:to-accent-dark rounded-full shadow-lg transition-all duration-300 hover:scale-110 flex items-center justify-center group pulse-glow hover-lift-sm"
         aria-label="Abrir asistente virtual Botie"
         data-chatbot-toggle
       >
