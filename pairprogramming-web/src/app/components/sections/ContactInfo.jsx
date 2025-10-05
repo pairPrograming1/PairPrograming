@@ -1,3 +1,4 @@
+// components/sections/ContactInfo.jsx
 "use client";
 import { Card } from "../ui/Card";
 
@@ -30,9 +31,22 @@ export const ContactInfo = () => {
       value: "info@pairprogramming.com",
       href: "mailto:info@pairprogramming.com",
     },
-    { icon: "📱", label: "Teléfono", value: "+1 (555) 123-4567" },
-    { icon: "🕒", label: "Horario", value: "Lun - Vie: 9:00 - 18:00" },
-    { icon: "💬", label: "Respuesta", value: "En menos de 24 horas" },
+    {
+      icon: "📱",
+      label: "Teléfono",
+      value: "+1 (555) 123-4567",
+      href: "tel:+15551234567",
+    },
+    {
+      icon: "🕒",
+      label: "Horario",
+      value: "Lun - Vie: 9:00 - 18:00",
+    },
+    {
+      icon: "💬",
+      label: "Respuesta",
+      value: "En menos de 24 horas",
+    },
   ];
 
   const features = [
@@ -40,6 +54,7 @@ export const ContactInfo = () => {
     "Tecnologías modernas",
     "Soporte continuo",
     "Entregas puntuales",
+    "Asesoría técnica gratuita",
   ];
 
   return (
