@@ -24,7 +24,8 @@ export default function Hero() {
               alt="Imagen de Bienvenida"
               width={240}
               height={240}
-              className="w-full h-full object-cover"
+              className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-300"
+              style={{ transform: "scale(1.6)" }}
               priority
             />
             <div className="absolute inset-0 bg-primary/10 hover:bg-transparent transition-colors" />

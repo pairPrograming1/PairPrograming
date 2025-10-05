@@ -2,6 +2,7 @@
 import Link from "next/link";
 import { useState } from "react";
 import { useSidebar } from "../context/SidebarContext";
+import Image from "next/image";
 
 export default function Sidebar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -117,6 +118,9 @@ export default function Sidebar() {
     },
   ];
 
+  const imageUrl =
+    "https://res.cloudinary.com/dmjusy7sn/image/upload/v1758981340/usuarios/xkajcqpxdbggr4q7ywjy.jpg";
+
   return (
     <>
       <button
@@ -155,35 +159,31 @@ export default function Sidebar() {
             isSidebarExpanded ? "" : "flex-col gap-2"
           }`}
         >
-          <h1
-            className={`font-bold tracking-tight transition-all duration-300 ${
-              isSidebarExpanded ? "text-xl" : "text-lg"
-            }`}
-          >
-            {isSidebarExpanded ? "PairProgramming" : "PP"}
-          </h1>
-
-          <button
-            onClick={toggleExpand}
-            className="lg:flex hidden items-center justify-center w-6 h-6 rounded-full bg-primary/20 hover:bg-primary/30 transition-colors"
-            title={isSidebarExpanded ? "Contraer menú" : "Expandir menú"}
-          >
-            <svg
-              className={`w-3 h-3 text-primary transition-transform duration-300 ${
-                isSidebarExpanded ? "rotate-0" : "rotate-180"
-              }`}
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
+          {isSidebarExpanded ? (
+            <button
+              onClick={toggleExpand}
+              className="flex items-center transition-all duration-300 hover:opacity-80"
             >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M15 19l-7-7 7-7"
+              <h1 className="font-bold tracking-tight text-xl">
+                PairProgramming
+              </h1>
+            </button>
+          ) : (
+            <button
+              onClick={toggleExpand}
+              className="flex items-center justify-center w-full transition-all duration-300 hover:opacity-80"
+            >
+              <Image
+                src={imageUrl}
+                alt="PairProgramming"
+                width={40}
+                height={40}
+                className="rounded-full object-cover w-10 h-10"
               />
-            </svg>
-          </button>
+            </button>
+          )}
+
+          {/* Eliminamos el botón de flecha ya que no es necesario */}
         </div>
 
         <nav className="flex-1 p-2">
@@ -215,7 +215,9 @@ export default function Sidebar() {
               isSidebarExpanded ? "opacity-100" : "opacity-0"
             }`}
           >
-            <p className="text-secondary-text text-xs">© 2025 PP</p>
+            <p className="text-secondary-text text-xs">
+              © 2025 PairProgramming
+            </p>
           </div>
         </div>
       </aside>
