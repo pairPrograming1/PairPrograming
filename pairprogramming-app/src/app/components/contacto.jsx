@@ -1,4 +1,3 @@
-// components/Contacto.jsx
 "use client";
 import { useState } from "react";
 import { useSidebar } from "../context/SidebarContext";
