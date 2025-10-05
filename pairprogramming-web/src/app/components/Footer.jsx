@@ -1,3 +1,4 @@
+// components/Footer.jsx (actualizado)
 "use client";
 import Link from "next/link";
 import { useSidebar } from "../context/SidebarContext";
@@ -22,22 +23,28 @@ export default function Footer() {
             </div>
             <div className="flex flex-wrap justify-center gap-6">
               <Link
-                href="/nosotros"
-                className="text-secondary-text hover:text-primary transition-colors duration-300 text-sm font-medium"
-              >
-                Sobre Nosotros
-              </Link>
-              <Link
-                href="/servicios"
-                className="text-secondary-text hover:text-primary transition-colors duration-300 text-sm font-medium"
-              >
-                Servicios
-              </Link>
-              <Link
                 href="/contacto"
                 className="text-secondary-text hover:text-primary transition-colors duration-300 text-sm font-medium"
               >
                 Contacto
+              </Link>
+              <Link
+                href="/faq"
+                className="text-secondary-text hover:text-primary transition-colors duration-300 text-sm font-medium"
+              >
+                FAQ
+              </Link>
+              <Link
+                href="/terminos-condiciones"
+                className="text-secondary-text hover:text-primary transition-colors duration-300 text-sm font-medium"
+              >
+                Términos y Condiciones
+              </Link>
+              <Link
+                href="/privacidad"
+                className="text-secondary-text hover:text-primary transition-colors duration-300 text-sm font-medium"
+              >
+                Privacidad
               </Link>
             </div>
           </div>
