@@ -1,6 +1,7 @@
-// components/Values.js
 "use client";
 import { useSidebar } from "../context/SidebarContext";
+import { Container } from "./ui/Container";
+import { Card } from "./ui/Card";
 
 export default function Values() {
   const { isSidebarExpanded } = useSidebar();
@@ -16,10 +17,9 @@ export default function Values() {
 
   return (
     <section className="py-16 lg:py-20 bg-card-bg text-white">
-      <div
-        className={`container mx-auto text-center px-4 transition-all duration-500 ${
-          isSidebarExpanded ? "max-w-4xl" : "max-w-6xl"
-        }`}
+      <Container
+        size={isSidebarExpanded ? "expanded" : "default"}
+        className="text-center"
       >
         <div className="fade-in">
           <h3
@@ -36,10 +36,13 @@ export default function Values() {
 
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
             {values.map((value, index) => (
-              <div
+              <Card
                 key={value.name}
-                className="glass-card p-4 text-center hover-lift group cursor-pointer"
-                style={{ animationDelay: `${index * 0.1}s` }}
+                hover
+                padding="sm"
+                className="text-center group cursor-pointer"
+                animate
+                animationDelay={`${index * 0.1}s`}
               >
                 <div className="text-2xl mb-2 transform group-hover:scale-110 transition-transform duration-300">
                   {value.icon}
@@ -47,11 +50,11 @@ export default function Values() {
                 <span className="text-sm font-medium group-hover:text-primary transition-colors">
                   {value.name}
                 </span>
-              </div>
+              </Card>
             ))}
           </div>
         </div>
-      </div>
+      </Container>
     </section>
   );
 }

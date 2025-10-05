@@ -1,18 +1,14 @@
-// components/Footer.js
 "use client";
 import Link from "next/link";
 import { useSidebar } from "../context/SidebarContext";
+import { Container } from "./ui/Container";
 
 export default function Footer() {
   const { isSidebarExpanded } = useSidebar();
 
   return (
     <footer className="bg-background border-t border-border-color text-white">
-      <div
-        className={`container mx-auto transition-all duration-500 ${
-          isSidebarExpanded ? "max-w-4xl" : "max-w-6xl"
-        }`}
-      >
+      <Container size={isSidebarExpanded ? "expanded" : "default"}>
         <div className="py-8 px-4">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="mb-4 md:mb-0">
@@ -52,7 +48,7 @@ export default function Footer() {
             </div>
           </div>
         </div>
-      </div>
+      </Container>
     </footer>
   );
 }

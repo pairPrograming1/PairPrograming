@@ -1,4 +1,3 @@
-// app/page.js
 import Sidebar from "./components/Sidebar";
 import Hero from "./components/Hero";
 import Footer from "./components/Footer";

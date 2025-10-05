@@ -1,6 +1,7 @@
-// components/Nosotros.js - MEJORADO
 "use client";
 import { useSidebar } from "../context/SidebarContext";
+import { Container } from "./ui/Container";
+import { Card } from "./ui/Card";
 
 export default function Nosotros() {
   const { isSidebarExpanded } = useSidebar();
@@ -36,14 +37,36 @@ export default function Nosotros() {
     { number: "24/7", label: "Soporte Continuo" },
   ];
 
+  const methodology = [
+    {
+      icon: "🔍",
+      title: "Descubrimiento",
+      description:
+        "Analizamos tus necesidades y objetivos para crear la estrategia perfecta.",
+    },
+    {
+      icon: "🎨",
+      title: "Diseño",
+      description:
+        "Creamos interfaces intuitivas y experiencias de usuario excepcionales.",
+    },
+    {
+      icon: "💻",
+      title: "Desarrollo",
+      description:
+        "Implementamos soluciones robustas con las mejores tecnologías.",
+    },
+    {
+      icon: "🚀",
+      title: "Entrega",
+      description:
+        "Desplegamos y damos soporte continuo para garantizar el éxito.",
+    },
+  ];
+
   return (
     <section className="py-16 lg:py-20 bg-card-bg text-white min-h-screen">
-      <div
-        className={`container mx-auto px-4 transition-all duration-500 ${
-          isSidebarExpanded ? "max-w-4xl" : "max-w-6xl"
-        }`}
-      >
-        {/* Header */}
+      <Container size={isSidebarExpanded ? "expanded" : "default"}>
         <div className="text-center mb-16 fade-in">
           <h1
             className={`font-bold mb-6 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent transition-all duration-300 ${
@@ -63,9 +86,8 @@ export default function Nosotros() {
           </p>
         </div>
 
-        {/* Nuestra Historia */}
         <div className="mb-16 fade-in" style={{ animationDelay: "0.1s" }}>
-          <div className="glass-card p-8">
+          <Card padding="lg">
             <h2 className="text-2xl lg:text-3xl font-bold text-primary mb-6">
               Nuestra Historia
             </h2>
@@ -103,36 +125,31 @@ export default function Nosotros() {
                 </p>
               </div>
             </div>
-          </div>
+          </Card>
         </div>
 
-        {/* Estadísticas */}
         <div className="mb-16 fade-in" style={{ animationDelay: "0.2s" }}>
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
             {stats.map((stat, index) => (
-              <div
-                key={index}
-                className="glass-card p-6 text-center hover-lift"
-              >
+              <Card key={index} hover padding="md" className="text-center">
                 <div className="text-2xl lg:text-3xl font-bold text-primary mb-2">
                   {stat.number}
                 </div>
                 <div className="text-secondary-text text-sm font-medium">
                   {stat.label}
                 </div>
-              </div>
+              </Card>
             ))}
           </div>
         </div>
 
-        {/* Nuestro Equipo */}
         <div className="mb-16 fade-in" style={{ animationDelay: "0.3s" }}>
           <h2 className="text-2xl lg:text-3xl font-bold text-primary mb-8 text-center">
             Nuestro Equipo
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {teamMembers.map((member, index) => (
-              <div key={index} className="glass-card p-6 hover-lift">
+              <Card key={index} hover padding="md">
                 <div className="text-center mb-4">
                   <div className="w-20 h-20 bg-gradient-to-br from-primary to-accent rounded-full mx-auto mb-4 flex items-center justify-center text-white font-bold text-xl">
                     {member.name
@@ -160,60 +177,32 @@ export default function Nosotros() {
                     </span>
                   ))}
                 </div>
-              </div>
+              </Card>
             ))}
           </div>
         </div>
 
-        {/* Nuestra Metodología */}
         <div className="fade-in" style={{ animationDelay: "0.4s" }}>
-          <div className="glass-card p-8">
+          <Card padding="lg">
             <h2 className="text-2xl lg:text-3xl font-bold text-primary mb-6 text-center">
               Nuestra Metodología
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              <div className="text-center">
-                <div className="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-primary text-lg">🔍</span>
+              {methodology.map((item, index) => (
+                <div key={index} className="text-center">
+                  <div className="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <span className="text-primary text-lg">{item.icon}</span>
+                  </div>
+                  <h3 className="font-bold text-white mb-2">{item.title}</h3>
+                  <p className="text-secondary-text text-sm">
+                    {item.description}
+                  </p>
                 </div>
-                <h3 className="font-bold text-white mb-2">Descubrimiento</h3>
-                <p className="text-secondary-text text-sm">
-                  Analizamos tus necesidades y objetivos para crear la
-                  estrategia perfecta.
-                </p>
-              </div>
-              <div className="text-center">
-                <div className="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-primary text-lg">🎨</span>
-                </div>
-                <h3 className="font-bold text-white mb-2">Diseño</h3>
-                <p className="text-secondary-text text-sm">
-                  Creamos interfaces intuitivas y experiencias de usuario
-                  excepcionales.
-                </p>
-              </div>
-              <div className="text-center">
-                <div className="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-primary text-lg">💻</span>
-                </div>
-                <h3 className="font-bold text-white mb-2">Desarrollo</h3>
-                <p className="text-secondary-text text-sm">
-                  Implementamos soluciones robustas con las mejores tecnologías.
-                </p>
-              </div>
-              <div className="text-center">
-                <div className="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-primary text-lg">🚀</span>
-                </div>
-                <h3 className="font-bold text-white mb-2">Entrega</h3>
-                <p className="text-secondary-text text-sm">
-                  Desplegamos y damos soporte continuo para garantizar el éxito.
-                </p>
-              </div>
+              ))}
             </div>
-          </div>
+          </Card>
         </div>
-      </div>
+      </Container>
     </section>
   );
 }

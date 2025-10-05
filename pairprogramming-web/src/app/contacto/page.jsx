@@ -1,4 +1,3 @@
-// app/contacto/page.js
 "use client";
 import Sidebar from "../components/Sidebar";
 import Contacto from "../components/Contacto";

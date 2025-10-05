@@ -1,4 +1,3 @@
-// app/servicios/page.js
 import Sidebar from "../components/Sidebar";
 import Services from "../components/Services";
 import Footer from "../components/Footer";

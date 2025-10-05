@@ -1,23 +1,21 @@
-// components/Hero.js - CORREGIDO
 "use client";
 import Image from "next/image";
-import Link from "next/link";
 import { useSidebar } from "../context/SidebarContext";
+import { Container } from "./ui/Container";
+import { Button } from "./ui/Button";
 
 export default function Hero() {
   const { isSidebarExpanded } = useSidebar();
 
   return (
     <section className="relative bg-gradient-to-br from-background via-card-bg to-primary/10 text-white py-20 lg:py-28 overflow-hidden">
-      {/* Elementos decorativos de fondo */}
       <div className="absolute inset-0 bg-grid-white bg-[size:60px_60px]" />
       <div className="absolute top-10 left-10 w-72 h-72 bg-primary/10 rounded-full blur-3xl" />
       <div className="absolute bottom-10 right-10 w-96 h-96 bg-accent/5 rounded-full blur-3xl" />
 
-      <div
-        className={`container mx-auto text-center px-4 relative z-10 transition-all duration-500 ${
-          isSidebarExpanded ? "max-w-4xl" : "max-w-6xl"
-        }`}
+      <Container
+        size={isSidebarExpanded ? "expanded" : "default"}
+        className="text-center relative z-10"
       >
         <div className="flex justify-center mb-8 fade-in">
           <div className="relative w-48 h-48 lg:w-60 lg:h-60 rounded-full overflow-hidden border-4 border-primary/80 shadow-2xl hover-lift">
@@ -55,34 +53,32 @@ export default function Hero() {
             eficientes.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
+            <Button
               href="/contacto"
-              className="btn-gold gold-shimmer inline-flex items-center"
+              icon={
+                <svg
+                  className="w-4 h-4 ml-2"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M13 7l5 5m0 0l-5 5m5-5H6"
+                  />
+                </svg>
+              }
             >
               Comienza tu Proyecto
-              <svg
-                className="w-4 h-4 ml-2"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M13 7l5 5m0 0l-5 5m5-5H6"
-                />
-              </svg>
-            </Link>
-            <Link
-              href="/servicios"
-              className="btn-gold-outline inline-flex items-center"
-            >
+            </Button>
+            <Button href="/servicios" variant="outline">
               Ver Servicios
-            </Link>
+            </Button>
           </div>
         </div>
-      </div>
+      </Container>
     </section>
   );
 }

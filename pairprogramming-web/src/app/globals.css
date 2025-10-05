@@ -1,4 +1,3 @@
-/* app/globals.css - CORREGIDO */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -7,10 +6,10 @@
   :root {
     --background: #1a202c;
     --foreground: #f7fafc;
-    --primary: #d4af37; /* Dorado principal */
-    --primary-dark: #b8941f; /* Dorado oscuro */
-    --primary-light: #f4d03f; /* Dorado claro */
-    --accent: #ffd700; /* Dorado brillante */
+    --primary: #d4af37;
+    --primary-dark: #b8941f;
+    --primary-light: #f4d03f;
+    --accent: #ffd700;
     --card-bg: #2d3748;
     --hover-bg: #4a5568;
     --secondary-text: #cbd5e0;
@@ -148,7 +147,6 @@
   }
 }
 
-/* Custom scrollbar for modern look */
 ::-webkit-scrollbar {
   width: 8px;
 }
@@ -166,7 +164,6 @@
   background: linear-gradient(to bottom, var(--primary-light), var(--accent));
 }
 
-/* Animaciones mejoradas */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -191,7 +188,6 @@
   animation: fadeIn 0.6s ease-out;
 }
 
-/* Mejora de transiciones suaves */
 * {
   transition: color 0.2s ease, background-color 0.2s ease,
     border-color 0.2s ease;

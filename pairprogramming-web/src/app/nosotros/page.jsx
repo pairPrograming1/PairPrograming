@@ -1,4 +1,3 @@
-// app/nosotros/page.js
 import Sidebar from "../components/Sidebar";
 import Nosotros from "../components/Nosotros";
 import Footer from "../components/Footer";

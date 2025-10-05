@@ -1,6 +1,7 @@
-// components/Services.js
 "use client";
 import { useSidebar } from "../context/SidebarContext";
+import { Container } from "./ui/Container";
+import { Card } from "./ui/Card";
 
 export default function Services() {
   const { isSidebarExpanded } = useSidebar();
@@ -46,11 +47,7 @@ export default function Services() {
 
   return (
     <section className="py-16 lg:py-20 bg-background text-white">
-      <div
-        className={`container mx-auto px-4 transition-all duration-500 ${
-          isSidebarExpanded ? "max-w-4xl" : "max-w-6xl"
-        }`}
-      >
+      <Container size={isSidebarExpanded ? "expanded" : "default"}>
         <div className="text-center mb-16 fade-in">
           <h3
             className={`font-bold mb-4 bg-gradient-to-r from-white to-secondary-text bg-clip-text text-transparent transition-all duration-300 ${
@@ -68,10 +65,13 @@ export default function Services() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, index) => (
-            <div
+            <Card
               key={service.title}
-              className="glass-card p-6 hover-lift group cursor-pointer fade-in"
-              style={{ animationDelay: `${index * 0.2}s` }}
+              hover
+              padding="md"
+              animate
+              animationDelay={`${index * 0.2}s`}
+              className="group cursor-pointer"
             >
               <div className="text-3xl mb-4 transform group-hover:scale-110 transition-transform duration-300">
                 {service.icon}
@@ -94,10 +94,10 @@ export default function Services() {
                   </div>
                 ))}
               </div>
-            </div>
+            </Card>
           ))}
         </div>
-      </div>
+      </Container>
     </section>
   );
 }

@@ -1,4 +1,3 @@
-// components/MainContainer.js
 "use client";
 import { useSidebar } from "../context/SidebarContext";
 

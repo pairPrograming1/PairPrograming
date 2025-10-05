@@ -1,13 +1,14 @@
-// components/Portfolio.js - VERSIÓN CORREGIDA
 "use client";
 import { useState } from "react";
 import { useSidebar } from "../context/SidebarContext";
+import { Container } from "./ui/Container";
+import { Card } from "./ui/Card";
+import { Button } from "./ui/Button";
 
 export default function Portfolio() {
   const { isSidebarExpanded } = useSidebar();
   const [currentVideo, setCurrentVideo] = useState(0);
 
-  // Lista de videos del portafolio
   const portfolioVideos = [
     {
       id: 1,
@@ -71,12 +72,9 @@ export default function Portfolio() {
     },
   ];
 
-  // Extraer ID de YouTube desde diferentes formatos de URL
   const getYouTubeId = (urlOrId) => {
     if (!urlOrId) return "";
-
     if (urlOrId.length === 11) return urlOrId;
-
     const regExp =
       /^.*((youtu.be\/)|(v\/)|(\/u\/\w\/)|(embed\/)|(watch\?))\??v?=?([^#&?]*).*/;
     const match = urlOrId.match(regExp);
@@ -91,9 +89,8 @@ export default function Portfolio() {
 
   return (
     <section className="py-16 lg:py-20 bg-background text-white min-h-screen">
-      {/* ELIMINAMOS LA RESTRICCIÓN DE MAX-WIDTH EN EL CONTENEDOR PRINCIPAL */}
-      <div className="container mx-auto px-4 transition-all duration-500">
-        {/* Header */}
+      {/* Usamos size="full" para que el contenedor no se vea afectado por el sidebar */}
+      <Container size="full">
         <div className="text-center mb-12 fade-in">
           <h1
             className={`font-bold mb-6 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent transition-all duration-300 ${
@@ -112,13 +109,21 @@ export default function Portfolio() {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-6 lg:gap-8">
-          {/* Lista de videos - MEJORADO EL ANCHO */}
-          <div className="lg:col-span-1">
-            <div className="glass-card p-4 lg:p-6 sticky top-4">
+          {/* Columna de lista de proyectos - ajustamos el ancho según el sidebar */}
+          <div
+            className={`${
+              isSidebarExpanded ? "lg:col-span-1" : "lg:col-span-1"
+            }`}
+          >
+            <Card padding="md" className="sticky top-4">
               <h3 className="text-lg font-bold text-primary mb-4">
                 Proyectos ({portfolioVideos.length})
               </h3>
-              <div className="space-y-3 max-h-96 lg:max-h-[500px] overflow-y-auto pr-2">
+              <div
+                className={`space-y-3 overflow-y-auto pr-2 ${
+                  isSidebarExpanded ? "max-h-80" : "max-h-96 lg:max-h-[500px]"
+                }`}
+              >
                 {portfolioVideos.map((video, index) => (
                   <button
                     key={video.id}
@@ -150,13 +155,16 @@ export default function Portfolio() {
                   </button>
                 ))}
               </div>
-            </div>
+            </Card>
           </div>
 
-          {/* Reproductor y detalles - MEJORADO EL ANCHO */}
-          <div className="lg:col-span-3">
-            {/* Reproductor de YouTube */}
-            <div className="glass-card p-4 lg:p-6 mb-6 fade-in">
+          {/* Columna de contenido principal - ajustamos el ancho según el sidebar */}
+          <div
+            className={`${
+              isSidebarExpanded ? "lg:col-span-3" : "lg:col-span-3"
+            }`}
+          >
+            <Card padding="md" className="mb-6 fade-in">
               <div className="aspect-w-16 aspect-h-9 bg-black rounded-lg overflow-hidden">
                 <iframe
                   src={`https://www.youtube.com/embed/${getYouTubeId(
@@ -168,13 +176,9 @@ export default function Portfolio() {
                   allowFullScreen
                 ></iframe>
               </div>
-            </div>
+            </Card>
 
-            {/* Información del video actual */}
-            <div
-              className="glass-card p-4 lg:p-6 fade-in"
-              style={{ animationDelay: "0.1s" }}
-            >
+            <Card padding="md" animate animationDelay="0.1s">
               <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between mb-4">
                 <div className="flex-1">
                   <h2 className="text-xl lg:text-2xl font-bold text-white mb-2">
@@ -195,7 +199,6 @@ export default function Portfolio() {
                 {currentVideoData.description}
               </p>
 
-              {/* Tecnologías utilizadas */}
               <div className="mb-6">
                 <h4 className="font-semibold text-white mb-3">
                   Tecnologías utilizadas:
@@ -212,7 +215,6 @@ export default function Portfolio() {
                 </div>
               </div>
 
-              {/* Características destacadas */}
               <div>
                 <h4 className="font-semibold text-white mb-3">
                   Características destacadas:
@@ -236,14 +238,13 @@ export default function Portfolio() {
                   </li>
                 </ul>
               </div>
-            </div>
+            </Card>
 
-            {/* Llamada a la acción */}
             <div
               className="text-center mt-6 lg:mt-8 fade-in"
               style={{ animationDelay: "0.2s" }}
             >
-              <div className="glass-card p-4 lg:p-6">
+              <Card padding="md">
                 <h3 className="text-lg font-bold text-primary mb-3">
                   ¿Te gustó lo que viste?
                 </h3>
@@ -251,30 +252,31 @@ export default function Portfolio() {
                   Podemos crear una solución similar o personalizada para tu
                   negocio.
                 </p>
-                <button
+                <Button
                   onClick={() => (window.location.href = "/contacto")}
-                  className="btn-gold gold-shimmer inline-flex items-center text-sm lg:text-base"
+                  icon={
+                    <svg
+                      className="w-4 h-4 mr-2"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"
+                      />
+                    </svg>
+                  }
                 >
-                  <svg
-                    className="w-4 h-4 mr-2"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"
-                    />
-                  </svg>
                   Solicitar Cotización
-                </button>
-              </div>
+                </Button>
+              </Card>
             </div>
           </div>
         </div>
-      </div>
+      </Container>
     </section>
   );
 }

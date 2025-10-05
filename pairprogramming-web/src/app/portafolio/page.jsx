@@ -1,4 +1,3 @@
-// app/portafolio/page.js
 import Sidebar from "../components/Sidebar";
 import Portfolio from "../components/Portfolio";
 import Footer from "../components/Footer";
