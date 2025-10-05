@@ -195,6 +195,7 @@ export default function Contacto() {
               proyecto en detalle.
             </p>
             <Button
+              href="/calendario"
               variant="outline"
               icon={
                 <svg
@@ -211,10 +212,6 @@ export default function Contacto() {
                   />
                 </svg>
               }
-              onClick={(e) => {
-                e.preventDefault();
-                alert("Funcionalidad de calendario próximamente disponible");
-              }}
             >
               Agendar Reunión
             </Button>
