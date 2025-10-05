@@ -1,15 +1,22 @@
+// components/Sidebar.jsx
 "use client";
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useSidebar } from "../context/SidebarContext";
 import Image from "next/image";
 
 export default function Sidebar() {
-  const [isMobileOpen, setIsMobileOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
+  const [isAdmin, setIsAdmin] = useState(false);
   const { isSidebarExpanded, setIsSidebarExpanded } = useSidebar();
 
-  const toggleMobileSidebar = () => {
-    setIsMobileOpen(!isMobileOpen);
+  useEffect(() => {
+    const authStatus = localStorage.getItem("adminAuthenticated");
+    setIsAdmin(authStatus === "true");
+  }, []);
+
+  const toggleSidebar = () => {
+    setIsOpen(!isOpen);
   };
 
   const toggleExpand = () => {
@@ -17,7 +24,7 @@ export default function Sidebar() {
   };
 
   const closeMobileSidebar = () => {
-    setIsMobileOpen(false);
+    setIsOpen(false);
   };
 
   const menuItems = [
@@ -79,6 +86,25 @@ export default function Sidebar() {
       ),
     },
     {
+      href: "/calendario",
+      label: "Calendario",
+      icon: (
+        <svg
+          className="w-5 h-5 flex-shrink-0"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+          />
+        </svg>
+      ),
+    },
+    {
       href: "/nosotros",
       label: "Nosotros",
       icon: (
@@ -93,6 +119,25 @@ export default function Sidebar() {
             strokeLinejoin="round"
             strokeWidth={2}
             d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
+          />
+        </svg>
+      ),
+    },
+    {
+      href: "/soporte",
+      label: "Soporte",
+      icon: (
+        <svg
+          className="w-5 h-5 flex-shrink-0"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192L5.636 18.364M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
           />
         </svg>
       ),
@@ -118,18 +163,41 @@ export default function Sidebar() {
     },
   ];
 
+  if (isAdmin) {
+    menuItems.push({
+      href: "/admin/dashboard",
+      label: "Admin",
+      icon: (
+        <svg
+          className="w-5 h-5 flex-shrink-0"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"
+          />
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+          />
+        </svg>
+      ),
+    });
+  }
+
   const imageUrl =
     "https://res.cloudinary.com/dmjusy7sn/image/upload/v1758981340/usuarios/xkajcqpxdbggr4q7ywjy.jpg";
-
-  // En móvil, siempre mostramos el texto cuando está abierto
-  const showTextMobile = isMobileOpen;
-  // En desktop, usamos el estado normal de expansión
-  const showTextDesktop = isSidebarExpanded;
 
   return (
     <>
       <button
-        onClick={toggleMobileSidebar}
+        onClick={toggleSidebar}
         className="lg:hidden fixed top-4 left-4 z-50 p-2 rounded-full bg-primary text-white hover:bg-primary-dark transition shadow-lg"
       >
         <svg
@@ -142,31 +210,29 @@ export default function Sidebar() {
             strokeLinecap="round"
             strokeLinejoin="round"
             strokeWidth={2}
-            d={
-              isMobileOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"
-            }
+            d={isOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"}
           />
         </svg>
       </button>
 
-      {isMobileOpen && (
+      {isOpen && (
         <div
           className="lg:hidden fixed inset-0 bg-black bg-opacity-50 z-30"
-          onClick={toggleMobileSidebar}
+          onClick={toggleSidebar}
         ></div>
       )}
 
       <aside
         className={`fixed top-0 left-0 h-screen bg-gradient-to-b from-background to-card-bg text-white flex flex-col shadow-xl transition-all duration-300 z-40 overflow-hidden
-          ${isMobileOpen ? "translate-x-0 w-64" : "-translate-x-full"}
+          ${isOpen ? "translate-x-0 w-64" : "-translate-x-full"}
           lg:translate-x-0 ${isSidebarExpanded ? "lg:w-64" : "lg:w-16"}`}
       >
         <div
           className={`p-4 border-b border-border-color flex items-center justify-between ${
-            showTextDesktop ? "" : "lg:flex-col lg:gap-2"
+            isSidebarExpanded ? "" : "flex-col gap-2"
           }`}
         >
-          {showTextDesktop || showTextMobile ? (
+          {isSidebarExpanded ? (
             <button
               onClick={toggleExpand}
               className="flex items-center gap-3 transition-all duration-300 hover:opacity-80"
@@ -214,9 +280,7 @@ export default function Sidebar() {
                   {item.icon}
                   <span
                     className={`ml-3 transition-all duration-300 whitespace-nowrap ${
-                      showTextDesktop || showTextMobile
-                        ? "opacity-100 w-auto"
-                        : "opacity-0 w-0"
+                      isSidebarExpanded ? "opacity-100 w-auto" : "opacity-0 w-0"
                     }`}
                   >
                     {item.label}
@@ -230,12 +294,17 @@ export default function Sidebar() {
         <div className="p-3 border-t border-border-color">
           <div
             className={`transition-all duration-300 text-center ${
-              showTextDesktop || showTextMobile ? "opacity-100" : "opacity-0"
+              isSidebarExpanded ? "opacity-100" : "opacity-0"
             }`}
           >
             <p className="text-secondary-text text-xs">
               © 2025 PairProgramming
             </p>
+            {isAdmin && (
+              <div className="mt-2 p-2 bg-primary/10 rounded">
+                <p className="text-primary text-xs font-semibold">Modo Admin</p>
+              </div>
+            )}
           </div>
         </div>
       </aside>

@@ -23,12 +23,6 @@ export default function Footer() {
             </div>
             <div className="flex flex-wrap justify-center gap-6">
               <Link
-                href="/contacto"
-                className="text-secondary-text hover:text-primary transition-colors duration-300 text-sm font-medium"
-              >
-                Contacto
-              </Link>
-              <Link
                 href="/faq"
                 className="text-secondary-text hover:text-primary transition-colors duration-300 text-sm font-medium"
               >
@@ -45,6 +39,12 @@ export default function Footer() {
                 className="text-secondary-text hover:text-primary transition-colors duration-300 text-sm font-medium"
               >
                 Privacidad
+              </Link>
+              <Link
+                href="/soporte"
+                className="text-secondary-text hover:text-primary transition-colors duration-300 text-sm font-medium"
+              >
+                Soporte
               </Link>
             </div>
           </div>
