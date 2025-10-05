@@ -5,11 +5,11 @@ import { useSidebar } from "../context/SidebarContext";
 import Image from "next/image";
 
 export default function Sidebar() {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isMobileOpen, setIsMobileOpen] = useState(false);
   const { isSidebarExpanded, setIsSidebarExpanded } = useSidebar();
 
-  const toggleSidebar = () => {
-    setIsOpen(!isOpen);
+  const toggleMobileSidebar = () => {
+    setIsMobileOpen(!isMobileOpen);
   };
 
   const toggleExpand = () => {
@@ -17,7 +17,7 @@ export default function Sidebar() {
   };
 
   const closeMobileSidebar = () => {
-    setIsOpen(false);
+    setIsMobileOpen(false);
   };
 
   const menuItems = [
@@ -121,10 +121,15 @@ export default function Sidebar() {
   const imageUrl =
     "https://res.cloudinary.com/dmjusy7sn/image/upload/v1758981340/usuarios/xkajcqpxdbggr4q7ywjy.jpg";
 
+  // En móvil, siempre mostramos el texto cuando está abierto
+  const showTextMobile = isMobileOpen;
+  // En desktop, usamos el estado normal de expansión
+  const showTextDesktop = isSidebarExpanded;
+
   return (
     <>
       <button
-        onClick={toggleSidebar}
+        onClick={toggleMobileSidebar}
         className="lg:hidden fixed top-4 left-4 z-50 p-2 rounded-full bg-primary text-white hover:bg-primary-dark transition shadow-lg"
       >
         <svg
@@ -137,29 +142,31 @@ export default function Sidebar() {
             strokeLinecap="round"
             strokeLinejoin="round"
             strokeWidth={2}
-            d={isOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"}
+            d={
+              isMobileOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"
+            }
           />
         </svg>
       </button>
 
-      {isOpen && (
+      {isMobileOpen && (
         <div
           className="lg:hidden fixed inset-0 bg-black bg-opacity-50 z-30"
-          onClick={toggleSidebar}
+          onClick={toggleMobileSidebar}
         ></div>
       )}
 
       <aside
         className={`fixed top-0 left-0 h-screen bg-gradient-to-b from-background to-card-bg text-white flex flex-col shadow-xl transition-all duration-300 z-40 overflow-hidden
-          ${isOpen ? "translate-x-0 w-64" : "-translate-x-full"}
+          ${isMobileOpen ? "translate-x-0 w-64" : "-translate-x-full"}
           lg:translate-x-0 ${isSidebarExpanded ? "lg:w-64" : "lg:w-16"}`}
       >
         <div
           className={`p-4 border-b border-border-color flex items-center justify-between ${
-            isSidebarExpanded ? "" : "flex-col gap-2"
+            showTextDesktop ? "" : "lg:flex-col lg:gap-2"
           }`}
         >
-          {isSidebarExpanded ? (
+          {showTextDesktop || showTextMobile ? (
             <button
               onClick={toggleExpand}
               className="flex items-center gap-3 transition-all duration-300 hover:opacity-80"
@@ -207,7 +214,9 @@ export default function Sidebar() {
                   {item.icon}
                   <span
                     className={`ml-3 transition-all duration-300 whitespace-nowrap ${
-                      isSidebarExpanded ? "opacity-100 w-auto" : "opacity-0 w-0"
+                      showTextDesktop || showTextMobile
+                        ? "opacity-100 w-auto"
+                        : "opacity-0 w-0"
                     }`}
                   >
                     {item.label}
@@ -221,7 +230,7 @@ export default function Sidebar() {
         <div className="p-3 border-t border-border-color">
           <div
             className={`transition-all duration-300 text-center ${
-              isSidebarExpanded ? "opacity-100" : "opacity-0"
+              showTextDesktop || showTextMobile ? "opacity-100" : "opacity-0"
             }`}
           >
             <p className="text-secondary-text text-xs">
