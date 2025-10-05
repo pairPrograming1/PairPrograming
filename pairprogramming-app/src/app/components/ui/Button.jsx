@@ -10,15 +10,16 @@ export const Button = ({
   disabled = false,
   loading = false,
   className = "",
+  icon,
   ...props
 }) => {
   const baseClasses =
     "inline-flex items-center justify-center font-semibold transition-all duration-300 focus:outline-none";
 
   const variants = {
-    primary: "btn-gold gold-shimmer hover:shadow-lg",
+    primary: "btn-primary primary-shimmer hover:shadow-lg",
     outline:
-      "btn-gold-outline border border-primary text-primary hover:bg-primary/10",
+      "btn-outline border border-primary text-primary hover:bg-primary/10",
     secondary: "glass-card hover:bg-primary/20 hover:text-white",
   };
 
@@ -32,17 +33,18 @@ export const Button = ({
     sizes[size]
   } ${className} ${disabled ? "opacity-50 cursor-not-allowed" : ""}`;
 
-  const content = loading ? (
+  const content = (
     <>
-      <div
-        className={`border-2 border-gray-900 border-t-transparent rounded-full animate-spin mr-2 ${
-          size === "sm" ? "w-3 h-3" : "w-4 h-4 lg:w-5 lg:h-5"
-        }`}
-      ></div>
+      {loading && (
+        <div
+          className={`border-2 border-white border-t-transparent rounded-full animate-spin mr-2 ${
+            size === "sm" ? "w-3 h-3" : "w-4 h-4 lg:w-5 lg:h-5"
+          }`}
+        ></div>
+      )}
+      {icon && !loading && <span className="mr-2">{icon}</span>}
       {children}
     </>
-  ) : (
-    children
   );
 
   if (href && !disabled) {

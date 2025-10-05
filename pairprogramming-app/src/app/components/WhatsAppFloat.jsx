@@ -1,4 +1,3 @@
-// components/WhatsAppFloat.jsx
 "use client";
 import { useState } from "react";
 
