@@ -4,13 +4,16 @@ import { createContext, useContext, useState, useEffect } from "react";
 const SidebarContext = createContext();
 
 export function SidebarProvider({ children }) {
-  const [isSidebarExpanded, setIsSidebarExpanded] = useState(false);
+  const [isSidebarExpanded, setIsSidebarExpanded] = useState(true); // Cambiado a true
 
   // Efecto para manejar el estado inicial en mobile vs desktop
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth >= 1024) {
-        // En desktop, empezar colapsado
+        // En desktop, empezar expandido (ya que el estado inicial es true)
+        setIsSidebarExpanded(true);
+      } else {
+        // En mobile, colapsar
         setIsSidebarExpanded(false);
       }
     };

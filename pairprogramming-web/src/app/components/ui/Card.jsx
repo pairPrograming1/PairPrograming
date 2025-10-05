@@ -5,6 +5,7 @@ export const Card = ({
   className = "",
   hover = false,
   padding = "md",
+  animate, // Extraemos animate para que no se pase al div
   ...props
 }) => {
   const paddings = {
