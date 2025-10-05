@@ -7,11 +7,11 @@ export default function MainContainer({ children }) {
 
   return (
     <main
-      className={`lg:ml-16 transition-all duration-300 flex flex-col ${
+      className={`min-h-screen transition-all duration-300 ${
         isSidebarExpanded ? "lg:ml-64" : "lg:ml-16"
       }`}
     >
-      {children}
+      <div className="flex flex-col min-h-screen">{children}</div>
     </main>
   );
 }
