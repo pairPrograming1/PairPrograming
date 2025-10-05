@@ -38,7 +38,7 @@ export default function Footer() {
                 href="/terminos-condiciones"
                 className="text-secondary-text hover:text-primary transition-colors duration-300 text-sm font-medium"
               >
-                Términos
+                Términos y Condiciones
               </Link>
               <Link
                 href="/privacidad"
