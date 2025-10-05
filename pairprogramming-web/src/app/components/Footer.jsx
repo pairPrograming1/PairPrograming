@@ -39,12 +39,6 @@ export default function Footer() {
               >
                 Contacto
               </Link>
-              <Link
-                href="/privacidad"
-                className="text-secondary-text hover:text-primary transition-colors duration-300 text-sm font-medium"
-              >
-                Privacidad
-              </Link>
             </div>
           </div>
         </div>
