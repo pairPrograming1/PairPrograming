@@ -1,6 +1,6 @@
+// components/Contacto.jsx (agrega esta sección después del formulario existente)
 "use client";
 import { useState } from "react";
-import Link from "next/link";
 import { useSidebar } from "../context/SidebarContext";
 import { Container } from "./ui/Container";
 import { Card } from "./ui/Card";
@@ -30,6 +30,7 @@ export default function Contacto() {
     e.preventDefault();
     setIsLoading(true);
 
+    // Simulación de envío
     setTimeout(() => {
       setIsLoading(false);
       setStatus("success");
@@ -41,6 +42,21 @@ export default function Contacto() {
         message: "",
       });
     }, 1500);
+  };
+
+  const openWhatsApp = () => {
+    const phoneNumber = "+1234567890";
+    const message =
+      "Hola, me interesa conocer más sobre sus servicios de desarrollo";
+    const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
+      message
+    )}`;
+    window.open(url, "_blank");
+  };
+
+  const openChatbot = () => {
+    const chatbotBtn = document.querySelector("[data-chatbot-toggle]");
+    if (chatbotBtn) chatbotBtn.click();
   };
 
   return (
@@ -165,6 +181,44 @@ export default function Contacto() {
                 </p>
               </div>
             </Card>
+
+            {/* Nueva Sección: Opciones de Contacto Alternativas */}
+            <div
+              className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6 fade-in"
+              style={{ animationDelay: "0.3s" }}
+            >
+              <Card padding="md" className="text-center hover-lift">
+                <div className="text-3xl mb-3">🤖</div>
+                <h4 className="font-bold text-white mb-2">Chat en Vivo</h4>
+                <p className="text-secondary-text text-sm mb-4">
+                  ¿Prefieres chatear? Usa nuestro asistente virtual para
+                  respuestas inmediatas a tus preguntas.
+                </p>
+                <Button
+                  variant="outline"
+                  onClick={openChatbot}
+                  className="w-full"
+                >
+                  Abrir Asistente Virtual
+                </Button>
+              </Card>
+
+              <Card padding="md" className="text-center hover-lift">
+                <div className="text-3xl mb-3">💬</div>
+                <h4 className="font-bold text-white mb-2">WhatsApp Business</h4>
+                <p className="text-secondary-text text-sm mb-4">
+                  Conversa directamente con nuestro equipo por WhatsApp para una
+                  atención más personalizada.
+                </p>
+                <Button
+                  variant="outline"
+                  onClick={openWhatsApp}
+                  className="w-full"
+                >
+                  Chatear por WhatsApp
+                </Button>
+              </Card>
+            </div>
           </div>
         </div>
 
