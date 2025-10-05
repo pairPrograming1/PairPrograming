@@ -30,7 +30,6 @@ export default function Contacto() {
     e.preventDefault();
     setIsLoading(true);
 
-    // Simulación de envío
     setTimeout(() => {
       setIsLoading(false);
       setStatus("success");
