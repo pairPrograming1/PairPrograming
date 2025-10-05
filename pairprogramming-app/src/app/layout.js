@@ -1,7 +1,9 @@
+// app/layout.js
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { SidebarProvider } from "./context/SidebarContext";
 import FloatingWidgets from "./components/FloatingWidgets";
+import Header from "./components/Header";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -19,6 +21,7 @@ export default function RootLayout({ children }) {
     <html lang="es" className="dark">
       <body className={`${inter.variable} antialiased`}>
         <SidebarProvider>
+          <Header />
           {children}
           <FloatingWidgets />
         </SidebarProvider>
