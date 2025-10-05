@@ -6,6 +6,7 @@ export const Card = ({
   hover = false,
   padding = "md",
   animate, // Extraemos animate para que no se pase al div
+  animationDelay, // También extraemos animationDelay
   ...props
 }) => {
   const paddings = {
