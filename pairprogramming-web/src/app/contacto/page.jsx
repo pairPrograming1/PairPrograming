@@ -1,7 +1,7 @@
 // app/contacto/page.jsx
 "use client";
 import Sidebar from "../components/Sidebar";
-import Contacto from "../components/Contacto";
+import Contacto from "../components/contacto";
 import Footer from "../components/Footer";
 import MainContainer from "../components/MainContainer";
 
