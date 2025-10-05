@@ -27,6 +27,9 @@ export default function Sidebar() {
     setIsOpen(false);
   };
 
+  // Función para determinar si el texto debe mostrarse
+  const shouldShowText = isOpen || isSidebarExpanded;
+
   const menuItems = [
     {
       href: "/",
@@ -229,10 +232,10 @@ export default function Sidebar() {
       >
         <div
           className={`p-4 border-b border-border-color flex items-center justify-between ${
-            isSidebarExpanded ? "" : "flex-col gap-2"
+            shouldShowText ? "" : "flex-col gap-2"
           }`}
         >
-          {isSidebarExpanded ? (
+          {shouldShowText ? (
             <button
               onClick={toggleExpand}
               className="flex items-center gap-3 transition-all duration-300 hover:opacity-80"
@@ -280,7 +283,7 @@ export default function Sidebar() {
                   {item.icon}
                   <span
                     className={`ml-3 transition-all duration-300 whitespace-nowrap ${
-                      isSidebarExpanded ? "opacity-100 w-auto" : "opacity-0 w-0"
+                      shouldShowText ? "opacity-100 w-auto" : "opacity-0 w-0"
                     }`}
                   >
                     {item.label}
@@ -294,7 +297,7 @@ export default function Sidebar() {
         <div className="p-3 border-t border-border-color">
           <div
             className={`transition-all duration-300 text-center ${
-              isSidebarExpanded ? "opacity-100" : "opacity-0"
+              shouldShowText ? "opacity-100" : "opacity-0"
             }`}
           >
             <p className="text-secondary-text text-xs">
