@@ -1,4 +1,3 @@
-// components/Sidebar.jsx
 "use client";
 import Link from "next/link";
 import { useState, useEffect } from "react";
@@ -277,10 +276,12 @@ export default function Sidebar() {
               <li key={item.href}>
                 <Link
                   href={item.href}
-                  className="flex items-center p-3 rounded-lg hover:bg-hover-bg transition-colors font-medium"
+                  className="flex items-center p-3 rounded-lg hover:bg-hover-bg transition-colors font-medium group"
                   onClick={closeMobileSidebar}
                 >
-                  {item.icon}
+                  <div className="text-primary group-hover:text-accent transition-colors">
+                    {item.icon}
+                  </div>
                   <span
                     className={`ml-3 transition-all duration-300 whitespace-nowrap ${
                       shouldShowText ? "opacity-100 w-auto" : "opacity-0 w-0"
@@ -305,7 +306,7 @@ export default function Sidebar() {
             </p>
             {isAdmin && (
               <div className="mt-2 p-2 bg-primary/10 rounded">
-                <p className="text-primary text-xs font-semibold">Modo Admin</p>
+                <p className="text-accent text-xs font-semibold">Modo Admin</p>
               </div>
             )}
           </div>

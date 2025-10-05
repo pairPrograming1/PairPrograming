@@ -8,7 +8,7 @@ export default function Hero() {
   const { isSidebarExpanded } = useSidebar();
 
   return (
-    <section className="relative bg-gradient-to-br from-background via-card-bg to-primary/10 text-white py-20 lg:py-28 overflow-hidden">
+    <section className="relative bg-gradient-to-br from-primary/20 via-card-bg to-accent/10 text-white py-20 lg:py-28 overflow-hidden">
       <div className="absolute inset-0 bg-grid-white bg-[size:60px_60px]" />
       <div className="absolute top-10 left-10 w-72 h-72 bg-primary/10 rounded-full blur-3xl" />
       <div className="absolute bottom-10 right-10 w-96 h-96 bg-accent/5 rounded-full blur-3xl" />
@@ -34,7 +34,7 @@ export default function Hero() {
 
         <div className="fade-in" style={{ animationDelay: "0.2s" }}>
           <h2
-            className={`font-bold mb-6 bg-gradient-to-r from-white to-primary bg-clip-text text-transparent tracking-tight transition-all duration-300 ${
+            className={`font-bold mb-6 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent tracking-tight transition-all duration-300 ${
               isSidebarExpanded
                 ? "text-2xl lg:text-3xl"
                 : "text-3xl lg:text-4xl"
@@ -48,7 +48,7 @@ export default function Hero() {
             }`}
           >
             En{" "}
-            <span className="text-primary font-semibold">PairProgramming</span>,
+            <span className="text-accent font-semibold">PairProgramming</span>,
             convertimos la complejidad en claridad, integrando tecnología,
             diseño y estrategia para crear productos digitales escalables y
             eficientes.

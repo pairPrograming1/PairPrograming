@@ -18,7 +18,7 @@ export default function CallToAction() {
         className="relative z-10"
       >
         <h3
-          className={`font-bold mb-4 bg-gradient-to-r from-white to-primary bg-clip-text text-transparent transition-all duration-300 ${
+          className={`font-bold mb-4 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent transition-all duration-300 ${
             isSidebarExpanded ? "text-xl lg:text-2xl" : "text-2xl lg:text-3xl"
           }`}
         >

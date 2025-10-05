@@ -4,17 +4,19 @@
 
 @layer base {
   :root {
-    --background: #1a202c;
-    --foreground: #f7fafc;
-    --primary: #d4af37;
-    --primary-dark: #b8941f;
-    --primary-light: #f4d03f;
-    --accent: #ffd700;
-    --card-bg: #2d3748;
-    --hover-bg: #4a5568;
-    --secondary-text: #cbd5e0;
-    --border-color: #4a5568;
-    --success: #48bb78;
+    --background: #000000;
+    --foreground: #ffffff;
+    --primary: #0b7eb5;
+    --primary-dark: #0a6ea0;
+    --primary-light: #1a8fcc;
+    --accent: #d4a017;
+    --accent-dark: #b38915;
+    --accent-light: #e5a823;
+    --card-bg: #1f2937;
+    --hover-bg: #374151;
+    --secondary-text: #d1d5db;
+    --border-color: #4b5563;
+    --success: #10b981;
   }
 
   body {
@@ -27,17 +29,19 @@
   /* Forzamos dark mode ya que nuestra paleta es oscura */
   :root,
   .dark {
-    --background: #1a202c;
-    --foreground: #f7fafc;
-    --primary: #d4af37;
-    --primary-dark: #b8941f;
-    --primary-light: #f4d03f;
-    --accent: #ffd700;
-    --card-bg: #2d3748;
-    --hover-bg: #4a5568;
-    --secondary-text: #cbd5e0;
-    --border-color: #4a5568;
-    --success: #48bb78;
+    --background: #000000;
+    --foreground: #ffffff;
+    --primary: #0b7eb5;
+    --primary-dark: #0a6ea0;
+    --primary-light: #1a8fcc;
+    --accent: #d4a017;
+    --accent-dark: #b38915;
+    --accent-light: #e5a823;
+    --card-bg: #1f2937;
+    --hover-bg: #374151;
+    --secondary-text: #d1d5db;
+    --border-color: #4b5563;
+    --success: #10b981;
   }
 
   html.dark {
@@ -47,7 +51,7 @@
 
 @layer components {
   .glass-card {
-    background: rgba(45, 55, 72, 0.8);
+    background: rgba(31, 41, 55, 0.8);
     backdrop-filter: blur(8px);
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 0.75rem;
@@ -68,22 +72,22 @@
     transition: all 0.3s ease-in-out;
   }
 
-  .btn-gold {
+  .btn-primary {
     background-color: var(--primary);
-    color: #1a202c;
+    color: white;
     font-weight: 600;
     padding: 0.75rem 1.5rem;
     border-radius: 0.5rem;
     transition: all 0.3s ease-in-out;
   }
 
-  .btn-gold:hover {
+  .btn-primary:hover {
     background-color: var(--primary-dark);
-    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 10px 25px -5px rgba(11, 126, 181, 0.3);
     transform: translateY(-2px);
   }
 
-  .btn-gold-outline {
+  .btn-outline {
     border: 1px solid var(--primary);
     color: var(--primary);
     font-weight: 600;
@@ -93,8 +97,19 @@
     background-color: transparent;
   }
 
-  .btn-gold-outline:hover {
-    background-color: rgba(212, 175, 55, 0.1);
+  .btn-outline:hover {
+    background-color: rgba(11, 126, 181, 0.1);
+  }
+
+  .primary-shimmer {
+    background: linear-gradient(
+      90deg,
+      var(--primary-dark),
+      var(--primary),
+      var(--primary-dark)
+    );
+    background-size: 200px 100%;
+    animation: shimmer 2s infinite;
   }
 
   .compact-section {
@@ -123,19 +138,19 @@
     background-size: 60px 60px;
   }
 
-  .bg-gradient-gold {
+  .bg-gradient-primary {
     background: linear-gradient(135deg, var(--primary), var(--accent));
   }
 
-  .text-gold {
-    color: var(--primary);
+  .text-accent {
+    color: var(--accent);
   }
 
-  .border-gold {
-    border-color: var(--primary);
+  .border-accent {
+    border-color: var(--accent);
   }
 
-  .gold-shimmer {
+  .primary-shimmer {
     background: linear-gradient(
       90deg,
       var(--primary-dark),
@@ -193,8 +208,6 @@
     border-color 0.2s ease;
 }
 
-/* Agrega esto al final de tu globals.css existente */
-
 /* Animaciones para los widgets flotantes */
 @keyframes fadeIn {
   from {
@@ -228,22 +241,33 @@
 @keyframes pulse-glow {
   0%,
   100% {
-    box-shadow: 0 0 20px rgba(212, 175, 55, 0.4);
+    box-shadow: 0 0 20px rgba(11, 126, 181, 0.4);
   }
   50% {
-    box-shadow: 0 0 30px rgba(212, 175, 55, 0.8),
-      0 0 40px rgba(212, 175, 55, 0.4);
+    box-shadow: 0 0 30px rgba(11, 126, 181, 0.8),
+      0 0 40px rgba(11, 126, 181, 0.4);
   }
 }
 
 @keyframes pulse-glow-green {
   0%,
   100% {
-    box-shadow: 0 0 20px rgba(72, 187, 120, 0.4);
+    box-shadow: 0 0 20px rgba(16, 185, 129, 0.4);
   }
   50% {
-    box-shadow: 0 0 30px rgba(72, 187, 120, 0.8),
-      0 0 40px rgba(72, 187, 120, 0.4);
+    box-shadow: 0 0 30px rgba(16, 185, 129, 0.8),
+      0 0 40px rgba(16, 185, 129, 0.4);
+  }
+}
+
+@keyframes pulse-glow-accent {
+  0%,
+  100% {
+    box-shadow: 0 0 20px rgba(212, 160, 23, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(212, 160, 23, 0.8),
+      0 0 40px rgba(212, 160, 23, 0.4);
   }
 }
 
@@ -264,23 +288,27 @@
   animation: pulse-glow-green 2s infinite;
 }
 
+.pulse-glow-accent {
+  animation: pulse-glow-accent 2s infinite;
+}
+
 /* Estilos para el scrollbar en el chatbot */
 .chatbot-messages::-webkit-scrollbar {
   width: 6px;
 }
 
 .chatbot-messages::-webkit-scrollbar-track {
-  background: #f1f1f1;
+  background: #1f2937;
   border-radius: 3px;
 }
 
 .chatbot-messages::-webkit-scrollbar-thumb {
-  background: #c1c1c1;
+  background: #4b5563;
   border-radius: 3px;
 }
 
 .chatbot-messages::-webkit-scrollbar-thumb:hover {
-  background: #a8a8a8;
+  background: #6b7280;
 }
 
 /* Mejoras de responsive para móviles */
@@ -320,7 +348,8 @@
   .animate-fade-in,
   .animate-bounce-in,
   .pulse-glow,
-  .pulse-glow-green {
+  .pulse-glow-green,
+  .pulse-glow-accent {
     animation: none;
   }
 }
@@ -374,21 +403,19 @@
   box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.15);
 }
 
-/* Agrega esto al final de tu globals.css */
-
 /* Mejoras para el chatbot con tema oscuro */
 .chatbot-messages::-webkit-scrollbar-track {
-  background: #2d3748; /* card-bg */
+  background: #1f2937;
   border-radius: 3px;
 }
 
 .chatbot-messages::-webkit-scrollbar-thumb {
-  background: #4a5568; /* border-color */
+  background: #4b5563;
   border-radius: 3px;
 }
 
 .chatbot-messages::-webkit-scrollbar-thumb:hover {
-  background: #718096; /* hover-bg */
+  background: #6b7280;
 }
 
 /* Mejoras de texto para el tema oscuro */
@@ -396,28 +423,11 @@
   color: var(--foreground);
 }
 
-/* Efectos de hover suaves */
-.hover-lift-sm {
-  transition: all 0.3s ease-in-out;
-}
-
-.hover-lift-sm:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
-}
-
 /* Animación de pulso para WhatsApp */
-@keyframes pulse-glow-green {
-  0%,
-  100% {
-    box-shadow: 0 0 20px rgba(72, 187, 120, 0.4);
-  }
-  50% {
-    box-shadow: 0 0 30px rgba(72, 187, 120, 0.8),
-      0 0 40px rgba(72, 187, 120, 0.4);
-  }
-}
-
 .pulse-glow-green {
   animation: pulse-glow-green 2s infinite;
+}
+
+.pulse-glow-accent {
+  animation: pulse-glow-accent 2s infinite;
 }

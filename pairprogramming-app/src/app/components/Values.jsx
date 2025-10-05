@@ -47,7 +47,7 @@ export default function Values() {
                 <div className="text-2xl mb-2 transform group-hover:scale-110 transition-transform duration-300">
                   {value.icon}
                 </div>
-                <span className="text-sm font-medium group-hover:text-primary transition-colors">
+                <span className="text-sm font-medium group-hover:text-accent transition-colors">
                   {value.name}
                 </span>
               </Card>
