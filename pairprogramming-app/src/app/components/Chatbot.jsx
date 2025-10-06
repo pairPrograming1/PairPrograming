@@ -160,7 +160,7 @@ export default function Chatbot() {
       /industria|sector|rama|rubro|empresa|negocio/i.test(message);
 
     if (isGreeting) {
-      return "¡Hola! 👋 Soy **Botie**, tu asistente virtual de **PairProgramming**. Me da mucho gusto saludarte. ¿En qué puedo ayudarte hoy? Aquí tienes algunas opciones comunes:";
+      return "¡Hola! 👋 Soy **Botie**, tu asistente virtual de **PairProgramming**. Me da mucho gusto saluarte. ¿En qué puedo ayudarte hoy? Aquí tienes algunas opciones comunes:";
     }
 
     if (isServicesQuestion) {
@@ -477,10 +477,10 @@ export default function Chatbot() {
         </div>
       )}
 
-      {/* Floating Button - POSICIÓN CORREGIDA: derecha y más arriba */}
+      {/* Floating Button - POSICIÓN CORREGIDA: bottom-6 para móvil */}
       <button
         onClick={toggleChat}
-        className="fixed bottom-24 right-6 w-14 h-14 bg-gradient-to-r from-primary to-accent hover:from-primary-dark hover:to-accent-dark rounded-full shadow-lg transition-all duration-300 hover:scale-110 flex items-center justify-center group pulse-glow hover-lift-sm z-50"
+        className="fixed bottom-24 right-4 w-14 h-14 bg-gradient-to-r from-primary to-accent hover:from-primary-dark hover:to-accent-dark rounded-full shadow-lg transition-all duration-300 hover:scale-110 flex items-center justify-center group pulse-glow hover-lift-sm z-50"
         aria-label="Abrir asistente virtual Botie"
         data-chatbot-toggle
       >
