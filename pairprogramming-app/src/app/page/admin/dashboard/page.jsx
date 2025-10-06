@@ -1,10 +1,10 @@
 "use client";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
-import Sidebar from "../../components/Sidebar";
-import Footer from "../../components/Footer";
-import MainContainer from "../../components/MainContainer";
-import DashboardAdminContent from "../../components/DashboardAdminContent";
+import Sidebar from "../../../components/Sidebar";
+import Footer from "../../../components/Footer";
+import MainContainer from "../../../components/MainContainer";
+import DashboardAdminContent from "../../../components/DashboardAdminContent";
 
 export default function DashboardAdminPage() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);

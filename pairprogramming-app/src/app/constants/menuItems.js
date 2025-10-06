@@ -1,6 +1,9 @@
+// src/constants/menuItems.js
+import { routes } from "@/config/routes";
+
 export const baseMenuItems = [
   {
-    href: "/",
+    href: routes.home,
     label: "Inicio",
     icon: (
       <svg
@@ -19,7 +22,7 @@ export const baseMenuItems = [
     ),
   },
   {
-    href: "/servicios",
+    href: routes.servicios,
     label: "Servicios",
     icon: (
       <svg
@@ -38,7 +41,7 @@ export const baseMenuItems = [
     ),
   },
   {
-    href: "/portafolio",
+    href: routes.portafolio,
     label: "Portafolio",
     icon: (
       <svg
@@ -57,7 +60,7 @@ export const baseMenuItems = [
     ),
   },
   {
-    href: "page/calendario",
+    href: routes.calendario,
     label: "Calendario",
     icon: (
       <svg
@@ -76,7 +79,7 @@ export const baseMenuItems = [
     ),
   },
   {
-    href: "page/nosotros",
+    href: routes.nosotros,
     label: "Nosotros",
     icon: (
       <svg
@@ -95,7 +98,7 @@ export const baseMenuItems = [
     ),
   },
   {
-    href: "page/soporte",
+    href: routes.soporte,
     label: "Soporte",
     icon: (
       <svg
@@ -114,7 +117,7 @@ export const baseMenuItems = [
     ),
   },
   {
-    href: "page/contacto",
+    href: routes.contacto,
     label: "Contacto",
     icon: (
       <svg
@@ -135,7 +138,7 @@ export const baseMenuItems = [
 ];
 
 export const adminMenuItem = {
-  href: "page/admin/dashboard",
+  href: routes.admin.dashboard,
   label: "Admin",
   icon: (
     <svg
@@ -158,4 +161,12 @@ export const adminMenuItem = {
       />
     </svg>
   ),
+};
+
+// Rutas para el footer o páginas secundarias
+export const footerRoutes = {
+  faq: routes.faq,
+  privacidad: routes.privacidad,
+  terminos: routes.terminos,
+  soporte: routes.soporte,
 };
