@@ -215,9 +215,9 @@ export default function Chatbot() {
     setInputMessage("");
     setIsTyping(true);
 
-    // Detectar si es un saludo para mostrar preguntas rápidas
+    // Detectar si es un saludo o comando para mostrar preguntas rápidas
     const isGreeting =
-      /^(hola|holi|holis|buenos|buenas|hey|hi|hello|saludos|que tal|qué tal)/i.test(
+      /^(hola|holi|holis|buenos|buenas|hey|hi|hello|saludos|que tal|qué tal|ok|okay|opciones|menú|menu|ayuda|help)$/i.test(
         messageText.trim()
       );
 
@@ -261,9 +261,22 @@ export default function Chatbot() {
         [...prev, userMessage, botMessage].slice(-8)
       );
 
-      // Mostrar preguntas rápidas solo para saludos
+      // Mostrar preguntas rápidas para saludos y comandos específicos
       if (isGreeting) {
         setShowQuickQuestions(true);
+
+        // Si es "ok" u otros comandos, agregar mensaje de recordatorio
+        if (
+          /^(ok|okay|opciones|menú|menu|ayuda|help)$/i.test(messageText.trim())
+        ) {
+          const reminderMessage = {
+            id: Date.now() + 2,
+            text: "¡Perfecto! 👆 Aquí tienes nuestras **opciones rápidas** nuevamente. Selecciona una o escribe tu consulta específica.",
+            sender: "bot",
+            timestamp: new Date(),
+          };
+          setMessages((prev) => [...prev, reminderMessage]);
+        }
       }
     } catch (error) {
       console.error("Error en el chatbot:", error);
