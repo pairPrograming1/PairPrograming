@@ -57,7 +57,7 @@ export const baseMenuItems = [
     ),
   },
   {
-    href: "/calendario",
+    href: "page/calendario",
     label: "Calendario",
     icon: (
       <svg
@@ -76,7 +76,7 @@ export const baseMenuItems = [
     ),
   },
   {
-    href: "/nosotros",
+    href: "page/nosotros",
     label: "Nosotros",
     icon: (
       <svg
@@ -95,7 +95,7 @@ export const baseMenuItems = [
     ),
   },
   {
-    href: "/soporte",
+    href: "page/soporte",
     label: "Soporte",
     icon: (
       <svg
@@ -114,7 +114,7 @@ export const baseMenuItems = [
     ),
   },
   {
-    href: "/contacto",
+    href: "page/contacto",
     label: "Contacto",
     icon: (
       <svg
@@ -135,7 +135,7 @@ export const baseMenuItems = [
 ];
 
 export const adminMenuItem = {
-  href: "/admin/dashboard",
+  href: "page/admin/dashboard",
   label: "Admin",
   icon: (
     <svg

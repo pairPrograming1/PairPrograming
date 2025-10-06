@@ -1,9 +1,9 @@
 // app/contacto/page.jsx
 "use client";
-import Sidebar from "../components/Sidebar";
-import Contacto from "../components/contacto";
-import Footer from "../components/Footer";
-import MainContainer from "../components/MainContainer";
+import Sidebar from "../../components/Sidebar";
+import Contacto from "../../components/contacto";
+import Footer from "../../components/Footer";
+import MainContainer from "../../components/MainContainer";
 
 export default function ContactoPage() {
   return (
