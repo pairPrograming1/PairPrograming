@@ -19,7 +19,7 @@ export const baseMenuItems = [
     ),
   },
   {
-    href: "/page/servicios",
+    href: "/servicios",
     label: "Servicios",
     icon: (
       <svg
@@ -38,7 +38,7 @@ export const baseMenuItems = [
     ),
   },
   {
-    href: "/page/portafolio",
+    href: "/portafolio",
     label: "Portafolio",
     icon: (
       <svg
@@ -57,7 +57,7 @@ export const baseMenuItems = [
     ),
   },
   {
-    href: "/page/calendario",
+    href: "/calendario",
     label: "Calendario",
     icon: (
       <svg
@@ -76,7 +76,7 @@ export const baseMenuItems = [
     ),
   },
   {
-    href: "/page/nosotros",
+    href: "/nosotros",
     label: "Nosotros",
     icon: (
       <svg
@@ -95,7 +95,7 @@ export const baseMenuItems = [
     ),
   },
   {
-    href: "/page/soporte",
+    href: "/soporte",
     label: "Soporte",
     icon: (
       <svg
@@ -114,7 +114,7 @@ export const baseMenuItems = [
     ),
   },
   {
-    href: "/page/contacto",
+    href: "/contacto",
     label: "Contacto",
     icon: (
       <svg
@@ -135,7 +135,7 @@ export const baseMenuItems = [
 ];
 
 export const adminMenuItem = {
-  href: "/page/admin/dashboard",
+  href: "/admin/dashboard",
   label: "Admin",
   icon: (
     <svg
