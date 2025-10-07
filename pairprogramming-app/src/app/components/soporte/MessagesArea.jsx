@@ -7,7 +7,8 @@ export default function MessagesArea({
   messages,
   isTyping,
   messagesEndRef,
-  messagesContainerRef, // ← Nueva prop
+  messagesContainerRef,
+  className = "",
 }) {
   const formatMessage = (text) => {
     return text.split("**").map((part, index) => {
@@ -30,7 +31,6 @@ export default function MessagesArea({
     ));
   };
 
-  // Efecto para hacer scroll cuando hay nuevos mensajes
   useEffect(() => {
     if (messagesContainerRef.current) {
       messagesContainerRef.current.scrollTop =
@@ -40,8 +40,8 @@ export default function MessagesArea({
 
   return (
     <div
-      ref={messagesContainerRef} // ← Asignamos la referencia al contenedor
-      className="flex-1 overflow-y-auto p-4 space-y-4 bg-background/30 rounded-lg mb-4"
+      ref={messagesContainerRef}
+      className={`overflow-y-auto p-4 space-y-4 bg-background/30 rounded-lg ${className}`}
     >
       {messages.map((message) => (
         <MessageBubble

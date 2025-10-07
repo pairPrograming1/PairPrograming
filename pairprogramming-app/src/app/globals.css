@@ -431,3 +431,59 @@
 .pulse-glow-accent {
   animation: pulse-glow-accent 2s infinite;
 }
+
+/* Mejoras específicas para el chat en móvil */
+@media (max-width: 1024px) {
+  .chat-container-mobile {
+    height: calc(100vh - 120px) !important;
+  }
+
+  .messages-area-mobile {
+    min-height: 300px;
+    max-height: 400px;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Para el grid principal */
+  .soporte-grid {
+    grid-template-rows: auto 1fr;
+  }
+
+  /* Reordenar los paneles en móvil */
+  .soporte-sidebar {
+    grid-row: 2;
+  }
+
+  .soporte-chat {
+    grid-row: 1;
+  }
+
+  /* Asegurar que el área de mensajes ocupe más espacio */
+  .messages-area-mobile {
+    min-height: 350px;
+    max-height: 450px;
+  }
+}
+
+@media (max-width: 640px) {
+  .messages-area-mobile {
+    min-height: 400px;
+    max-height: 500px;
+  }
+
+  /* Reducir padding en móvil para más espacio */
+  .chat-padding-mobile {
+    padding: 0.75rem;
+  }
+
+  .message-bubble-mobile {
+    max-width: 85% !important;
+  }
+
+  /* Ajustar altura del contenedor en móvil */
+  .chat-height-mobile {
+    height: 70vh !important;
+    min-height: 500px;
+  }
+}
