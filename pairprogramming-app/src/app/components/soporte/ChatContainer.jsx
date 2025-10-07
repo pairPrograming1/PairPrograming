@@ -20,7 +20,8 @@ export default function ChatContainer({
     handleSendMessage,
     handleQuickIssue,
     downloadChatHistory,
-    messagesEndRef, // ← Recibimos la referencia
+    messagesEndRef,
+    messagesContainerRef, // ← Recibimos la nueva referencia
   } = useChat({
     messages,
     setMessages,
@@ -38,7 +39,8 @@ export default function ChatContainer({
       <MessagesArea
         messages={messages}
         isTyping={isTyping}
-        messagesEndRef={messagesEndRef} // ← Pasamos la referencia
+        messagesEndRef={messagesEndRef}
+        messagesContainerRef={messagesContainerRef} // ← Pasamos la nueva referencia
       />
 
       <CommonIssues onQuickIssue={handleQuickIssue} />
