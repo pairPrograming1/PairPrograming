@@ -38,64 +38,72 @@ export default function ChatContainer({
   // Manejar el envío de mensajes normales
   const handleSend = () => {
     handleSendMessage();
-    setShowCommonIssues(false); // Ocultar problemas comunes
+    setShowCommonIssues(false);
   };
 
   // Manejar la selección de problemas comunes
   const handleQuickIssueSelection = (issue) => {
     handleQuickIssue(issue);
-    setShowCommonIssues(false); // Ocultar problemas comunes después de seleccionar
+    setShowCommonIssues(false);
   };
 
   return (
     <Card padding="md" className="h-[600px] flex flex-col">
       <ChatHeader ticketNumber={ticketNumber} />
 
-      {/* Área de mensajes más grande en móvil */}
-      <div className="flex-1 flex flex-col min-h-0">
-        <MessagesArea
-          messages={messages}
-          isTyping={isTyping}
-          messagesEndRef={messagesEndRef}
-          messagesContainerRef={messagesContainerRef}
-          className="flex-1 min-h-0"
-        />
+      {/* Contenedor principal SCROLLABLE */}
+      <div className="flex-1 flex flex-col min-h-0 overflow-y-auto">
+        {/* Área de mensajes */}
+        <div className="flex-1">
+          <MessagesArea
+            messages={messages}
+            isTyping={isTyping}
+            messagesEndRef={messagesEndRef}
+            messagesContainerRef={messagesContainerRef}
+          />
+        </div>
 
-        {/* Problemas comunes - Oculto en móvil por defecto */}
+        {/* Problemas comunes - Siempre visibles en desktop */}
         <div className="lg:block hidden">
           <CommonIssues onQuickIssue={handleQuickIssueSelection} />
         </div>
 
-        {/* Botón para mostrar problemas comunes en móvil */}
-        <div className="lg:hidden block border-t border-border-color pt-2">
+        {/* Problemas comunes en móvil - Aparece como contenido adicional */}
+        <div className="lg:hidden">
+          {showCommonIssues && (
+            <div className="mt-4 p-4 bg-background/50 border border-border-color rounded-lg">
+              <CommonIssues onQuickIssue={handleQuickIssueSelection} />
+            </div>
+          )}
+        </div>
+
+        {/* Botón toggle para móvil - Dentro del área scrollable */}
+        <div className="lg:hidden block mt-4">
           <button
             onClick={() => setShowCommonIssues(!showCommonIssues)}
-            className="w-full text-center py-2 text-sm text-primary hover:bg-background/50 rounded-lg transition-colors"
+            className="w-full text-center py-3 text-sm text-primary hover:bg-background/50 rounded-lg transition-colors border border-border-color"
           >
             {showCommonIssues
               ? "▲ Ocultar problemas comunes"
               : "▼ Mostrar problemas comunes"}
           </button>
+        </div>
 
-          {showCommonIssues && (
-            <div className="pb-2">
-              <CommonIssues onQuickIssue={handleQuickIssueSelection} />
-            </div>
-          )}
+        {/* Input y acciones - DENTRO del área scrollable */}
+        <div className="flex-shrink-0 space-y-3 mt-4">
+          <MessageInput
+            inputMessage={inputMessage}
+            setInputMessage={setInputMessage}
+            onSendMessage={handleSend}
+            isTyping={isTyping}
+          />
+
+          <QuickActions
+            onDownloadChat={downloadChatHistory}
+            ticketNumber={ticketNumber}
+          />
         </div>
       </div>
-
-      <MessageInput
-        inputMessage={inputMessage}
-        setInputMessage={setInputMessage}
-        onSendMessage={handleSend} // Usar la función modificada
-        isTyping={isTyping}
-      />
-
-      <QuickActions
-        onDownloadChat={downloadChatHistory}
-        ticketNumber={ticketNumber}
-      />
     </Card>
   );
 }
