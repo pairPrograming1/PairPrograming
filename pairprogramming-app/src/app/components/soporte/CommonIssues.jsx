@@ -11,13 +11,18 @@ const commonIssues = [
 export default function CommonIssues({ onQuickIssue }) {
   return (
     <div className="mb-4">
-      <p className="text-secondary-text text-sm mb-2">Problemas comunes:</p>
+      <p className="text-secondary-text text-sm mb-2 hidden lg:block">
+        Problemas comunes:
+      </p>
+      <p className="text-secondary-text text-sm mb-2 lg:hidden">
+        Selecciona un problema común:
+      </p>
       <div className="flex flex-wrap gap-2">
         {commonIssues.map((issue, index) => (
           <button
             key={index}
             onClick={() => onQuickIssue(issue)}
-            className="text-xs bg-background hover:bg-hover-bg text-secondary-text border border-border-color px-3 py-1 rounded-full transition-colors hover:text-primary hover:border-primary"
+            className="text-xs bg-background hover:bg-hover-bg text-secondary-text border border-border-color px-3 py-1 rounded-full transition-colors hover:text-primary hover:border-primary flex-shrink-0"
           >
             {issue}
           </button>
