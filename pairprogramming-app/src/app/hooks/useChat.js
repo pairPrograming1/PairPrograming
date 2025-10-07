@@ -1,5 +1,5 @@
 // hooks/useChat.js
-import { useRef, useEffect } from "react";
+import { useRef, useEffect, useCallback } from "react";
 
 const supportAgents = [
   {
@@ -18,14 +18,21 @@ export function useChat({
   ticketNumber,
 }) {
   const messagesEndRef = useRef(null);
+  const messagesContainerRef = useRef(null);
 
-  const scrollToBottom = () => {
-    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
-  };
+  // Función para hacer scroll solo dentro del contenedor del chat
+  const scrollToBottom = useCallback(() => {
+    if (messagesContainerRef.current) {
+      // Hacer scroll solo dentro del contenedor de mensajes
+      messagesContainerRef.current.scrollTop =
+        messagesContainerRef.current.scrollHeight;
+    }
+  }, []);
 
+  // Efecto para hacer scroll cuando se agregan mensajes
   useEffect(() => {
     scrollToBottom();
-  }, [messages]);
+  }, [messages, scrollToBottom]);
 
   const handleQuickIssue = (issue) => {
     setInputMessage("");
@@ -127,6 +134,7 @@ export function useChat({
     handleSendMessage,
     handleQuickIssue,
     downloadChatHistory,
-    messagesEndRef, // ← Exportamos la referencia
+    messagesEndRef,
+    messagesContainerRef, // ← Nueva referencia para el contenedor
   };
 }

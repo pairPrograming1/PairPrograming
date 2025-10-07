@@ -15,13 +15,14 @@ export default function Contacto() {
       <Container size={isSidebarExpanded ? "expanded" : "default"}>
         <ContactHeader isSidebarExpanded={isSidebarExpanded} />
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
-          <div className="lg:col-span-1 space-y-6 fade-in">
+        {/* Añadimos items-stretch aquí para igualar alturas */}
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch">
+          <div className="lg:col-span-1 space-y-6 fade-in h-full">
             <ContactInfo />
           </div>
 
           <div
-            className="lg:col-span-2 fade-in"
+            className="lg:col-span-2 fade-in h-full"
             style={{ animationDelay: "0.2s" }}
           >
             <ContactForm />

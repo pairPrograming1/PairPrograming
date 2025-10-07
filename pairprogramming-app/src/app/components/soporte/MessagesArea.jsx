@@ -1,9 +1,15 @@
 // components/soporte/MessagesArea.jsx
 import MessageBubble from "./MessageBubble";
 import TypingIndicator from "./TypingIndicator";
+import { useEffect } from "react";
 
-export default function MessagesArea({ messages, isTyping, messagesEndRef }) {
-  // ← Recibimos messagesEndRef como prop
+export default function MessagesArea({
+  messages,
+  isTyping,
+  messagesEndRef,
+  messagesContainerRef,
+  className = "",
+}) {
   const formatMessage = (text) => {
     return text.split("**").map((part, index) => {
       return index % 2 === 1 ? (
@@ -25,8 +31,18 @@ export default function MessagesArea({ messages, isTyping, messagesEndRef }) {
     ));
   };
 
+  useEffect(() => {
+    if (messagesContainerRef.current) {
+      messagesContainerRef.current.scrollTop =
+        messagesContainerRef.current.scrollHeight;
+    }
+  }, [messages, isTyping, messagesContainerRef]);
+
   return (
-    <div className="flex-1 overflow-y-auto p-4 space-y-4 bg-background/30 rounded-lg mb-4">
+    <div
+      ref={messagesContainerRef}
+      className={`overflow-y-auto p-4 space-y-4 bg-background/30 rounded-lg ${className}`}
+    >
       {messages.map((message) => (
         <MessageBubble
           key={message.id}
@@ -35,7 +51,7 @@ export default function MessagesArea({ messages, isTyping, messagesEndRef }) {
         />
       ))}
       {isTyping && <TypingIndicator />}
-      <div ref={messagesEndRef} /> {/* ← Ahora messagesEndRef está definido */}
+      <div ref={messagesEndRef} />
     </div>
   );
 }
