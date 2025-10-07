@@ -1,88 +1,91 @@
 // components/sections/ContactInfo.jsx
 "use client";
 import { Card } from "../ui/Card";
+import { useContactActions } from "../../hooks/useContactActions";
 
-const ContactItem = ({ icon, label, value, href }) => (
-  <div className="flex items-start space-x-3">
-    <div className="w-10 h-10 bg-primary/20 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-      <span className="text-primary">{icon}</span>
-    </div>
-    <div className="min-w-0 flex-1">
-      <p className="text-secondary-text text-sm">{label}</p>
-      {href ? (
-        <a
-          href={href}
-          className="text-white font-medium hover:text-primary transition-colors break-words text-sm"
-        >
-          {value}
-        </a>
-      ) : (
-        <p className="text-white font-medium text-sm">{value}</p>
-      )}
-    </div>
-  </div>
-);
-
-export const ContactInfo = () => {
-  const contactItems = [
-    {
-      icon: "📧",
-      label: "Email",
-      value: "info@pairprogramming.com",
-      href: "mailto:info@pairprogramming.com",
-    },
-    {
-      icon: "📱",
-      label: "Teléfono",
-      value: "+1 (555) 123-4567",
-      href: "tel:+15551234567",
-    },
-    {
-      icon: "🕒",
-      label: "Horario",
-      value: "Lun - Vie: 9:00 - 18:00",
-    },
-    {
-      icon: "💬",
-      label: "Respuesta",
-      value: "En menos de 24 horas",
-    },
-  ];
-
-  const features = [
-    "Desarrollo personalizado",
-    "Tecnologías modernas",
-    "Soporte continuo",
-    "Entregas puntuales",
-    "Asesoría técnica gratuita",
-  ];
+export function ContactInfo() {
+  const { openWhatsApp, openChatbot } = useContactActions();
 
   return (
     <div className="space-y-6">
-      <Card hover padding="md">
-        <h3 className="text-xl font-bold text-primary mb-4">
+      <Card padding="lg">
+        <h3 className="text-xl font-bold text-white mb-4">
           Información de Contacto
         </h3>
         <div className="space-y-4">
-          {contactItems.map((item, index) => (
-            <ContactItem key={index} {...item} />
-          ))}
-        </div>
-      </Card>
+          <div className="flex items-center space-x-3">
+            <div className="w-10 h-10 bg-primary/20 rounded-full flex items-center justify-center">
+              <svg
+                className="w-5 h-5 text-primary"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+                />
+              </svg>
+            </div>
+            <div>
+              <p className="text-secondary-text text-sm">Teléfono</p>
+              <p className="text-white font-medium">+1 (555) 123-4567</p>
+            </div>
+          </div>
 
-      <Card hover padding="md">
-        <h3 className="text-xl font-bold text-primary mb-4">
-          ¿Por qué elegirnos?
-        </h3>
-        <ul className="space-y-3 text-secondary-text text-sm">
-          {features.map((feature, index) => (
-            <li key={index} className="flex items-center space-x-2">
-              <span className="text-primary">✓</span>
-              <span>{feature}</span>
-            </li>
-          ))}
-        </ul>
+          <div className="flex items-center space-x-3">
+            <div className="w-10 h-10 bg-primary/20 rounded-full flex items-center justify-center">
+              <svg
+                className="w-5 h-5 text-primary"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                />
+              </svg>
+            </div>
+            <div>
+              <p className="text-secondary-text text-sm">Email</p>
+              <p className="text-white font-medium">contacto@empresa.com</p>
+            </div>
+          </div>
+
+          <div className="flex items-center space-x-3">
+            <div className="w-10 h-10 bg-primary/20 rounded-full flex items-center justify-center">
+              <svg
+                className="w-5 h-5 text-primary"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                />
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+                />
+              </svg>
+            </div>
+            <div>
+              <p className="text-secondary-text text-sm">Ubicación</p>
+              <p className="text-white font-medium">Ciudad, País</p>
+            </div>
+          </div>
+        </div>
       </Card>
     </div>
   );
-};
+}
