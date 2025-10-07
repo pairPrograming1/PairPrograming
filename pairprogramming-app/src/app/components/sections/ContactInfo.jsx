@@ -7,8 +7,9 @@ export function ContactInfo() {
   const { openWhatsApp, openChatbot } = useContactActions();
 
   return (
-    <div className="space-y-6">
-      <Card padding="lg">
+    <div className="space-y-6 h-full">
+      {/* Añadimos h-full aquí y min-h al Card para igualar la altura */}
+      <Card padding="lg" className="h-full min-h-[500px] lg:min-h-[600px]">
         <h3 className="text-xl font-bold text-white mb-4">
           Información de Contacto
         </h3>
