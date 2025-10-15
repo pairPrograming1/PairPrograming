@@ -126,7 +126,7 @@ export function ContactInfo() {
                 </div>
                 <div className="flex-1">
                   <p className="text-white font-medium text-sm">
-                    Sector Comercial - Mauricio:
+                    Sector Comercial -Bou Mauricio:
                     <a
                       href="https://wa.me/5493412696133"
                       target="_blank"
