@@ -20,7 +20,7 @@ export function FAQContact() {
             href="/contacto"
             className="bg-primary hover:bg-primary-dark text-white px-6 py-3 rounded-lg font-semibold transition-colors inline-flex items-center justify-center"
           >
-            Contactarnos
+            Contáctanos
           </a>
           {/* <a
             href="https://wa.me/+1234567890"
