@@ -9,21 +9,21 @@ export default function Nosotros() {
   const teamMembers = [
     {
       name: "Pablo Rubiño",
-      role: "Fundador & Full-Stack Developer",
+      role: "Full-Stack Developer",
       description:
         "Más de 5 años de experiencia en desarrollo web y mobile. Especialista en React, Node.js y arquitecturas escalables.",
       expertise: ["React", "Node.js", "TypeScript", "AWS"],
     },
     {
       name: "Esteban Aleart",
-      role: "Fundador & Full-Stack Developer",
+      role: "Full-Stack Developer",
       description:
         "Más de 5 años de experiencia en desarrollo web y mobile. Especialista en React, Node.js y arquitecturas escalables.",
       expertise: ["React", "Node.js", "TypeScript", "AWS"],
     },
     {
       name: "Josue Rendom",
-      role: "Fundador & Full-Stack Developer",
+      role: "Full-Stack Developer",
       description:
         "Más de 5 años de experiencia en desarrollo web y mobile. Especialista en React, Node.js y arquitecturas escalables.",
       expertise: ["React", "Node.js", "TypeScript", "AWS"],

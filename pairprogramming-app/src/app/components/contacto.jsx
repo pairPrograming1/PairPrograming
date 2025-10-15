@@ -28,8 +28,8 @@ export default function Contacto() {
             <ContactForm />
           </div>
         </div>
-
-        <ContactMeeting />
+        {/* 
+        <ContactMeeting /> */}
       </Container>
     </section>
   );

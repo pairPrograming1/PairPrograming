@@ -40,12 +40,12 @@ export default function Footer() {
               >
                 Privacidad
               </Link>
-              <Link
+              {/* <Link
                 href="/soporte"
                 className="text-secondary-text hover:text-primary transition-colors duration-300 text-sm font-medium"
               >
                 Soporte
-              </Link>
+              </Link> */}
             </div>
           </div>
         </div>
