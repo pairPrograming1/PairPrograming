@@ -23,15 +23,15 @@ export default function Portfolio() {
     <section className="py-16 lg:py-20 bg-background text-white min-h-screen relative">
       {/* Cartel de "En Construcción" superpuesto */}
       <div className="absolute inset-0 flex items-center justify-center z-50 pointer-events-none">
-        <div className="bg-black/80 backdrop-blur-sm rounded-xl p-8 max-w-md text-center border border-yellow-500 shadow-2xl animate-pulse">
-          <h2 className="text-3xl font-bold text-yellow-400 mb-4">
+        <div className="bg-black/80 backdrop-blur-sm rounded-xl p-4 sm:p-6 md:p-8 max-w-xs sm:max-w-sm md:max-w-md text-center border border-yellow-500 shadow-2xl animate-pulse">
+          <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-yellow-400 mb-2 sm:mb-4">
             🚧 En Construcción 🚧
           </h2>
-          <p className="text-white text-lg">
+          <p className="text-white text-sm sm:text-base md:text-lg">
             Este portafolio está en desarrollo. Lo que ves es solo un ejemplo
             demostrativo y no representa proyectos reales finalizados.
           </p>
-          <p className="text-gray-300 text-sm mt-2">
+          <p className="text-gray-300 text-xs sm:text-sm mt-2">
             ¡Vuelve pronto para ver el contenido completo!
           </p>
         </div>
