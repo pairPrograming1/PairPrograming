@@ -1,4 +1,3 @@
-// components/contact/ContactForm.jsx
 "use client";
 import { useState } from "react";
 import { Card } from "../ui/Card";
@@ -31,20 +30,22 @@ export function ContactForm() {
       {/* Cartel de "En Construcción" condicional */}
       {showConstruction && (
         <div className="absolute inset-0 flex items-center justify-center z-50 bg-black/80 backdrop-blur-sm rounded-xl">
-          <div className="bg-gradient-to-br from-black/90 to-gray-900/90 backdrop-blur-md rounded-2xl p-10 max-w-lg text-center border-2 border-yellow-500 shadow-2xl transform rotate-1">
-            <div className="flex justify-center mb-4">
-              <span className="text-6xl animate-bounce">🚧</span>
-              <span className="text-6xl animate-bounce animation-delay-200">
+          <div className="bg-gradient-to-br from-black/90 to-gray-900/90 backdrop-blur-md rounded-2xl p-4 sm:p-6 md:p-10 w-full max-w-[90%] sm:max-w-lg text-center border-2 border-yellow-500 shadow-2xl transform rotate-1">
+            <div className="flex justify-center mb-2 sm:mb-4">
+              <span className="text-3xl sm:text-5xl md:text-6xl animate-bounce">
                 🚧
               </span>
-              <span className="text-6xl animate-bounce animation-delay-400">
+              <span className="text-3xl sm:text-5xl md:text-6xl animate-bounce animation-delay-200">
+                🚧
+              </span>
+              <span className="text-3xl sm:text-5xl md:text-6xl animate-bounce animation-delay-400">
                 🚧
               </span>
             </div>
-            <h2 className="text-4xl font-extrabold text-yellow-400 mb-4 tracking-wide drop-shadow-lg">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-yellow-400 mb-2 sm:mb-4 tracking-wide drop-shadow-lg">
               En Construcción
             </h2>
-            <p className="text-white text-xl mb-3 leading-relaxed">
+            <p className="text-white text-sm sm:text-base md:text-xl mb-2 sm:mb-3 leading-relaxed">
               Esta funcionalidad está en desarrollo activo. Lo que ves es solo
               un{" "}
               <span className="font-semibold text-yellow-300">
@@ -52,17 +53,17 @@ export function ContactForm() {
               </span>
               .
             </p>
-            <p className="text-gray-300 text-base italic mb-6">
+            <p className="text-gray-300 text-xs sm:text-sm md:text-base italic mb-4 sm:mb-6">
               ¡Vuelve pronto para enviar mensajes reales!
             </p>
             <div className="flex justify-center">
-              <div className="bg-yellow-500/20 text-yellow-300 px-6 py-3 rounded-full border border-yellow-400 animate-pulse">
+              <div className="bg-yellow-500/20 text-yellow-300 px-4 py-2 sm:px-6 sm:py-3 rounded-full border border-yellow-400 animate-pulse text-xs sm:text-sm md:text-base">
                 <span className="font-medium">Trabajo en Progreso</span>
               </div>
             </div>
             <button
               onClick={() => setShowConstruction(false)}
-              className="mt-6 text-white underline hover:text-yellow-300"
+              className="mt-4 sm:mt-6 text-white underline hover:text-yellow-300 text-sm sm:text-base"
             >
               Cerrar
             </button>

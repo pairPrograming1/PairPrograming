@@ -168,7 +168,7 @@ Implementamos cláusulas contractuales estándar para transferencias.`,
                     href="mailto:privacidad@pairprogramming.com"
                     className="text-primary hover:underline"
                   >
-                    privacidad@pairprogramming.com
+                    pairprogramming@gmail.com
                   </a>
                 </p>
                 <p>
