@@ -3,13 +3,22 @@ import { useState } from "react";
 
 export default function WhatsAppFloat() {
   const [isOpen, setIsOpen] = useState(false);
-  const phoneNumber = "+1234567890"; // Reemplaza con tu número real
-  const message =
+  const [selectedContact, setSelectedContact] = useState(null);
+
+  // Contactos extraídos del ContactForm
+  const contacts = [
+    { name: "Rubiño Pablo", phone: "+5492616396981" },
+    { name: "Aleart Esteban", phone: "+34673782934" },
+    { name: "Rendom Josue", phone: "+56940881083" },
+    { name: "Sector Comercial -Bou Mauricio", phone: "+5493412696133" },
+  ];
+
+  const defaultMessage =
     "Hola, me interesa conocer más sobre sus servicios de desarrollo";
 
-  const openWhatsApp = () => {
-    const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
-      message
+  const openWhatsApp = (phone) => {
+    const url = `https://wa.me/${phone}?text=${encodeURIComponent(
+      defaultMessage
     )}`;
     window.open(url, "_blank");
     setIsOpen(false);
@@ -17,11 +26,12 @@ export default function WhatsAppFloat() {
 
   const toggleChat = () => {
     setIsOpen(!isOpen);
+    setSelectedContact(null); // Resetear selección al toggle
   };
 
   return (
     <div className="relative">
-      {/* Chat Bubble con tema oscuro */}
+      {/* Chat Bubble con tema oscuro y selección de contacto */}
       {isOpen && (
         <div className="absolute bottom-16 right-0 w-80 bg-card-bg rounded-2xl shadow-2xl border border-border-color animate-fade-in mb-4">
           <div className="bg-green-500 text-white p-4 rounded-t-2xl">
@@ -38,18 +48,35 @@ export default function WhatsAppFloat() {
             </div>
           </div>
 
-          <div className="p-4 bg-background rounded-b-2xl">
+          <div className="p-4 bg-background rounded-b-2xl space-y-4">
             <p className="text-secondary-text text-sm mb-4">
-              ¡Hola! 👋 ¿En qué podemos ayudarte? Estamos aquí para responder
-              todas tus preguntas sobre desarrollo web, aplicaciones móviles y
-              soluciones digitales.
+              ¡Hola! 👋 Selecciona un contacto para chatear vía WhatsApp sobre
+              desarrollo web, aplicaciones móviles y soluciones digitales.
             </p>
+
+            {/* Lista de contactos */}
+            <div className="space-y-2">
+              {contacts.map((contact) => (
+                <button
+                  key={contact.phone}
+                  onClick={() => openWhatsApp(contact.phone)}
+                  className="w-full bg-gray-700 hover:bg-gray-600 text-white py-2 px-4 rounded-lg font-medium transition-colors flex items-center justify-between"
+                >
+                  <span>{contact.name}</span>
+                  <span className="text-green-400 text-sm">
+                    {contact.phone}
+                  </span>
+                </button>
+              ))}
+            </div>
+
+            {/* Opción rápida general si no selecciona */}
             <button
-              onClick={openWhatsApp}
-              className="w-full bg-green-500 hover:bg-green-600 text-white py-3 px-4 rounded-lg font-semibold transition-colors flex items-center justify-center space-x-2"
+              onClick={() => openWhatsApp(contacts[3].phone)} // Default al comercial por ejemplo
+              className="w-full bg-green-500 hover:bg-green-600 text-white py-3 px-4 rounded-lg font-semibold transition-colors flex items-center justify-center space-x-2 mt-4"
             >
               <span>💬</span>
-              <span>Abrir WhatsApp</span>
+              <span>Contacto Rápido (Comercial)</span>
             </button>
           </div>
         </div>

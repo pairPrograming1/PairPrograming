@@ -114,7 +114,7 @@ export function ContactForm() {
             </a>
           </li>
           <li>
-            Sector Comercial - Mauricio:{" "}
+            Sector Comercial -Bou Mauricio:{" "}
             <a
               href="https://wa.me/5493412696133"
               target="_blank"
