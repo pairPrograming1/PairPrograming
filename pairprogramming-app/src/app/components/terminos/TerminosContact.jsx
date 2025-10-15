@@ -9,7 +9,7 @@ export default function TerminosContact() {
           href="mailto:legal@pairprogramming.com"
           className="text-primary hover:underline"
         >
-          legal@pairprogramming.com
+          pairprogramming@gmail.com
         </a>
       </p>
     </div>
