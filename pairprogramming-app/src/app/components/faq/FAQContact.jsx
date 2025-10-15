@@ -20,16 +20,16 @@ export function FAQContact() {
             href="/contacto"
             className="bg-primary hover:bg-primary-dark text-white px-6 py-3 rounded-lg font-semibold transition-colors inline-flex items-center justify-center"
           >
-            Contactar Soporte
+            Contactarnos
           </a>
-          <a
+          {/* <a
             href="https://wa.me/+1234567890"
             target="_blank"
             rel="noopener noreferrer"
             className="border border-primary text-primary hover:bg-primary hover:text-white px-6 py-3 rounded-lg font-semibold transition-colors inline-flex items-center justify-center"
           >
             WhatsApp
-          </a>
+          </a> */}
         </div>
       </Card>
     </div>
