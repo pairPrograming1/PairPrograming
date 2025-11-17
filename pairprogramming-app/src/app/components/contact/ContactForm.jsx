@@ -9,20 +9,18 @@ import { FormFooter } from "./FormFooter";
 import { useContactForm } from "../../hooks/useContactForm";
 
 export function ContactForm() {
-  const { formData, status, isLoading, handleChange, originalHandleSubmit } =
+  const { formData, status, isLoading, handleChange, handleSubmit } =
     useContactForm();
 
   const [showConstruction, setShowConstruction] = useState(false);
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Mostrar el cartel inmediatamente
+  const handleLocalSubmit = async (e) => {
+    // Mostrar el cartel inmediatamente (si quieres mantener la señal de "en construcción")
     setShowConstruction(true);
-    // Opcional: ocultar después de unos segundos o mantenerlo
-    // setTimeout(() => setShowConstruction(false), 5000);
-
-    // Si quieres ejecutar la lógica original después, descomenta:
-    // originalHandleSubmit(e);
+    // Llamar al submit real del hook (que hace POST a /api/contact)
+    if (handleSubmit) await handleSubmit(e);
+    // Opcional: ocultar el cartel después de 3s
+    setTimeout(() => setShowConstruction(false), 3000);
   };
 
   return (
@@ -126,7 +124,7 @@ export function ContactForm() {
             </a>
           </li>
         </ul>
-        <p className="mt-4">
+        {/* <p className="mt-4">
           Email:{" "}
           <a
             href="mailto:pairprogramming@gmail.com"
@@ -134,10 +132,10 @@ export function ContactForm() {
           >
             pairprogramming@gmail.com
           </a>
-        </p>
+        </p> */}
       </div>
 
-      <form onSubmit={handleSubmit} className="space-y-6">
+  <form onSubmit={handleLocalSubmit} className="space-y-6">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 lg:gap-6">
           <Input
             label="Nombre Completo"
