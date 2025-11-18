@@ -1,4 +1,3 @@
-// hooks/useContactForm.js
 import { useState } from "react";
 
 export function useContactForm() {
@@ -17,32 +16,37 @@ export function useContactForm() {
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
+  // Submits form data to the server-side endpoint `/api/contact`.
+  // Expects JSON response { ok: true } on success.
   const handleSubmit = async (e) => {
-    e.preventDefault();
+    if (e && e.preventDefault) e.preventDefault();
     setIsLoading(true);
+    setStatus(null);
 
-    // Simulación de envío
-    setTimeout(() => {
-      setIsLoading(false);
-      setStatus("success");
-      setFormData({
-        name: "",
-        email: "",
-        phone: "",
-        company: "",
-        message: "",
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
       });
-    }, 1500);
+
+      const json = await res.json();
+      if (res.ok && json && json.ok) {
+        setStatus('success');
+        setFormData({ name: '', email: '', phone: '', company: '', message: '' });
+      } else {
+        setStatus('error');
+      }
+    } catch (err) {
+      console.error('Contact submit error:', err);
+      setStatus('error');
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   const resetForm = () => {
-    setFormData({
-      name: "",
-      email: "",
-      phone: "",
-      company: "",
-      message: "",
-    });
+    setFormData({ name: '', email: '', phone: '', company: '', message: '' });
     setStatus(null);
   };
 
