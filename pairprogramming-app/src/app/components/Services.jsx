@@ -20,6 +20,114 @@ export default function Services() {
       ],
     },
     {
+      title: "Branding & Identidad",
+      description:
+        "Construimos marcas memorables: naming, diseño de identidad visual, guías de uso y sistemas de marca que comunican tu propuesta de valor.",
+      icon: "🎨",
+      features: [
+        "Naming y posicionamiento",
+        "Logotipo y sistema visual",
+        "Manual de marca",
+        "Aplicaciones de marca (web, social, docs)",
+      ],
+    },
+    {
+      title: "Marketing & Growth",
+      description:
+        "Estrategias de adquisición y retención: campañas pagadas, inbound, email marketing y growth experiments para escalar usuarios y ventas.",
+      icon: "📈",
+      features: [
+        "Estrategia digital",
+        "Campañas PPC y social",
+        "Email & CRM Marketing",
+        "Growth Hacking",
+      ],
+    },
+    {
+      title: "CRM & Automatización",
+      description:
+        "Implementación e integración de CRM, automatizaciones de ventas y marketing, y dashboards para seguimiento de oportunidades.",
+      icon: "🤖",
+      features: [
+        "Implementación CRM (HubSpot, Pipedrive, Salesforce)",
+        "Automatizaciones y workflows",
+        "Integración con herramientas existentes",
+        "Reportes y pipelines de ventas",
+      ],
+    },
+    {
+      title: "Automatización & n8n",
+      description:
+        "Implementamos flujos de trabajo visuales con n8n para automatizar procesos, integrar herramientas y orquestar pipelines sin código o con código ligero.",
+      icon: "🔗",
+      features: [
+        "Diseño de workflows con n8n",
+        "Integraciones API y webhooks",
+        "Automatizaciones de marketing y ventas",
+        "Monitoreo y mantenimiento de workflows",
+      ],
+    },
+    {
+      title: "Consultoría en Ciberseguridad",
+      description:
+        "Evaluaciones de seguridad, hardening, pruebas de penetración y estrategias de gobernanza para proteger datos, infra y aplicaciones.",
+      icon: "🛡️",
+      features: [
+        "Auditoría y evaluación de riesgos",
+        "Pruebas de penetración (pentest)",
+        "Hardening de infra y aplicaciones",
+        "Planes de respuesta y continuidad",
+      ],
+    },
+    {
+      title: "SEO & Contenido",
+      description:
+        "Mejoramos la visibilidad orgánica con auditorías SEO, optimización on-page, estrategia de contenidos y linkbuilding técnico.",
+      icon: "🔎",
+      features: [
+        "Auditoría SEO técnica",
+        "Estrategia y calendario de contenidos",
+        "Optimización on-page",
+        "Linkbuilding y autoridad de dominio",
+      ],
+    },
+    {
+      title: "Modernización de Legacy",
+      description:
+        "Modernizamos sistemas legacy a arquitecturas modernas: refactor, migración a microservicios, contenedores y APIs REST/GraphQL.",
+      icon: "🧰",
+      features: [
+        "Evaluación y plan de migración",
+        "Refactor y cobertura de tests",
+        "Contenerización (Docker) y orquestación",
+        "Integración con APIs modernas",
+      ],
+    },
+    {
+      title: "QA, Testing & Performance",
+      description:
+        "Aseguramos calidad con pruebas automatizadas, e2e, unitarias, y optimizaciones de performance y experiencia de usuario.",
+      icon: "✅",
+      features: [
+        "Pruebas E2E y unitarias",
+        "Tests de integración",
+        "Auditoría de performance",
+        "Monitoreo y alertas",
+      ],
+    },
+    {
+      title: "Cloud & DevOps",
+      description:
+        "Diseñamos infraestructura en la nube, pipelines CI/CD, IaC y prácticas de observabilidad para despliegues seguros y escalables.",
+      icon: "☁️",
+      features: [
+        "Infraestructura como código ",
+        "CI/CD y pipelines automatizados",
+        "Observability (logs, métricas, traces)",
+        "Optimización de costos en la nube",
+      ],
+    },
+    {
       title: "Servicios Digitales",
       description:
         "Desarrollo a medida, consultoría estratégica, diseño UX/UI, integración de sistemas y soporte técnico para soluciones personalizadas.",
