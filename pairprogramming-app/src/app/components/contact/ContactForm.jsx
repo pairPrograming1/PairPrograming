@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Card } from "../ui/Card";
 import { Input } from "../ui/Input";
 import { TextArea } from "../ui/TextArea";
@@ -7,67 +7,39 @@ import { SubmitButton } from "./SubmitButton";
 import { FormStatus } from "./FormStatus";
 import { FormFooter } from "./FormFooter";
 import { useContactForm } from "../../hooks/useContactForm";
+import Swal from 'sweetalert2';
 
 export function ContactForm() {
   const { formData, status, isLoading, handleChange, handleSubmit } =
     useContactForm();
 
-  const [showConstruction, setShowConstruction] = useState(false);
-
-  const handleLocalSubmit = async (e) => {
-    // Mostrar el cartel inmediatamente (si quieres mantener la señal de "en construcción")
-    setShowConstruction(true);
-    // Llamar al submit real del hook (que hace POST a /api/contact)
-    if (handleSubmit) await handleSubmit(e);
-    // Opcional: ocultar el cartel después de 3s
-    setTimeout(() => setShowConstruction(false), 3000);
-  };
+  useEffect(() => {
+    if (status === 'success') {
+      Swal.fire({
+        title: '¡Gracias! / Thanks!',
+        html: '<p style="color:#fff">Te contactaremos en las próximas 24 horas.<br/><small>We will contact you within 24 hours.</small></p>',
+        icon: 'success',
+        background: '#0f172a',
+        color: '#fff',
+        confirmButtonColor: '#F59E0B',
+        customClass: { popup: 'rounded-2xl p-6' }
+      });
+    } else if (status === 'error') {
+      Swal.fire({
+        title: 'Error',
+        html: '<p style="color:#fff">No pudimos enviar tu mensaje. Intenta nuevamente más tarde.</p>',
+        icon: 'error',
+        background: '#0f172a',
+        color: '#fff',
+        confirmButtonColor: '#F59E0B',
+        customClass: { popup: 'rounded-2xl p-6' }
+      });
+    }
+  }, [status]);
 
   return (
     <Card padding="lg" className="relative">
-      {/* Cartel de "En Construcción" condicional */}
-      {showConstruction && (
-        <div className="absolute inset-0 flex items-center justify-center z-50 bg-black/80 backdrop-blur-sm rounded-xl">
-          <div className="bg-gradient-to-br from-black/90 to-gray-900/90 backdrop-blur-md rounded-2xl p-4 sm:p-6 md:p-10 w-full max-w-[90%] sm:max-w-lg text-center border-2 border-yellow-500 shadow-2xl transform rotate-1">
-            <div className="flex justify-center mb-2 sm:mb-4">
-              <span className="text-3xl sm:text-5xl md:text-6xl animate-bounce">
-                🚧
-              </span>
-              <span className="text-3xl sm:text-5xl md:text-6xl animate-bounce animation-delay-200">
-                🚧
-              </span>
-              <span className="text-3xl sm:text-5xl md:text-6xl animate-bounce animation-delay-400">
-                🚧
-              </span>
-            </div>
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-yellow-400 mb-2 sm:mb-4 tracking-wide drop-shadow-lg">
-              En Construcción
-            </h2>
-            <p className="text-white text-sm sm:text-base md:text-xl mb-2 sm:mb-3 leading-relaxed">
-              Esta funcionalidad está en desarrollo activo. Lo que ves es solo
-              un{" "}
-              <span className="font-semibold text-yellow-300">
-                ejemplo demostrativo
-              </span>
-              .
-            </p>
-            <p className="text-gray-300 text-xs sm:text-sm md:text-base italic mb-4 sm:mb-6">
-              ¡Vuelve pronto para enviar mensajes reales!
-            </p>
-            <div className="flex justify-center">
-              <div className="bg-yellow-500/20 text-yellow-300 px-4 py-2 sm:px-6 sm:py-3 rounded-full border border-yellow-400 animate-pulse text-xs sm:text-sm md:text-base">
-                <span className="font-medium">Trabajo en Progreso</span>
-              </div>
-            </div>
-            <button
-              onClick={() => setShowConstruction(false)}
-              className="mt-4 sm:mt-6 text-white underline hover:text-yellow-300 text-sm sm:text-base"
-            >
-              Cerrar
-            </button>
-          </div>
-        </div>
-      )}
+      {/* Envío inmediato: eliminada la pantalla de "En Construcción" */}
 
       <h3 className="text-2xl font-bold text-white mb-6">
         Envíanos un Mensaje
@@ -135,7 +107,7 @@ export function ContactForm() {
         </p> */}
       </div>
 
-  <form onSubmit={handleLocalSubmit} className="space-y-6">
+  <form onSubmit={handleSubmit} className="space-y-6">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 lg:gap-6">
           <Input
             label="Nombre Completo"
@@ -184,7 +156,7 @@ export function ContactForm() {
           rows={6}
         />
 
-        <SubmitButton isLoading={isLoading || showConstruction} />
+  <SubmitButton isLoading={isLoading} />
 
         <FormStatus status={status} />
 
