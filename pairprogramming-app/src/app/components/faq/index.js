@@ -1,4 +1,4 @@
-// components/faq/index.js
+
 export { FAQHeader } from "./FAQHeader";
 export { FAQCategories } from "./FAQCategories";
 export { FAQCategory } from "./FAQCategory";

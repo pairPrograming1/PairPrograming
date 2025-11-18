@@ -1,4 +1,4 @@
-// components/faq/FAQContact.jsx
+
 import { Card } from "../ui/Card";
 
 export function FAQContact() {

@@ -1,4 +1,4 @@
-// components/soporte/SoporteHeader.jsx
+
 export default function SoporteHeader({ isSidebarExpanded }) {
   return (
     <div className="text-center mb-8 fade-in">

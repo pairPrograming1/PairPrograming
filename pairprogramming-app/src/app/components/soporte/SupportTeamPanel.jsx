@@ -1,4 +1,4 @@
-// components/soporte/SupportTeamPanel.jsx
+
 import { Card } from "../ui/Card";
 
 const supportAgents = [

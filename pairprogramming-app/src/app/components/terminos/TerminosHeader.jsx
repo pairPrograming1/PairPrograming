@@ -1,4 +1,4 @@
-// components/terminos/TerminosHeader.jsx
+
 export default function TerminosHeader({ isSidebarExpanded }) {
   return (
     <div className="text-center mb-12 fade-in">

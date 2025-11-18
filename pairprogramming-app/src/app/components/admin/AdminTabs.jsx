@@ -1,4 +1,4 @@
-// components/admin/AdminTabs.jsx
+
 import { Button } from "../ui/Button";
 
 const tabs = [

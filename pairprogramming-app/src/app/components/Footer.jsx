@@ -1,4 +1,4 @@
-// components/Footer.jsx (actualizado)
+
 "use client";
 import Link from "next/link";
 import { useSidebar } from "../context/SidebarContext";

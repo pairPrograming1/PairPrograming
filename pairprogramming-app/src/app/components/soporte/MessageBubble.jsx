@@ -1,4 +1,4 @@
-// components/soporte/MessageBubble.jsx
+
 export default function MessageBubble({ message, formatMessage }) {
   return (
     <div

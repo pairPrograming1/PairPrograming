@@ -1,4 +1,4 @@
-// components/admin/tabs/MessagesTab.jsx
+
 import { Card } from "../../ui/Card";
 import { Button } from "../../ui/Button";
 import MessageCard from "../ui/MessageCard";

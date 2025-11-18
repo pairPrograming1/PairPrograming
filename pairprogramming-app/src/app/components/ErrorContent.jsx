@@ -1,4 +1,4 @@
-// components/ErrorContent.jsx
+
 "use client";
 import Link from "next/link";
 import { useSidebar } from "../context/SidebarContext";

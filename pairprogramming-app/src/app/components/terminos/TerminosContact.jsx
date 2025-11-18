@@ -1,4 +1,4 @@
-// components/terminos/TerminosContact.jsx
+
 export default function TerminosContact() {
   return (
     <div className="mt-8 p-4 bg-background rounded-lg border border-border-color">

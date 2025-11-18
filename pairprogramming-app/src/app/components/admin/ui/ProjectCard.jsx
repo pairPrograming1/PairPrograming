@@ -1,4 +1,4 @@
-// components/admin/ui/ProjectCard.jsx
+
 import { Button } from "../../ui/Button";
 
 export default function ProjectCard({

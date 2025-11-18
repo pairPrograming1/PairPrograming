@@ -1,4 +1,4 @@
-// components/soporte/ChatContainer.jsx
+
 import { Card } from "../ui/Card";
 import ChatHeader from "./ChatHeader";
 import MessagesArea from "./MessagesArea";

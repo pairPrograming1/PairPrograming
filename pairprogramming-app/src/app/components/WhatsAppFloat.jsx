@@ -6,13 +6,27 @@ export default function WhatsAppFloat() {
   const [isOpen, setIsOpen] = useState(false);
   const [selectedContact, setSelectedContact] = useState(null);
 
-  // Contactos extraídos del ContactForm
-  const contacts = [
-    { name: "Rubiño Pablo", phone: "+5492616396981" },
-    { name: "Aleart Esteban", phone: "+34673782934" },
-    { name: "Rendom Josue", phone: "+56940881083" },
-    { name: "Sector Comercial -Bou Mauricio", phone: "+5493412696133" },
-  ];
+  // Contactos centralizados
+  importContacts();
+
+  function importContacts() {
+    try {
+      // lazy import to avoid SSR issues
+      // eslint-disable-next-line global-require
+      const { CONTACTS } = require("../data/contacts");
+      return CONTACTS;
+    } catch (e) {
+      // fallback hardcoded
+      return [
+        { name: "Rubiño Pablo", phone: "+5492616396981" },
+        { name: "Aleart Esteban", phone: "+34673782934" },
+        { name: "Rendom Josue", phone: "+56940881083" },
+        { name: "Sector Comercial -Bou Mauricio", phone: "+5493412696133" },
+      ];
+    }
+  }
+
+  const contacts = importContacts();
 
   const defaultMessage =
     "Hola, me interesa conocer más sobre sus servicios de desarrollo";

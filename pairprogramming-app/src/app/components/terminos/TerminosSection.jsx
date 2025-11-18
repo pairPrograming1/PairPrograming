@@ -1,4 +1,4 @@
-// components/terminos/TerminosSection.jsx
+
 export default function TerminosSection({ title, content, isLast = false }) {
   return (
     <div
