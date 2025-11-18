@@ -22,7 +22,7 @@ export default function Portfolio() {
   return (
     <section className="py-16 lg:py-20 bg-background text-white min-h-screen relative">
       {/* Cartel de "En Construcción" superpuesto */}
-      <div className="absolute inset-0 flex items-center justify-center z-50 pointer-events-none">
+      {/* <div className="absolute inset-0 flex items-center justify-center z-50 pointer-events-none">
         <div className="bg-black/80 backdrop-blur-sm rounded-xl p-4 sm:p-6 md:p-8 max-w-xs sm:max-w-sm md:max-w-md text-center border border-yellow-500 shadow-2xl animate-pulse">
           <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-yellow-400 mb-2 sm:mb-4">
             🚧 En Construcción 🚧
@@ -35,7 +35,7 @@ export default function Portfolio() {
             ¡Vuelve pronto para ver el contenido completo!
           </p>
         </div>
-      </div>
+      </div> */}
 
       {/* Contenido original con opacidad reducida para indicar que es ejemplo */}
       <div className="opacity-70">
