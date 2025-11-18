@@ -32,7 +32,7 @@ export default function TerminosCondicionesContent() {
               ))}
             </div>
 
-            <TerminosContact />
+            {/* <TerminosContact /> */}
           </div>
         </Card>
       </Container>

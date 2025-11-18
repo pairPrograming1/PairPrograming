@@ -162,7 +162,7 @@ Implementamos cláusulas contractuales estándar para transferencias.`,
                   <strong>Oficial de Privacidad:</strong> Departamento de
                   Cumplimiento
                 </p>
-                <p>
+                {/* <p>
                   <strong>Email:</strong>{" "}
                   <a
                     href="mailto:privacidad@pairprogramming.com"
@@ -170,7 +170,7 @@ Implementamos cláusulas contractuales estándar para transferencias.`,
                   >
                     pairprogramming@gmail.com
                   </a>
-                </p>
+                </p> */}
                 <p>
                   <strong>Dirección:</strong> Buenos Aires, Argentina
                 </p>
