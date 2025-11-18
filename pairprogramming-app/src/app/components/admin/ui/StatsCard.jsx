@@ -1,4 +1,4 @@
-// components/admin/ui/StatsCard.jsx
+
 import { Card } from "../../ui/Card";
 
 export default function StatsCard({

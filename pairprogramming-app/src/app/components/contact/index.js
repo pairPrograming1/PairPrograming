@@ -1,4 +1,4 @@
-// components/contact/index.js
+
 export { ContactHeader } from "./ContactHeader";
 export { ContactForm } from "./ContactForm";
 export { ContactMeeting } from "./ContactMeeting";

@@ -1,4 +1,4 @@
-// components/contact/FormStatus.jsx
+
 export function FormStatus({ status }) {
   if (status !== "success") return null;
 

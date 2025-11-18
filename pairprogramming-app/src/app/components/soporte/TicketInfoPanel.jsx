@@ -1,4 +1,4 @@
-// components/soporte/TicketInfoPanel.jsx
+
 import { Card } from "../ui/Card";
 
 export default function TicketInfoPanel({ ticketNumber }) {

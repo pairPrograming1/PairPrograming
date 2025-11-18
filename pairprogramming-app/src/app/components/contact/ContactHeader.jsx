@@ -1,4 +1,4 @@
-// components/contact/ContactHeader.jsx
+
 export function ContactHeader({ isSidebarExpanded }) {
   return (
     <div className="text-center mb-12 fade-in">

@@ -1,4 +1,4 @@
-// components/admin/AdminHeader.jsx
+
 export default function AdminHeader({ isSidebarExpanded }) {
   return (
     <div className="text-center mb-8 fade-in px-4">

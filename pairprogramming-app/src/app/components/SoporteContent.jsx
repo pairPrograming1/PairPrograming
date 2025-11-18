@@ -1,4 +1,4 @@
-// components/SoporteContent.jsx
+
 "use client";
 import { useState, useRef, useEffect } from "react";
 import { useSidebar } from "../context/SidebarContext";

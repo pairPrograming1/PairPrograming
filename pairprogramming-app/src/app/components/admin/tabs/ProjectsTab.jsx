@@ -1,4 +1,4 @@
-// components/admin/tabs/ProjectsTab.jsx
+
 import { Card } from "../../ui/Card";
 import { Button } from "../../ui/Button";
 import ProjectCard from "../ui/ProjectCard";

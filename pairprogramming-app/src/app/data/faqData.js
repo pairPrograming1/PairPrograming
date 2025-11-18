@@ -12,7 +12,7 @@ export const faqData = [
       {
         question: "¿Qué tecnologías utilizan?",
         answer:
-          "Trabajamos con las tecnologías más modernas y confiables:\n\nFrontend: React, Next.js, Vue.js, Angular\nBackend: Node.js, Python, Java, .NET\nMobile: React Native, Flutter\nBases de datos: PostgreSQL, MongoDB, MySQL\nCloud: AWS, Google Cloud, Azure\nDevOps: Docker, Kubernetes, CI/CD",
+          "Trabajamos con las tecnologías más modernas y confiables:\n\nFrontend: React, Next.js, Vue.js, Angular\nBackend: Node.js, Python\nMobile: React Native, Flutter\nBases de datos: PostgreSQL, MongoDB, MySQL\nCloud: AWS\nDevOps: CI/CD",
       },
       {
         question: "¿Ofrecen mantenimiento y soporte?",

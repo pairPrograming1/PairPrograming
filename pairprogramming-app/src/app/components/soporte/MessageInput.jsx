@@ -1,4 +1,4 @@
-// components/soporte/MessageInput.jsx
+
 import { Input } from "../ui/Input";
 import { Button } from "../ui/Button";
 

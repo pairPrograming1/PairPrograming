@@ -1,4 +1,4 @@
-// components/soporte/CommonIssues.jsx
+
 const commonIssues = [
   "Problemas con el servidor",
   "Error en la aplicación",

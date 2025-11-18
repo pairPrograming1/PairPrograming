@@ -1,4 +1,4 @@
-// components/soporte/SupportFeatures.jsx
+
 import { Card } from "../ui/Card";
 
 export default function SupportFeatures({ ticketNumber }) {
