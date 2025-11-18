@@ -1,4 +1,4 @@
-// components/admin/DashboardAdminContent.jsx
+
 "use client";
 import { useState, useEffect } from "react";
 import { useSidebar } from "../context/SidebarContext";

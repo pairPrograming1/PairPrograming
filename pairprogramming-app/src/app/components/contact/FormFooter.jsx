@@ -1,4 +1,4 @@
-// components/contact/FormFooter.jsx
+
 export function FormFooter() {
   return (
     <div className="mt-6 text-center">

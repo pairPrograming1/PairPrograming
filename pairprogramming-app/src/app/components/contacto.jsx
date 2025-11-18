@@ -1,4 +1,4 @@
-// components/Contacto.jsx
+
 "use client";
 import { useSidebar } from "../context/SidebarContext";
 import { Container } from "./ui/Container";

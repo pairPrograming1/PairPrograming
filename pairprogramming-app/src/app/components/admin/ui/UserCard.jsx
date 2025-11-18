@@ -1,4 +1,4 @@
-// components/admin/ui/UserCard.jsx
+
 import { Card } from "../../ui/Card";
 import { Button } from "../../ui/Button";
 

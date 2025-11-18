@@ -1,4 +1,4 @@
-// components/admin/tabs/SettingsTab.jsx
+
 import { Card } from "../../ui/Card";
 import { Button } from "../../ui/Button";
 import { Input } from "../../ui/Input";

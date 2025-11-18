@@ -1,4 +1,4 @@
-// components/admin/ui/MessageCard.jsx
+
 import { Button } from "../../ui/Button";
 
 export default function MessageCard({

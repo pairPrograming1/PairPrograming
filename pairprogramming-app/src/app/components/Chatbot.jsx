@@ -1,7 +1,7 @@
 "use client";
-import { useChatbot } from "../hooks/useChatbot"; // Ajusta ruta al hook
-import { commonQuestions } from "../components/utils/intelligentResponses"; // Ajusta ruta
-import { formatMessageWithBreaks } from "../components/utils/messageFormatter"; // Ajusta ruta
+import { useChatbot } from "../hooks/useChatbot"; 
+import { commonQuestions } from "../components/utils/intelligentResponses"; 
+import { formatMessageWithBreaks } from "../components/utils/messageFormatter"; 
 
 export default function Chatbot() {
   const {
@@ -15,6 +15,7 @@ export default function Chatbot() {
     setInputMessage,
     handleQuickQuestion,
     handleSendMessage,
+    handleAction,
     toggleChat,
   } = useChatbot();
 
@@ -30,6 +31,7 @@ export default function Chatbot() {
             isTyping={isTyping}
             aiStatus={aiStatus}
             messagesEndRef={messagesEndRef}
+            handleAction={handleAction}
           />
 
           {/* Quick Questions & Input con tema oscuro */}
@@ -107,11 +109,12 @@ export const ChatMessages = ({
   isTyping,
   aiStatus,
   messagesEndRef,
+  handleAction,
 }) => {
   return (
     <div className="flex-1 p-4 overflow-y-auto bg-background chatbot-messages">
       {messages.map((message) => (
-        <ChatMessage key={message.id} message={message} />
+        <ChatMessage key={message.id} message={message} handleAction={handleAction} />
       ))}
 
       {isTyping && <TypingIndicator aiStatus={aiStatus} />}
@@ -121,7 +124,7 @@ export const ChatMessages = ({
   );
 };
 
-const ChatMessage = ({ message }) => {
+const ChatMessage = ({ message, handleAction }) => {
   const isUser = message.sender === "user";
 
   return (
@@ -135,6 +138,33 @@ const ChatMessage = ({ message }) => {
       >
         <div className="text-sm leading-relaxed">
           {formatMessageWithBreaks(message.text)}
+          {/* Render action buttons when the bot suggests contacts */}
+          {message.actions && (
+            <div className="mt-3 flex flex-col space-y-2">
+              {message.actions.map((action, idx) => (
+                <button
+                  key={idx}
+                  onClick={() => {
+                    if (action.type === "whatsapp") {
+                      const phone = action.phone.replace(/\+/g, "");
+                      const defaultMsg = encodeURIComponent(
+                        "Hola, me gustaría recibir más información."
+                      );
+                      window.open(`https://wa.me/${phone}?text=${defaultMsg}`, "_blank");
+                    } else if (action.type === "page") {
+                      window.location.href = action.href;
+                    } else if (action.type === "menu") {
+                      // Call the hook-provided handler to show the initial menu without reloading
+                      handleAction && handleAction(action);
+                    }
+                  }}
+                  className="text-sm bg-background hover:bg-hover-bg text-secondary-text border border-border-color px-3 py-2 rounded-lg transition-colors text-left"
+                >
+                  {action.label}
+                </button>
+              ))}
+            </div>
+          )}
         </div>
       </div>
       <div

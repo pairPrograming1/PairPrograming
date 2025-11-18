@@ -1,4 +1,4 @@
-// components/soporte/MessagesArea.jsx
+
 import MessageBubble from "./MessageBubble";
 import TypingIndicator from "./TypingIndicator";
 import { useEffect } from "react";

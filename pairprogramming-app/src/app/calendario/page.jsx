@@ -1,4 +1,4 @@
-// app/calendario/page.jsx
+
 "use client";
 import Sidebar from "../components/Sidebar";
 import Footer from "../components/Footer";

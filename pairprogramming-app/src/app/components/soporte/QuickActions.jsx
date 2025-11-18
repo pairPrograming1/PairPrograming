@@ -1,4 +1,4 @@
-// components/soporte/QuickActions.jsx
+
 import { Button } from "../ui/Button";
 
 export default function QuickActions({ onDownloadChat, ticketNumber }) {

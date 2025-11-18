@@ -1,4 +1,4 @@
-// components/terminos/TerminosNotice.jsx
+
 export default function TerminosNotice() {
   return (
     <div className="mb-8 p-4 bg-primary/10 rounded-lg border border-primary/20">

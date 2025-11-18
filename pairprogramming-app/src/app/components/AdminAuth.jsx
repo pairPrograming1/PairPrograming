@@ -1,4 +1,4 @@
-// components/AdminAuth.jsx
+
 "use client";
 import { useState, useEffect } from "react";
 import { Button } from "./ui/Button";

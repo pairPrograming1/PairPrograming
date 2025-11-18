@@ -1,4 +1,4 @@
-// components/soporte/TypingIndicator.jsx
+
 export default function TypingIndicator() {
   return (
     <div className="flex justify-start">

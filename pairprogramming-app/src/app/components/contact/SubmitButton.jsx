@@ -1,4 +1,4 @@
-// components/contact/SubmitButton.jsx
+
 import { Button } from "../ui/Button";
 
 export function SubmitButton({ isLoading }) {

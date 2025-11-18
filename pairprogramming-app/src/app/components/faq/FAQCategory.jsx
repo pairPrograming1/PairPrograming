@@ -1,4 +1,4 @@
-// components/faq/FAQCategory.jsx
+
 "use client";
 import { useState } from "react";
 import { Card } from "../ui/Card";
