@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git add:*)",
+      "Bash(git commit -m \"$\\(cat <<''EOF''\nLimpieza completa de estilos de landing page\n\nEliminado todo el estilo \"\"futurista\"\" excesivo:\n- Removidos colores custom \\(--primary, --accent, etc\\) del globals.css\n- Eliminados efectos glass-card, backdrop-filter blur, shimmer\n- Quitados fondos decorativos blur-3xl y grillas bg-grid-white\n- Simplificados gradientes excesivos en Hero, Values, CallToAction\n- Reemplazados colores custom por Tailwind directo \\(gray-*, blue-*\\)\n- Button: bg-blue-600, sin shimmer, focus ring limpio\n- Card: bg-gray-900, sin glass effect\n- Hero: fondo gray-900, sin decoraciones, imagen más chica\n- Values: cards simples con border-gray-800\n- CallToAction: bg-gray-950, sin efectos\n- globals.css: de 490 líneas a 108 líneas \\(78% reducción\\)\n\nCo-Authored-By: Claude Sonnet 4.5 <noreply@anthropic.com>\nEOF\n\\)\")"
+    ]
+  }
+}

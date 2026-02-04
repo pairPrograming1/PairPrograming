@@ -11,7 +11,7 @@ export default function Contacto() {
   const { isSidebarExpanded } = useSidebar();
 
   return (
-    <section className="py-16 lg:py-20 bg-card-bg text-white min-h-screen">
+    <section className="py-16 lg:py-20 bg-black text-white min-h-screen border-b border-gray-800">
       <Container size={isSidebarExpanded ? "expanded" : "default"}>
         <ContactHeader isSidebarExpanded={isSidebarExpanded} />
 

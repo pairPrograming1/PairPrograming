@@ -15,9 +15,9 @@ export const Card = ({
     lg: "p-8",
   };
 
-  const classes = `glass-card rounded-xl border border-border-color ${
+  const classes = `bg-gray-900 rounded-lg border border-gray-800 ${
     paddings[padding]
-  } ${hover ? "hover-lift transition-all duration-300" : ""} ${className}`;
+  } ${hover ? "hover:border-gray-700 transition-all duration-200" : ""} ${className}`;
 
   return (
     <div className={classes} {...props}>

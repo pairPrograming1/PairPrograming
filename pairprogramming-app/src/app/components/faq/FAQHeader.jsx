@@ -1,3 +1,4 @@
+"use client";
 
 export function FAQHeader({ isSidebarExpanded }) {
   return (
@@ -9,7 +10,7 @@ export function FAQHeader({ isSidebarExpanded }) {
       >
         Preguntas Frecuentes
       </h1>
-      <p className="text-secondary-text max-w-2xl mx-auto text-lg">
+      <p className="text-secondary-text max-w-2xl mx-auto text-sm lg:text-lg">
         Encuentra respuestas a las preguntas más comunes sobre nuestros
         servicios, procesos y metodologías.
       </p>

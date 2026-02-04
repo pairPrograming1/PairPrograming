@@ -6,160 +6,26 @@
   :root {
     --background: #000000;
     --foreground: #ffffff;
-    --primary: #0b7eb5;
-    --primary-dark: #0a6ea0;
-    --primary-light: #1a8fcc;
-    --accent: #d4a017;
-    --accent-dark: #b38915;
-    --accent-light: #e5a823;
-    --card-bg: #1f2937;
-    --hover-bg: #374151;
-    --secondary-text: #d1d5db;
-    --border-color: #4b5563;
-    --success: #10b981;
   }
 
   body {
-    background: var(--background);
-    color: var(--foreground);
+    background: #000000;
+    color: #ffffff;
     font-family: "Inter", Arial, Helvetica, sans-serif;
     line-height: 1.6;
   }
 
-  /* Forzamos dark mode ya que nuestra paleta es oscura */
-  :root,
-  .dark {
-    --background: #000000;
-    --foreground: #ffffff;
-    --primary: #0b7eb5;
-    --primary-dark: #0a6ea0;
-    --primary-light: #1a8fcc;
-    --accent: #d4a017;
-    --accent-dark: #b38915;
-    --accent-light: #e5a823;
-    --card-bg: #1f2937;
-    --hover-bg: #374151;
-    --secondary-text: #d1d5db;
-    --border-color: #4b5563;
-    --success: #10b981;
-  }
-
-  html.dark {
+  html {
     color-scheme: dark;
   }
 }
 
 @layer components {
-  .glass-card {
-    background: rgba(31, 41, 55, 0.8);
-    backdrop-filter: blur(8px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 0.75rem;
-    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
-      0 10px 10px -5px rgba(0, 0, 0, 0.04);
-  }
-
-  .hover-lift {
-    transition: all 0.3s ease-in-out;
-  }
-
-  .hover-lift:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
-  }
-
-  .smooth-transition {
-    transition: all 0.3s ease-in-out;
-  }
-
-  .btn-primary {
-    background-color: var(--primary);
-    color: white;
-    font-weight: 600;
-    padding: 0.75rem 1.5rem;
-    border-radius: 0.5rem;
-    transition: all 0.3s ease-in-out;
-  }
-
-  .btn-primary:hover {
-    background-color: var(--primary-dark);
-    box-shadow: 0 10px 25px -5px rgba(11, 126, 181, 0.3);
-    transform: translateY(-2px);
-  }
-
-  .btn-outline {
-    border: 1px solid var(--primary);
-    color: var(--primary);
-    font-weight: 600;
-    padding: 0.75rem 1.5rem;
-    border-radius: 0.5rem;
-    transition: all 0.3s ease-in-out;
-    background-color: transparent;
-  }
-
-  .btn-outline:hover {
-    background-color: rgba(11, 126, 181, 0.1);
-  }
-
-  .primary-shimmer {
-    background: linear-gradient(
-      90deg,
-      var(--primary-dark),
-      var(--primary),
-      var(--primary-dark)
-    );
-    background-size: 200px 100%;
-    animation: shimmer 2s infinite;
-  }
-
-  .compact-section {
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
-  }
-
-  .compact-card {
-    padding: 1rem;
-    border-radius: 0.5rem;
-  }
-
-  .compact-button {
-    padding: 0.5rem 1rem;
-    font-size: 0.875rem;
-  }
+  /* Mantener solo lo necesario - el resto se maneja con Tailwind directo */
 }
 
 @layer utilities {
-  .bg-grid-white {
-    background-image: linear-gradient(
-        rgba(255, 255, 255, 0.1) 1px,
-        transparent 1px
-      ),
-      linear-gradient(90deg, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
-    background-size: 60px 60px;
-  }
-
-  .bg-gradient-primary {
-    background: linear-gradient(135deg, var(--primary), var(--accent));
-  }
-
-  .text-accent {
-    color: var(--accent);
-  }
-
-  .border-accent {
-    border-color: var(--accent);
-  }
-
-  .primary-shimmer {
-    background: linear-gradient(
-      90deg,
-      var(--primary-dark),
-      var(--primary),
-      var(--primary-dark)
-    );
-    background-size: 200px 100%;
-    animation: shimmer 2s infinite;
-  }
+  /* Utilidades personalizadas mínimas */
 }
 
 ::-webkit-scrollbar {
@@ -167,22 +33,22 @@
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--background);
+  background: #000000;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(to bottom, var(--primary), var(--primary-dark));
+  background: #374151;
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(to bottom, var(--primary-light), var(--accent));
+  background: #4b5563;
 }
 
 @keyframes fadeIn {
   from {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(10px);
   }
   to {
     opacity: 1;
@@ -190,109 +56,30 @@
   }
 }
 
-@keyframes shimmer {
-  0% {
-    background-position: -200px 0;
-  }
-  100% {
-    background-position: 200px 0;
-  }
-}
-
 .fade-in {
-  animation: fadeIn 0.6s ease-out;
+  animation: fadeIn 0.4s ease-out;
 }
 
-* {
-  transition: color 0.2s ease, background-color 0.2s ease,
-    border-color 0.2s ease;
-}
-
-/* Animaciones para los widgets flotantes */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px) scale(0.95);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0) scale(1);
-  }
-}
-
-@keyframes bounceIn {
-  0% {
-    opacity: 0;
-    transform: scale(0.3);
-  }
-  50% {
-    opacity: 1;
-    transform: scale(1.05);
-  }
-  70% {
-    transform: scale(0.9);
-  }
-  100% {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-
-@keyframes pulse-glow {
-  0%,
-  100% {
-    box-shadow: 0 0 20px rgba(11, 126, 181, 0.4);
-  }
-  50% {
-    box-shadow: 0 0 30px rgba(11, 126, 181, 0.8),
-      0 0 40px rgba(11, 126, 181, 0.4);
-  }
-}
-
-@keyframes pulse-glow-green {
-  0%,
-  100% {
-    box-shadow: 0 0 20px rgba(16, 185, 129, 0.4);
-  }
-  50% {
-    box-shadow: 0 0 30px rgba(16, 185, 129, 0.8),
-      0 0 40px rgba(16, 185, 129, 0.4);
-  }
-}
-
-@keyframes pulse-glow-accent {
-  0%,
-  100% {
-    box-shadow: 0 0 20px rgba(212, 160, 23, 0.4);
-  }
-  50% {
-    box-shadow: 0 0 30px rgba(212, 160, 23, 0.8),
-      0 0 40px rgba(212, 160, 23, 0.4);
-  }
-}
-
-/* Utilidades para animaciones */
+/* Animación simple para widgets flotantes */
 .animate-fade-in {
   animation: fadeIn 0.3s ease-out;
 }
 
-.animate-bounce-in {
-  animation: bounceIn 0.5s ease-out;
-}
-
-.pulse-glow {
-  animation: pulse-glow 2s infinite;
+/* Animación suave para pulse-glow-green (solo para WhatsApp) */
+@keyframes pulse-glow-green {
+  0%, 100% {
+    box-shadow: 0 4px 20px rgba(37, 211, 102, 0.3);
+  }
+  50% {
+    box-shadow: 0 4px 30px rgba(37, 211, 102, 0.5);
+  }
 }
 
 .pulse-glow-green {
-  animation: pulse-glow-green 2s infinite;
+  animation: pulse-glow-green 3s infinite;
 }
 
-.pulse-glow-accent {
-  animation: pulse-glow-accent 2s infinite;
-}
-
-/* Estilos para el scrollbar en el chatbot */
+/* Scrollbar personalizado para chatbot */
 .chatbot-messages::-webkit-scrollbar {
   width: 6px;
 }
@@ -311,179 +98,10 @@
   background: #6b7280;
 }
 
-/* Mejoras de responsive para móviles */
-@media (max-width: 640px) {
-  .fixed.bottom-6.left-6 {
-    bottom: 5rem;
-    left: 1rem;
-  }
-
-  .fixed.bottom-6.right-6 {
-    bottom: 5rem;
-    right: 1rem;
-  }
-
-  .absolute.bottom-16.left-0 {
-    bottom: 6rem;
-    left: 0;
-    width: calc(100vw - 2rem);
-    max-width: 20rem;
-  }
-
-  .absolute.bottom-16.right-0 {
-    bottom: 6rem;
-    right: 0;
-    width: calc(100vw - 2rem);
-    max-width: 20rem;
-  }
-}
-
-/* Asegurar que los z-index sean correctos */
-.fixed.z-50 {
-  z-index: 50;
-}
-
 /* Mejoras de accesibilidad */
 @media (prefers-reduced-motion: reduce) {
   .animate-fade-in,
-  .animate-bounce-in,
-  .pulse-glow,
-  .pulse-glow-green,
-  .pulse-glow-accent {
+  .pulse-glow-green {
     animation: none;
-  }
-}
-
-@keyframes staggerFadeIn {
-  0% {
-    opacity: 0;
-    transform: translateY(20px) scale(0.95);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0) scale(1);
-  }
-}
-
-.stagger-1 {
-  animation: staggerFadeIn 0.3s ease-out;
-}
-
-.stagger-2 {
-  animation: staggerFadeIn 0.3s ease-out 0.1s both;
-}
-
-/* Mejoras de responsive para la nueva disposición */
-@media (max-width: 640px) {
-  .fixed.bottom-6.right-6 {
-    bottom: 1rem;
-    right: 1rem;
-  }
-
-  .absolute.bottom-16.right-0 {
-    bottom: 4rem;
-    right: 0;
-    width: calc(100vw - 2rem);
-    max-width: 20rem;
-  }
-}
-
-/* Asegurar que los chats no se superpongan */
-.fixed .relative + .relative {
-  margin-top: 1rem;
-}
-
-/* Efectos de hover mejorados */
-.hover-lift-sm {
-  transition: all 0.3s ease-in-out;
-}
-
-.hover-lift-sm:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.15);
-}
-
-/* Mejoras para el chatbot con tema oscuro */
-.chatbot-messages::-webkit-scrollbar-track {
-  background: #1f2937;
-  border-radius: 3px;
-}
-
-.chatbot-messages::-webkit-scrollbar-thumb {
-  background: #4b5563;
-  border-radius: 3px;
-}
-
-.chatbot-messages::-webkit-scrollbar-thumb:hover {
-  background: #6b7280;
-}
-
-/* Mejoras de texto para el tema oscuro */
-.text-foreground {
-  color: var(--foreground);
-}
-
-/* Animación de pulso para WhatsApp */
-.pulse-glow-green {
-  animation: pulse-glow-green 2s infinite;
-}
-
-.pulse-glow-accent {
-  animation: pulse-glow-accent 2s infinite;
-}
-
-/* Mejoras específicas para el chat en móvil */
-@media (max-width: 1024px) {
-  .chat-container-mobile {
-    height: calc(100vh - 120px) !important;
-  }
-
-  .messages-area-mobile {
-    min-height: 300px;
-    max-height: 400px;
-  }
-}
-
-@media (max-width: 768px) {
-  /* Para el grid principal */
-  .soporte-grid {
-    grid-template-rows: auto 1fr;
-  }
-
-  /* Reordenar los paneles en móvil */
-  .soporte-sidebar {
-    grid-row: 2;
-  }
-
-  .soporte-chat {
-    grid-row: 1;
-  }
-
-  /* Asegurar que el área de mensajes ocupe más espacio */
-  .messages-area-mobile {
-    min-height: 350px;
-    max-height: 450px;
-  }
-}
-
-@media (max-width: 640px) {
-  .messages-area-mobile {
-    min-height: 400px;
-    max-height: 500px;
-  }
-
-  /* Reducir padding en móvil para más espacio */
-  .chat-padding-mobile {
-    padding: 0.75rem;
-  }
-
-  .message-bubble-mobile {
-    max-width: 85% !important;
-  }
-
-  /* Ajustar altura del contenedor en móvil */
-  .chat-height-mobile {
-    height: 70vh !important;
-    min-height: 500px;
   }
 }
