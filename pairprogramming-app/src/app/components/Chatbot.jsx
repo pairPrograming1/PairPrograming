@@ -23,7 +23,7 @@ export default function Chatbot() {
     <div className="relative">
       {/* Chat Window - Ahora absolute relativo al botón */}
       {isOpen && (
-        <div className="absolute bottom-20 right-0 w-80 h-96 bg-card-bg rounded-2xl shadow-2xl border border-border-color flex flex-col animate-fade-in z-50">
+        <div className="absolute bottom-20 right-0 w-[90vw] sm:w-96 max-w-md h-[500px] bg-gray-900/95 backdrop-blur-lg rounded-2xl shadow-xl border border-gray-700/50 flex flex-col animate-fade-in z-50">
           <ChatHeader aiStatus={aiStatus} onClose={toggleChat} />
 
           <ChatMessages
@@ -34,8 +34,8 @@ export default function Chatbot() {
             handleAction={handleAction}
           />
 
-          {/* Quick Questions & Input con tema oscuro */}
-          <div className="p-3 border-t border-border-color bg-card-bg rounded-b-2xl">
+          {/* Quick Questions & Input */}
+          <div className="p-3 border-t border-gray-700 bg-gray-800 rounded-b-2xl">
             {showQuickQuestions && (
               <QuickQuestions onQuestionClick={handleQuickQuestion} />
             )}
@@ -50,10 +50,10 @@ export default function Chatbot() {
 
             {/* Status Indicator */}
             <div className="text-center mt-2">
-              <span className="text-xs text-secondary-text">
+              <span className="text-xs text-gray-400">
                 {aiStatus === "available"
-                  ? "🤖 Conectado a Google Gemini AI"
-                  : "💡 Usando respuestas inteligentes"}
+                  ? "Conectado a Google Gemini AI"
+                  : "Respuestas inteligentes"}
               </span>
             </div>
           </div>
@@ -76,7 +76,7 @@ export const QuickQuestions = ({ onQuestionClick }) => {
         <button
           key={index}
           onClick={() => onQuestionClick(question)}
-          className="text-xs bg-background hover:bg-hover-bg text-secondary-text border border-border-color px-3 py-1 rounded-full transition-colors hover:text-accent hover:border-accent"
+          className="text-xs bg-gray-700 hover:bg-gray-600 text-gray-200 border border-gray-600 px-3 py-1.5 rounded-full transition-colors hover:border-blue-500"
         >
           {question}
         </button>
@@ -89,16 +89,42 @@ export const FloatingButton = ({ isOpen, aiStatus, onToggle }) => {
   return (
     <button
       onClick={onToggle}
-      className="w-14 h-14 bg-gradient-to-r from-primary to-accent hover:from-primary-dark hover:to-accent-dark rounded-full shadow-lg transition-all duration-300 hover:scale-110 flex items-center justify-center group pulse-glow hover-lift-sm z-50"
-      aria-label="Abrir asistente virtual Botie"
+      className="w-14 h-14 sm:w-16 sm:h-16 bg-blue-600 hover:bg-blue-700 rounded-full shadow-lg hover:shadow-xl transition-all duration-200 hover:scale-105 active:scale-95 flex items-center justify-center z-50"
+      aria-label="Abrir asistente virtual"
       data-chatbot-toggle
     >
       {isOpen ? (
-        <span className="text-white text-xl">✕</span>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="white"
+          strokeWidth="2.5"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        >
+          <line x1="18" y1="6" x2="6" y2="18" />
+          <line x1="6" y1="6" x2="18" y2="18" />
+        </svg>
       ) : (
-        <span className="text-white text-2xl">
-          {aiStatus === "available" ? "🤖" : "💡"}
-        </span>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="28"
+          height="28"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="white"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        >
+          <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+          <circle cx="9" cy="10" r="1" fill="white" />
+          <circle cx="12" cy="10" r="1" fill="white" />
+          <circle cx="15" cy="10" r="1" fill="white" />
+        </svg>
       )}
     </button>
   );
@@ -112,7 +138,7 @@ export const ChatMessages = ({
   handleAction,
 }) => {
   return (
-    <div className="flex-1 p-4 overflow-y-auto bg-background chatbot-messages">
+    <div className="flex-1 p-4 overflow-y-auto bg-gray-800 chatbot-messages">
       {messages.map((message) => (
         <ChatMessage key={message.id} message={message} handleAction={handleAction} />
       ))}
@@ -128,12 +154,12 @@ const ChatMessage = ({ message, handleAction }) => {
   const isUser = message.sender === "user";
 
   return (
-    <div className={`mb-4 ${isUser ? "text-right" : "text-left"}`}>
+    <div className={`mb-3 ${isUser ? "text-right" : "text-left"}`}>
       <div
-        className={`inline-block max-w-xs lg:max-w-md px-4 py-2 rounded-2xl ${
+        className={`inline-block max-w-xs lg:max-w-md px-3.5 py-2.5 rounded-xl ${
           isUser
-            ? "bg-primary text-white rounded-br-none"
-            : "bg-card-bg text-foreground rounded-bl-none border border-border-color"
+            ? "bg-blue-600 text-white rounded-br-none"
+            : "bg-gray-700 text-gray-100 rounded-bl-none border border-gray-600"
         }`}
       >
         <div className="text-sm leading-relaxed">
@@ -158,7 +184,7 @@ const ChatMessage = ({ message, handleAction }) => {
                       handleAction && handleAction(action);
                     }
                   }}
-                  className="text-sm bg-background hover:bg-hover-bg text-secondary-text border border-border-color px-3 py-2 rounded-lg transition-colors text-left"
+                  className="text-sm bg-gray-600 hover:bg-gray-500 text-gray-100 border border-gray-500 px-3 py-2 rounded-lg transition-colors text-left"
                 >
                   {action.label}
                 </button>
@@ -169,7 +195,7 @@ const ChatMessage = ({ message, handleAction }) => {
       </div>
       <div
         className={`text-xs mt-1 ${
-          isUser ? "text-secondary-text" : "text-secondary-text"
+          isUser ? "text-gray-400" : "text-gray-400"
         }`}
       >
         {message.timestamp.toLocaleTimeString([], {
@@ -183,24 +209,24 @@ const ChatMessage = ({ message, handleAction }) => {
 
 const TypingIndicator = ({ aiStatus }) => {
   return (
-    <div className="text-left mb-4">
-      <div className="inline-block bg-card-bg text-foreground px-4 py-2 rounded-2xl rounded-bl-none border border-border-color">
+    <div className="text-left mb-3">
+      <div className="inline-block bg-gray-700 text-gray-100 px-3.5 py-2.5 rounded-xl rounded-bl-none border border-gray-600">
         <div className="flex items-center space-x-2">
           <div className="flex space-x-1">
-            <div className="w-2 h-2 bg-accent rounded-full animate-bounce"></div>
+            <div className="w-2 h-2 bg-blue-500 rounded-full animate-bounce"></div>
             <div
-              className="w-2 h-2 bg-accent rounded-full animate-bounce"
+              className="w-2 h-2 bg-blue-500 rounded-full animate-bounce"
               style={{ animationDelay: "0.1s" }}
             ></div>
             <div
-              className="w-2 h-2 bg-accent rounded-full animate-bounce"
+              className="w-2 h-2 bg-blue-500 rounded-full animate-bounce"
               style={{ animationDelay: "0.2s" }}
             ></div>
           </div>
-          <span className="text-secondary-text text-xs">
+          <span className="text-gray-300 text-xs">
             {aiStatus === "available"
-              ? "Procesando con IA..."
-              : "Botie está escribiendo..."}
+              ? "Procesando..."
+              : "Escribiendo..."}
           </span>
         </div>
       </div>
@@ -216,21 +242,34 @@ export const ChatInput = ({
   aiStatus,
 }) => {
   return (
-    <form onSubmit={onSendMessage} className="flex space-x-2">
+    <form onSubmit={onSendMessage} className="flex gap-2">
       <input
         type="text"
         value={inputMessage}
         onChange={onInputChange}
         placeholder="Escribe tu mensaje..."
-        className="flex-1 px-3 py-2 border border-border-color rounded-lg focus:outline-none focus:ring-2 focus:ring-accent bg-background text-foreground placeholder-secondary-text text-sm"
+        className="flex-1 px-3 py-2 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-gray-700 text-gray-100 placeholder-gray-400 text-sm"
         disabled={isTyping}
       />
       <button
         type="submit"
         disabled={!inputMessage.trim() || isTyping}
-        className="bg-accent hover:bg-accent-dark disabled:bg-gray-600 disabled:cursor-not-allowed text-white px-4 py-2 rounded-lg transition-colors"
+        className="bg-blue-600 hover:bg-blue-700 disabled:bg-gray-600 disabled:cursor-not-allowed text-white px-4 py-2 rounded-lg transition-colors"
       >
-        →
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="18"
+          height="18"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        >
+          <line x1="22" y1="2" x2="11" y2="13" />
+          <polygon points="22 2 15 22 11 13 2 9 22 2" />
+        </svg>
       </button>
     </form>
   );
@@ -238,29 +277,54 @@ export const ChatInput = ({
 
 export const ChatHeader = ({ aiStatus, onClose }) => {
   return (
-    <div className="bg-gradient-to-r from-primary to-accent text-white p-4 rounded-t-2xl">
+    <div className="bg-blue-600 text-white p-4 rounded-t-2xl">
       <div className="flex items-center justify-between">
         <div className="flex items-center space-x-3">
-          <div className="w-8 h-8 bg-white rounded-full flex items-center justify-center">
-            <span className="text-primary text-sm">
-              {aiStatus === "available" ? "🤖" : "💡"}
-            </span>
+          <div className="w-9 h-9 bg-white rounded-full flex items-center justify-center">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="#2563eb"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+              <circle cx="9" cy="10" r="1" fill="#2563eb" />
+              <circle cx="12" cy="10" r="1" fill="#2563eb" />
+              <circle cx="15" cy="10" r="1" fill="#2563eb" />
+            </svg>
           </div>
           <div>
-            <h3 className="font-bold">Botie - PairProgramming</h3>
-            <p className="text-accent-light text-xs">
-              {aiStatus === "available"
-                ? "Asistente con IA"
-                : "Modo inteligente"}
+            <h3 className="font-semibold text-base">Asistente Virtual</h3>
+            <p className="text-white/80 text-xs flex items-center gap-1.5">
+              <span className="w-1.5 h-1.5 bg-white rounded-full"></span>
+              {aiStatus === "available" ? "Con IA" : "Inteligente"}
             </p>
           </div>
         </div>
         <button
           onClick={onClose}
-          className="text-white hover:text-gray-200 transition-colors"
+          className="text-white/90 hover:text-white transition-colors"
           aria-label="Cerrar chat"
         >
-          ✕
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2.5"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          >
+            <line x1="18" y1="6" x2="6" y2="18" />
+            <line x1="6" y1="6" x2="18" y2="18" />
+          </svg>
         </button>
       </div>
     </div>
