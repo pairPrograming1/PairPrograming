@@ -5,7 +5,6 @@ import { Container } from "./ui/Container";
 import { portfolioVideos } from "../data/portfolioVideos";
 import PortfolioHeader from "./portfolio/PortfolioHeader";
 import ProjectList from "./portfolio/ProjectList";
-import VideoPlayer from "./portfolio/VideoPlayer";
 import ProjectDetails from "./portfolio/ProjectDetails";
 import PortfolioCTA from "./portfolio/PortfolioCTA";
 
@@ -15,34 +14,37 @@ export default function Portfolio() {
 
   const handleVideoSelect = (index) => {
     setCurrentVideo(index);
+    // Smooth scroll to top of details on mobile
+    if (window.innerWidth < 1024) {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
   };
 
   const currentVideoData = portfolioVideos[currentVideo];
 
   return (
-    <section className="py-16 lg:py-20 bg-black text-white min-h-screen relative border-b border-gray-800">
+    <section className="py-16 lg:py-24 bg-black text-white min-h-screen relative border-b border-gray-800">
       <Container size="full">
-          <PortfolioHeader isSidebarExpanded={isSidebarExpanded} />
+        <PortfolioHeader isSidebarExpanded={isSidebarExpanded} />
 
-          <div className="grid grid-cols-1 lg:grid-cols-4 gap-6 lg:gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8">
+          {/* Lista de proyectos - Sidebar */}
+          <div className="lg:col-span-4 xl:col-span-3">
             <ProjectList
               projects={portfolioVideos}
               currentVideo={currentVideo}
               onVideoSelect={handleVideoSelect}
               isSidebarExpanded={isSidebarExpanded}
             />
-
-            <div
-              className={`${
-                isSidebarExpanded ? "lg:col-span-3" : "lg:col-span-3"
-              }`}
-            >
-              {/* <VideoPlayer video={currentVideoData} /> */}
-              <ProjectDetails video={currentVideoData} />
-              <PortfolioCTA />
-            </div>
           </div>
-        </Container>
+
+          {/* Detalles del proyecto - Área principal */}
+          <div className="lg:col-span-8 xl:col-span-9">
+            <ProjectDetails video={currentVideoData} />
+            <PortfolioCTA />
+          </div>
+        </div>
+      </Container>
     </section>
   );
 }
