@@ -7,8 +7,8 @@ export default function ProjectList({
   isSidebarExpanded,
 }) {
   return (
-    <div className="lg:sticky lg:top-24 lg:self-start">
-      <div className="bg-gray-900 rounded-xl p-5 lg:p-6 border border-gray-800 shadow-xl">
+    <div className="h-full">
+      <div className="bg-gray-900 rounded-xl p-5 lg:p-6 border border-gray-800 shadow-xl h-full flex flex-col">
         <div className="flex items-center justify-between mb-5">
           <h3 className="text-xl font-bold text-blue-500">
             Proyectos
@@ -18,7 +18,7 @@ export default function ProjectList({
           </span>
         </div>
 
-        <div className="space-y-2 overflow-y-auto max-h-[calc(100vh-16rem)] pr-2 scrollbar-thin scrollbar-thumb-gray-700 scrollbar-track-gray-900">
+        <div className="space-y-2 flex-1 overflow-visible">
           {projects.map((video, index) => (
             <button
               key={video.id}
