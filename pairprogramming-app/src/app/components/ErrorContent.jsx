@@ -10,13 +10,17 @@ export default function ErrorContent() {
   const { isSidebarExpanded } = useSidebar();
 
   return (
-    <section className="py-16 lg:py-20 bg-card-bg text-white min-h-screen flex items-center">
+    <section className="py-16 lg:py-20 bg-black text-white min-h-screen flex items-center">
       <Container size={isSidebarExpanded ? "expanded" : "default"}>
         <div className="text-center fade-in">
           <Card padding="lg" className="max-w-2xl mx-auto">
             {/* Icono animado */}
             <div className="w-32 h-32 bg-gradient-to-br from-red-500/20 to-orange-500/20 rounded-full flex items-center justify-center mx-auto mb-8 animate-pulse">
-              <span className="text-6xl">🚧</span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-red-400">
+                <path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z" />
+                <line x1="12" y1="9" x2="12" y2="13" />
+                <line x1="12" y1="17" x2="12.01" y2="17" />
+              </svg>
             </div>
 
             {/* Título y descripción */}
@@ -30,23 +34,23 @@ export default function ErrorContent() {
               Ha Ocurrido un Error
             </h1>
 
-            <p className="text-secondary-text mb-4 text-lg">
+            <p className="text-gray-400 mb-4 text-lg">
               Lo sentimos, algo salió mal en nuestro sistema.
             </p>
 
-            <p className="text-secondary-text mb-8 max-w-md mx-auto">
+            <p className="text-gray-400 mb-8 max-w-md mx-auto">
               Nuestro equipo ha sido notificado y está trabajando para resolver
               el problema. Mientras tanto, puedes intentar una de las siguientes
               opciones.
             </p>
 
             {/* Información del error */}
-            <div className="bg-background border border-border-color rounded-lg p-6 mb-8 text-left">
+            <div className="bg-gray-900 border border-gray-700 rounded-lg p-6 mb-8 text-left">
               <h3 className="font-bold text-white mb-3 flex items-center">
                 <span className="w-2 h-2 bg-red-500 rounded-full mr-2"></span>
                 Información del Error
               </h3>
-              <div className="space-y-2 text-sm text-secondary-text">
+              <div className="space-y-2 text-sm text-gray-400">
                 <div className="flex justify-between">
                   <span>Código:</span>
                   <span className="text-red-400">
@@ -133,22 +137,29 @@ export default function ErrorContent() {
             </div>
 
             {/* Contacto de soporte */}
-            <div className="border-t border-border-color pt-6">
-              <p className="text-secondary-text text-sm mb-3">
+            <div className="border-t border-gray-700 pt-6">
+              <p className="text-gray-400 text-sm mb-3">
                 Si el problema persiste, contáctanos directamente:
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center text-sm">
                 <a
                   href="mailto:soporte@pairprogramming.com"
-                  className="text-primary hover:underline"
+                  className="text-blue-500 hover:underline inline-flex items-center gap-2"
                 >
-                  📧 soporte@pairprogramming.com
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <rect x="2" y="4" width="20" height="16" rx="2" />
+                    <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+                  </svg>
+                  soporte@pairprogramming.com
                 </a>
                 <a
                   href="https://wa.me/+1234567890"
-                  className="text-primary hover:underline"
+                  className="text-blue-500 hover:underline inline-flex items-center gap-2"
                 >
-                  💬 WhatsApp
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+                  </svg>
+                  WhatsApp
                 </a>
               </div>
             </div>

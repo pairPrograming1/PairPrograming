@@ -14,7 +14,7 @@ export const TextArea = ({
   return (
     <div className="w-full">
       {label && (
-        <label className="block text-secondary-text font-semibold mb-2 text-sm">
+        <label className="block text-gray-400 font-semibold mb-2 text-sm">
           {label} {required && "*"}
         </label>
       )}
@@ -25,7 +25,7 @@ export const TextArea = ({
         required={required}
         disabled={disabled}
         rows={rows}
-        className={`w-full px-4 py-3 border border-border-color rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent bg-background/50 text-white placeholder-secondary-text resize-none transition-all text-sm ${
+        className={`w-full px-4 py-3 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-gray-800/50 text-white placeholder-gray-500 resize-none transition-all text-sm ${
           disabled ? "opacity-50 cursor-not-allowed" : ""
         } ${className}`}
         {...props}
