@@ -8,8 +8,8 @@ export default function ProjectList({
 }) {
   return (
     <div className={`${isSidebarExpanded ? "lg:col-span-1" : "lg:col-span-1"}`}>
-      <div className="bg-card-bg rounded-xl p-4 sticky top-4 border border-border-color">
-        <h3 className="text-lg font-bold text-primary mb-4">
+      <div className="bg-gray-900 rounded-xl p-4 sticky top-4 border border-gray-800">
+        <h3 className="text-lg font-bold text-blue-500 mb-4">
           Proyectos ({projects.length})
         </h3>
         <div
@@ -21,25 +21,27 @@ export default function ProjectList({
             <button
               key={video.id}
               onClick={() => onVideoSelect(index)}
-              className={`w-full text-left p-3 rounded-lg transition-all duration-300 hover:bg-hover-bg group ${
+              className={`w-full text-left p-3 rounded-lg transition-all duration-300 hover:bg-gray-800 group ${
                 currentVideo === index
-                  ? "bg-primary/20 border-l-4 border-primary"
-                  : "bg-background/50"
+                  ? "bg-blue-600/20 border-l-4 border-blue-500"
+                  : "bg-gray-900/50"
               }`}
             >
               <div className="flex items-start space-x-3">
-                <div className="flex-shrink-0 w-10 h-10 bg-primary/20 rounded flex items-center justify-center group-hover:bg-primary/30 transition-colors">
-                  <span className="text-primary text-sm">▶️</span>
+                <div className="flex-shrink-0 w-10 h-10 bg-blue-600/20 rounded flex items-center justify-center group-hover:bg-blue-600/30 transition-colors">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" className="text-blue-500">
+                    <path d="M8 5v14l11-7z" />
+                  </svg>
                 </div>
                 <div className="flex-1 min-w-0">
                   <h4 className="font-semibold text-white text-sm leading-tight line-clamp-2">
                     {video.title}
                   </h4>
                   <div className="flex items-center mt-1 space-x-2">
-                    <span className="text-primary text-xs font-medium">
+                    <span className="text-blue-500 text-xs font-medium">
                       {video.category}
                     </span>
-                    <span className="text-secondary-text text-xs">
+                    <span className="text-gray-400 text-xs">
                       • {video.duration}
                     </span>
                   </div>
