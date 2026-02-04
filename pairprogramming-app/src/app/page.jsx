@@ -8,7 +8,7 @@ import FloatingWidgets from "./components/FloatingWidgets"; // Nueva importació
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-black">
       <Sidebar />
       <MainContainer>
         <Hero />

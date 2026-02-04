@@ -8,24 +8,20 @@ export default function CallToAction() {
   const { isSidebarExpanded } = useSidebar();
 
   return (
-    <section className="compact-section bg-gradient-to-r from-primary/20 to-accent/20 text-white text-center relative overflow-hidden">
-      <div className="absolute inset-0 bg-grid-white bg-[size:60px_60px] opacity-10" />
-      <div className="absolute -top-20 -left-20 w-40 h-40 bg-primary/20 rounded-full blur-3xl" />
-      <div className="absolute -bottom-20 -right-20 w-40 h-40 bg-accent/20 rounded-full blur-3xl" />
-
+    <section className="py-12 lg:py-16 bg-gray-950 text-white text-center border-b border-gray-800">
       <Container
         size={isSidebarExpanded ? "expanded" : "default"}
         className="relative z-10"
       >
         <h3
-          className={`font-bold mb-4 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent transition-all duration-300 ${
+          className={`font-bold mb-4 text-white transition-all duration-300 ${
             isSidebarExpanded ? "text-xl lg:text-2xl" : "text-2xl lg:text-3xl"
           }`}
         >
           ¿Listo para transformar tu idea?
         </h3>
         <p
-          className={`mb-6 mx-auto transition-all duration-300 ${
+          className={`mb-6 mx-auto text-gray-400 transition-all duration-300 ${
             isSidebarExpanded ? "text-base max-w-lg" : "text-lg max-w-xl"
           }`}
         >

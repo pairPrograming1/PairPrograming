@@ -16,41 +16,37 @@ export default function Values() {
   ];
 
   return (
-    <section className="py-16 lg:py-20 bg-card-bg text-white">
+    <section className="py-12 lg:py-16 bg-black text-white border-b border-gray-800">
       <Container
         size={isSidebarExpanded ? "expanded" : "default"}
         className="text-center"
       >
-        <div className="fade-in">
+        <div>
           <h3
-            className={`font-bold mb-4 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent transition-all duration-300 ${
+            className={`font-bold mb-3 text-white transition-all duration-300 ${
               isSidebarExpanded ? "text-xl lg:text-2xl" : "text-2xl lg:text-3xl"
             }`}
           >
             Nuestros Valores
           </h3>
-          <p className="text-secondary-text max-w-xl mx-auto mb-12 transition-all duration-300">
+          <p className="text-gray-400 max-w-xl mx-auto mb-10 text-base">
             Principios que guían cada proyecto y garantizan excelencia en cada
             solución
           </p>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3">
             {values.map((value, index) => (
-              <Card
+              <div
                 key={value.name}
-                hover
-                padding="sm"
-                className="text-center group cursor-pointer"
-                animate
-                animationDelay={`${index * 0.1}s`}
+                className="bg-gray-900 border border-gray-800 rounded-lg p-4 text-center hover:border-gray-700 transition-colors"
               >
-                <div className="text-2xl mb-2 transform group-hover:scale-110 transition-transform duration-300">
+                <div className="text-2xl mb-2">
                   {value.icon}
                 </div>
-                <span className="text-sm font-medium group-hover:text-accent transition-colors">
+                <span className="text-sm font-medium text-gray-300">
                   {value.name}
                 </span>
-              </Card>
+              </div>
             ))}
           </div>
         </div>
