@@ -21,7 +21,7 @@ export function ContactForm() {
         icon: 'success',
         background: '#0f172a',
         color: '#fff',
-        confirmButtonColor: '#F59E0B',
+        confirmButtonColor: '#2563eb',
         customClass: { popup: 'rounded-2xl p-6' }
       });
     } else if (status === 'error') {
@@ -31,7 +31,7 @@ export function ContactForm() {
         icon: 'error',
         background: '#0f172a',
         color: '#fff',
-        confirmButtonColor: '#F59E0B',
+        confirmButtonColor: '#2563eb',
         customClass: { popup: 'rounded-2xl p-6' }
       });
     }

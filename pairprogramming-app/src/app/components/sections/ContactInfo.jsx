@@ -15,15 +15,15 @@ export function ContactInfo() {
         </h3>
         <div className="space-y-6">
           <div>
-            <p className="text-special-text text-sm mb-2">
+            <p className="text-gray-400 text-sm mb-2">
               Teléfonos (vía WhatsApp)
             </p>
             <ul className="space-y-3">
               {CONTACTS.map((contact) => (
                 <li key={contact.phone} className="flex items-start space-x-3">
-                  <div className="w-10 h-10 bg-primary/20 rounded-full flex items-center justify-center flex-shrink-0">
+                  <div className="w-10 h-10 bg-blue-600/20 rounded-full flex items-center justify-center flex-shrink-0">
                     <svg
-                      className="w-5 h-5 text-primary"
+                      className="w-5 h-5 text-blue-500"
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -55,9 +55,9 @@ export function ContactInfo() {
           </div>
 
           <div className="flex items-start space-x-3">
-            <div className="w-10 h-10 bg-primary/20 rounded-full flex items-center justify-center flex-shrink-0">
+            <div className="w-10 h-10 bg-blue-600/20 rounded-full flex items-center justify-center flex-shrink-0">
               {/* <svg
-                className="w-5 h-5 text-primary"
+                className="w-5 h-5 text-blue-500"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
