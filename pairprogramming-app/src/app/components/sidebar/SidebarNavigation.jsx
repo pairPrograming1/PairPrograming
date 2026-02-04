@@ -8,10 +8,10 @@ export function SidebarNavigation({ menuItems, shouldShowText, onItemClick }) {
           <li key={item.href}>
             <Link
               href={item.href}
-              className="flex items-center p-3 rounded-lg hover:bg-hover-bg transition-colors font-medium group"
+              className="flex items-center p-3 rounded-lg hover:bg-gray-800 transition-colors font-medium group"
               onClick={onItemClick}
             >
-              <div className="text-primary group-hover:text-accent transition-colors">
+              <div className="text-blue-500 group-hover:text-blue-400 transition-colors">
                 {item.icon}
               </div>
               <span

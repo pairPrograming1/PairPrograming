@@ -2,7 +2,7 @@ export function MobileToggleButton({ isOpen, onToggle }) {
   return (
     <button
       onClick={onToggle}
-      className="lg:hidden fixed top-4 left-4 z-50 p-2 rounded-full bg-primary text-white hover:bg-primary-dark transition shadow-lg"
+      className="lg:hidden fixed top-4 left-4 z-50 p-2 rounded-full bg-blue-600 text-white hover:bg-blue-700 transition shadow-lg"
     >
       <svg
         className="w-5 h-5"
