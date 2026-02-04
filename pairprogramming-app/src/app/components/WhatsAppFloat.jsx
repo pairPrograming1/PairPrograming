@@ -18,9 +18,9 @@ export default function WhatsAppFloat() {
     } catch (e) {
       // fallback hardcoded
       return [
-        { name: "Rubiño Pablo", phone: "+5492616396981" },
         { name: "Aleart Esteban", phone: "+34673782934" },
         { name: "Rendom Josue", phone: "+56940881083" },
+        { name: "Rubiño Pablo", phone: "+5492616396981" },
         { name: "Sector Comercial -Bou Mauricio", phone: "+5493412696133" },
       ];
     }

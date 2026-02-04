@@ -41,7 +41,7 @@ export default function Portfolio() {
           {/* Detalles del proyecto - Área principal */}
           <div className="lg:col-span-8 xl:col-span-9">
             <ProjectDetails video={currentVideoData} />
-            <PortfolioCTA />
+            {/* <PortfolioCTA /> */}
           </div>
         </div>
       </Container>

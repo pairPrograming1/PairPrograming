@@ -11,7 +11,7 @@ export default function ProjectDetails({ video }) {
   ];
 
   return (
-    <div className="bg-gray-900 rounded-xl p-6 lg:p-8 mb-6 border border-gray-800 shadow-xl fade-in">
+    <div className="bg-gray-900 h-full rounded-xl p-6 lg:p-8 mb-6 border border-gray-800 shadow-xl fade-in">
       {/* Header del proyecto */}
       <div className="mb-6 pb-6 border-b border-gray-800">
         <div className="flex items-start justify-between gap-4 mb-4">

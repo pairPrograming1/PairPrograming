@@ -51,17 +51,7 @@ export function ContactForm() {
           Contáctanos directamente vía WhatsApp o Email:
         </p>
         <ul className="list-disc pl-5 space-y-1">
-          <li>
-            Rubiño Pablo:{" "}
-            <a
-              href="https://wa.me/5492616396981"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-green-400 underline"
-            >
-              +54 9 2616396981
-            </a>
-          </li>
+         
           <li>
             Aleart Esteban:{" "}
             <a
@@ -82,6 +72,17 @@ export function ContactForm() {
               className="text-green-400 underline"
             >
               +56 9 40881083
+            </a>
+          </li>
+           <li>
+            Rubiño Pablo:{" "}
+            <a
+              href="https://wa.me/5492616396981"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-green-400 underline"
+            >
+              +54 9 2616396981
             </a>
           </li>
           <li>
