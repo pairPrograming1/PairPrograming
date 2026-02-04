@@ -55,7 +55,7 @@ export function ContactInfo() {
           </div>
 
           <div className="flex items-start space-x-3">
-            <div className="w-10 h-10 bg-blue-600/20 rounded-full flex items-center justify-center flex-shrink-0">
+           
               {/* <svg
                 className="w-5 h-5 text-blue-500"
                 fill="none"
@@ -69,8 +69,8 @@ export function ContactInfo() {
                   d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
                 />
               </svg> */}
-            </div>
-            <div className="flex-1">
+         
+            
               {/* <p className="text-secondary-text text-sm">Email</p> */}
               {/* <p className="text-white font-medium text-sm break-all">
                 <a
@@ -80,7 +80,7 @@ export function ContactInfo() {
                   pairprogramming@gmail.com
                 </a>
               </p> */}
-            </div>
+            
           </div>
         </div>
       </Card>
