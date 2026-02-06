@@ -6,10 +6,14 @@ export function SidebarFooter({ shouldShowText, isAdmin }) {
           shouldShowText ? "opacity-100" : "opacity-0"
         }`}
       >
-        <p className="text-secondary-text text-xs">© 2025 PairProgramming</p>
+        <p className="text-secondary-text text-xs">
+          © {new Date().getFullYear()}{" "}
+          <span className="text-brand-blue">pair</span>
+          <span className="text-foreground">programming</span>
+        </p>
         {isAdmin && (
-          <div className="mt-2 p-2 bg-brand-blue/10 rounded">
-            <p className="text-brand-blue-light text-xs font-semibold">Modo Admin</p>
+          <div className="mt-2 p-2 bg-brand-gold/10 border border-brand-gold/20 rounded-lg">
+            <p className="text-brand-gold text-xs font-semibold">Modo Admin</p>
           </div>
         )}
       </div>
