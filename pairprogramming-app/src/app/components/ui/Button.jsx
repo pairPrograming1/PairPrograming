@@ -14,19 +14,23 @@ export const Button = ({
   ...props
 }) => {
   const baseClasses =
-    "inline-flex items-center justify-center font-semibold transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-gray-900";
+    "inline-flex items-center justify-center font-semibold transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-brand-blue/50 focus:ring-offset-2 focus:ring-offset-background";
 
   const variants = {
-    primary: "bg-blue-600 hover:bg-blue-700 text-white shadow-lg hover:shadow-xl",
+    primary:
+      "bg-brand-blue hover:bg-brand-blue-light text-white shadow-lg shadow-brand-blue/20 hover:shadow-brand-blue/30",
+    accent:
+      "bg-brand-gold hover:bg-brand-gold-light text-white shadow-lg shadow-brand-gold/20 hover:shadow-brand-gold/30",
     outline:
-      "border-2 border-gray-700 text-gray-300 hover:bg-gray-800 hover:border-gray-600",
-    secondary: "bg-gray-800 hover:bg-gray-700 text-white border border-gray-700",
+      "border border-border-color text-secondary-text hover:text-foreground hover:border-brand-blue/50 hover:bg-brand-blue/5",
+    secondary:
+      "bg-background-card hover:bg-hover-bg text-foreground border border-border-color",
   };
 
   const sizes = {
     sm: "px-4 py-2 text-sm rounded-lg",
     md: "px-6 py-2.5 rounded-lg text-sm lg:text-base",
-    lg: "px-8 py-3 rounded-lg text-base lg:text-lg",
+    lg: "px-8 py-3 rounded-xl text-base lg:text-lg",
   };
 
   const classes = `${baseClasses} ${variants[variant]} ${

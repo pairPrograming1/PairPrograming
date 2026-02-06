@@ -7,7 +7,7 @@ import FloatingWidgets from "../components/FloatingWidgets";
 
 export default function NosotrosPage() {
   return (
-    <div className="min-h-screen bg-black">
+    <div className="min-h-screen bg-background">
       <Sidebar />
       <MainContainer>
         <Nosotros />

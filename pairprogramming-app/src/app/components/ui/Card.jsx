@@ -5,8 +5,8 @@ export const Card = ({
   className = "",
   hover = false,
   padding = "md",
-  animate, // Extraemos animate para que no se pase al div
-  animationDelay, // También extraemos animationDelay
+  animate,
+  animationDelay,
   ...props
 }) => {
   const paddings = {
@@ -15,9 +15,9 @@ export const Card = ({
     lg: "p-8",
   };
 
-  const classes = `bg-gray-900 rounded-lg border border-gray-800 ${
+  const classes = `bg-background-card rounded-xl border border-border-color ${
     paddings[padding]
-  } ${hover ? "hover:border-gray-700 transition-all duration-200" : ""} ${className}`;
+  } ${hover ? "hover:border-brand-blue/40 hover:shadow-md transition-all duration-300" : ""} ${className}`;
 
   return (
     <div className={classes} {...props}>
