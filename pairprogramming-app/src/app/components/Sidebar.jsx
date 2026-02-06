@@ -25,7 +25,7 @@ export default function Sidebar() {
       <MobileOverlay isOpen={isOpen} onClose={toggleSidebar} />
 
       <aside
-        className={`fixed top-0 left-0 h-screen bg-gray-950 text-white flex flex-col shadow-xl border-r border-gray-800 transition-all duration-300 z-40 overflow-hidden
+        className={`fixed top-0 left-0 h-screen bg-background text-foreground flex flex-col shadow-xl shadow-black/20 border-r border-border-color transition-all duration-300 z-40 overflow-hidden
           ${isOpen ? "translate-x-0 w-64" : "-translate-x-full"}
           lg:translate-x-0 ${isSidebarExpanded ? "lg:w-64" : "lg:w-16"}`}
       >
