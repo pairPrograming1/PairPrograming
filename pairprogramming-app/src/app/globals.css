@@ -4,13 +4,39 @@
 
 @layer base {
   :root {
-    --background: #000000;
-    --foreground: #ffffff;
+    /* Brand Colors - extracted from logo */
+    --brand-blue: #2B7CB5;
+    --brand-blue-light: #3A8FCA;
+    --brand-blue-dark: #1E5F8F;
+    --brand-gold: #D49A2A;
+    --brand-gold-light: #E5B04A;
+    --brand-gold-dark: #B8841E;
+
+    /* Surfaces - Dark Navy */
+    --background: #0B1221;
+    --background-secondary: #111B2E;
+    --background-card: #152238;
+    --foreground: #F1F5F9;
+
+    /* Semantic */
+    --primary: var(--brand-blue);
+    --primary-dark: var(--brand-blue-dark);
+    --primary-light: var(--brand-blue-light);
+    --accent: var(--brand-gold);
+    --accent-light: var(--brand-gold-light);
+    --accent-dark: var(--brand-gold-dark);
+
+    /* UI */
+    --card-bg: var(--background-card);
+    --hover-bg: #1A2D4A;
+    --secondary-text: #94A3B8;
+    --border-color: #1E3150;
+    --success: #25D366;
   }
 
   body {
-    background: #000000;
-    color: #ffffff;
+    background: var(--background);
+    color: var(--foreground);
     font-family: "Inter", Arial, Helvetica, sans-serif;
     line-height: 1.6;
   }
@@ -20,31 +46,25 @@
   }
 }
 
-@layer components {
-  /* Mantener solo lo necesario - el resto se maneja con Tailwind directo */
-}
-
-@layer utilities {
-  /* Utilidades personalizadas mínimas */
-}
-
+/* Scrollbar */
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 6px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #000000;
+  background: var(--background);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #374151;
-  border-radius: 4px;
+  background: var(--border-color);
+  border-radius: 3px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #4b5563;
+  background: var(--brand-blue-dark);
 }
 
+/* Animations */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -56,16 +76,47 @@
   }
 }
 
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200px 0;
+  }
+  100% {
+    background-position: 200px 0;
+  }
+}
+
 .fade-in {
   animation: fadeIn 0.4s ease-out;
 }
 
-/* Animación simple para widgets flotantes */
 .animate-fade-in {
   animation: fadeIn 0.3s ease-out;
 }
 
-/* Animación suave para pulse-glow-green (solo para WhatsApp) */
+.animate-fade-in-up {
+  animation: fadeInUp 0.6s ease-out both;
+}
+
+/* Stagger delays */
+.stagger-1 { animation-delay: 0.1s; }
+.stagger-2 { animation-delay: 0.2s; }
+.stagger-3 { animation-delay: 0.3s; }
+.stagger-4 { animation-delay: 0.4s; }
+.stagger-5 { animation-delay: 0.5s; }
+.stagger-6 { animation-delay: 0.6s; }
+
+/* WhatsApp pulse glow */
 @keyframes pulse-glow-green {
   0%, 100% {
     box-shadow: 0 4px 20px rgba(37, 211, 102, 0.3);
@@ -79,28 +130,29 @@
   animation: pulse-glow-green 3s infinite;
 }
 
-/* Scrollbar personalizado para chatbot */
+/* Chatbot scrollbar */
 .chatbot-messages::-webkit-scrollbar {
   width: 6px;
 }
 
 .chatbot-messages::-webkit-scrollbar-track {
-  background: #1f2937;
+  background: var(--background-secondary);
   border-radius: 3px;
 }
 
 .chatbot-messages::-webkit-scrollbar-thumb {
-  background: #4b5563;
+  background: var(--border-color);
   border-radius: 3px;
 }
 
 .chatbot-messages::-webkit-scrollbar-thumb:hover {
-  background: #6b7280;
+  background: var(--brand-blue-dark);
 }
 
-/* Mejoras de accesibilidad */
+/* Accessibility */
 @media (prefers-reduced-motion: reduce) {
   .animate-fade-in,
+  .animate-fade-in-up,
   .pulse-glow-green {
     animation: none;
   }

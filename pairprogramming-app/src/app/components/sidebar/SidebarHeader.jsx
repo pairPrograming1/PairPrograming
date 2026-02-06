@@ -3,7 +3,7 @@ import Image from "next/image";
 export function SidebarHeader({ shouldShowText, onToggleExpand, imageUrl }) {
   return (
     <div
-      className={`p-4 border-b border-gray-800 flex items-center justify-between ${
+      className={`p-4 border-b border-border-color flex items-center justify-between ${
         shouldShowText ? "" : "flex-col gap-2"
       }`}
     >
@@ -21,7 +21,10 @@ export function SidebarHeader({ shouldShowText, onToggleExpand, imageUrl }) {
               className="w-full h-full object-cover"
             />
           </div>
-          <h1 className="font-bold tracking-tight text-xl">PairProgramming</h1>
+          <h1 className="font-bold tracking-tight text-xl">
+            <span className="text-brand-blue">pair</span>
+            <span className="text-foreground">programming</span>
+          </h1>
         </button>
       ) : (
         <button

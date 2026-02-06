@@ -20,7 +20,7 @@ export const metadata = {
 
 // export default function RootLayout({ children }) {
 //   return (
-//     <html lang="es" className="dark">
+//     <html lang="es">
 //       <body className={`${inter.variable} antialiased`}>
 //         <SidebarProvider>
 //           <Header />
