@@ -68,7 +68,7 @@ export default function Nosotros() {
   const stats = [
     { number: "50+", label: "Proyectos Completados" },
     { number: "3+", label: "Años de Experiencia" },
-    { number: "100%", label: "Clientes Satisfechos" },
+    { number: "98%", label: "Clientes Satisfechos" },
     { number: "24/7", label: "Soporte Continuo" },
   ];
 

@@ -6,6 +6,7 @@ import { portfolioVideos } from "../data/portfolioVideos";
 import PortfolioHeader from "./portfolio/PortfolioHeader";
 import ProjectList from "./portfolio/ProjectList";
 import ProjectDetails from "./portfolio/ProjectDetails";
+import PortfolioCTA from "./portfolio/PortfolioCTA";
 
 export default function Portfolio() {
   const { isSidebarExpanded } = useSidebar();
@@ -22,16 +23,12 @@ export default function Portfolio() {
 
   return (
     <section className="py-16 lg:py-24 bg-background text-foreground min-h-screen relative overflow-hidden border-b border-border-color">
-      {/* Animated background blobs */}
+      {/* Background blobs */}
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute -top-40 -right-40 w-[500px] h-[500px] bg-brand-blue/15 rounded-full blur-3xl animate-float-blob" />
+        <div className="absolute -top-40 -right-40 w-[500px] h-[500px] bg-brand-blue/10 rounded-full blur-3xl animate-float-blob" />
         <div
           className="absolute -bottom-40 -left-40 w-[450px] h-[450px] bg-brand-gold/10 rounded-full blur-3xl animate-float-blob"
           style={{ animationDelay: "3s" }}
-        />
-        <div
-          className="absolute top-1/2 left-1/4 w-72 h-72 bg-brand-blue/8 rounded-full blur-3xl animate-float-blob"
-          style={{ animationDelay: "5s" }}
         />
       </div>
 
@@ -52,6 +49,8 @@ export default function Portfolio() {
             <ProjectDetails key={currentVideo} video={currentVideoData} />
           </div>
         </div>
+
+        <PortfolioCTA />
       </Container>
     </section>
   );
