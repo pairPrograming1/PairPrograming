@@ -51,40 +51,7 @@ export const metadata = {
 };
 
 
-// export default function RootLayout({ children }) {
-//   return (
-//     <html lang="es">
-//       <body className={`${inter.variable} antialiased`}>
-//         <SidebarProvider>
-//           <Header />
-//           {children}
-//           <FloatingWidgets />
-//         </SidebarProvider>
-//       </body>
-//     </html>
-//   );
-// }
 export default function RootLayout({ children }) {
-
-  // useEffect(() => {
-  //   const handleClick = (e) => {
-  //     const target = e.target;
-  //     window.dataLayer = window.dataLayer || [];
-  //     window.dataLayer.push({
-  //       event: "click_general",
-  //       tagName: target.tagName,
-  //       id: target.id || "",
-  //       classes: target.className || "",
-  //       text: target.innerText?.slice(0, 50) || "",
-  //       timestamp: new Date().toISOString(),
-  //     });
-  //     console.log("GTM Event pushed: click_general");
-  //   };
-
-  //   document.addEventListener("click", handleClick);
-  //   return () => document.removeEventListener("click", handleClick);
-  // }, []);
-
   return (
     <html lang="es" className="dark">
       <head>

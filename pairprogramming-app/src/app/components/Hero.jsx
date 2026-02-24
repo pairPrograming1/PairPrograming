@@ -114,7 +114,7 @@ export default function Hero() {
           <div className="flex-shrink-0 animate-fade-in-up stagger-2">
             <div className="relative">
               {/* Subtle shadow behind logo */}
-              <div className="absolute inset-0 bg-brand-blue/8 rounded-2xl blur-2xl scale-110" />
+              <div className="absolute inset-0 bg-brand-blue/10 rounded-2xl blur-2xl scale-110" />
               <div className="absolute inset-0 bg-brand-gold/5 rounded-2xl blur-xl scale-105 translate-x-4 translate-y-4" />
 
               <div className="relative w-56 h-56 lg:w-72 lg:h-72 rounded-2xl overflow-hidden border border-border-color bg-background-card/50 backdrop-blur-sm shadow-2xl shadow-brand-blue/10">

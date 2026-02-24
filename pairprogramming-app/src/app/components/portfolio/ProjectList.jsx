@@ -1,19 +1,19 @@
 "use client";
 
 const categoryColors = {
-  blue:    { bg: "bg-blue-500/15",    border: "border-blue-500/40",    text: "text-blue-400",    hoverBorder: "hover:border-blue-500/50",    dot: "bg-blue-400",    selectedBg: "bg-blue-500/20" },
-  amber:   { bg: "bg-amber-500/15",   border: "border-amber-500/40",   text: "text-amber-400",   hoverBorder: "hover:border-amber-500/50",   dot: "bg-amber-400",   selectedBg: "bg-amber-500/20" },
-  emerald: { bg: "bg-emerald-500/15", border: "border-emerald-500/40", text: "text-emerald-400", hoverBorder: "hover:border-emerald-500/50", dot: "bg-emerald-400", selectedBg: "bg-emerald-500/20" },
-  purple:  { bg: "bg-purple-500/15",  border: "border-purple-500/40",  text: "text-purple-400",  hoverBorder: "hover:border-purple-500/50",  dot: "bg-purple-400",  selectedBg: "bg-purple-500/20" },
-  cyan:    { bg: "bg-cyan-500/15",    border: "border-cyan-500/40",    text: "text-cyan-400",    hoverBorder: "hover:border-cyan-500/50",    dot: "bg-cyan-400",    selectedBg: "bg-cyan-500/20" },
-  indigo:  { bg: "bg-indigo-500/15",  border: "border-indigo-500/40",  text: "text-indigo-400",  hoverBorder: "hover:border-indigo-500/50",  dot: "bg-indigo-400",  selectedBg: "bg-indigo-500/20" },
-  gold:    { bg: "bg-yellow-500/15",  border: "border-yellow-500/40",  text: "text-yellow-400",  hoverBorder: "hover:border-yellow-500/50",  dot: "bg-yellow-400",  selectedBg: "bg-yellow-500/20" },
+  blue:    { bg: "bg-blue-500/10",    border: "border-blue-500/40",    text: "text-blue-400",    hoverBorder: "hover:border-blue-500/40",    dot: "bg-blue-400",    selectedBg: "bg-blue-500/10" },
+  amber:   { bg: "bg-amber-500/10",   border: "border-amber-500/40",   text: "text-amber-400",   hoverBorder: "hover:border-amber-500/40",   dot: "bg-amber-400",   selectedBg: "bg-amber-500/10" },
+  emerald: { bg: "bg-emerald-500/10", border: "border-emerald-500/40", text: "text-emerald-400", hoverBorder: "hover:border-emerald-500/40", dot: "bg-emerald-400", selectedBg: "bg-emerald-500/10" },
+  purple:  { bg: "bg-purple-500/10",  border: "border-purple-500/40",  text: "text-purple-400",  hoverBorder: "hover:border-purple-500/40",  dot: "bg-purple-400",  selectedBg: "bg-purple-500/10" },
+  cyan:    { bg: "bg-cyan-500/10",    border: "border-cyan-500/40",    text: "text-cyan-400",    hoverBorder: "hover:border-cyan-500/40",    dot: "bg-cyan-400",    selectedBg: "bg-cyan-500/10" },
+  indigo:  { bg: "bg-indigo-500/10",  border: "border-indigo-500/40",  text: "text-indigo-400",  hoverBorder: "hover:border-indigo-500/40",  dot: "bg-indigo-400",  selectedBg: "bg-indigo-500/10" },
+  gold:    { bg: "bg-yellow-500/10",  border: "border-yellow-500/40",  text: "text-yellow-400",  hoverBorder: "hover:border-yellow-500/40",  dot: "bg-yellow-400",  selectedBg: "bg-yellow-500/10" },
 };
 
 const statusConfig = {
-  "Producción":    { bg: "bg-emerald-500/15", text: "text-emerald-400", border: "border-emerald-500/30", dot: "bg-emerald-400" },
-  "Demo Activo":   { bg: "bg-brand-blue/15",  text: "text-brand-blue-light", border: "border-brand-blue/30", dot: "bg-brand-blue-light" },
-  "En Desarrollo": { bg: "bg-brand-gold/15",  text: "text-brand-gold-light", border: "border-brand-gold/30", dot: "bg-brand-gold-light" },
+  "Producción":    { bg: "bg-emerald-500/10", text: "text-emerald-400", border: "border-emerald-500/30", dot: "bg-emerald-400" },
+  "Demo Activo":   { bg: "bg-brand-blue/10",  text: "text-brand-blue-light", border: "border-brand-blue/30", dot: "bg-brand-blue-light" },
+  "En Desarrollo": { bg: "bg-brand-gold/10",  text: "text-brand-gold-light", border: "border-brand-gold/30", dot: "bg-brand-gold-light" },
 };
 
 export default function ProjectList({
@@ -26,7 +26,7 @@ export default function ProjectList({
       <div className="bg-background-card rounded-xl p-5 lg:p-6 border border-border-color shadow-xl h-full flex flex-col">
         <div className="flex items-center justify-between mb-5">
           <h3 className="text-xl font-bold text-brand-blue">Proyectos</h3>
-          <span className="bg-brand-blue/15 text-brand-blue-light text-sm font-semibold px-3 py-1 rounded-full border border-brand-blue/20">
+          <span className="bg-brand-blue/10 text-brand-blue-light text-sm font-semibold px-3 py-1 rounded-full border border-brand-blue/20">
             {projects.length}
           </span>
         </div>
