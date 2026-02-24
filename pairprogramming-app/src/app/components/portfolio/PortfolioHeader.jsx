@@ -27,7 +27,7 @@ export default function PortfolioHeader({ isSidebarExpanded }) {
         <span className="text-brand-blue">Portafolio</span>
       </h1>
 
-      <p className="text-secondary-text max-w-3xl mx-auto text-lg lg:text-xl leading-relaxed mb-8 animate-fade-in-up stagger-2">
+      <p className="text-secondary-text max-w-2xl mx-auto text-base lg:text-lg leading-relaxed mb-8 animate-fade-in-up stagger-2">
         Explora nuestros proyectos más destacados. Cada uno representa soluciones reales
         que hemos desarrollado con tecnologías modernas y las mejores prácticas de la industria.
       </p>

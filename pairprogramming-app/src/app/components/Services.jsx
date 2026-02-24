@@ -198,28 +198,6 @@ export default function Services() {
         "Optimización de costos",
       ],
     },
-    {
-      title: "Servicios Digitales",
-      description:
-        "Desarrollo a medida, consultoría estratégica, diseño UX/UI, integración de sistemas y soporte técnico para soluciones personalizadas.",
-      features: [
-        "Desarrollo Custom",
-        "Consultoría Tech",
-        "Diseño UX/UI",
-        "Soporte Continuo",
-      ],
-    },
-    {
-      title: "Soluciones Digitales",
-      description:
-        "Proyectos integrales que combinan tecnología y estrategia, como dashboards ejecutivos, portales de autoservicio y modernización de sistemas legacy.",
-      features: [
-        "Dashboards Ejecutivos",
-        "Portales Cliente",
-        "Modernización",
-        "Soluciones E2E",
-      ],
-    },
   ];
 
   return (
@@ -256,10 +234,10 @@ export default function Services() {
 
         {/* Services grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-6">
-          {services.map((service) => (
+          {services.map((service, index) => (
             <div
               key={service.title}
-              className="group relative bg-background-card border border-border-color rounded-xl p-6 hover:border-brand-blue/40 transition-all duration-300"
+              className={`group relative bg-background-card border border-border-color rounded-xl p-6 hover:border-brand-blue/40 transition-all duration-300 animate-fade-in-up stagger-${Math.min(index + 1, 8)}`}
             >
               {/* Hover gradient overlay */}
               <div className="absolute inset-0 rounded-xl bg-gradient-to-br from-brand-blue/0 to-brand-gold/0 group-hover:from-brand-blue/5 group-hover:to-brand-gold/5 transition-all duration-300" />

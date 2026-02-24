@@ -3,7 +3,6 @@ import Nosotros from "../components/Nosotros";
 import Footer from "../components/Footer";
 import CallToAction from "../components/CallToAction";
 import MainContainer from "../components/MainContainer";
-import FloatingWidgets from "../components/FloatingWidgets";
 
 export default function NosotrosPage() {
   return (
@@ -14,7 +13,6 @@ export default function NosotrosPage() {
         <CallToAction />
         <Footer />
       </MainContainer>
-      <FloatingWidgets />
     </div>
   );
 }
