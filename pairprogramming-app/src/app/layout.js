@@ -12,41 +12,72 @@ const inter = Inter({
   subsets: ["latin"],
 });
 
+const BASE_URL = "https://www.pairprogramming.com.ar";
+const OG_IMAGE = "https://res.cloudinary.com/dmjusy7sn/image/upload/v1758981340/usuarios/xkajcqpxdbggr4q7ywjy.jpg";
+
 export const metadata = {
-  title: "PairProgramming - Transformamos Ideas en Soluciones Digitales",
+  metadataBase: new URL(BASE_URL),
+
+  title: {
+    default: "PairProgramming - Desarrollo de Software B2B SaaS",
+    template: "%s | PairProgramming",
+  },
   description:
-    "Co-creamos soluciones digitales que integran tecnología y estrategia",
+    "Diseñamos y construimos plataformas B2B SaaS, CRM, ERP y productos digitales escalables para empresas de Latinoamérica. +5 años de experiencia, 100% clientes satisfechos.",
+  keywords: [
+    "desarrollo software B2B SaaS",
+    "arquitectura SaaS multi-tenant",
+    "desarrollo plataformas digitales",
+    "CRM a medida",
+    "ERP personalizado",
+    "desarrollo Next.js Argentina",
+    "agencia desarrollo web",
+    "software empresarial",
+    "PairProgramming",
+  ],
+
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
 
   openGraph: {
-    title: "PairProgramming - Transformamos Ideas en Soluciones Digitales",
+    title: "PairProgramming - Desarrollo de Software B2B SaaS",
     description:
-      "Co-creamos soluciones digitales que integran tecnología y estrategia",
-    url: "https://www.pairprogramming.com.ar",
+      "Diseñamos y construimos plataformas B2B SaaS, CRM, ERP y productos digitales escalables para empresas de Latinoamérica.",
+    url: BASE_URL,
     siteName: "PairProgramming",
-    images: [
-      {
-        url: "https://res.cloudinary.com/dmjusy7sn/image/upload/v1758981340/usuarios/xkajcqpxdbggr4q7ywjy.jpg",
-        width: 1200,
-        height: 630,
-      },
-    ],
+    images: [{ url: OG_IMAGE, width: 1200, height: 630, alt: "PairProgramming - Desarrollo B2B SaaS" }],
     locale: "es_AR",
     type: "website",
   },
 
   twitter: {
     card: "summary_large_image",
-    title: "PairProgramming",
+    title: "PairProgramming - Desarrollo de Software B2B SaaS",
     description:
-      "Co-creamos soluciones digitales que integran tecnología y estrategia",
-    images: [
-      "https://res.cloudinary.com/dmjusy7sn/image/upload/v1758981340/usuarios/xkajcqpxdbggr4q7ywjy.jpg",
-    ],
+      "Diseñamos y construimos plataformas B2B SaaS, CRM, ERP y productos digitales escalables.",
+    images: [OG_IMAGE],
   },
+
+  alternates: {
+    canonical: BASE_URL,
+  },
+
   icons: {
     icon: "/icon.svg",
     shortcut: "/icon.svg",
     apple: "/icon.svg",
+  },
+
+  verification: {
+    google: "c0n5-H_sk_Zh-sKTmJ4OzTvdGp1xN2n5etlKXugPpF8",
   },
 };
 
@@ -79,6 +110,40 @@ export default function RootLayout({ children }) {
       </head>
 
       <body className={`${inter.variable} antialiased`}>
+        {/* JSON-LD Organization schema */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              name: "PairProgramming",
+              url: "https://www.pairprogramming.com.ar",
+              logo: "https://www.pairprogramming.com.ar/icon.svg",
+              description:
+                "Agencia especializada en desarrollo de software B2B SaaS, arquitectura multi-tenant, CRM, ERP y productos digitales escalables para empresas de Latinoamérica.",
+              foundingDate: "2020",
+              areaServed: ["AR", "MX", "CL", "CO", "UY", "ES"],
+              knowsAbout: [
+                "Arquitectura B2B SaaS",
+                "Desarrollo Next.js",
+                "CRM a medida",
+                "ERP empresarial",
+                "Automatización de procesos",
+                "Cloud & DevOps",
+              ],
+              contactPoint: {
+                "@type": "ContactPoint",
+                contactType: "customer service",
+                availableLanguage: "Spanish",
+                url: "https://www.pairprogramming.com.ar/contacto",
+              },
+              sameAs: [
+                "https://www.linkedin.com/company/pairprogramming",
+              ],
+            }),
+          }}
+        />
         {/* Google Tag Manager (noscript) */}
         <noscript>
           <iframe
