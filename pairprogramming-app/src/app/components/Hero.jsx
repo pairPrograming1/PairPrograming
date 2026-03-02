@@ -135,9 +135,9 @@ export default function Hero() {
         <div className="mt-16 lg:mt-20 pt-10 border-t border-border-color animate-fade-in-up stagger-4">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
             {[
-              { value: "50+", label: "Proyectos Entregados" },
-              { value: "98%", label: "Clientes Satisfechos" },
-              { value: "3+", label: "Años de Experiencia" },
+              { value: "20+", label: "Proyectos Entregados" },
+              { value: "100%", label: "Clientes Satisfechos" },
+              { value: "5+", label: "Años de Experiencia" },
               { value: "24/7", label: "Soporte Continuo" },
             ].map((stat) => (
               <div key={stat.label} className="text-center">

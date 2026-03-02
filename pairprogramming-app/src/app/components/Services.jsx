@@ -4,6 +4,16 @@ import { Container } from "./ui/Container";
 
 const ServiceIcon = ({ name }) => {
   const icons = {
+    "Arquitectura B2B SaaS": (
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <rect x="2" y="3" width="20" height="4" rx="1" />
+        <rect x="2" y="10" width="20" height="4" rx="1" />
+        <rect x="2" y="17" width="20" height="4" rx="1" />
+        <circle cx="6" cy="5" r="1" fill="currentColor" stroke="none" />
+        <circle cx="6" cy="12" r="1" fill="currentColor" stroke="none" />
+        <circle cx="6" cy="19" r="1" fill="currentColor" stroke="none" />
+      </svg>
+    ),
     "Productos Digitales": (
       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
         <rect x="2" y="3" width="20" height="14" rx="2" ry="2" />
@@ -35,11 +45,6 @@ const ServiceIcon = ({ name }) => {
       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
         <polyline points="16 18 22 12 16 6" />
         <polyline points="8 6 2 12 8 18" />
-      </svg>
-    ),
-    "Consultoría en Ciberseguridad": (
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
       </svg>
     ),
     "SEO & Contenido": (
@@ -88,6 +93,17 @@ export default function Services() {
   const { isSidebarExpanded } = useSidebar();
 
   const services = [
+    {
+      title: "Arquitectura B2B SaaS",
+      description:
+        "Diseño y construcción de plataformas SaaS multi-tenant desde cero: arquitectura escalable, modelo de planes, onboarding, billing y operaciones. El servicio que más ofrecemos y donde más valor generamos.",
+      features: [
+        "Arquitectura multi-tenant escalable",
+        "Módulos por plan y feature flags",
+        "APIs y webhooks empresariales",
+        "Onboarding, billing y operaciones",
+      ],
+    },
     {
       title: "Productos Digitales",
       description:
@@ -141,17 +157,6 @@ export default function Services() {
         "Integraciones API y webhooks",
         "Automatizaciones de marketing",
         "Monitoreo de workflows",
-      ],
-    },
-    {
-      title: "Consultoría en Ciberseguridad",
-      description:
-        "Evaluaciones de seguridad, hardening, pruebas de penetración y estrategias de gobernanza para proteger datos, infra y aplicaciones.",
-      features: [
-        "Auditoría y evaluación de riesgos",
-        "Pruebas de penetración",
-        "Hardening de infraestructura",
-        "Planes de respuesta",
       ],
     },
     {
