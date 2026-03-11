@@ -21,7 +21,7 @@ export function useSidebarLogic() {
   // Construir items del menú
   const menuItems = isAdmin ? [...baseMenuItems, adminMenuItem] : baseMenuItems;
 
-  const imageUrl = "/icon.svg";
+  const imageUrl = "/team.jpg";
 
   return {
     isOpen,

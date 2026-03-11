@@ -17,6 +17,8 @@ const C = {
   border:"rgba(238,242,247,0.07)", border2:"rgba(74,143,196,0.2)",
 };
 
+const TEAM_IMAGE = "/team.jpg";
+
 /* ─── GLOBAL STYLES ─── */
 const GS = `
 @import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@300;400;600;700;800&family=Instrument+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap');
@@ -36,6 +38,36 @@ body{font-family:'Instrument Sans',sans-serif;background:${C.bg};color:${C.white
 ::-webkit-scrollbar{width:4px;}
 ::-webkit-scrollbar-track{background:${C.bg};}
 ::-webkit-scrollbar-thumb{background:${C.navy};border-radius:2px;}
+.mobileToggle{display:none;}
+.mobilePanel{display:none;}
+.heroVisual{position:absolute;right:5vw;top:22%;width:min(34vw,480px);height:min(26vw,320px);border-radius:18px;overflow:hidden;border:1px solid ${C.border2};box-shadow:0 24px 64px rgba(0,0,0,.45);z-index:1;}
+.heroStats{position:absolute;right:5vw;bottom:8%;}
+.nosotrosLead{display:grid;grid-template-columns:1.2fr .8fr;gap:2rem;align-items:end;margin-bottom:5rem;}
+@media (max-width: 1024px){
+  .heroVisual{position:relative;right:auto;top:auto;width:100%;max-width:560px;height:260px;margin-top:2rem;}
+  .heroStats{position:relative;right:auto;bottom:auto;margin-top:1.5rem;width:fit-content;}
+  .nosotrosLead{grid-template-columns:1fr;}
+}
+@media (max-width: 900px){
+  .navLinks{display:none !important;}
+  .mobileToggle{display:flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:10px;border:1px solid ${C.border2};background:${C.bg2};color:${C.white};cursor:pointer;}
+  .mobilePanel{display:flex;flex-direction:column;gap:.35rem;position:absolute;left:5vw;right:5vw;top:74px;padding:.8rem;border-radius:12px;border:1px solid ${C.border2};background:rgba(8,12,18,.97);backdrop-filter:blur(12px);box-shadow:0 16px 40px rgba(0,0,0,.35);}
+  .mobilePanel button{background:none;border:none;color:${C.muted};text-align:left;padding:.65rem .55rem;border-radius:8px;font-size:.9rem;cursor:pointer;}
+  .mobilePanel button:hover{background:${C.bg2};color:${C.white};}
+  .mobilePanel .mobilePrimary{margin-top:.35rem;background:linear-gradient(135deg,${C.gold},${C.goldLt});color:${C.bg};font-weight:700;text-align:center;}
+  .homeButtons{flex-wrap:wrap;}
+  .servicesGrid,.valuesGrid,.portfolioGrid,.teamGrid,.statsGrid{grid-template-columns:1fr !important;}
+  .processGrid{grid-template-columns:repeat(2,1fr) !important;gap:1.2rem !important;}
+  .processLine{display:none;}
+  .contactGrid{grid-template-columns:1fr !important;gap:2rem !important;}
+  .contactNameGrid{grid-template-columns:1fr !important;}
+  .footerWrap{flex-direction:column;align-items:flex-start !important;gap:1.1rem;}
+}
+@media (max-width: 560px){
+  .processGrid{grid-template-columns:1fr !important;}
+  .heroStats{padding:1rem 1.2rem !important;gap:1rem !important;}
+  .heroStats .ff{font-size:1.35rem !important;}
+}
 `;
 
 function useReveal() {
@@ -92,7 +124,7 @@ function Nav({ active, setActive }) {
           pair<span style={{color:C.goldLt}}>programming</span>
         </span>
       </button>
-      <ul style={{ display:"flex", gap:"2rem", listStyle:"none", alignItems:"center" }}>
+      <ul className="navLinks" style={{ display:"flex", gap:"2rem", listStyle:"none", alignItems:"center" }}>
         {NAV_LINKS.map(l => (
           <li key={l}>
             <button onClick={() => setActive(l.toLowerCase())} style={{
@@ -117,6 +149,25 @@ function Nav({ active, setActive }) {
           </button>
         </li>
       </ul>
+      <button
+        className="mobileToggle"
+        aria-label="Abrir menu"
+        onClick={() => setMenuOpen(!menuOpen)}
+      >
+        {menuOpen ? <X size={18} /> : <Menu size={18} />}
+      </button>
+      {menuOpen && (
+        <div className="mobilePanel">
+          {NAV_LINKS.map((l) => (
+            <button key={l} onClick={() => { setActive(l.toLowerCase()); setMenuOpen(false); }}>
+              {l}
+            </button>
+          ))}
+          <button className="mobilePrimary" onClick={() => { setActive("contacto"); setMenuOpen(false); }}>
+            Contacto
+          </button>
+        </div>
+      )}
     </nav>
   );
 }
@@ -202,12 +253,21 @@ function PageHome({ setActive }) {
           Co-creamos soluciones digitales que integran tecnología y estrategia. Tu socio técnico desde el día uno hasta producción.
         </p>
 
-        <div style={{ marginTop:"2.8rem", display:"flex", gap:"1rem", alignItems:"center", position:"relative", zIndex:1, animation:"fadeUp .8s .65s both" }}>
+        <div className="homeButtons" style={{ marginTop:"2.8rem", display:"flex", gap:"1rem", alignItems:"center", position:"relative", zIndex:1, animation:"fadeUp .8s .65s both" }}>
           <BtnGold onClick={()=>setActive("contacto")}>Empezar proyecto <ArrowRight size={15}/></BtnGold>
           <BtnOutline onClick={()=>setActive("portafolio")}>Ver portafolio <ArrowRight size={14}/></BtnOutline>
         </div>
 
-        <div style={{ position:"absolute", right:"5vw", bottom:"8%", background:C.bg3, border:`1px solid ${C.border2}`, borderRadius:16, padding:"1.4rem 2rem", display:"flex", gap:"2rem", alignItems:"center", animation:"fadeUp .9s .85s both", zIndex:1, boxShadow:"0 20px 60px rgba(0,0,0,.45)" }}>
+        <div className="heroVisual" style={{ animation:"fadeUp .9s .8s both" }}>
+          <img src={TEAM_IMAGE} alt="Equipo PairProgramming" style={{ width:"100%", height:"100%", objectFit:"cover", objectPosition:"center" }} />
+          <div style={{ position:"absolute", inset:0, background:"linear-gradient(180deg,transparent 35%,rgba(8,12,18,.72) 100%)" }} />
+          <div style={{ position:"absolute", left:16, bottom:14, display:"inline-flex", alignItems:"center", gap:".45rem", fontSize:".68rem", letterSpacing:".1em", textTransform:"uppercase", color:C.white, background:"rgba(8,12,18,.65)", border:`1px solid ${C.border2}`, borderRadius:999, padding:".35rem .65rem" }}>
+            <span style={{ width:6, height:6, background:C.goldLt, borderRadius:"50%" }} />
+            Equipo en acción
+          </div>
+        </div>
+
+        <div className="heroStats" style={{ background:C.bg3, border:`1px solid ${C.border2}`, borderRadius:16, padding:"1.4rem 2rem", display:"flex", gap:"2rem", alignItems:"center", animation:"fadeUp .9s .85s both", zIndex:1, boxShadow:"0 20px 60px rgba(0,0,0,.45)" }}>
           {[["50+","Proyectos"],["5★","Rating"],["3+","Años"]].map(([n,l],i,a)=>(
             <div key={n} style={{ display:"flex", alignItems:"center", gap:"2rem" }}>
               <div style={{ textAlign:"center" }}>
@@ -228,7 +288,7 @@ function PageHome({ setActive }) {
           <div><SectionLabel>Lo que hacemos</SectionLabel><SectionTitle>Servicios que<br/>mueven negocios</SectionTitle></div>
           <p style={{ fontSize:".88rem", color:C.muted, lineHeight:1.7, maxWidth:260, textAlign:"right" }}>Desde la idea hasta producción.<br/>Sin intermediarios, con resultados.</p>
         </div>
-        <div className="reveal" style={{ display:"grid", gridTemplateColumns:"repeat(3,1fr)", gap:1, background:C.border, border:`1px solid ${C.border}` }}>
+        <div className="reveal servicesGrid" style={{ display:"grid", gridTemplateColumns:"repeat(3,1fr)", gap:1, background:C.border, border:`1px solid ${C.border}` }}>
           {SERVICES.map(s=><ServiceCard key={s.n} {...s}/>)}
         </div>
       </section>
@@ -237,7 +297,7 @@ function PageHome({ setActive }) {
       <section style={{ padding:"8rem 5vw", background:C.bg2, position:"relative", overflow:"hidden" }}>
         <div style={{ position:"absolute", fontFamily:"'Bricolage Grotesque',sans-serif", fontSize:"18vw", fontWeight:800, color:"rgba(46,109,164,.04)", top:"50%", left:"50%", transform:"translate(-50%,-50%)", letterSpacing:"-.05em", pointerEvents:"none", userSelect:"none", whiteSpace:"nowrap" }}>VALORES</div>
         <div className="reveal"><SectionLabel>Cómo trabajamos</SectionLabel><SectionTitle>Principios que nos definen</SectionTitle></div>
-        <div className="reveal" style={{ display:"grid", gridTemplateColumns:"repeat(3,1fr)", gap:1, background:C.border, border:`1px solid ${C.border}`, marginTop:"3.5rem" }}>
+        <div className="reveal valuesGrid" style={{ display:"grid", gridTemplateColumns:"repeat(3,1fr)", gap:1, background:C.border, border:`1px solid ${C.border}`, marginTop:"3.5rem" }}>
           {VALUES.map(v=><ValueItem key={v.n} {...v}/>)}
         </div>
       </section>
@@ -245,8 +305,8 @@ function PageHome({ setActive }) {
       {/* PROCESS */}
       <section style={{ padding:"8rem 5vw" }}>
         <div className="reveal"><SectionLabel>Cómo arrancamos</SectionLabel><SectionTitle>Del concepto al deploy</SectionTitle></div>
-        <div className="reveal" style={{ display:"grid", gridTemplateColumns:"repeat(4,1fr)", gap:0, marginTop:"4rem", position:"relative" }}>
-          <div style={{ position:"absolute", top:32, left:"12%", right:"12%", height:1, background:`linear-gradient(90deg,transparent,${C.border2},${C.goldLt},${C.border2},transparent)` }}/>
+        <div className="reveal processGrid" style={{ display:"grid", gridTemplateColumns:"repeat(4,1fr)", gap:0, marginTop:"4rem", position:"relative" }}>
+          <div className="processLine" style={{ position:"absolute", top:32, left:"12%", right:"12%", height:1, background:`linear-gradient(90deg,transparent,${C.border2},${C.goldLt},${C.border2},transparent)` }}/>
           {STEPS.map(s=><StepCard key={s.n} {...s}/>)}
         </div>
       </section>
@@ -367,7 +427,7 @@ function PagePortafolio() {
         ))}
       </div>
 
-      <div style={{ display:"grid", gridTemplateColumns:"repeat(3,1fr)", gap:"1.5rem" }}>
+      <div className="portfolioGrid" style={{ display:"grid", gridTemplateColumns:"repeat(3,1fr)", gap:"1.5rem" }}>
         {filtered.map((p,i)=>(
           <div key={p.id} className="reveal" style={{ animationDelay:`${i*.08}s` }}>
             <ProjectCard project={p}/>
@@ -390,18 +450,27 @@ const TEAM = [
 function PageNosotros() {
   return (
     <div style={{ padding:"9rem 5vw 6rem" }}>
-      <div className="reveal" style={{ maxWidth:680, marginBottom:"5rem" }}>
-        <SectionLabel>Quiénes somos</SectionLabel>
-        <h1 className="ff" style={{ fontWeight:800, fontSize:"clamp(2.5rem,5vw,4.5rem)", lineHeight:.96, letterSpacing:"-.04em", marginBottom:"1.5rem" }}>
-          Somos devs que<br/><span style={{color:C.goldLt}}>entienden</span><br/>tu negocio.
-        </h1>
-        <p style={{ fontSize:"1.05rem", fontWeight:300, color:C.muted, lineHeight:1.75 }}>
-          No somos una agencia enorme con capas de burocracia. Somos un equipo chico, muy bueno, que trabaja directo con vos. Entendemos el problema antes de escribir una línea de código.
-        </p>
+      <div className="reveal nosotrosLead">
+        <div style={{ maxWidth:680 }}>
+          <SectionLabel>Quiénes somos</SectionLabel>
+          <h1 className="ff" style={{ fontWeight:800, fontSize:"clamp(2.5rem,5vw,4.5rem)", lineHeight:.96, letterSpacing:"-.04em", marginBottom:"1.5rem" }}>
+            Somos devs que<br/><span style={{color:C.goldLt}}>entienden</span><br/>tu negocio.
+          </h1>
+          <p style={{ fontSize:"1.05rem", fontWeight:300, color:C.muted, lineHeight:1.75 }}>
+            No somos una agencia enorme con capas de burocracia. Somos un equipo chico, muy bueno, que trabaja directo con vos. Entendemos el problema antes de escribir una línea de código.
+          </p>
+        </div>
+        <div style={{ position:"relative", width:"100%", height:320, borderRadius:16, overflow:"hidden", border:`1px solid ${C.border2}`, boxShadow:"0 20px 50px rgba(0,0,0,.35)" }}>
+          <img src={TEAM_IMAGE} alt="Equipo de PairProgramming" style={{ width:"100%", height:"100%", objectFit:"cover", objectPosition:"center" }} />
+          <div style={{ position:"absolute", inset:0, background:"linear-gradient(180deg,transparent 40%,rgba(8,12,18,.78) 100%)" }} />
+          <div style={{ position:"absolute", left:14, bottom:12, fontSize:".72rem", letterSpacing:".08em", textTransform:"uppercase", color:C.white, padding:".35rem .6rem", borderRadius:999, border:`1px solid ${C.border2}`, background:"rgba(8,12,18,.62)" }}>
+            Partner técnico real
+          </div>
+        </div>
       </div>
 
       {/* stats row */}
-      <div className="reveal" style={{ display:"grid", gridTemplateColumns:"repeat(4,1fr)", gap:1, background:C.border, border:`1px solid ${C.border}`, marginBottom:"6rem" }}>
+      <div className="reveal statsGrid" style={{ display:"grid", gridTemplateColumns:"repeat(4,1fr)", gap:1, background:C.border, border:`1px solid ${C.border}`, marginBottom:"6rem" }}>
         {[["50+","Proyectos entregados"],["100%","Clientes satisfechos"],["3+","Años en el mercado"],["∞","Café consumido"]].map(([n,l])=>(
           <div key={l} style={{ background:C.bg2, padding:"2.5rem", textAlign:"center" }}>
             <div className="ff" style={{ fontSize:"2.8rem", fontWeight:800, background:`linear-gradient(135deg,${C.blueLt},${C.goldLt})`, WebkitBackgroundClip:"text", WebkitTextFillColor:"transparent", lineHeight:1, marginBottom:".5rem" }}>{n}</div>
@@ -415,7 +484,7 @@ function PageNosotros() {
         <SectionLabel>El equipo</SectionLabel>
         <SectionTitle>Las personas detrás del código</SectionTitle>
       </div>
-      <div className="reveal" style={{ display:"grid", gridTemplateColumns:"repeat(3,1fr)", gap:"1.5rem" }}>
+      <div className="reveal teamGrid" style={{ display:"grid", gridTemplateColumns:"repeat(3,1fr)", gap:"1.5rem" }}>
         {TEAM.map((m,i)=>{
           const [hov, setHov] = useState(false);
           return (
@@ -464,7 +533,7 @@ function PageContacto() {
   });
 
   return (
-    <div style={{ padding:"9rem 5vw 6rem", display:"grid", gridTemplateColumns:"1fr 1fr", gap:"6rem", alignItems:"start" }}>
+    <div className="contactGrid" style={{ padding:"9rem 5vw 6rem", display:"grid", gridTemplateColumns:"1fr 1fr", gap:"6rem", alignItems:"start" }}>
       <div>
         <div className="reveal"><SectionLabel>Escribinos</SectionLabel></div>
         <h1 className="ff reveal" style={{ fontWeight:800, fontSize:"clamp(2.5rem,5vw,4rem)", lineHeight:.96, letterSpacing:"-.04em", marginBottom:"1.5rem" }}>
@@ -491,7 +560,7 @@ function PageContacto() {
           </div>
         ) : (
           <div style={{ background:C.bg2, border:`1px solid ${C.border2}`, borderRadius:16, padding:"2.5rem", display:"flex", flexDirection:"column", gap:"1.2rem" }}>
-            <div style={{ display:"grid", gridTemplateColumns:"1fr 1fr", gap:"1rem" }}>
+            <div className="contactNameGrid" style={{ display:"grid", gridTemplateColumns:"1fr 1fr", gap:"1rem" }}>
               <div><label style={{ fontSize:".75rem", color:C.muted, letterSpacing:".08em", display:"block", marginBottom:".4rem" }}>NOMBRE</label><input {...inp("nombre")} placeholder="Tu nombre"/></div>
               <div><label style={{ fontSize:".75rem", color:C.muted, letterSpacing:".08em", display:"block", marginBottom:".4rem" }}>EMAIL</label><input {...inp("email")} placeholder="tu@email.com"/></div>
             </div>
@@ -608,7 +677,7 @@ function StepCard({Icon,n,title,desc}) {
 /* ─── FOOTER ─── */
 function Footer({ setActive }) {
   return (
-    <footer style={{ borderTop:`1px solid ${C.border}`, padding:"2.5rem 5vw", display:"flex", alignItems:"center", justifyContent:"space-between", background:C.bg }}>
+    <footer className="footerWrap" style={{ borderTop:`1px solid ${C.border}`, padding:"2.5rem 5vw", display:"flex", alignItems:"center", justifyContent:"space-between", background:C.bg }}>
       <button onClick={()=>setActive("home")} style={{ display:"flex", alignItems:"center", gap:".6rem", background:"none", border:"none", cursor:"pointer" }}>
         <LogoIcon size={28}/>
         <span className="ff" style={{ fontWeight:700, fontSize:".9rem", color:"rgba(238,242,247,.3)" }}>pair<span style={{color:C.gold}}>·</span>programming</span>
