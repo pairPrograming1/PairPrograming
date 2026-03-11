@@ -7,10 +7,11 @@ export const metadata = {
 
 import Sidebar from "./components/Sidebar";
 import Hero from "./components/Hero";
-import Footer from "./components/Footer";
+import Ticker from "./components/Ticker";
 import Values from "./components/Values";
 import CallToAction from "./components/CallToAction";
 import MainContainer from "./components/MainContainer";
+import Footer from "./components/Footer";
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
       <Sidebar />
       <MainContainer>
         <Hero />
+        <Ticker />
         <Values />
         <CallToAction />
         <Footer />

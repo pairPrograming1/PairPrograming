@@ -1,297 +1,125 @@
 "use client";
-import { useSidebar } from "../context/SidebarContext";
-import { Container } from "./ui/Container";
+import { useState } from "react";
 
-const ServiceIcon = ({ name }) => {
-  const icons = {
-    "Arquitectura B2B SaaS": (
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-        <rect x="2" y="3" width="20" height="4" rx="1" />
-        <rect x="2" y="10" width="20" height="4" rx="1" />
-        <rect x="2" y="17" width="20" height="4" rx="1" />
-        <circle cx="6" cy="5" r="1" fill="currentColor" stroke="none" />
-        <circle cx="6" cy="12" r="1" fill="currentColor" stroke="none" />
-        <circle cx="6" cy="19" r="1" fill="currentColor" stroke="none" />
-      </svg>
-    ),
-    "Productos Digitales": (
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-        <rect x="2" y="3" width="20" height="14" rx="2" ry="2" />
-        <line x1="8" y1="21" x2="16" y2="21" />
-        <line x1="12" y1="17" x2="12" y2="21" />
-      </svg>
-    ),
-    "Branding & Identidad": (
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-      </svg>
-    ),
-    "Marketing & Growth": (
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-        <line x1="12" y1="20" x2="12" y2="10" />
-        <line x1="18" y1="20" x2="18" y2="4" />
-        <line x1="6" y1="20" x2="6" y2="16" />
-      </svg>
-    ),
-    "CRM & Automatización": (
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-        <rect x="3" y="3" width="7" height="7" />
-        <rect x="14" y="3" width="7" height="7" />
-        <rect x="14" y="14" width="7" height="7" />
-        <rect x="3" y="14" width="7" height="7" />
-      </svg>
-    ),
-    "Automatización & n8n": (
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-        <polyline points="16 18 22 12 16 6" />
-        <polyline points="8 6 2 12 8 18" />
-      </svg>
-    ),
-    "SEO & Contenido": (
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-        <circle cx="11" cy="11" r="8" />
-        <path d="m21 21-4.35-4.35" />
-      </svg>
-    ),
-    "Modernización de Legacy": (
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-        <polyline points="16 3 21 3 21 8" />
-        <line x1="4" y1="20" x2="21" y2="3" />
-        <polyline points="21 16 21 21 16 21" />
-        <line x1="15" y1="15" x2="21" y2="21" />
-        <line x1="4" y1="4" x2="9" y2="9" />
-      </svg>
-    ),
-    "QA, Testing & Performance": (
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-        <polyline points="20 6 9 17 4 12" />
-      </svg>
-    ),
-    "Cloud & DevOps": (
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z" />
-      </svg>
-    ),
-    "Servicios Digitales": (
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" />
-      </svg>
-    ),
-    "Soluciones Digitales": (
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />
-        <polyline points="3.27 6.96 12 12.01 20.73 6.96" />
-        <line x1="12" y1="22.08" x2="12" y2="12" />
-      </svg>
-    ),
-  };
+const SERVICES = [
+  {
+    n:"01",
+    icon: <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="3" width="20" height="4" rx="1"/><rect x="2" y="10" width="20" height="4" rx="1"/><rect x="2" y="17" width="20" height="4" rx="1"/></svg>,
+    name:"Arquitectura B2B SaaS",
+    desc:"Plataformas multi-tenant desde cero. Modelo de planes, feature flags, onboarding, billing y escala. Lo que más hacemos y donde más valor generamos.",
+  },
+  {
+    n:"02",
+    icon: <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>,
+    name:"Productos Digitales",
+    desc:"Apps web, móviles, CRM, ERP e intranets. Sistemas escalables que crecen con tu negocio desde el primer commit.",
+  },
+  {
+    n:"03",
+    icon: <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>,
+    name:"CRM & Automatización",
+    desc:"Implementación e integración de CRM, workflows automáticos, pipelines de ventas y dashboards de seguimiento.",
+  },
+  {
+    n:"04",
+    icon: <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>,
+    name:"Automatización & n8n",
+    desc:"Flujos visuales con n8n para integrar herramientas, orquestar pipelines y eliminar trabajo manual repetitivo.",
+  },
+  {
+    n:"05",
+    icon: <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/></svg>,
+    name:"Cloud & DevOps",
+    desc:"Infraestructura en la nube, CI/CD, IaC y observabilidad. Despliegues seguros y escalables sin drama.",
+  },
+  {
+    n:"06",
+    icon: <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>,
+    name:"SEO & Contenido",
+    desc:"Auditorías técnicas, optimización on-page, estrategia de contenidos y linkbuilding para crecer en orgánico.",
+  },
+  {
+    n:"07",
+    icon: <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="16 3 21 3 21 8"/><line x1="4" y1="20" x2="21" y2="3"/><polyline points="21 16 21 21 16 21"/><line x1="15" y1="15" x2="21" y2="21"/><line x1="4" y1="4" x2="9" y2="9"/></svg>,
+    name:"Modernización de Legacy",
+    desc:"Migramos sistemas viejos a arquitecturas modernas: microservicios, contenedores, APIs REST/GraphQL.",
+  },
+  {
+    n:"08",
+    icon: <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg>,
+    name:"QA & Performance",
+    desc:"Tests E2E, unitarios e integración. Auditorías de performance y monitoreo continuo para productos sin bugs.",
+  },
+  {
+    n:"09",
+    icon: <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>,
+    name:"Branding & Identidad",
+    desc:"Naming, logotipo, sistema visual y manual de marca. La identidad que comunica tu propuesta de valor.",
+  },
+];
 
-  return icons[name] || null;
-};
+function ServiceCard({ n, icon, name, desc }) {
+  const [h, setH] = useState(false);
+  return (
+    <div
+      onMouseEnter={()=>setH(true)}
+      onMouseLeave={()=>setH(false)}
+      style={{
+        background: h ? "#0d1520" : "#080c12",
+        padding:"2.5rem",position:"relative",overflow:"hidden",
+        transition:"background .3s",cursor:"default",
+      }}
+    >
+      <div style={{ fontSize:".68rem",fontWeight:700,letterSpacing:".16em",color:"rgba(238,242,247,0.42)",marginBottom:"1.8rem" }}>{n}</div>
+      <div style={{
+        width:44,height:44,borderRadius:12,marginBottom:"1.2rem",
+        background: h ? "linear-gradient(135deg,#1a3a5c,#2e6da4)" : "#111b2a",
+        border:`1px solid ${h ? "#4a8fc4" : "rgba(238,242,247,0.07)"}`,
+        display:"flex",alignItems:"center",justifyContent:"center",
+        transition:"all .3s",
+        boxShadow: h ? "0 0 20px rgba(46,109,164,.3)" : "none",
+        color: h ? "#e8b84b" : "#4a8fc4",
+      }}>
+        {icon}
+      </div>
+      <div className="ff" style={{ fontSize:"1.1rem",fontWeight:700,letterSpacing:"-.02em",marginBottom:".75rem",color:"#eef2f7" }}>{name}</div>
+      <p style={{ fontSize:".875rem",color:"rgba(238,242,247,0.42)",lineHeight:1.7 }}>{desc}</p>
+      <div style={{
+        position:"absolute",left:0,bottom:0,right:0,height:2,
+        background:"linear-gradient(90deg,#2e6da4,#c9920d)",
+        transform: h ? "scaleX(1)" : "scaleX(0)",
+        transformOrigin:"left",transition:"transform .4s ease",
+      }}/>
+    </div>
+  );
+}
 
 export default function Services() {
-  const { isSidebarExpanded } = useSidebar();
-
-  const services = [
-    {
-      title: "Arquitectura B2B SaaS",
-      description:
-        "Diseño y construcción de plataformas SaaS multi-tenant desde cero: arquitectura escalable, modelo de planes, onboarding, billing y operaciones. El servicio que más ofrecemos y donde más valor generamos.",
-      features: [
-        "Arquitectura multi-tenant escalable",
-        "Módulos por plan y feature flags",
-        "APIs y webhooks empresariales",
-        "Onboarding, billing y operaciones",
-      ],
-    },
-    {
-      title: "Productos Digitales",
-      description:
-        "Plataformas escalables como aplicaciones móviles, SaaS, CRM, ERP e intranets, diseñadas para optimizar procesos y crecer con tu negocio.",
-      features: [
-        "Aplicaciones Móviles",
-        "Plataformas SaaS",
-        "CRM & ERP",
-        "Sistemas Escalables",
-      ],
-    },
-    {
-      title: "Branding & Identidad",
-      description:
-        "Construimos marcas memorables: naming, diseño de identidad visual, guías de uso y sistemas de marca que comunican tu propuesta de valor.",
-      features: [
-        "Naming y posicionamiento",
-        "Logotipo y sistema visual",
-        "Manual de marca",
-        "Aplicaciones de marca",
-      ],
-    },
-    {
-      title: "Marketing & Growth",
-      description:
-        "Estrategias de adquisición y retención: campañas pagadas, inbound, email marketing y growth experiments para escalar usuarios y ventas.",
-      features: [
-        "Estrategia digital",
-        "Campañas PPC y social",
-        "Email & CRM Marketing",
-        "Growth Hacking",
-      ],
-    },
-    {
-      title: "CRM & Automatización",
-      description:
-        "Implementación e integración de CRM, automatizaciones de ventas y marketing, y dashboards para seguimiento de oportunidades.",
-      features: [
-        "Implementación CRM",
-        "Automatizaciones y workflows",
-        "Integración con herramientas",
-        "Reportes y pipelines",
-      ],
-    },
-    {
-      title: "Automatización & n8n",
-      description:
-        "Implementamos flujos de trabajo visuales con n8n para automatizar procesos, integrar herramientas y orquestar pipelines sin código o con código ligero.",
-      features: [
-        "Diseño de workflows con n8n",
-        "Integraciones API y webhooks",
-        "Automatizaciones de marketing",
-        "Monitoreo de workflows",
-      ],
-    },
-    {
-      title: "SEO & Contenido",
-      description:
-        "Mejoramos la visibilidad orgánica con auditorías SEO, optimización on-page, estrategia de contenidos y linkbuilding técnico.",
-      features: [
-        "Auditoría SEO técnica",
-        "Estrategia de contenidos",
-        "Optimización on-page",
-        "Linkbuilding",
-      ],
-    },
-    {
-      title: "Modernización de Legacy",
-      description:
-        "Modernizamos sistemas legacy a arquitecturas modernas: refactor, migración a microservicios, contenedores y APIs REST/GraphQL.",
-      features: [
-        "Evaluación y plan de migración",
-        "Refactor y cobertura de tests",
-        "Contenerización y orquestación",
-        "Integración con APIs modernas",
-      ],
-    },
-    {
-      title: "QA, Testing & Performance",
-      description:
-        "Aseguramos calidad con pruebas automatizadas, e2e, unitarias, y optimizaciones de performance y experiencia de usuario.",
-      features: [
-        "Pruebas E2E y unitarias",
-        "Tests de integración",
-        "Auditoría de performance",
-        "Monitoreo y alertas",
-      ],
-    },
-    {
-      title: "Cloud & DevOps",
-      description:
-        "Diseñamos infraestructura en la nube, pipelines CI/CD, IaC y prácticas de observabilidad para despliegues seguros y escalables.",
-      features: [
-        "Infraestructura como código",
-        "CI/CD automatizados",
-        "Observability",
-        "Optimización de costos",
-      ],
-    },
-  ];
-
   return (
-    <section className="py-20 lg:py-28 bg-background-secondary text-foreground relative overflow-hidden">
-      {/* Background decoration */}
-      <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute -top-40 right-1/4 w-96 h-96 bg-brand-blue/5 rounded-full blur-3xl" />
-        <div className="absolute bottom-0 left-1/3 w-80 h-80 bg-brand-gold/5 rounded-full blur-3xl" />
+    <section style={{ padding:"8rem 5vw", background:"#080c12" }}>
+      {/* Header */}
+      <div style={{ display:"flex",justifyContent:"space-between",alignItems:"flex-end",marginBottom:"3.5rem",gap:"2rem",flexWrap:"wrap" }}>
+        <div>
+          <div style={{ fontSize:".7rem",fontWeight:600,letterSpacing:".16em",textTransform:"uppercase",color:"#e8b84b",marginBottom:".8rem" }}>— Lo que hacemos</div>
+          <h2 className="ff" style={{ fontWeight:700,fontSize:"clamp(1.8rem,3.5vw,3rem)",letterSpacing:"-.03em",lineHeight:1.05,maxWidth:500,color:"#eef2f7" }}>
+            Servicios que<br/>mueven negocios
+          </h2>
+        </div>
+        <p style={{ fontSize:".88rem",color:"rgba(238,242,247,0.42)",lineHeight:1.7,maxWidth:260,textAlign:"right" }}>
+          Desde la idea hasta producción.<br/>Sin intermediarios, con resultados.
+        </p>
       </div>
 
-      <Container size={isSidebarExpanded ? "expanded" : "default"} className="relative z-10">
-        {/* Header */}
-        <div className="text-center mb-16">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-brand-blue/10 border border-brand-blue/20 mb-5">
-            <span className="w-2 h-2 rounded-full bg-brand-gold" />
-            <span className="text-sm font-medium text-brand-blue-light">
-              Lo que hacemos
-            </span>
-          </div>
-          <h2
-            className={`font-bold mb-4 text-foreground transition-all duration-300 ${
-              isSidebarExpanded
-                ? "text-2xl lg:text-3xl"
-                : "text-3xl lg:text-4xl"
-            }`}
-          >
-            Nuestros{" "}
-            <span className="text-brand-blue">Servicios</span>
-          </h2>
-          <p className="text-secondary-text max-w-2xl mx-auto text-base lg:text-lg">
-            Soluciones completas que transforman tu visión en realidad digital
-          </p>
-        </div>
-
-        {/* Services grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-6">
-          {services.map((service, index) => (
-            <div
-              key={service.title}
-              className={`group relative bg-background-card border border-border-color rounded-xl p-6 hover:border-brand-blue/40 transition-all duration-300 animate-fade-in-up stagger-${Math.min(index + 1, 8)}`}
-            >
-              {/* Hover gradient overlay */}
-              <div className="absolute inset-0 rounded-xl bg-gradient-to-br from-brand-blue/0 to-brand-gold/0 group-hover:from-brand-blue/5 group-hover:to-brand-gold/5 transition-all duration-300" />
-
-              <div className="relative z-10">
-                {/* Icon */}
-                <div className="w-11 h-11 rounded-lg bg-brand-blue/10 border border-brand-blue/20 flex items-center justify-center text-brand-blue mb-4 group-hover:bg-brand-blue/15 group-hover:border-brand-blue/30 transition-all duration-300">
-                  <ServiceIcon name={service.title} />
-                </div>
-
-                {/* Title */}
-                <h4
-                  className={`font-semibold mb-3 text-foreground transition-colors ${
-                    isSidebarExpanded ? "text-base" : "text-lg"
-                  }`}
-                >
-                  {service.title}
-                </h4>
-
-                {/* Description */}
-                <p className="text-secondary-text mb-4 text-sm leading-relaxed">
-                  {service.description}
-                </p>
-
-                {/* Features */}
-                <ul className="space-y-2">
-                  {service.features.map((feature, idx) => (
-                    <li key={idx} className="flex items-start text-sm text-secondary-text">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        className="w-4 h-4 text-brand-gold mr-2 flex-shrink-0 mt-0.5"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      >
-                        <polyline points="20 6 9 17 4 12" />
-                      </svg>
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-          ))}
-        </div>
-      </Container>
+      {/* Grid */}
+      <div style={{
+        display:"grid",
+        gridTemplateColumns:"repeat(3,1fr)",
+        gap:1,
+        background:"rgba(238,242,247,0.07)",
+        border:"1px solid rgba(238,242,247,0.07)",
+      }}>
+        {SERVICES.map(s => <ServiceCard key={s.n} {...s}/>)}
+      </div>
     </section>
   );
 }

@@ -172,7 +172,7 @@ Implementamos cláusulas contractuales estándar para transferencias.`,
                   </a>
                 </p> */}
                 <p>
-                  <strong>Dirección:</strong> Buenos Aires, Argentina
+                  <strong>Dirección:</strong> Argentina
                 </p>
                 <p className="mt-3 text-xs">
                   Tiempo de respuesta estimado: 72 horas hábiles
