@@ -3,16 +3,16 @@ import { useRef, useCallback, useEffect, useState } from "react";
 import Image from "next/image";
 
 const categoryColors = {
-  blue:    { text: "text-blue-400",    bg: "bg-blue-500/10",    border: "border-blue-500/30" },
-  amber:   { text: "text-amber-400",   bg: "bg-amber-500/10",   border: "border-amber-500/30" },
-  emerald: { text: "text-emerald-400", bg: "bg-emerald-500/10", border: "border-emerald-500/30" },
-  purple:  { text: "text-purple-400",  bg: "bg-purple-500/10",  border: "border-purple-500/30" },
-  cyan:    { text: "text-cyan-400",    bg: "bg-cyan-500/10",    border: "border-cyan-500/30" },
-  indigo:  { text: "text-indigo-400",  bg: "bg-indigo-500/10",  border: "border-indigo-500/30" },
-  gold:    { text: "text-yellow-400",  bg: "bg-yellow-500/10",  border: "border-yellow-500/30" },
-  rose:    { text: "text-rose-400",    bg: "bg-rose-500/10",    border: "border-rose-500/30" },
-  violet:  { text: "text-violet-400",  bg: "bg-violet-500/10",  border: "border-violet-500/30" },
-  orange:  { text: "text-orange-400",  bg: "bg-orange-500/10",  border: "border-orange-500/30" },
+  blue:    { text: "text-blue-400",    bg: "bg-blue-500/10",    border: "border-blue-500/30",    hex: "#3b82f6" },
+  amber:   { text: "text-amber-400",   bg: "bg-amber-500/10",   border: "border-amber-500/30",   hex: "#f59e0b" },
+  emerald: { text: "text-emerald-400", bg: "bg-emerald-500/10", border: "border-emerald-500/30", hex: "#10b981" },
+  purple:  { text: "text-purple-400",  bg: "bg-purple-500/10",  border: "border-purple-500/30",  hex: "#a855f7" },
+  cyan:    { text: "text-cyan-400",    bg: "bg-cyan-500/10",    border: "border-cyan-500/30",    hex: "#06b6d4" },
+  indigo:  { text: "text-indigo-400",  bg: "bg-indigo-500/10",  border: "border-indigo-500/30",  hex: "#6366f1" },
+  gold:    { text: "text-yellow-400",  bg: "bg-yellow-500/10",  border: "border-yellow-500/30",  hex: "#c9920d" },
+  rose:    { text: "text-rose-400",    bg: "bg-rose-500/10",    border: "border-rose-500/30",    hex: "#f43f5e" },
+  violet:  { text: "text-violet-400",  bg: "bg-violet-500/10",  border: "border-violet-500/30",  hex: "#8b5cf6" },
+  orange:  { text: "text-orange-400",  bg: "bg-orange-500/10",  border: "border-orange-500/30",  hex: "#f97316" },
 };
 
 const statusConfig = {
@@ -174,9 +174,22 @@ function ProjectCard({ project, onDetail }) {
 
   return (
     <div
-      className="group h-full flex flex-col bg-background-card border border-border-color rounded-2xl overflow-hidden hover:border-brand-blue/30 transition-all duration-300 hover:shadow-xl hover:shadow-brand-blue/5 hover:-translate-y-1 cursor-pointer"
+      className="group h-full flex flex-col rounded-2xl overflow-hidden cursor-pointer transition-all duration-300 hover:-translate-y-1"
+      style={{
+        background: "#111b2a",
+        border: "1px solid rgba(238,242,247,0.07)",
+        boxShadow: "none",
+      }}
+      onMouseEnter={e => { e.currentTarget.style.border = "1px solid rgba(74,143,196,0.2)"; e.currentTarget.style.boxShadow = "0 20px 40px rgba(0,0,0,0.3)"; }}
+      onMouseLeave={e => { e.currentTarget.style.border = "1px solid rgba(238,242,247,0.07)"; e.currentTarget.style.boxShadow = "none"; }}
       onClick={onDetail}
     >
+      {/* Color top bar */}
+      <div style={{
+        height: 3,
+        background: `linear-gradient(90deg, ${colors.hex || "#2e6da4"}, #e8b84b)`,
+        flexShrink: 0,
+      }}/>
       {/* Screenshot */}
       <div className="relative h-52 overflow-hidden flex-shrink-0 bg-background-secondary">
         {project.image ? (
@@ -343,38 +356,44 @@ export default function ProjectList({ projects, currentVideo, onVideoSelect }) {
         </div>
 
         {/* Barra de navegación */}
-        <div className="flex items-center justify-between mt-5 pt-4 border-t border-border-color">
+        <div className="flex items-center justify-between mt-5 pt-4" style={{ borderTop: "1px solid rgba(238,242,247,0.07)" }}>
           <div className="flex gap-2">
             <button
               onClick={prev}
               disabled={currentVideo === 0}
-              className="w-10 h-10 rounded-xl bg-background-secondary hover:bg-hover-bg disabled:opacity-30 disabled:cursor-not-allowed border border-border-color hover:border-brand-blue/40 flex items-center justify-center transition-all duration-200 group"
+              className="w-10 h-10 rounded-xl flex items-center justify-center transition-all duration-200 group disabled:opacity-30 disabled:cursor-not-allowed"
+              style={{ background: "#0d1520", border: "1px solid rgba(238,242,247,0.07)" }}
+              onMouseEnter={e => { if (!e.currentTarget.disabled) e.currentTarget.style.borderColor = "rgba(74,143,196,0.3)"; }}
+              onMouseLeave={e => { e.currentTarget.style.borderColor = "rgba(238,242,247,0.07)"; }}
               aria-label="Proyecto anterior"
             >
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="text-secondary-text group-hover:text-foreground transition-colors">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" style={{ color: "rgba(238,242,247,0.42)" }}>
                 <polyline points="15 18 9 12 15 6" />
               </svg>
             </button>
             <button
               onClick={next}
               disabled={currentVideo === total - 1}
-              className="w-10 h-10 rounded-xl bg-background-secondary hover:bg-hover-bg disabled:opacity-30 disabled:cursor-not-allowed border border-border-color hover:border-brand-blue/40 flex items-center justify-center transition-all duration-200 group"
+              className="w-10 h-10 rounded-xl flex items-center justify-center transition-all duration-200 group disabled:opacity-30 disabled:cursor-not-allowed"
+              style={{ background: "#0d1520", border: "1px solid rgba(238,242,247,0.07)" }}
+              onMouseEnter={e => { if (!e.currentTarget.disabled) e.currentTarget.style.borderColor = "rgba(74,143,196,0.3)"; }}
+              onMouseLeave={e => { e.currentTarget.style.borderColor = "rgba(238,242,247,0.07)"; }}
               aria-label="Proyecto siguiente"
             >
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="text-secondary-text group-hover:text-foreground transition-colors">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" style={{ color: "rgba(238,242,247,0.42)" }}>
                 <polyline points="9 18 15 12 9 6" />
               </svg>
             </button>
           </div>
 
-          <div className="flex-1 mx-6 h-1 bg-border-color rounded-full overflow-hidden">
+          <div className="flex-1 mx-6 h-1 rounded-full overflow-hidden" style={{ background: "rgba(238,242,247,0.07)" }}>
             <div
-              className="h-1 bg-brand-blue rounded-full transition-all duration-500 ease-out"
-              style={{ width: `${((currentVideo + 1) / total) * 100}%` }}
+              className="h-1 rounded-full transition-all duration-500 ease-out"
+              style={{ width: `${((currentVideo + 1) / total) * 100}%`, background: "linear-gradient(90deg,#2e6da4,#e8b84b)" }}
             />
           </div>
 
-          <span className="text-xs font-mono text-secondary-text tabular-nums whitespace-nowrap">
+          <span className="text-xs font-mono tabular-nums whitespace-nowrap" style={{ color: "rgba(238,242,247,0.42)" }}>
             {String(currentVideo + 1).padStart(2, "0")} / {String(total).padStart(2, "0")}
           </span>
         </div>

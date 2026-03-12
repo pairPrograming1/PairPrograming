@@ -1,5 +1,5 @@
 
-import { Inter } from "next/font/google";
+import { Inter, Bricolage_Grotesque, Instrument_Sans } from "next/font/google";
 import "./globals.css";
 import { SidebarProvider } from "./context/SidebarContext";
 import FloatingWidgets from "./components/FloatingWidgets";
@@ -10,6 +10,21 @@ import ClickListener from "./components/utils/clickListener";
 const inter = Inter({
   variable: "--font-inter",
   subsets: ["latin"],
+});
+
+const bricolage = Bricolage_Grotesque({
+  variable: "--font-bricolage",
+  subsets: ["latin"],
+  weight: ["300", "400", "600", "700", "800"],
+  display: "swap",
+});
+
+const instrument = Instrument_Sans({
+  variable: "--font-instrument",
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  style: ["normal", "italic"],
+  display: "swap",
 });
 
 const BASE_URL = "https://www.pairprogramming.com.ar";
@@ -109,7 +124,7 @@ export default function RootLayout({ children }) {
         {/* End Google Tag Manager */}
       </head>
 
-      <body className={`${inter.variable} antialiased`}>
+      <body className={`${inter.variable} ${bricolage.variable} ${instrument.variable} antialiased`}>
         {/* JSON-LD Organization schema */}
         <script
           type="application/ld+json"

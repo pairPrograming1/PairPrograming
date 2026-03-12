@@ -1,79 +1,42 @@
 "use client";
-import { useSidebar } from "../context/SidebarContext";
-import { Container } from "./ui/Container";
-import { Button } from "./ui/Button";
-
+import { useState } from "react";
+import Link from "next/link";
 
 export default function CallToAction() {
-  const { isSidebarExpanded } = useSidebar();
-
+  const [h, setH] = useState(false);
   return (
-    <section className="py-20 lg:py-28 bg-background-secondary text-foreground relative overflow-hidden">
-      {/* Background decoration */}
-      <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-0 left-1/4 w-72 h-72 bg-brand-blue/5 rounded-full blur-3xl" />
-        <div className="absolute bottom-0 right-1/4 w-72 h-72 bg-brand-gold/5 rounded-full blur-3xl" />
+    <section style={{ padding:"10rem 5vw",textAlign:"center",position:"relative",overflow:"hidden",background:"#080c12" }}>
+      {/* Radial gradients */}
+      <div style={{ position:"absolute",inset:0,pointerEvents:"none",background:"radial-gradient(ellipse 55% 50% at 50% 100%,rgba(46,109,164,.1) 0%,transparent 70%),radial-gradient(ellipse 35% 35% at 30% 20%,rgba(201,146,13,.06) 0%,transparent 70%)" }}/>
+      {/* Grid pattern */}
+      <div style={{ position:"absolute",inset:0,pointerEvents:"none",backgroundImage:"linear-gradient(rgba(238,242,247,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(238,242,247,.025) 1px,transparent 1px)",backgroundSize:"72px 72px",WebkitMaskImage:"radial-gradient(ellipse 60% 60% at 50% 50%,black 0%,transparent 100%)" }}/>
+
+      <h2 className="ff" style={{ fontWeight:800,fontSize:"clamp(2.2rem,5.5vw,5rem)",letterSpacing:"-.04em",lineHeight:.98,maxWidth:660,margin:"0 auto 1.5rem",position:"relative",zIndex:1,color:"#eef2f7" }}>
+        ¿Tenés una <span style={{color:"#e8b84b"}}>idea</span>?<br/>La hacemos realidad.
+      </h2>
+      <p style={{ color:"rgba(238,242,247,0.42)",fontSize:".98rem",fontWeight:300,marginBottom:"2.8rem",position:"relative",zIndex:1 }}>
+        Sin compromisos. Solo una charla honesta sobre tu proyecto.
+      </p>
+
+      <div style={{ position:"relative",zIndex:1 }}>
+        <Link
+          href="/contacto"
+          onMouseEnter={()=>setH(true)}
+          onMouseLeave={()=>setH(false)}
+          style={{
+            background:"linear-gradient(135deg,#c9920d,#e8b84b)",color:"#080c12",
+            border:"none",cursor:"pointer",
+            padding:".9rem 2rem",borderRadius:"100px",fontWeight:600,fontSize:".9rem",
+            display:"inline-flex",alignItems:"center",gap:".5rem",textDecoration:"none",
+            transition:"all .25s",
+            boxShadow: h ? "0 8px 32px rgba(201,146,13,.45)" : "0 4px 20px rgba(201,146,13,.25)",
+            transform: h ? "translateY(-2px)" : "none",
+          }}
+        >
+          Hablemos
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </Link>
       </div>
-
-      <Container
-        size={isSidebarExpanded ? "expanded" : "default"}
-        className="relative z-10"
-      >
-        <div className="max-w-3xl mx-auto text-center">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-blue/10 border border-brand-blue/20 mb-6">
-            <span className="w-1.5 h-1.5 rounded-full bg-brand-gold" />
-            <span className="text-xs font-semibold text-brand-blue-light uppercase tracking-wider">
-              Empecemos
-            </span>
-          </div>
-
-          <h2
-            className={`font-bold mb-5 text-foreground transition-all duration-300 ${
-              isSidebarExpanded ? "text-2xl lg:text-3xl" : "text-3xl lg:text-4xl"
-            }`}
-          >
-            ¿Listo para transformar{" "}
-            <span className="text-brand-gold">tu idea</span>?
-          </h2>
-
-          <p
-            className={`mb-10 mx-auto text-secondary-text leading-relaxed transition-all duration-300 ${
-              isSidebarExpanded ? "text-base max-w-lg" : "text-lg max-w-xl"
-            }`}
-          >
-            Co-creamos soluciones digitales que integran tecnología y estrategia.
-            Contáctanos y empecemos a construir juntos.
-          </p>
-
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button
-              href="/contacto"
-              variant="accent"
-              size="lg"
-              icon={
-                <svg
-                  className="w-5 h-5"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"
-                  />
-                </svg>
-              }
-            >
-              Contáctanos
-            </Button>
-            <Button href="/servicios" variant="outline" size="lg">
-              Explorar Servicios
-            </Button>
-          </div>
-        </div>
-      </Container>
     </section>
   );
 }

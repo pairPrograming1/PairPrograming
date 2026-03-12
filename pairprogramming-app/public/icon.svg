@@ -1,0 +1,19 @@
+<svg width="256" height="256" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="PairProgramming logo">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0f1e33"/>
+      <stop offset="100%" stop-color="#111b2a"/>
+    </linearGradient>
+    <linearGradient id="blue" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#4a8fc4"/>
+      <stop offset="100%" stop-color="#1e4f7d"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#e8b84b"/>
+      <stop offset="100%" stop-color="#c9920d"/>
+    </linearGradient>
+  </defs>
+  <rect x="16" y="16" width="224" height="224" rx="56" fill="url(#bg)" stroke="#2a3d56" stroke-width="6"/>
+  <path d="M64 64C110 64 146 100 146 146V184H112V146C112 118 92 98 64 98V64Z" fill="url(#blue)"/>
+  <path d="M154 64C186 64 212 90 212 122C212 154 186 180 154 180H138V146H154C167 146 178 135 178 122C178 109 167 98 154 98V64Z" fill="url(#gold)"/>
+</svg>

@@ -82,7 +82,7 @@ No nos hacemos responsables por:
   {
     id: "ley",
     title: "9. Ley Aplicable",
-    content: `Estos términos se rigen por las leyes de la República Argentina. Cualquier disputa será resuelta en los tribunales competentes de Buenos Aires, Argentina.`,
+    content: `Estos términos se rigen por las leyes de la República Argentina. Cualquier disputa será resuelta en los tribunales competentes de la República Argentina.`,
   },
   {
     id: "modificaciones",

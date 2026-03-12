@@ -1,8 +1,13 @@
 "use client";
+import { HelpCircle, Sparkles } from "lucide-react";
 
 export function FAQHeader({ isSidebarExpanded }) {
   return (
     <div className="text-center mb-12 fade-in">
+      <div className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.12em] text-primary mb-4">
+        <Sparkles className="w-4 h-4" />
+        Centro de ayuda
+      </div>
       <h1
         className={`font-bold mb-4 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent transition-all duration-300 ${
           isSidebarExpanded ? "text-2xl lg:text-3xl" : "text-3xl lg:text-4xl"
@@ -14,6 +19,10 @@ export function FAQHeader({ isSidebarExpanded }) {
         Encuentra respuestas a las preguntas más comunes sobre nuestros
         servicios, procesos y metodologías.
       </p>
+      <div className="mt-6 inline-flex items-center gap-2 text-xs text-secondary-text/90 border border-border-color rounded-full px-3 py-1.5 bg-card-bg/60">
+        <HelpCircle className="w-4 h-4 text-primary" />
+        Respuestas claras, sin vueltas
+      </div>
     </div>
   );
 }

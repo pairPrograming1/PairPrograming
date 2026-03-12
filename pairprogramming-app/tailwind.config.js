@@ -30,15 +30,21 @@ module.exports = {
         "hover-bg": "var(--hover-bg)",
         "secondary-text": "var(--secondary-text)",
         "border-color": "var(--border-color)",
+        "border-accent": "var(--border-accent)",
+        "muted": "var(--secondary-text)",
         success: "var(--success)",
       },
       fontFamily: {
         inter: ["var(--font-inter)", "sans-serif"],
+        display: ["var(--font-bricolage)", "sans-serif"],
+        instrument: ["var(--font-instrument)", "sans-serif"],
       },
       animation: {
         "fade-in": "fadeIn 0.6s ease-out",
         "fade-in-up": "fadeInUp 0.6s ease-out both",
         shimmer: "shimmer 2s infinite",
+        ticker: "ticker 28s linear infinite",
+        blink: "blink 2s infinite",
       },
       keyframes: {
         fadeIn: {
@@ -52,6 +58,14 @@ module.exports = {
         shimmer: {
           "0%": { backgroundPosition: "-200px 0" },
           "100%": { backgroundPosition: "200px 0" },
+        },
+        ticker: {
+          from: { transform: "translateX(0)" },
+          to: { transform: "translateX(-50%)" },
+        },
+        blink: {
+          "0%, 100%": { opacity: "1" },
+          "50%": { opacity: "0.25" },
         },
       },
     },
