@@ -1,5 +1,6 @@
 import { SERVICES } from "./data/services";
 import { portfolioVideos } from "./data/portfolioVideos";
+import { LOCATIONS, INDUSTRIES } from "./data/seo-dimensions";
 
 const BASE_URL = "https://pairprogramming.com.ar";
 
@@ -44,5 +45,38 @@ export default function sitemap() {
     priority: 0.7,
   }));
 
-  return [...staticPages, ...servicePages, ...portfolioPages];
+  // Location pages (/desarrollo-software/[locacion])
+  const locationPages = LOCATIONS.map((l) => ({
+    url: `${BASE_URL}/desarrollo-software/${l.slug}`,
+    lastModified: now,
+    changeFrequency: "monthly",
+    priority: 0.7,
+  }));
+
+  // Location × Service pages (/desarrollo-software/[locacion]/[servicio])
+  const locationServicePages = LOCATIONS.flatMap((l) =>
+    SERVICES.map((s) => ({
+      url: `${BASE_URL}/desarrollo-software/${l.slug}/${s.slug}`,
+      lastModified: now,
+      changeFrequency: "monthly",
+      priority: 0.6,
+    }))
+  );
+
+  // Industry pages (/sectores/[industria])
+  const industryPages = INDUSTRIES.map((i) => ({
+    url: `${BASE_URL}/sectores/${i.slug}`,
+    lastModified: now,
+    changeFrequency: "monthly",
+    priority: 0.7,
+  }));
+
+  return [
+    ...staticPages,
+    ...servicePages,
+    ...portfolioPages,
+    ...locationPages,
+    ...locationServicePages,
+    ...industryPages,
+  ];
 }
