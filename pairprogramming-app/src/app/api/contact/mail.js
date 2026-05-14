@@ -1,5 +1,30 @@
 import nodemailer from 'nodemailer';
 
+const PP_LOGO_SVG = `<svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#d4a017"/>
+      <stop offset="100%" stop-color="#b8860b"/>
+    </linearGradient>
+    <linearGradient id="blue" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1e3a8a"/>
+      <stop offset="100%" stop-color="#2563eb"/>
+    </linearGradient>
+  </defs>
+  <rect x="56" y="56" width="400" height="400" rx="90" fill="none" stroke="#111" stroke-width="18"/>
+  <path d="M200 150 h120 a80 80 0 0 1 0 160 h-120 z" fill="url(#gold)"/>
+  <path d="M200 150 v260 a110 110 0 0 0 110 -110 a110 110 0 0 0 -110 -110 z" fill="url(#blue)"/>
+</svg>`;
+
+function getLogoAttachment() {
+  return {
+    filename: 'logo.svg',
+    content: Buffer.from(PP_LOGO_SVG),
+    contentType: 'image/svg+xml',
+    cid: 'pplogo',
+  };
+}
+
 function createTransporter() {
   const host = process.env.SMTP_HOST;
   const port = process.env.SMTP_PORT ? Number(process.env.SMTP_PORT) : undefined;
@@ -35,7 +60,7 @@ export async function sendTeamMail({ name, email, phone, company, message }) {
             <!-- Header -->
             <tr><td style="padding:0 0 32px 0">
               <table cellpadding="0" cellspacing="0"><tr>
-                <td style="width:24px;height:24px"><img src="https://www.pairprogramming.com.ar/favicon.ico" width="24" height="24" alt="PP" style="display:block;border:0;border-radius:4px" /></td>
+                <td style="width:24px;height:24px"><img src="cid:pplogo" width="24" height="24" alt="PP" style="display:block;border:0;border-radius:4px" /></td>
                 <td style="padding-left:10px;font-size:15px;font-weight:600;color:#f7f8f8;letter-spacing:-0.3px">PairProgramming</td>
               </tr></table>
             </td></tr>
@@ -80,6 +105,7 @@ export async function sendTeamMail({ name, email, phone, company, message }) {
     subject,
     text,
     html,
+    attachments: [getLogoAttachment()],
   });
 }
 
@@ -101,7 +127,7 @@ export async function sendAutoResponder({ name, email, message }) {
             <!-- Header -->
             <tr><td style="padding:0 0 32px 0">
               <table cellpadding="0" cellspacing="0"><tr>
-                <td style="width:24px;height:24px"><img src="https://www.pairprogramming.com.ar/favicon.ico" width="24" height="24" alt="PP" style="display:block;border:0;border-radius:4px" /></td>
+                <td style="width:24px;height:24px"><img src="cid:pplogo" width="24" height="24" alt="PP" style="display:block;border:0;border-radius:4px" /></td>
                 <td style="padding-left:10px;font-size:15px;font-weight:600;color:#f7f8f8;letter-spacing:-0.3px">PairProgramming</td>
               </tr></table>
             </td></tr>
@@ -175,5 +201,6 @@ export async function sendAutoResponder({ name, email, message }) {
     text: autoText,
     html: autoHtml,
     replyTo: to,
+    attachments: [getLogoAttachment()],
   });
 }
