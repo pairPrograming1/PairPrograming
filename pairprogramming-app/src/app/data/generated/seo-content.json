@@ -1,0 +1,2158 @@
+{
+  "locations": {
+    "buenos-aires": {
+      "title": "Desarrollo de software en Buenos Aires",
+      "description": "Desarrollo de software personalizado en Buenos Aires. Servicios de creación de aplicaciones web y móviles con Next.js, React y Node.js. Contáctanos en PairProgramming",
+      "h1": "Desarrollo de software en Buenos Aires",
+      "intro": "Buenos Aires, el polo tecnológico más grande de Latinoamérica, es hogar de empresas líderes como MercadoLibre, Globant y Auth0. En este ecosistema tech en constante crecimiento, PairProgramming se destaca como una opción ideal para empresas que buscan innovar y expandirse. Con una fundación en 2022 por Esteban Aleart, nuestra empresa ofrece soluciones de desarrollo de software personalizadas y de alta calidad, aprovechando el poder de tecnologías como Next.js, React, TypeScript, Node.js y PostgreSQL.",
+      "faq": [
+        {
+          "question": "¿Qué tecnologías utiliza PairProgramming?",
+          "answer": "Utilizamos Next.js, React, TypeScript, Node.js y PostgreSQL."
+        },
+        {
+          "question": "¿Cuál es el enfoque de PairProgramming?",
+          "answer": "Nuestro enfoque es el desarrollo de software personalizado y de alta calidad."
+        },
+        {
+          "question": "¿Dónde se encuentra PairProgramming?",
+          "answer": "Estamos ubicados en Buenos Aires, la capital federal de Argentina."
+        }
+      ]
+    },
+    "caba": {
+      "title": "Desarrollo de software CABA",
+      "description": "Desarrollo de software personalizado en CABA, Argentina. Servicios de creación de aplicaciones web y móviles para startups y empresas en Parque Patricios y el distrito tecnológico.",
+      "h1": "Desarrollo de software en CABA",
+      "intro": "En el corazón del distrito tecnológico de Parque Patricios, PairProgramming se destaca como líder en desarrollo de software en CABA. Con un ecosistema tech en constante crecimiento, más de 100 startups fintech y una comunidad de desarrolladores apasionados, nuestra empresa ofrece soluciones personalizadas para empresas que buscan innovar y escalar.",
+      "faq": [
+        {
+          "question": "¿Qué tecnologías utiliza PairProgramming?",
+          "answer": "Utilizamos Next.js, React, TypeScript, Node.js y PostgreSQL."
+        },
+        {
+          "question": "¿Cuál es el enfoque de PairProgramming?",
+          "answer": "Nuestro enfoque es el desarrollo de software personalizado para startups y empresas en CABA."
+        },
+        {
+          "question": "¿Por qué elegir PairProgramming en CABA?",
+          "answer": "Por nuestra experiencia en desarrollo de software y nuestro conocimiento del ecosistema tech local."
+        }
+      ]
+    },
+    "cordoba": {
+      "title": "Desarrollo de software en Córdoba",
+      "description": "Desarrollo de software personalizado en Córdoba. En PairProgramming, ofrecemos soluciones tecnológicas con Next.js, React y Node.js para empresas de la región.",
+      "h1": "Desarrollo de software en Córdoba",
+      "intro": "Córdoba, el segundo polo tech de Argentina, es hogar de un ecosistema innovador con el Córdoba Technology Cluster. Fundada en 2022 por Esteban Aleart, PairProgramming se destaca en el desarrollo de software y videojuegos, ofreciendo soluciones personalizadas para empresas locales.",
+      "faq": [
+        {
+          "question": "¿Qué tecnologías utiliza PairProgramming?",
+          "answer": "Utilizamos Next.js, React, TypeScript, Node.js y PostgreSQL."
+        },
+        {
+          "question": "¿Por qué elegir PairProgramming en Córdoba?",
+          "answer": "Ofrecemos soluciones personalizadas y experiencia en desarrollo de software y videojuegos."
+        },
+        {
+          "question": "¿Cuándo se fundó PairProgramming?",
+          "answer": "PairProgramming fue fundada en 2022 por Esteban Aleart."
+        }
+      ]
+    },
+    "rosario": {
+      "title": "Desarrollo de software en Rosario",
+      "description": "Desarrollo de software personalizado en Rosario. En PairProgramming, ofrecemos soluciones tecnológicas con Next.js, React y Node.js para empresas del polo agroindustrial y más.",
+      "h1": "Desarrollo de software en Rosario",
+      "intro": "Rosario, el tercer centro económico de Argentina, experimenta un crecimiento significativo en su sector tech. Con un polo agroindustrial en constante evolución y un importante hub logístico, la ciudad se convierte en un escenario ideal para el desarrollo de soluciones tecnológicas innovadoras. En este contexto, PairProgramming se establece como una opción confiable y especializada para empresas que buscan aprovechar al máximo las oportunidades que ofrece la tecnología.",
+      "faq": [
+        {
+          "question": "¿Qué tecnologías utiliza PairProgramming?",
+          "answer": "Utilizamos Next.js, React, TypeScript, Node.js y PostgreSQL."
+        },
+        {
+          "question": "¿Por qué elegir Rosario para desarrollar software?",
+          "answer": "Rosario ofrece un ecosistema tech en crecimiento con acceso a talento local y una ubicación estratégica."
+        },
+        {
+          "question": "¿Qué tipo de proyectos desarrolla PairProgramming?",
+          "answer": "Desarrollamos soluciones personalizadas para empresas de diversos sectores, desde agroindustria hasta logística."
+        }
+      ]
+    },
+    "mendoza": {
+      "title": "Desarrollo de software en Mendoza",
+      "description": "Desarrollo de software personalizado en Mendoza. En PairProgramming, ofrecemos soluciones tecnológicas con Next.js, React y TypeScript para empresas de la región vitivinícola.",
+      "h1": "Desarrollo de software en Mendoza",
+      "intro": "Mendoza se consolida como un polo tecnológico en constante crecimiento, con más de 100 empresas del sector tech. En este ecosistema, PairProgramming se destaca como una opción confiable para el desarrollo de software, gracias a su equipo experimentado y su stack tecnológico de vanguardia.",
+      "faq": [
+        {
+          "question": "¿Qué tecnologías utiliza PairProgramming?",
+          "answer": "Utilizamos Next.js, React, TypeScript, Node.js y PostgreSQL."
+        },
+        {
+          "question": "¿Cuál es el enfoque de PairProgramming?",
+          "answer": "Nos enfocamos en brindar soluciones personalizadas y de alta calidad para empresas de Mendoza."
+        },
+        {
+          "question": "¿Por qué elegir PairProgramming?",
+          "answer": "Por nuestra experiencia y compromiso con la innovación y el crecimiento de las empresas locales."
+        }
+      ]
+    },
+    "mar-del-plata": {
+      "title": "Desarrollo de software en Mar del Plata",
+      "description": "Desarrollo de software personalizado en Mar del Plata. En PairProgramming, ofrecemos soluciones tecnológicas con Next.js, React y TypeScript para empresas de la región.",
+      "h1": "Desarrollo de software en Mar del Plata",
+      "intro": "Mar del Plata se destaca como un polo tecnológico en constante crecimiento, con un clúster de empresas innovadoras y un ecosistema emprendedor activo. Con más de 100 empresas de tecnología y un gran número de profesionales capacitados, la ciudad ofrece un entorno ideal para el desarrollo de software. En este contexto, PairProgramming se posiciona como una opción ideal para empresas que buscan soluciones tecnológicas personalizadas y de alta calidad, aprovechando la experiencia de su fundador Esteban Aleart y su equipo de expertos en Next.js, React y TypeScript.",
+      "faq": [
+        {
+          "question": "¿Qué tecnologías utiliza PairProgramming?",
+          "answer": "Utilizamos Next.js, React, TypeScript, Node.js y PostgreSQL."
+        },
+        {
+          "question": "¿Cuál es el enfoque de PairProgramming?",
+          "answer": "Nos enfocamos en desarrollo de software personalizado y soluciones tecnológicas innovadoras."
+        },
+        {
+          "question": "¿Por qué elegir PairProgramming en Mar del Plata?",
+          "answer": "Ofrecemos soluciones tecnológicas de alta calidad, aprovechando el talento local y la experiencia de nuestro equipo."
+        }
+      ]
+    },
+    "la-plata": {
+      "title": "Desarrollo de software en La Plata",
+      "description": "Desarrollo de software personalizado en La Plata. En PairProgramming, ofrecemos soluciones tecnológicas con Next.js, React y Node.js para empresas de la región.",
+      "h1": "Desarrollo de software en La Plata",
+      "intro": "La Plata, con su Universidad Nacional fuerte en informática, se posiciona como un polo tecnológico en constante crecimiento. PairProgramming, fundada en 2022 por Esteban Aleart, aprovecha este ecosistema para ofrecer soluciones de desarrollo de software personalizadas y de alta calidad a empresas locales, impulsando su innovación y competitividad.",
+      "faq": [
+        {
+          "question": "¿Qué tecnologías utiliza PairProgramming?",
+          "answer": "Utilizamos Next.js, React, TypeScript, Node.js y PostgreSQL."
+        },
+        {
+          "question": "¿Por qué elegir PairProgramming en La Plata?",
+          "answer": "Por nuestra experiencia local y compromiso con la calidad y la innovación."
+        },
+        {
+          "question": "¿Ofrecen servicios de consultoría tecnológica?",
+          "answer": "Sí, ofrecemos consultoría para ayudar a las empresas a mejorar su estrategia tecnológica."
+        }
+      ]
+    },
+    "tucuman": {
+      "title": "Desarrollo de software en Tucumán",
+      "description": "En Tucumán, PairProgramming ofrece desarrollo de software personalizado con Next.js, React y TypeScript. Mejora la eficiencia de tu negocio con soluciones tecnológicas innovadoras.",
+      "h1": "Desarrollo de Software en Tucumán",
+      "intro": "Tucumán, centro económico del NOA, se digitaliza. La industria azucarera y citrícola busca innovar. Fundada en 2022 por Esteban Aleart, PairProgramming es la opción ideal para empresas locales que buscan soluciones tecnológicas personalizadas y eficientes.",
+      "faq": [
+        {
+          "question": "¿Qué tecnologías utiliza PairProgramming?",
+          "answer": "Utilizamos Next.js, React, TypeScript, Node.js y PostgreSQL."
+        },
+        {
+          "question": "¿Por qué elegir PairProgramming en Tucumán?",
+          "answer": "Ofrecemos soluciones personalizadas y eficientes para empresas locales."
+        },
+        {
+          "question": "¿Cuándo se fundó PairProgramming?",
+          "answer": "Fue fundada en 2022 por Esteban Aleart."
+        }
+      ]
+    },
+    "mexico": {
+      "title": "Desarrollo de software en México",
+      "description": "En PairProgramming, ofrecemos servicios de desarrollo de software personalizados en la Ciudad de México. Nuestro equipo experto en Next.js, React y Node.js te ayuda a impulsar tu negocio.",
+      "h1": "Desarrollo de software en México",
+      "intro": "México, con su mercado tech de USD 25B, es un destino atractivo para empresas que buscan nearshoring desde EEUU. En PairProgramming, fundada en 2022 por Esteban Aleart, ofrecemos soluciones personalizadas para satisfacer tus necesidades de desarrollo de software en la región.",
+      "faq": [
+        {
+          "question": "¿Por qué elegir PairProgramming para desarrollo de software en México?",
+          "answer": "Ofrecemos soluciones personalizadas con tecnologías como Next.js y React."
+        },
+        {
+          "question": "¿Cuáles son los beneficios del nearshoring en México?",
+          "answer": "Reducción de costos y aumento de la eficiencia en proyectos de desarrollo de software."
+        },
+        {
+          "question": "¿Qué tecnologías utiliza PairProgramming para desarrollo de software?",
+          "answer": "Utilizamos Next.js, React, TypeScript, Node.js y PostgreSQL para proyectos de alta calidad."
+        }
+      ]
+    },
+    "chile": {
+      "title": "Desarrollo de software en Chile",
+      "description": "Desarrollo de software personalizado en Santiago de Chile. Servicios de creación de aplicaciones web y móviles con Next.js, React y Node.js",
+      "h1": "Desarrollo de software en Chile",
+      "intro": "Chile cuenta con una economía estable y un ecosistema tech en constante crecimiento, siendo Startup Chile un referente en la región. Con una fuerte adopción digital en sectores como banca y retail, PairProgramming se posiciona como la opción ideal para empresas que buscan innovar y expandirse en el mercado local.",
+      "faq": [
+        {
+          "question": "¿Qué tecnologías utiliza PairProgramming?",
+          "answer": "Utilizamos Next.js, React, TypeScript, Node.js y PostgreSQL"
+        },
+        {
+          "question": "¿Cuándo se fundó PairProgramming?",
+          "answer": "Fue fundada en 2022 por Esteban Aleart"
+        },
+        {
+          "question": "¿Qué servicios ofrece PairProgramming?",
+          "answer": "Ofrecemos desarrollo de aplicaciones web y móviles personalizadas"
+        }
+      ]
+    },
+    "colombia": {
+      "title": "Desarrollo de software en Colombia",
+      "description": "En Medellín, Colombia, PairProgramming ofrece servicios de desarrollo de software con Next.js, React y Node.js. Nuestro equipo experto crea soluciones personalizadas para empresas.",
+      "h1": "Desarrollo de software en Colombia",
+      "intro": "Colombia es el tercer mercado tech más grande de LATAM, con Medellín como un hub de innovación en constante crecimiento. Con la Ley de Emprendimiento activa, PairProgramming se estableció en 2022 para satisfacer la demanda de soluciones de software personalizadas y de alta calidad.",
+      "faq": [
+        {
+          "question": "¿Cuál es el stack de tecnologías utilizado por PairProgramming?",
+          "answer": "Utilizamos Next.js, React, TypeScript, Node.js y PostgreSQL."
+        },
+        {
+          "question": "¿Por qué Medellín es un buen lugar para desarrollar software?",
+          "answer": "Medellín es un hub de innovación con una gran oferta de talento y una infraestructura en constante crecimiento."
+        },
+        {
+          "question": "¿Qué tipo de servicios de desarrollo de software ofrece PairProgramming?",
+          "answer": "Ofrecemos desarrollo de software personalizado, incluyendo aplicaciones web y móviles."
+        }
+      ]
+    },
+    "uruguay": {
+      "title": "Desarrollo de software en Uruguay",
+      "description": "En Montevideo, Uruguay, ofrecemos desarrollo de software personalizado con Next.js, React y Node.js. Confíe en PairProgramming para su proyecto tecnológico.",
+      "h1": "Desarrollo de software en Uruguay",
+      "intro": "Uruguay lidera la penetración de internet en LATAM, con una zona franca tech y sedes regionales de empresas globales. Fundada en 2022 por Esteban Aleart, PairProgramming es la opción ideal para empresas que buscan innovar en este ecosistema en constante crecimiento.",
+      "faq": [
+        {
+          "question": "¿Qué tecnologías utiliza PairProgramming?",
+          "answer": "Utilizamos Next.js, React, TypeScript, Node.js y PostgreSQL."
+        },
+        {
+          "question": "¿Por qué elegir Uruguay para desarrollo de software?",
+          "answer": "Uruguay ofrece una zona franca tech y una penetración de internet líder en LATAM."
+        },
+        {
+          "question": "¿Qué tipo de proyectos desarrolla PairProgramming?",
+          "answer": "Desarrollamos proyectos personalizados con tecnologías como Next.js y React."
+        }
+      ]
+    }
+  },
+  "locationServices": {
+    "buenos-aires/saas-b2b": {
+      "title": "Arquitectura B2B SaaS Buenos Aires",
+      "description": "Desarrollamos soluciones de Arquitectura B2B SaaS personalizadas para empresas de Buenos Aires, mejorando la escalabilidad y seguridad con tecnologías como Next.js y PostgreSQL.",
+      "h1": "Arquitectura B2B SaaS en Buenos Aires",
+      "intro": "En el polo tecnológico más grande de Latinoamérica, empresas como MercadoLibre y Globant requieren soluciones de Arquitectura B2B SaaS robustas. En PairProgramming, ofrecemos plataformas multi-tenant, billing y seguridad de nivel de fila para satisfacer las necesidades de las empresas de Buenos Aires.",
+      "faq": [
+        {
+          "question": "¿Qué es Arquitectura B2B SaaS?",
+          "answer": "Esquema de software como servicio para empresas, ofreciendo escalabilidad y seguridad."
+        },
+        {
+          "question": "¿Por qué es importante en Buenos Aires?",
+          "answer": "Permite a las empresas locales competir a nivel global con soluciones personalizadas y seguras."
+        }
+      ]
+    },
+    "buenos-aires/productos-digitales": {
+      "title": "Productos Digitales Buenos Aires",
+      "description": "Desarrollamos soluciones digitales personalizadas en Buenos Aires. Apps web, móviles y dashboards para empresas que buscan innovar en el polo tecnológico más grande de Latinoamérica.",
+      "h1": "Productos Digitales en Buenos Aires",
+      "intro": "En el corazón del polo tecnológico más grande de Latinoamérica, PairProgramming ofrece soluciones digitales personalizadas para empresas de Buenos Aires. Con nuestra experiencia en Next.js, React, TypeScript, Node.js y PostgreSQL, ayudamos a startups y empresas consolidadas a desarrollar apps web, móviles y dashboards que impulsan su crecimiento en un entorno competitivo.",
+      "faq": [
+        {
+          "question": "¿Por qué necesito un producto digital en Buenos Aires?",
+          "answer": "Para destacarte en el mercado más competitivo de Latinoamérica y alcanzar a más clientes."
+        },
+        {
+          "question": "¿Cuál es el beneficio de trabajar con PairProgramming?",
+          "answer": "Nuestro equipo de expertos en tecnología ofrece soluciones personalizadas y escalables para tu negocio."
+        }
+      ]
+    },
+    "buenos-aires/crm-automatizacion": {
+      "title": "CRM y Automatización en Buenos Aires",
+      "description": "Mejora la gestión de tus clientes y procesos en la capital federal con soluciones de CRM y Automatización personalizadas por PairProgramming, expertos en Salesforce y HubSpot.",
+      "h1": "Automatiza tu negocio",
+      "intro": "En el polo tecnológico más grande de Latinoamérica, las empresas de Buenos Aires necesitan soluciones de CRM y Automatización para mantener su competitividad. Con sede de gigantes como MercadoLibre, Globant y Auth0, la ciudad exige innovación y eficiencia. PairProgramming, fundada en 2022, ofrece soluciones personalizadas para empresas que buscan mejorar su gestión de clientes y procesos.",
+      "faq": [
+        {
+          "question": "¿Qué es CRM y cómo puede ayudar a mi empresa?",
+          "answer": "CRM es un sistema para gestionar clientes y procesos, mejorando la eficiencia y ventas."
+        },
+        {
+          "question": "¿Puedo integrar Salesforce con mis herramientas existentes?",
+          "answer": "Sí, PairProgramming ofrece integraciones custom para conectar Salesforce con tus sistemas actuales."
+        }
+      ]
+    },
+    "buenos-aires/automatizacion-n8n": {
+      "title": "Automatización con n8n en Buenos Aires",
+      "description": "Automatiza procesos con n8n en Buenos Aires. Integraciones, scraping y ETL para empresas. PairProgramming, expertos en soluciones personalizadas.",
+      "h1": "Automatización con n8n",
+      "intro": "En el polo tecnológico más grande de Latinoamérica, las empresas de Buenos Aires necesitan automatizar procesos para mantener su competitividad. Con sede de gigantes como MercadoLibre, Globant y Auth0, la ciudad exige soluciones innovadoras. PairProgramming resuelve esta necesidad con Automatización con n8n, ofreciendo workflows personalizados y eficientes.",
+      "faq": [
+        {
+          "question": "¿Qué es la automatización con n8n?",
+          "answer": "Es un proceso que utiliza n8n para automatizar tareas y workflows, mejorando la eficiencia empresarial."
+        },
+        {
+          "question": "¿Cómo puede PairProgramming ayudar a mi empresa en Buenos Aires?",
+          "answer": "Ofrecemos soluciones personalizadas de automatización con n8n, integraciones y ETL para mejorar la productividad de tu negocio."
+        }
+      ]
+    },
+    "buenos-aires/cloud-devops": {
+      "title": "Cloud y DevOps Buenos Aires",
+      "description": "Desarrolla infraestructuras escalables y seguras con nuestros servicios de Cloud y DevOps en Buenos Aires. AWS, Vercel, CI/CD y más. Optimiza tus procesos con PairProgramming.",
+      "h1": "Cloud y DevOps en Buenos Aires",
+      "intro": "En el polo tecnológico más grande de Latinoamérica, las empresas de Buenos Aires necesitan soluciones de Cloud y DevOps para mantenerse competitivas. Con sede de gigantes como MercadoLibre, Globant y Auth0, la demanda de tecnologías innovadoras es alta. En PairProgramming, ayudamos a las empresas a escalar y optimizar sus procesos con servicios de Cloud y DevOps personalizados, desde la implementación de AWS y Vercel hasta la automatización de pipelines con CI/CD, Docker y Kubernetes.",
+      "faq": [
+        {
+          "question": "¿Qué es Cloud y DevOps?",
+          "answer": "Es la combinación de prácticas y herramientas para desarrollar y entregar software de manera rápida y segura."
+        },
+        {
+          "question": "¿Por qué elegir PairProgramming?",
+          "answer": "Ofrecemos soluciones personalizadas de Cloud y DevOps con tecnologías como Next.js, React y Node.js."
+        }
+      ]
+    },
+    "buenos-aires/seo-contenido": {
+      "title": "SEO y Contenido en Buenos Aires",
+      "description": "Mejora la visibilidad de tu empresa en la capital federal con nuestros servicios de posicionamiento, schema markup y contenido programático en PairProgramming",
+      "h1": "SEO y Contenido en Buenos Aires",
+      "intro": "En el polo tecnológico más grande de Latinoamérica, como sede de MercadoLibre, Globant y Auth0, las empresas de Buenos Aires necesitan destacarse en la web. En PairProgramming, fundada en 2022, ofrecemos servicios de posicionamiento y contenido personalizado para ayudar a las empresas a aumentar su visibilidad y competitividad en el mercado local.",
+      "faq": [
+        {
+          "question": "¿Por qué es importante el SEO en Buenos Aires?",
+          "answer": "El SEO es clave para destacarse en la competencia y aumentar la visibilidad en la web."
+        },
+        {
+          "question": "¿Qué tecnologías utiliza PairProgramming?",
+          "answer": "Utilizamos Next.js, React, TypeScript, Node.js y PostgreSQL para desarrollar soluciones personalizadas."
+        }
+      ]
+    },
+    "buenos-aires/modernizacion-legacy": {
+      "title": "Modernización Legacy en Buenos Aires",
+      "description": "Moderniza tus sistemas legacy con PairProgramming en Buenos Aires. Migración a stack moderno, refactoring y reescritura incremental para empresas de la capital federal.",
+      "h1": "Modernización Legacy",
+      "intro": "En el polo tecnológico más grande de Latinoamérica, las empresas de Buenos Aires necesitan modernizar sus sistemas legacy para competir. PairProgramming, con sede en la ciudad, ofrece migración a stack moderno, refactoring y reescritura incremental con tecnologías como Next.js, React y Node.js.",
+      "faq": [
+        {
+          "question": "¿Por qué modernizar sistemas legacy?",
+          "answer": "Mejora la eficiencia y reduce costos con tecnologías actuales."
+        },
+        {
+          "question": "¿Qué tecnologías utiliza PairProgramming?",
+          "answer": "Next.js, React, TypeScript, Node.js y PostgreSQL para soluciones personalizadas."
+        }
+      ]
+    },
+    "buenos-aires/qa-performance": {
+      "title": "QA y Performance en Buenos Aires",
+      "description": "Mejora la calidad y el rendimiento de tus aplicaciones en Buenos Aires con PairProgramming. Testing automatizado y optimización para empresas de tecnología.",
+      "h1": "QA y Performance",
+      "intro": "En el polo tecnológico más grande de Latinoamérica, las empresas de Buenos Aires como MercadoLibre, Globant y Auth0 requieren soluciones de QA y Performance para mantener su competitividad. PairProgramming, con su stack de Next.js, React, TypeScript, Node.js y PostgreSQL, ofrece testing automatizado y optimización para mejorar la calidad y el rendimiento de tus aplicaciones.",
+      "faq": [
+        {
+          "question": "¿Qué es testing automatizado?",
+          "answer": "Es un proceso que utiliza software para ejecutar pruebas de manera automática."
+        },
+        {
+          "question": "¿Cómo mejora Lighthouse la experiencia del usuario?",
+          "answer": "Mediante la evaluación de Core Web Vitals para optimizar el rendimiento y la calidad de las aplicaciones web."
+        }
+      ]
+    },
+    "buenos-aires/branding-identidad": {
+      "title": "Branding e Identidad en Buenos Aires",
+      "description": "Desarrolla una marca única en Buenos Aires con PairProgramming. Diseño de marca, UI/UX y sistemas de diseño para empresas innovadoras.",
+      "h1": "Branding e Identidad",
+      "intro": "En el polo tecnológico más grande de Latinoamérica, las empresas de Buenos Aires necesitan destacarse. PairProgramming ofrece diseño de marca, UI/UX y sistemas de diseño para empresas como MercadoLibre, Globant y Auth0, ayudándolas a consolidar su identidad visual en el mercado.",
+      "faq": [
+        {
+          "question": "¿Por qué necesito Branding e Identidad en Buenos Aires?",
+          "answer": "Para destacarte en el mercado y aumentar tu reconocimiento de marca."
+        },
+        {
+          "question": "¿Qué tecnologías utiliza PairProgramming?",
+          "answer": "Next.js, React, TypeScript, Node.js y PostgreSQL."
+        }
+      ]
+    },
+    "caba/saas-b2b": {
+      "title": "Arquitectura B2B SaaS en CABA",
+      "description": "Desarrollamos plataformas multi-tenant y soluciones de billing para empresas en CABA, con tecnología de vanguardia en Parque Patricios",
+      "h1": "Arquitectura B2B SaaS en CABA",
+      "intro": "En el distrito tecnológico de Parque Patricios, las startups fintech y empresas de CABA necesitan soluciones de Arquitectura B2B SaaS para escalar. PairProgramming, con su experiencia en Next.js, React y TypeScript, ofrece plataformas personalizadas y seguras para satisfacer las necesidades de las empresas locales.",
+      "faq": [
+        {
+          "question": "¿Qué es Arquitectura B2B SaaS?",
+          "answer": "Es un enfoque de diseño de software para empresas que necesitan plataformas escalables y seguras."
+        },
+        {
+          "question": "¿Cómo PairProgramming puede ayudar a mi empresa en CABA?",
+          "answer": "Ofrecemos soluciones personalizadas de Arquitectura B2B SaaS con tecnologías como Next.js y TypeScript."
+        }
+      ]
+    },
+    "caba/productos-digitales": {
+      "title": "Productos Digitales CABA - Soluciones Personalizadas",
+      "description": "Desarrollamos aplicaciones web y móviles innovadoras en el distrito tecnológico de Parque Patricios, CABA. Nuestros productos digitales están diseñados para startups fintech y empresas locales.",
+      "h1": "Productos Digitales para Empresas de CABA",
+      "intro": "En la Ciudad Autónoma de Buenos Aires, donde el distrito tecnológico de Parque Patricios es un hub de startups fintech, las empresas necesitan productos digitales innovadores para destacarse. En PairProgramming, fundada en 2022, desarrollamos soluciones personalizadas con tecnologías como Next.js, React y Node.js para impulsar el crecimiento de nuestros clientes.",
+      "faq": [
+        {
+          "question": "¿Qué tipo de productos digitales ofrece PairProgramming?",
+          "answer": "Desarrollamos aplicaciones web, móviles, dashboards y sistemas escalables con tecnologías como Next.js y React."
+        },
+        {
+          "question": "¿Por qué elegir PairProgramming para mis productos digitales en CABA?",
+          "answer": "Nuestra experiencia en el mercado local y nuestro enfoque en tecnologías de vanguardia como TypeScript y PostgreSQL nos permiten ofrecer soluciones personalizadas y efectivas."
+        }
+      ]
+    },
+    "caba/crm-automatizacion": {
+      "title": "CRM y Automatización en CABA",
+      "description": "Mejora la eficiencia de tu negocio en CABA con soluciones de CRM y Automatización personalizadas. PairProgramming ofrece servicios de Salesforce, HubSpot e integraciones custom.",
+      "h1": "Automatiza tu negocio en CABA",
+      "intro": "En el distrito tecnológico de Parque Patricios, donde startups fintech innovan, las empresas de CABA necesitan soluciones de CRM y Automatización para mantenerse competitivas. PairProgramming, con su experiencia en tecnologías como Next.js, React y Node.js, ofrece soluciones personalizadas para mejorar la eficiencia y el rendimiento de los negocios locales.",
+      "faq": [
+        {
+          "question": "¿Qué es CRM y cómo beneficia a mi empresa en CABA?",
+          "answer": "El CRM te ayuda a gestionar relaciones con clientes y aumentar ventas en el mercado local."
+        },
+        {
+          "question": "¿Puedo integrar Salesforce con mi sistema existente en CABA?",
+          "answer": "Sí, PairProgramming ofrece integraciones custom para conectar Salesforce con tus sistemas actuales."
+        }
+      ]
+    },
+    "caba/automatizacion-n8n": {
+      "title": "Automatización con n8n en CABA",
+      "description": "Automatización de procesos con n8n en Ciudad Autónoma de Buenos Aires. Integraciones, ETL y scraping para startups fintech en Parque Patricios. Soluciones personalizadas con PairProgramming.",
+      "h1": "Automatización con n8n en CABA",
+      "intro": "En el distrito tecnológico de Parque Patricios, las startups fintech necesitan automatizar procesos para escalar. PairProgramming, con su experiencia en Next.js, React y TypeScript, ofrece soluciones de automatización con n8n para empresas de CABA, mejorando la eficiencia y reduciendo costos.",
+      "faq": [
+        {
+          "question": "¿Qué es la automatización con n8n?",
+          "answer": "Es un proceso que utiliza n8n para automatizar tareas y flujos de trabajo, mejorando la eficiencia."
+        },
+        {
+          "question": "¿Cómo puede PairProgramming ayudar a mi empresa en CABA?",
+          "answer": "Ofrecemos soluciones personalizadas de automatización con n8n para startups fintech en Parque Patricios."
+        }
+      ]
+    },
+    "caba/cloud-devops": {
+      "title": "Cloud y DevOps en CABA",
+      "description": "Desarrolla infraestructuras escalables y seguras en la Ciudad Autónoma de Buenos Aires con nuestros servicios de Cloud y DevOps. Confía en PairProgramming para tu negocio fintech en Parque Patricios.",
+      "h1": "Cloud y DevOps en CABA",
+      "intro": "En el distrito tecnológico de Parque Patricios, las startups fintech necesitan soluciones de Cloud y DevOps para escalar. PairProgramming ofrece servicios de AWS, Vercel, CI/CD, Docker y Kubernetes para impulsar tu negocio en la región.",
+      "faq": [
+        {
+          "question": "¿Qué es Cloud y DevOps?",
+          "answer": "Es la integración de desarrollo y operaciones para entregar software de manera rápida y segura."
+        },
+        {
+          "question": "¿Qué tecnologías utiliza PairProgramming?",
+          "answer": "Utilizamos Next.js, React, TypeScript, Node.js y PostgreSQL para desarrollar soluciones personalizadas."
+        }
+      ]
+    },
+    "caba/seo-contenido": {
+      "title": "SEO y Contenido en CABA",
+      "description": "Mejora la visibilidad de tu negocio en la Ciudad Autónoma de Buenos Aires con nuestros servicios de posicionamiento y contenido programático en PairProgramming",
+      "h1": "SEO y Contenido en CABA",
+      "intro": "En el distrito tecnológico de Parque Patricios, donde las startups fintech están en auge, las empresas de CABA necesitan destacarse en el mercado digital. En PairProgramming, con nuestra experiencia en Next.js, React, TypeScript, Node.js y PostgreSQL, ayudamos a las empresas a mejorar su presencia en línea a través de servicios de posicionamiento, schema markup, contenido programático y analytics, para que puedan competir en el mercado local y expandirse.",
+      "faq": [
+        {
+          "question": "¿Por qué es importante el SEO en CABA?",
+          "answer": "El SEO es crucial en CABA para que las empresas puedan destacarse en un mercado competitivo y llegar a su público objetivo de manera efectiva."
+        },
+        {
+          "question": "¿Cómo puedo mejorar mi contenido en línea en CABA?",
+          "answer": "Puedes mejorar tu contenido en línea en CABA con nuestros servicios de contenido programático y schema markup, que ayudan a aumentar la visibilidad y atraer más tráfico a tu sitio web."
+        }
+      ]
+    },
+    "caba/modernizacion-legacy": {
+      "title": "Modernización Legacy CABA",
+      "description": "Modernización Legacy en CABA: migración a stack moderno con PairProgramming. Refactoring y reescritura incremental para empresas fintech en Parque Patricios.",
+      "h1": "Modernización Legacy",
+      "intro": "En el distrito tecnológico de Parque Patricios, CABA, las empresas fintech necesitan modernizar sus sistemas legacy para mantener la competitividad. PairProgramming, con sede en CABA, ofrece migración a stack moderno, refactoring y reescritura incremental con tecnologías como Next.js, React y Node.js.",
+      "faq": [
+        {
+          "question": "¿Por qué modernizar sistemas legacy en CABA?",
+          "answer": "Para mejorar la escalabilidad y competitividad en el mercado fintech local."
+        },
+        {
+          "question": "¿Qué tecnologías utiliza PairProgramming?",
+          "answer": "Next.js, React, TypeScript, Node.js y PostgreSQL para una modernización eficiente."
+        }
+      ]
+    },
+    "caba/qa-performance": {
+      "title": "QA y Performance en CABA",
+      "description": "Mejora la eficiencia de tus aplicaciones en Ciudad Autónoma de Buenos Aires con nuestro servicio de testing automatizado y optimización de rendimiento en PairProgramming",
+      "h1": "QA y Performance en CABA",
+      "intro": "En el distrito tecnológico de Parque Patricios, donde startups fintech innovan, PairProgramming ofrece soluciones de QA y Performance para empresas de CABA. Nuestro equipo experto en Next.js, React, TypeScript, Node.js y PostgreSQL garantiza aplicaciones rápidas y seguras, mejorando la experiencia del usuario en la ciudad que nunca duerme.",
+      "faq": [
+        {
+          "question": "¿Por qué es importante el testing automatizado en CABA?",
+          "answer": "Asegura la calidad y velocidad de tus aplicaciones en un entorno competitivo."
+        },
+        {
+          "question": "¿Cómo mejora Lighthouse y Core Web Vitals la experiencia del usuario?",
+          "answer": "Optimiza el rendimiento y la accesibilidad de tus sitios web para mejorar la experiencia del usuario final."
+        }
+      ]
+    },
+    "caba/branding-identidad": {
+      "title": "Branding e Identidad en CABA",
+      "description": "Desarrolla una identidad visual fuerte en el distrito tecnológico de Parque Patricios con PairProgramming, expertos en diseño de marca y sistemas de diseño para startups fintech en CABA.",
+      "h1": "Branding e Identidad en CABA",
+      "intro": "En el corazón del distrito tecnológico de Parque Patricios, las startups fintech de CABA necesitan una identidad visual sólida para destacarse. En PairProgramming, fundada en 2022, ofrecemos diseño de marca, UI/UX y sistemas de diseño personalizados para ayudar a las empresas a establecer su presencia en el mercado.",
+      "faq": [
+        {
+          "question": "¿Por qué necesito Branding e Identidad para mi startup en CABA?",
+          "answer": "Para destacarte en el mercado fintech de Parque Patricios y establecer tu presencia."
+        },
+        {
+          "question": "¿Qué tecnologías utiliza PairProgramming para el diseño de marca?",
+          "answer": "Utilizamos Next.js, React, TypeScript, Node.js y PostgreSQL para crear soluciones personalizadas."
+        }
+      ]
+    },
+    "cordoba/saas-b2b": {
+      "title": "Arquitectura B2B SaaS en Córdoba",
+      "description": "Desarrollamos plataformas multi-tenant y soluciones de billing y seguridad para empresas de Córdoba. Confíe en PairProgramming para su Arquitectura B2B SaaS personalizada.",
+      "h1": "Arquitectura B2B SaaS Córdoba",
+      "intro": "En el corazón del Córdoba Technology Cluster, PairProgramming ofrece soluciones de Arquitectura B2B SaaS personalizadas para empresas que buscan innovar y crecer. Con nuestra experiencia en Next.js, React y Node.js, ayudamos a las empresas de Córdoba a desarrollar plataformas multi-tenant y soluciones de billing y seguridad para impulsar su negocio.",
+      "faq": [
+        {
+          "question": "¿Qué es la Arquitectura B2B SaaS?",
+          "answer": "Es un enfoque de diseño de software para empresas que necesitan plataformas escalables y seguras."
+        },
+        {
+          "question": "¿Cómo puedo implementar la Arquitectura B2B SaaS en mi empresa de Córdoba?",
+          "answer": "Contáctenos en PairProgramming para obtener una solución personalizada y adaptada a tus necesidades."
+        }
+      ]
+    },
+    "cordoba/productos-digitales": {
+      "title": "Productos Digitales Córdoba - PairProgramming",
+      "description": "Desarrollamos apps web y móviles, dashboards y sistemas escalables en Córdoba, segundo polo tech de Argentina. Confía en PairProgramming para tu negocio digital.",
+      "h1": "Productos Digitales en Córdoba",
+      "intro": "En el corazón del Córdoba Technology Cluster, las empresas necesitan soluciones digitales innovadoras para destacarse. En PairProgramming, desarrollamos productos digitales personalizados con Next.js, React y Node.js, impulsando el crecimiento de negocios locales como los tuyos.",
+      "faq": [
+        {
+          "question": "¿Qué tipo de productos digitales ofrece PairProgramming?",
+          "answer": "Desarrollamos apps web, móviles, dashboards y sistemas escalables."
+        },
+        {
+          "question": "¿Cuál es el beneficio de contratar a PairProgramming en Córdoba?",
+          "answer": "Nuestro equipo local entiende las necesidades del mercado cordobés y desarrolla soluciones personalizadas."
+        }
+      ]
+    },
+    "cordoba/crm-automatizacion": {
+      "title": "CRM y Automatización en Córdoba",
+      "description": "Mejora la eficiencia de tu negocio en Córdoba con soluciones de CRM y Automatización personalizadas. Descubre cómo PairProgramming puede ayudarte a impulsar tus ventas y optimizar tus procesos.",
+      "h1": "CRM y Automatización en Córdoba",
+      "intro": "En el corazón del Córdoba Technology Cluster, las empresas necesitan soluciones de CRM y Automatización para mantener su competitividad. PairProgramming, con su experiencia en Salesforce, HubSpot e integraciones custom, ayuda a las empresas de la región a optimizar sus pipelines de venta y mejorar su eficiencia.",
+      "faq": [
+        {
+          "question": "¿Qué es CRM y cómo puede ayudar a mi empresa en Córdoba?",
+          "answer": "El CRM te permite gestionar tus relaciones con clientes y prospectos de manera eficiente, mejorando tus ventas y servicios."
+        },
+        {
+          "question": "¿Puedo personalizar mis pipelines de venta con PairProgramming?",
+          "answer": "Sí, nuestros expertos en Salesforce y HubSpot te ayudan a crear pipelines de venta personalizados para tu negocio en Córdoba."
+        }
+      ]
+    },
+    "cordoba/automatizacion-n8n": {
+      "title": "Automatización con n8n en Córdoba",
+      "description": "Automatización de procesos y workflows con n8n en Córdoba. PairProgramming ofrece soluciones personalizadas para empresas del Córdoba Technology Cluster.",
+      "h1": "Automatización con n8n en Córdoba",
+      "intro": "En el corazón del Córdoba Technology Cluster, las empresas necesitan optimizar procesos. PairProgramming, con su experiencia en Next.js, React y Node.js, ofrece Automatización con n8n para mejorar la eficiencia y productividad en la región.",
+      "faq": [
+        {
+          "question": "¿Qué es la automatización con n8n?",
+          "answer": "Es una herramienta para automatizar workflows y procesos, mejorando la eficiencia empresarial."
+        },
+        {
+          "question": "¿Cómo puede PairProgramming ayudar a mi empresa en Córdoba?",
+          "answer": "Ofrecemos soluciones personalizadas de automatización con n8n para mejorar la productividad y competitividad."
+        }
+      ]
+    },
+    "cordoba/cloud-devops": {
+      "title": "Cloud y DevOps en Córdoba",
+      "description": "Desarrolla infraestructuras escalables y seguras con nuestros servicios de Cloud y DevOps en Córdoba. AWS, Vercel, CI/CD y más. Mejora la eficiencia de tu negocio con PairProgramming.",
+      "h1": "Soluciones Cloud y DevOps",
+      "intro": "En el corazón del Córdoba Technology Cluster, las empresas necesitan soluciones de Cloud y DevOps para mantener su competitividad. En PairProgramming, ofrecemos servicios de AWS, Vercel, CI/CD, Docker y Kubernetes para impulsar el crecimiento de tu negocio en la segunda ciudad tech de Argentina.",
+      "faq": [
+        {
+          "question": "¿Qué es Cloud y DevOps?",
+          "answer": "Es un enfoque que combina desarrollo y operaciones para mejorar la eficiencia y la escalabilidad."
+        },
+        {
+          "question": "¿Por qué elegir PairProgramming?",
+          "answer": "Ofrecemos soluciones personalizadas con tecnologías como Next.js, React y TypeScript para satisfacer tus necesidades de Cloud y DevOps."
+        }
+      ]
+    },
+    "cordoba/seo-contenido": {
+      "title": "SEO y Contenido en Córdoba",
+      "description": "Mejora la visibilidad de tu negocio en Córdoba con nuestros servicios de SEO y Contenido personalizados, impulsando el crecimiento en el segundo polo tech de Argentina.",
+      "h1": "SEO y Contenido en Córdoba",
+      "intro": "En el corazón del Córdoba Technology Cluster, las empresas de software y videojuegos necesitan destacarse en la competencia. En PairProgramming, con tecnologías como Next.js y React, ofrecemos soluciones de posicionamiento y contenido programático para impulsar el crecimiento de tu negocio en esta vibrante ciudad.",
+      "faq": [
+        {
+          "question": "¿Por qué es importante el SEO en Córdoba?",
+          "answer": "El SEO es crucial en Córdoba para destacar en el mercado tech local y atraer clientes potenciales."
+        },
+        {
+          "question": "¿Qué tecnologías utiliza PairProgramming?",
+          "answer": "Utilizamos Next.js, React, TypeScript, Node.js y PostgreSQL para desarrollar soluciones personalizadas."
+        }
+      ]
+    },
+    "cordoba/modernizacion-legacy": {
+      "title": "Modernización Legacy en Córdoba",
+      "description": "Moderniza tus sistemas legacy en Córdoba con PairProgramming. Migración a stack moderno, refactoring y reescritura incremental para empresas del Córdoba Technology Cluster.",
+      "h1": "Modernización Legacy Córdoba",
+      "intro": "En el corazón del Córdoba Technology Cluster, las empresas de software y videojuegos necesitan modernizar sus sistemas legacy para mantener la competitividad. PairProgramming, con sede en Córdoba, ofrece migración a stack moderno, refactoring y reescritura incremental con tecnologías como Next.js, React, TypeScript, Node.js y PostgreSQL.",
+      "faq": [
+        {
+          "question": "¿Por qué necesito modernizar mis sistemas legacy en Córdoba?",
+          "answer": "Para mejorar la eficiencia y competitividad en el mercado local de software y videojuegos."
+        },
+        {
+          "question": "¿Cuál es el enfoque de PairProgramming en Modernización Legacy?",
+          "answer": "Migración a stack moderno, refactoring y reescritura incremental con tecnologías como Next.js y React."
+        }
+      ]
+    },
+    "cordoba/qa-performance": {
+      "title": "QA y Performance en Córdoba",
+      "description": "Mejora la calidad y velocidad de tus aplicaciones en Córdoba con nuestros servicios de testing automatizado y optimización de rendimiento en PairProgramming",
+      "h1": "QA y Performance en Córdoba",
+      "intro": "En el segundo polo tech de Argentina, Córdoba, las empresas de desarrollo de software y videojuegos necesitan garantizar la calidad y velocidad de sus aplicaciones. PairProgramming, con su experiencia en Next.js, React, TypeScript, Node.js y PostgreSQL, ofrece soluciones de testing automatizado y optimización de rendimiento para mejorar la experiencia del usuario y aumentar la competitividad en el mercado.",
+      "faq": [
+        {
+          "question": "¿Por qué es importante el testing automatizado en Córdoba?",
+          "answer": "El testing automatizado en Córdoba permite a las empresas reducir errores y mejorar la calidad de sus aplicaciones de manera rápida y eficiente."
+        },
+        {
+          "question": "¿Cómo puedo mejorar el rendimiento de mi sitio web en Córdoba?",
+          "answer": "Puedes mejorar el rendimiento de tu sitio web en Córdoba con herramientas como Lighthouse y Core Web Vitals, y optimizando el código con la ayuda de PairProgramming."
+        }
+      ]
+    },
+    "cordoba/branding-identidad": {
+      "title": "Branding e Identidad en Córdoba",
+      "description": "Desarrolla una identidad visual fuerte en Córdoba con PairProgramming. Diseño de marca, UI/UX y sistemas de diseño para empresas tecnológicas en el segundo polo tech de Argentina.",
+      "h1": "Branding e Identidad en Córdoba",
+      "intro": "En el corazón del Córdoba Technology Cluster, las empresas de tecnología y videojuegos necesitan una identidad visual sólida para destacarse. PairProgramming, con experiencia en Next.js, React y TypeScript, ofrece diseño de marca y sistemas de diseño personalizados para empresas locales, potenciando su presencia en el mercado.",
+      "faq": [
+        {
+          "question": "¿Por qué es importante el Branding e Identidad para empresas de Córdoba?",
+          "answer": "Para destacarse en el mercado tecnológico local y atraer talentos y clientes."
+        },
+        {
+          "question": "¿Qué tecnologías utiliza PairProgramming para el diseño de marca?",
+          "answer": "Next.js, React, TypeScript y Node.js para soluciones personalizadas."
+        }
+      ]
+    },
+    "rosario/saas-b2b": {
+      "title": "Arquitectura B2B SaaS en Rosario",
+      "description": "Desarrollamos plataformas multi-tenant y soluciones de billing para empresas en Rosario, el tercer centro económico de Argentina, impulsando el crecimiento del sector tech local.",
+      "h1": "Arquitectura B2B SaaS en Rosario",
+      "intro": "En Rosario, un polo agroindustrial en crecimiento con un sector tech emergente, las empresas necesitan soluciones personalizadas para gestionar sus operaciones de manera eficiente. En PairProgramming, ofrecemos servicios de Arquitectura B2B SaaS para satisfacer esas necesidades, desde plataformas multi-tenant hasta soluciones de billing y feature flags, aprovechando nuestro stack de Next.js, React, TypeScript, Node.js y PostgreSQL.",
+      "faq": [
+        {
+          "question": "¿Qué es la Arquitectura B2B SaaS?",
+          "answer": "Es un enfoque de diseño de software para empresas que necesitan plataformas escalables y seguras."
+        },
+        {
+          "question": "¿Cómo puede ayudar PairProgramming a mi empresa en Rosario?",
+          "answer": "Ofrecemos soluciones personalizadas de Arquitectura B2B SaaS para impulsar el crecimiento de tu negocio."
+        }
+      ]
+    },
+    "rosario/productos-digitales": {
+      "title": "Productos Digitales Rosario",
+      "description": "Desarrollamos soluciones digitales personalizadas para empresas de Rosario, mejorando la eficiencia y competitividad en el mercado local y global.",
+      "h1": "Productos Digitales en Rosario",
+      "intro": "En el corazón del polo agroindustrial argentino, PairProgramming ofrece soluciones tecnológicas innovadoras para empresas de Rosario, ayudándolas a escalar y prosperar en un entorno cada vez más digital.",
+      "faq": [
+        {
+          "question": "¿Por qué necesito un producto digital para mi negocio en Rosario?",
+          "answer": "Para mejorar la eficiencia y competitividad en el mercado local y global."
+        },
+        {
+          "question": "¿Qué tecnologías utiliza PairProgramming para desarrollar productos digitales?",
+          "answer": "Utilizamos Next.js, React, TypeScript, Node.js y PostgreSQL para crear soluciones escalables y seguras."
+        }
+      ]
+    },
+    "rosario/crm-automatizacion": {
+      "title": "CRM y Automatización en Rosario",
+      "description": "Mejora la eficiencia de tu negocio en Rosario con soluciones de CRM y Automatización personalizadas de PairProgramming, expertos en Salesforce y HubSpot",
+      "h1": "Automatiza tu negocio en Rosario",
+      "intro": "En Rosario, el tercer centro económico de Argentina, las empresas necesitan soluciones de CRM y Automatización para mantener su competitividad en el mercado agroindustrial y tech en crecimiento. PairProgramming ofrece soluciones personalizadas para mejorar la eficiencia y productividad de tus procesos comerciales, aprovechando el potencial de Salesforce, HubSpot y tecnologías de vanguardia como Next.js y React",
+      "faq": [
+        {
+          "question": "¿Qué es CRM y cómo puede ayudar a mi empresa en Rosario?",
+          "answer": "El CRM es un sistema que gestiona relaciones con clientes, mejorando la experiencia y fidelidad"
+        },
+        {
+          "question": "¿Puedo integrar Salesforce con mis sistemas existentes en Rosario?",
+          "answer": "Sí, PairProgramming ofrece integraciones custom para conectar Salesforce con tus sistemas y mejorar la eficiencia"
+        }
+      ]
+    },
+    "rosario/automatizacion-n8n": {
+      "title": "Automatización con n8n en Rosario",
+      "description": "Automatización de procesos con n8n en Rosario. Integraciones, scraping y ETL para empresas. PairProgramming ofrece soluciones personalizadas para el tercer centro económico de Argentina.",
+      "h1": "Automatización con n8n",
+      "intro": "En Rosario, el creciente sector tech y la actividad agroindustrial demandan procesos eficientes. PairProgramming, con experiencia en Next.js, React y Node.js, ofrece Automatización con n8n para optimizar workflows y mejorar la productividad de las empresas locales.",
+      "faq": [
+        {
+          "question": "¿Qué es la automatización con n8n?",
+          "answer": "Es un proceso que optimiza tareas y workflows mediante integraciones y ETL."
+        },
+        {
+          "question": "¿Cómo puede ayudar PairProgramming?",
+          "answer": "Ofrecemos soluciones personalizadas de automatización con n8n para empresas de Rosario."
+        }
+      ]
+    },
+    "rosario/cloud-devops": {
+      "title": "Cloud y DevOps en Rosario",
+      "description": "Desarrolla infraestructuras escalables y seguras con Cloud y DevOps en Rosario. PairProgramming ofrece soluciones personalizadas para empresas del polo agroindustrial y sector tech.",
+      "h1": "Cloud y DevOps Rosario",
+      "intro": "En el creciente sector tech de Rosario, las empresas necesitan infraestructuras ágiles y seguras. PairProgramming, con experiencia en AWS, Vercel y Docker, ayuda a las empresas a escalar y proteger sus sistemas, aprovechando el potencial del polo agroindustrial y logístico de la ciudad.",
+      "faq": [
+        {
+          "question": "¿Qué beneficios ofrece Cloud para las empresas de Rosario?",
+          "answer": "Mayor escalabilidad y reducción de costos con soluciones en la nube."
+        },
+        {
+          "question": "¿Cómo puedo implementar DevOps en mi empresa de Rosario?",
+          "answer": "Con PairProgramming, implementa CI/CD y monitoreo para mejorar la eficiencia y la calidad de tus sistemas."
+        }
+      ]
+    },
+    "rosario/seo-contenido": {
+      "title": "SEO y Contenido en Rosario",
+      "description": "Mejora la visibilidad de tu empresa en Rosario con nuestros servicios de SEO y Contenido personalizados, impulsando el crecimiento en el polo agroindustrial y sector tech de la región",
+      "h1": "Posicionamiento en Rosario",
+      "intro": "En Rosario, el tercer centro económico de Argentina, las empresas necesitan destacarse en el mercado agroindustrial y tecnológico en crecimiento. PairProgramming, fundada en 2022, ofrece soluciones de SEO y Contenido personalizadas para impulsar el crecimiento de tu negocio en esta dinámica ciudad, aprovechando su posición como hub logístico y polo de innovación",
+      "faq": [
+        {
+          "question": "¿Cómo mejora el SEO mi visibilidad en Rosario?",
+          "answer": "Nuestros servicios de SEO mejoran tu posición en buscadores, aumentando la visibilidad y el tráfico hacia tu sitio web"
+        },
+        {
+          "question": "¿Qué beneficios ofrece el contenido programático para mi empresa?",
+          "answer": "Contenido personalizado y escalable que atrae a tu audiencia objetivo, mejorando la experiencia del usuario y aumentando la conversión"
+        }
+      ]
+    },
+    "rosario/modernizacion-legacy": {
+      "title": "Modernización Legacy Rosario",
+      "description": "Migra tu sistema legacy a tecnologías modernas con PairProgramming en Rosario. Incrementa la eficiencia y competitividad de tu negocio.",
+      "h1": "Modernización Legacy en Rosario",
+      "intro": "En Rosario, polo agroindustrial y creciente hub tech, las empresas necesitan modernizar sus sistemas legacy para mantener la competitividad. PairProgramming ofrece migración a stack moderno, refactoring y reescritura incremental con tecnologías como Next.js, React y Node.js.",
+      "faq": [
+        {
+          "question": "¿Qué es la Modernización Legacy?",
+          "answer": "Es el proceso de migrar sistemas antiguos a tecnologías modernas para mejorar la eficiencia y competitividad."
+        },
+        {
+          "question": "¿Cuáles son los beneficios de la Modernización Legacy en Rosario?",
+          "answer": "Mejora la eficiencia, reduce costos y aumenta la competitividad en el mercado local y global."
+        }
+      ]
+    },
+    "rosario/qa-performance": {
+      "title": "QA y Performance en Rosario",
+      "description": "Mejora la calidad y el rendimiento de tus aplicaciones en Rosario con PairProgramming, expertos en testing automatizado y optimización",
+      "h1": "QA y Performance en Rosario",
+      "intro": "En Rosario, el crecimiento del sector tech y la importancia del polo agroindustrial demandan soluciones de calidad y rendimiento para las aplicaciones. PairProgramming ofrece servicios de testing automatizado y optimización para mejorar la experiencia del usuario y aumentar la eficiencia de tus aplicaciones",
+      "faq": [
+        {
+          "question": "¿Por qué es importante el testing automatizado en Rosario?",
+          "answer": "Para asegurar la calidad y reducir errores en aplicaciones críticas"
+        },
+        {
+          "question": "¿Cómo mejora Lighthouse y Core Web Vitals la experiencia del usuario?",
+          "answer": "Mediante la optimización del rendimiento y la accesibilidad de las aplicaciones web"
+        }
+      ]
+    },
+    "rosario/branding-identidad": {
+      "title": "Branding e Identidad en Rosario",
+      "description": "Desarrolla una identidad visual fuerte en Rosario con PairProgramming. Diseño de marca, UI/UX y sistemas de diseño para empresas del polo agroindustrial y sector tech.",
+      "h1": "Branding e Identidad en Rosario",
+      "intro": "En Rosario, el tercer centro económico de Argentina, las empresas necesitan destacarse en un mercado competitivo. PairProgramming, con su experiencia en tecnologías como Next.js y React, ofrece soluciones de diseño de marca y UI/UX para que las empresas locales puedan diferenciarse y crecer en el polo agroindustrial y el creciente sector tech.",
+      "faq": [
+        {
+          "question": "¿Por qué necesito Branding e Identidad para mi empresa en Rosario?",
+          "answer": "Para destacarte en un mercado competitivo y aumentar tu reconocimiento."
+        },
+        {
+          "question": "¿Qué tecnologías utiliza PairProgramming para el diseño de marca?",
+          "answer": "Utilizamos Next.js, React y TypeScript para crear experiencias de usuario únicas."
+        }
+      ]
+    },
+    "mendoza/saas-b2b": {
+      "title": "Arquitectura B2B SaaS Mendoza",
+      "description": "Desarrollamos plataformas multi-tenant y soluciones de billing para empresas de Mendoza. Con PairProgramming, obtén la mejor Arquitectura B2B SaaS para tu negocio en la provincia vitivinícola.",
+      "h1": "Arquitectura B2B SaaS en Mendoza",
+      "intro": "En Mendoza, la economía del conocimiento está en constante crecimiento. Las empresas necesitan soluciones personalizadas y escalables para mantener su competitividad. En PairProgramming, ofrecemos Arquitectura B2B SaaS con plataformas multi-tenant, billing y feature flags para satisfacer las necesidades de las empresas locales, aprovechando nuestro conocimiento en Next.js, React, TypeScript, Node.js y PostgreSQL.",
+      "faq": [
+        {
+          "question": "¿Qué es la Arquitectura B2B SaaS?",
+          "answer": "Es un modelo de desarrollo de software como servicio para empresas, ofreciendo escalabilidad y personalización."
+        },
+        {
+          "question": "¿Cómo puedo beneficiarme de la Arquitectura B2B SaaS en Mendoza?",
+          "answer": "Con PairProgramming, obtienes soluciones personalizadas y escalables para tu negocio, mejorando la eficiencia y competitividad en el mercado local."
+        }
+      ]
+    },
+    "mendoza/productos-digitales": {
+      "title": "Productos Digitales Mendoza",
+      "description": "Desarrollamos soluciones digitales personalizadas en Mendoza. Aplicaciones web y móviles, dashboards y sistemas escalables para empresas de la región vitivinícola.",
+      "h1": "Innovación Digital en Mendoza",
+      "intro": "En la provincia vitivinícola de Mendoza, donde la economía del conocimiento está en constante crecimiento, las empresas necesitan soluciones digitales para mantener su competitividad. En PairProgramming, desarrollamos aplicaciones web y móviles, dashboards y sistemas escalables que se adaptan a las necesidades específicas de cada negocio, impulsando el crecimiento y la innovación en la región.",
+      "faq": [
+        {
+          "question": "¿Qué es un MVP?",
+          "answer": "Un MVP es un producto mínimo viable, ideal para probar conceptos en el mercado."
+        },
+        {
+          "question": "¿Cuál es el stack tecnológico de PairProgramming?",
+          "answer": "Utilizamos Next.js, React, TypeScript, Node.js y PostgreSQL para desarrollar soluciones robustas y escalables."
+        }
+      ]
+    },
+    "mendoza/crm-automatizacion": {
+      "title": "CRM y Automatización en Mendoza",
+      "description": "Mejora la eficiencia de tu negocio en Mendoza con soluciones de CRM y Automatización personalizadas. PairProgramming ofrece servicios de Salesforce, HubSpot e integraciones custom para empresas vitivinícolas y del sector tech.",
+      "h1": "Automatización y CRM en Mendoza",
+      "intro": "En la provincia vitivinícola de Mendoza, donde la economía del conocimiento está en constante crecimiento, las empresas necesitan soluciones eficientes para gestionar sus procesos y ventas. PairProgramming, con su experiencia en tecnologías como Next.js, React y Node.js, ofrece soluciones de CRM y Automatización personalizadas para empresas de la región, ayudándolas a optimizar sus pipelines de venta y mejorar su competitividad en el mercado.",
+      "faq": [
+        {
+          "question": "¿Qué es CRM y cómo puede ayudar a mi negocio en Mendoza?",
+          "answer": "Un CRM es un sistema que gestiona las interacciones con clientes, mejorando la eficiencia y aumentando las ventas."
+        },
+        {
+          "question": "¿Puedo integrar Salesforce con mi sistema existente en Mendoza?",
+          "answer": "Sí, en PairProgramming podemos realizar integraciones custom para conectar Salesforce con tus sistemas actuales."
+        }
+      ]
+    },
+    "mendoza/automatizacion-n8n": {
+      "title": "Automatización con n8n en Mendoza",
+      "description": "Optimiza procesos con Automatización con n8n en Mendoza. PairProgramming ofrece soluciones personalizadas para empresas de la región vitivinícola, mejorando la eficiencia y productividad.",
+      "h1": "Automatización con n8n",
+      "intro": "En Mendoza, la creciente economía del conocimiento y el sector tech emergente requieren soluciones innovadoras. PairProgramming, con su experiencia en Next.js, React, TypeScript, Node.js y PostgreSQL, ofrece Automatización con n8n para optimizar workflows, integraciones y procesos, impulsando el crecimiento de las empresas locales.",
+      "faq": [
+        {
+          "question": "¿Qué es la Automatización con n8n?",
+          "answer": "Es una herramienta para automatizar procesos y workflows, mejorando la eficiencia y productividad."
+        },
+        {
+          "question": "¿Cómo puede PairProgramming ayudar a mi empresa en Mendoza?",
+          "answer": "Ofrecemos soluciones personalizadas de Automatización con n8n, ajustadas a las necesidades específicas de tu negocio."
+        }
+      ]
+    },
+    "mendoza/cloud-devops": {
+      "title": "Cloud y DevOps Mendoza",
+      "description": "Desarrolla infraestructuras escalables y seguras con nuestros servicios de Cloud y DevOps en Mendoza. Soluciones personalizadas para empresas vitivinícolas y tecnológicas.",
+      "h1": "Cloud y DevOps en Mendoza",
+      "intro": "En Mendoza, la economía del conocimiento crece rápidamente. Las empresas vitivinícolas y tecnológicas necesitan infraestructuras escalables y seguras. En PairProgramming, ofrecemos servicios de Cloud y DevOps personalizados con AWS, Vercel, CI/CD, Docker y Kubernetes para impulsar el crecimiento de tu negocio.",
+      "faq": [
+        {
+          "question": "¿Qué es Cloud y DevOps?",
+          "answer": "Es la combinación de prácticas y herramientas para entregar software de manera rápida y segura."
+        },
+        {
+          "question": "¿Cómo puedo mejorar la escalabilidad de mi empresa?",
+          "answer": "Con nuestros servicios de Cloud y DevOps, podemos ayudarte a diseñar e implementar infraestructuras escalables y seguras."
+        }
+      ]
+    },
+    "mendoza/seo-contenido": {
+      "title": "SEO y Contenido en Mendoza",
+      "description": "Mejora la visibilidad de tu negocio en Mendoza con nuestros servicios de SEO y Contenido personalizados, impulsando el crecimiento en la economía del conocimiento local.",
+      "h1": "Posicionamiento en Mendoza",
+      "intro": "En Mendoza, la provincia vitivinícola con un sector tech en constante crecimiento, las empresas necesitan destacarse en la web para aprovechar el potencial de la economía del conocimiento. En PairProgramming, con nuestra experiencia en tecnologías como Next.js, React y TypeScript, ofrecemos soluciones de SEO y Contenido personalizadas para que tu negocio se posicione en los primeros lugares de búsqueda y atraiga a más clientes.",
+      "faq": [
+        {
+          "question": "¿Por qué es importante el SEO en Mendoza?",
+          "answer": "El SEO en Mendoza es crucial para que los negocios locales se destaquen en la web y atraigan más clientes."
+        },
+        {
+          "question": "¿Qué tecnologías utiliza PairProgramming?",
+          "answer": "Utilizamos Next.js, React, TypeScript, Node.js y PostgreSQL para ofrecer soluciones de vanguardia."
+        }
+      ]
+    },
+    "mendoza/modernizacion-legacy": {
+      "title": "Modernización Legacy Mendoza",
+      "description": "Migración a stack moderno para empresas de Mendoza. Refactoring y reescritura incremental con tecnologías como Next.js y React en PairProgramming.",
+      "h1": "Moderniza tu legado",
+      "intro": "En Mendoza, la provincia vitivinícola líder en innovación, las empresas necesitan modernizar sus sistemas legacy para mantener su competitividad. PairProgramming, con sede en Mendoza, ofrece migración a stack moderno, refactoring y reescritura incremental para empresas que buscan mejorar su eficiencia y escalabilidad en el sector tech emergente.",
+      "faq": [
+        {
+          "question": "¿Qué es la modernización legacy?",
+          "answer": "Proceso de migración a tecnologías modernas para mejorar la eficiencia y escalabilidad de sistemas antiguos."
+        },
+        {
+          "question": "¿Cuáles son los beneficios de la modernización legacy?",
+          "answer": "Mejora la eficiencia, reduce costos y aumenta la escalabilidad de los sistemas, permitiendo a las empresas de Mendoza competir en el mercado actual."
+        }
+      ]
+    },
+    "mendoza/qa-performance": {
+      "title": "QA y Performance Mendoza",
+      "description": "Mejora la calidad y el rendimiento de tus aplicaciones en Mendoza con PairProgramming, expertos en testing automatizado y optimización de sitios web",
+      "h1": "QA y Performance en Mendoza",
+      "intro": "En la provincia vitivinícola de Mendoza, donde el sector tech está en constante crecimiento, las empresas necesitan asegurarse de que sus aplicaciones web sean rápidas y confiables. PairProgramming, con su experiencia en testing automatizado y optimización, ayuda a las empresas de la región a mejorar su presencia en línea y a ofrecer una mejor experiencia al usuario.",
+      "faq": [
+        {
+          "question": "¿Por qué es importante el testing automatizado en Mendoza?",
+          "answer": "El testing automatizado garantiza la calidad y la confiabilidad de las aplicaciones web en un entorno de crecimiento tecnológico como Mendoza."
+        },
+        {
+          "question": "¿Cómo puedo mejorar el rendimiento de mi sitio web en Mendoza?",
+          "answer": "Con PairProgramming, puedes mejorar el rendimiento de tu sitio web mediante la optimización de código y la mejora de la experiencia del usuario con herramientas como Lighthouse y Core Web Vitals."
+        }
+      ]
+    },
+    "mendoza/branding-identidad": {
+      "title": "Branding e Identidad Mendoza",
+      "description": "Desarrolla una identidad visual única en Mendoza con PairProgramming. Diseño de marca, UI/UX y sistemas de diseño para empresas vitivinícolas y tech.",
+      "h1": "Branding e Identidad en Mendoza",
+      "intro": "En Mendoza, la provincia vitivinícola líder, las empresas necesitan destacarse con una identidad visual fuerte. PairProgramming, con experiencia en Next.js, React y TypeScript, ofrece soluciones de diseño de marca y UI/UX personalizadas para el sector tech y vitivinícola local.",
+      "faq": [
+        {
+          "question": "¿Por qué necesito Branding e Identidad en Mendoza?",
+          "answer": "Para destacarte en el mercado vitivinícola y tech de Mendoza."
+        },
+        {
+          "question": "¿Qué tecnologías utiliza PairProgramming?",
+          "answer": "Next.js, React, TypeScript, Node.js y PostgreSQL."
+        }
+      ]
+    },
+    "mar-del-plata/saas-b2b": {
+      "title": "Arquitectura B2B SaaS en Mar del Plata",
+      "description": "Desarrolla plataformas escalables con PairProgramming, expertos en Arquitectura B2B SaaS en Mar del Plata. Soluciones personalizadas para empresas costeras con tecnología de vanguardia.",
+      "h1": "Arquitectura B2B SaaS en Mar del Plata",
+      "intro": "En Mar del Plata, ciudad líder en desarrollo de software, las empresas necesitan soluciones innovadoras para mantener su competitividad. PairProgramming, con su experiencia en plataformas multi-tenant, billing y seguridad de nivel de fila, ofrece soluciones personalizadas para empresas locales, aprovechando el clúster tecnológico de la ciudad.",
+      "faq": [
+        {
+          "question": "¿Qué es la Arquitectura B2B SaaS?",
+          "answer": "Es un modelo de diseño de software como servicio para empresas, escalable y seguro."
+        },
+        {
+          "question": "¿Cómo puede ayudar PairProgramming?",
+          "answer": "Ofrecemos soluciones personalizadas con tecnologías como Next.js, React y Node.js para empresas de Mar del Plata."
+        }
+      ]
+    },
+    "mar-del-plata/productos-digitales": {
+      "title": "Productos Digitales en Mar del Plata",
+      "description": "Desarrollamos soluciones digitales personalizadas para empresas de Mar del Plata, mejorando su presencia en línea y competitividad en el mercado local y nacional con tecnología de vanguardia.",
+      "h1": "Productos Digitales",
+      "intro": "En Mar del Plata, la creciente demanda de soluciones tecnológicas para impulsar el crecimiento empresarial es evidente. PairProgramming, con sede en esta ciudad costera, ofrece servicios de desarrollo de aplicaciones web y móviles, dashboards y sistemas escalables, aprovechando el clúster tecnológico local para brindar soluciones innovadoras y efectivas.",
+      "faq": [
+        {
+          "question": "¿Qué tipo de soluciones digitales ofrece PairProgramming?",
+          "answer": "Desarrollamos aplicaciones web y móviles, dashboards y sistemas escalables con tecnologías como Next.js, React y Node.js."
+        },
+        {
+          "question": "¿Por qué elegir a PairProgramming para mis necesidades de productos digitales?",
+          "answer": "Porque somos una empresa local con conocimiento profundo del mercado de Mar del Plata y experiencia en desarrollo de software personalizado."
+        }
+      ]
+    },
+    "mar-del-plata/crm-automatizacion": {
+      "title": "CRM y Automatización en Mar del Plata",
+      "description": "Mejora la eficiencia de tu negocio en Mar del Plata con soluciones de CRM y Automatización personalizadas de PairProgramming, expertos en Salesforce y HubSpot.",
+      "h1": "Potencia tu negocio",
+      "intro": "En Mar del Plata, donde el clúster tecnológico está en constante crecimiento, las empresas necesitan herramientas efectivas para gestionar sus relaciones con los clientes y automatizar procesos. PairProgramming ofrece soluciones de CRM y Automatización personalizadas para empresas de la región, ayudándolas a mejorar su eficiencia y competitividad en el mercado.",
+      "faq": [
+        {
+          "question": "¿Qué es CRM y cómo beneficia a mi empresa?",
+          "answer": "El CRM te ayuda a gestionar tus relaciones con los clientes de manera efectiva, mejorando la experiencia del cliente y aumentando las ventas."
+        },
+        {
+          "question": "¿Puedo integrar mi sistema de gestión con herramientas de automatización?",
+          "answer": "Sí, en PairProgramming podemos integrar tu sistema de gestión con herramientas de automatización como Salesforce y HubSpot para mejorar tu eficiencia."
+        }
+      ]
+    },
+    "mar-del-plata/automatizacion-n8n": {
+      "title": "Automatización con n8n en Mar del Plata",
+      "description": "Automatización con n8n en Mar del Plata. Mejora la eficiencia de tus procesos con PairProgramming. Workflows, integraciones, scraping y ETL personalizados.",
+      "h1": "Automatización con n8n en Mar del Plata",
+      "intro": "En Mar del Plata, la creciente demanda de soluciones tecnológicas en el clúster tecnológico local requiere que las empresas optimicen sus procesos. PairProgramming, con su experiencia en Next.js, React, TypeScript, Node.js y PostgreSQL, ofrece soluciones de automatización con n8n para mejorar la eficiencia y productividad de las empresas de la región.",
+      "faq": [
+        {
+          "question": "¿Qué es la automatización con n8n?",
+          "answer": "Es un proceso que utiliza n8n para automatizar workflows y procesos, mejorando la eficiencia."
+        },
+        {
+          "question": "¿Cómo puede PairProgramming ayudar a mi empresa en Mar del Plata?",
+          "answer": "Ofrecemos soluciones personalizadas de automatización con n8n para mejorar la productividad y eficiencia de tus procesos."
+        }
+      ]
+    },
+    "mar-del-plata/cloud-devops": {
+      "title": "Cloud y DevOps en Mar del Plata",
+      "description": "Soluciones de Cloud y DevOps personalizadas para empresas de Mar del Plata. Mejora la eficiencia y escalabilidad con PairProgramming.",
+      "h1": "Cloud y DevOps en Mar del Plata",
+      "intro": "En Mar del Plata, el polo de desarrollo de software y el clúster tecnológico activo requieren soluciones de Cloud y DevOps eficientes. PairProgramming, con experiencia en AWS, Vercel, CI/CD, Docker y Kubernetes, ayuda a las empresas locales a mejorar su infraestructura y monitoreo, optimizando su stack tecnológico con Next.js, React, TypeScript, Node.js y PostgreSQL.",
+      "faq": [
+        {
+          "question": "¿Por qué necesito Cloud y DevOps en mi empresa de Mar del Plata?",
+          "answer": "Para mejorar la escalabilidad y eficiencia de tus sistemas, reduciendo costos y tiempos de desarrollo."
+        },
+        {
+          "question": "¿Qué tecnologías utiliza PairProgramming para Cloud y DevOps?",
+          "answer": "Utilizamos AWS, Vercel, CI/CD, Docker, Kubernetes y más, para ofrecer soluciones personalizadas."
+        }
+      ]
+    },
+    "mar-del-plata/seo-contenido": {
+      "title": "SEO y Contenido Mar del Plata",
+      "description": "Mejora la visibilidad en línea de tu negocio en Mar del Plata con nuestros servicios de SEO y contenido personalizados, impulsando el crecimiento en el polo de desarrollo de software local.",
+      "h1": "SEO y Contenido en Mar del Plata",
+      "intro": "En Mar del Plata, donde el clúster tecnológico está en constante evolución, las empresas necesitan destacarse en línea para atraer a turistas y residentes. En PairProgramming, con nuestra experiencia en Next.js, React, TypeScript, Node.js y PostgreSQL, creamos estrategias de SEO y contenido que ayudan a las empresas locales a aumentar su visibilidad y competitividad en el mercado.",
+      "faq": [
+        {
+          "question": "¿Por qué es importante el SEO en Mar del Plata?",
+          "answer": "El SEO es crucial para que los negocios locales sean visibles en las búsquedas en línea de turistas y residentes."
+        },
+        {
+          "question": "¿Cómo puede PairProgramming ayudar a mi negocio?",
+          "answer": "Ofrecemos servicios de posicionamiento, schema markup, contenido programático y analytics para impulsar el crecimiento de tu negocio en línea."
+        }
+      ]
+    },
+    "mar-del-plata/modernizacion-legacy": {
+      "title": "Modernización Legacy en Mar del Plata",
+      "description": "Migración a stack moderno para empresas de Mar del Plata. Refactoring y reescritura incremental con Next.js, React y TypeScript. Mejora la eficiencia y competitividad de tu negocio con PairProgramming.",
+      "h1": "Moderniza tu legado",
+      "intro": "En Mar del Plata, el clúster tecnológico en constante crecimiento demanda soluciones innovadoras. Las empresas locales necesitan modernizar sus sistemas legacy para mantenerse competitivas. En PairProgramming, ofrecemos migración a stack moderno, refactoring y reescritura incremental para mejorar la eficiencia y agilidad de tus procesos, aprovechando el potencial de la ciudad como polo de desarrollo de software.",
+      "faq": [
+        {
+          "question": "¿Qué es la Modernización Legacy?",
+          "answer": "Proceso de migración a tecnologías actuales para mejorar la eficiencia y competitividad."
+        },
+        {
+          "question": "¿Cuáles son los beneficios de la Modernización Legacy?",
+          "answer": "Mejora la escalabilidad, reduce costos y aumenta la agilidad de tus procesos."
+        }
+      ]
+    },
+    "mar-del-plata/qa-performance": {
+      "title": "QA y Performance en Mar del Plata",
+      "description": "Mejora la calidad y el rendimiento de tus aplicaciones en Mar del Plata con PairProgramming, expertos en testing automatizado y optimización de software",
+      "h1": "QA y Performance para empresas de Mar del Plata",
+      "intro": "En Mar del Plata, el clúster tecnológico en constante crecimiento demanda soluciones de alta calidad y rendimiento. En PairProgramming, ayudamos a las empresas a mejorar la eficiencia y la experiencia del usuario con nuestros servicios de testing automatizado y optimización de software, aprovechando tecnologías como Next.js, React y Node.js",
+      "faq": [
+        {
+          "question": "¿Por qué es importante el testing automatizado en Mar del Plata?",
+          "answer": "El testing automatizado reduce errores y aumenta la velocidad de entrega de software en el polo tecnológico de Mar del Plata"
+        },
+        {
+          "question": "¿Cómo puedo mejorar los Core Web Vitals de mi sitio web en Mar del Plata?",
+          "answer": "Con PairProgramming, puedes mejorar los Core Web Vitals y la optimización de tu sitio web en Mar del Plata mediante nuestro servicio de Lighthouse y análisis personalizado"
+        }
+      ]
+    },
+    "mar-del-plata/branding-identidad": {
+      "title": "Branding e Identidad Mar del Plata",
+      "description": "Desarrolla una identidad visual fuerte en Mar del Plata con PairProgramming. Diseño de marca, UI/UX y sistemas de diseño para empresas de tecnología.",
+      "h1": "Branding e Identidad en Mar del Plata",
+      "intro": "En Mar del Plata, ciudad con un polo de desarrollo de software en constante crecimiento, las empresas necesitan una identidad visual sólida para destacarse. PairProgramming, con experiencia en Next.js, React y TypeScript, ofrece soluciones de diseño de marca y UI/UX para empresas tecnológicas, ayudándolas a establecer una presencia única en el clúster tecnológico local.",
+      "faq": [
+        {
+          "question": "¿Por qué es importante el Branding en Mar del Plata?",
+          "answer": "El Branding ayuda a las empresas a destacarse en el mercado local y atraer clientes."
+        },
+        {
+          "question": "¿Qué servicios de diseño ofrece PairProgramming?",
+          "answer": "Diseño de marca, UI/UX, sistemas de diseño e identidad visual para empresas de tecnología."
+        }
+      ]
+    },
+    "la-plata/saas-b2b": {
+      "title": "Arquitectura B2B SaaS La Plata",
+      "description": "Desarrollamos soluciones de Arquitectura B2B SaaS personalizadas para empresas de La Plata, capital de la provincia de Buenos Aires, con tecnologías como Next.js y React.",
+      "h1": "Arquitectura B2B SaaS en La Plata",
+      "intro": "En La Plata, ciudad con una fuerte presencia de la Universidad Nacional, las empresas necesitan soluciones de Arquitectura B2B SaaS para escalabilidad y seguridad. PairProgramming, fundada en 2022, ofrece plataformas multi-tenant, billing y seguridad de nivel de fila para satisfacer estas necesidades.",
+      "faq": [
+        {
+          "question": "¿Qué es Arquitectura B2B SaaS?",
+          "answer": "Es un modelo de software como servicio para empresas, ofreciendo escalabilidad y seguridad."
+        },
+        {
+          "question": "¿Cuáles son los beneficios de la Arquitectura B2B SaaS en La Plata?",
+          "answer": "Ofrece flexibilidad, reducción de costos y mayor seguridad para las empresas locales."
+        }
+      ]
+    },
+    "la-plata/productos-digitales": {
+      "title": "Productos Digitales La Plata",
+      "description": "Desarrollamos soluciones digitales personalizadas en La Plata. Apps web y móviles, dashboards y sistemas escalables con Next.js, React y Node.js.",
+      "h1": "Soluciones Digitales en La Plata",
+      "intro": "La Plata, con su fuerte presencia universitaria en informática, demanda soluciones digitales innovadoras. En PairProgramming, desarrollamos apps web y móviles, dashboards y MVPs escalables para empresas locales, aprovechando nuestra experiencia en Next.js, React, TypeScript, Node.js y PostgreSQL.",
+      "faq": [
+        {
+          "question": "¿Qué tecnologías utilizan para desarrollar productos digitales?",
+          "answer": "Utilizamos Next.js, React, TypeScript, Node.js y PostgreSQL."
+        },
+        {
+          "question": "¿Cuál es el beneficio de contratar a PairProgramming para productos digitales?",
+          "answer": "Ofrecemos soluciones personalizadas y escalables, mejorando la eficiencia y competitividad de las empresas en La Plata."
+        }
+      ]
+    },
+    "la-plata/crm-automatizacion": {
+      "title": "CRM y Automatización en La Plata",
+      "description": "Mejora la eficiencia de tu negocio en La Plata con soluciones de CRM y Automatización personalizadas. Descubre cómo PairProgramming puede ayudarte a aumentar tus ventas y productividad.",
+      "h1": "Soluciones de CRM y Automatización",
+      "intro": "En La Plata, ciudad con una fuerte presencia universitaria y un ecosistema emprendedor en constante crecimiento, las empresas necesitan herramientas efectivas para gestionar sus relaciones con los clientes y automatizar procesos. PairProgramming, con su experiencia en Salesforce, HubSpot y desarrollando soluciones personalizadas, ayuda a las empresas de la región a mejorar su competitividad y alcanzar sus objetivos.",
+      "faq": [
+        {
+          "question": "¿Qué es CRM y cómo puede ayudar a mi negocio?",
+          "answer": "CRM es un sistema para gestionar relaciones con clientes, ayudando a aumentar ventas y mejorar la experiencia del cliente."
+        },
+        {
+          "question": "¿Puedo integrar Salesforce con otras herramientas de mi empresa?",
+          "answer": "Sí, PairProgramming ofrece integraciones custom para conectar Salesforce con otras herramientas y sistemas de tu empresa."
+        }
+      ]
+    },
+    "la-plata/automatizacion-n8n": {
+      "title": "Automatización con n8n en La Plata",
+      "description": "Automatización con n8n en La Plata, Argentina. PairProgramming ofrece servicios de workflows, integraciones, scraping, ETL y automatización de procesos para empresas.",
+      "h1": "Automatización con n8n",
+      "intro": "En La Plata, ciudad con una fuerte presencia de la Universidad Nacional, las empresas necesitan automatizar procesos para ser competitivas. PairProgramming, fundada en 2022, ofrece soluciones personalizadas de Automatización con n8n para empresas de la región, mejorando su eficiencia y productividad.",
+      "faq": [
+        {
+          "question": "¿Qué es la Automatización con n8n?",
+          "answer": "Es un proceso que permite automatizar tareas y flujos de trabajo mediante la integración de diferentes herramientas y sistemas."
+        },
+        {
+          "question": "¿Cómo puede PairProgramming ayudar a mi empresa?",
+          "answer": "Ofrecemos servicios de automatización de procesos, integraciones y scraping para mejorar la eficiencia y productividad de su empresa en La Plata."
+        }
+      ]
+    },
+    "la-plata/cloud-devops": {
+      "title": "Cloud y DevOps La Plata",
+      "description": "Soluciones de Cloud y DevOps en La Plata, Argentina. Mejora la eficiencia y escalabilidad de tus aplicaciones con PairProgramming y tecnologías como AWS, Vercel y Kubernetes.",
+      "h1": "Cloud y DevOps en La Plata",
+      "intro": "La Plata, con su fuerte presencia universitaria y creciente escena tecnológica, requiere soluciones de Cloud y DevOps innovadoras. En PairProgramming, ayudamos a las empresas de la región a migrar a la nube y optimizar sus procesos con tecnologías como Next.js, React y TypeScript, mejorando su competitividad en el mercado.",
+      "faq": [
+        {
+          "question": "¿Qué es Cloud y DevOps?",
+          "answer": "Cloud y DevOps son prácticas que combinan desarrollo de software y operaciones para mejorar la eficiencia y velocidad de entrega."
+        },
+        {
+          "question": "¿Cómo puedo mejorar mi infraestructura en La Plata?",
+          "answer": "Con PairProgramming, puedes mejorar tu infraestructura con soluciones personalizadas de AWS, Docker y Kubernetes, asegurando escalabilidad y seguridad."
+        }
+      ]
+    },
+    "la-plata/seo-contenido": {
+      "title": "SEO y Contenido en La Plata",
+      "description": "Mejora la visibilidad de tu negocio en La Plata con nuestros servicios de SEO y contenido personalizados. En PairProgramming, te ayudamos a destacar en el mercado local.",
+      "h1": "Posicionamiento en La Plata",
+      "intro": "En La Plata, ciudad con una universidad nacional líder en informática, las empresas necesitan destacarse en el mercado digital. En PairProgramming, ofrecemos servicios de posicionamiento, schema markup, contenido programático y analytics para ayudar a los negocios locales a crecer y prosperar en la capital de la provincia de Buenos Aires.",
+      "faq": [
+        {
+          "question": "¿Por qué es importante el SEO en La Plata?",
+          "answer": "El SEO es crucial en La Plata para aumentar la visibilidad y atraer clientes locales."
+        },
+        {
+          "question": "¿Qué tecnologías utiliza PairProgramming?",
+          "answer": "Utilizamos Next.js, React, TypeScript, Node.js y PostgreSQL para desarrollar soluciones personalizadas."
+        }
+      ]
+    },
+    "la-plata/modernizacion-legacy": {
+      "title": "Modernización Legacy La Plata",
+      "description": "Migración a stack moderno para empresas de La Plata. Refactoring y reescritura incremental con Next.js, React y TypeScript. PairProgramming, expertos en modernización legacy.",
+      "h1": "Modernización Legacy",
+      "intro": "La Universidad Nacional de La Plata, con su fuerte enfoque en informática, ha generado un ecosistema tecnológico próspero en la ciudad. Sin embargo, muchas empresas de la región enfrentan desafíos con sistemas legacy obsoletos. PairProgramming, fundada en 2022, ofrece soluciones de migración a stack moderno, refactoring y reescritura incremental para empresas de La Plata, mejorando su competitividad y eficiencia.",
+      "faq": [
+        {
+          "question": "¿Qué es la modernización legacy?",
+          "answer": "Proceso de migración de sistemas obsoletos a tecnologías modernas como Next.js y React."
+        },
+        {
+          "question": "¿Cuál es el beneficio de la reescritura incremental?",
+          "answer": "Permite mejorar sistemas legacy sin reemplazarlos completamente, reduciendo costos y riesgos."
+        }
+      ]
+    },
+    "la-plata/qa-performance": {
+      "title": "QA y Performance en La Plata",
+      "description": "Mejora la eficiencia de tus aplicaciones en La Plata con nuestros servicios de testing automatizado, Lighthouse y optimización de rendimiento",
+      "h1": "QA y Performance en La Plata",
+      "intro": "En la ciudad de La Plata, donde la Universidad Nacional de La Plata lidera la formación en informática, las empresas necesitan asegurar la calidad y el rendimiento de sus aplicaciones. En PairProgramming, ofrecemos soluciones personalizadas de testing automatizado y optimización para empresas de la región, aprovechando tecnologías como Next.js, React y Node.js para mejorar la experiencia del usuario y aumentar la competitividad en el mercado local.",
+      "faq": [
+        {
+          "question": "¿Qué es testing automatizado?",
+          "answer": "Es un proceso que utiliza software para evaluar la calidad de tus aplicaciones de manera eficiente"
+        },
+        {
+          "question": "¿Cómo mejora Lighthouse el rendimiento?",
+          "answer": "Analiza y ofrece recomendaciones para mejorar la velocidad y eficiencia de tus sitios web"
+        }
+      ]
+    },
+    "la-plata/branding-identidad": {
+      "title": "Branding e Identidad en La Plata",
+      "description": "Desarrolla una identidad visual fuerte en La Plata con PairProgramming. Diseño de marca, UI/UX y sistemas de diseño para empresas innovadoras.",
+      "h1": "Branding e Identidad en La Plata",
+      "intro": "En La Plata, ciudad con una fuerte presencia universitaria y tecnológica, las empresas necesitan destacarse con una identidad visual sólida. PairProgramming, con su enfoque en diseño de marca y sistemas de diseño, ayuda a las empresas a establecerse en el mercado local y nacional, aprovechando la rica oferta de talentos informáticos de la Universidad Nacional de La Plata.",
+      "faq": [
+        {
+          "question": "¿Por qué necesito Branding e Identidad para mi empresa en La Plata?",
+          "answer": "Para diferenciarte y establecer una presencia fuerte en el mercado local."
+        },
+        {
+          "question": "¿Qué tecnologías utiliza PairProgramming para el diseño de marca?",
+          "answer": "Utilizamos Next.js, React, TypeScript, Node.js y PostgreSQL para crear soluciones personalizadas."
+        }
+      ]
+    },
+    "tucuman/saas-b2b": {
+      "title": "Arquitectura B2B SaaS en Tucumán",
+      "description": "Desarrollamos plataformas B2B SaaS personalizadas para empresas de Tucumán, impulsando la digitalización de la industria azucarera y citrícola con soluciones de vanguardia",
+      "h1": "Arquitectura B2B SaaS Tucumán",
+      "intro": "En Tucumán, la industria azucarera y citrícola busca innovar. En PairProgramming, desarrollamos plataformas multi-tenant, billing y seguridad de datos para empresas que buscan digitalizarse. Nuestro equipo experto en Next.js, React y TypeScript te ayuda a escalar tu negocio",
+      "faq": [
+        {
+          "question": "¿Qué es Arquitectura B2B SaaS?",
+          "answer": "Es un modelo de software como servicio para empresas, personalizable y escalable"
+        },
+        {
+          "question": "¿Cómo ayuda PairProgramming?",
+          "answer": "Desarrollamos soluciones personalizadas con tecnologías como Next.js y PostgreSQL"
+        }
+      ]
+    },
+    "tucuman/productos-digitales": {
+      "title": "Productos Digitales Tucumán",
+      "description": "Desarrollamos soluciones digitales personalizadas para empresas de Tucumán, impulsando la innovación y el crecimiento en la región del NOA",
+      "h1": "Productos Digitales en Tucumán",
+      "intro": "En Tucumán, la industria azucarera y citrícola está en constante evolución. En PairProgramming, desarrollamos aplicaciones web y móviles para ayudar a las empresas de la región a digitalizarse y mejorar su competitividad. Nuestros expertos en Next.js, React y TypeScript crean soluciones personalizadas para cada necesidad",
+      "faq": [
+        {
+          "question": "¿Cómo puedo mejorar la eficiencia de mi empresa con productos digitales?",
+          "answer": "Nuestros productos digitales ayudan a automatizar procesos y mejorar la toma de decisiones"
+        },
+        {
+          "question": "¿Cuál es el beneficio de contratar a PairProgramming para mi proyecto?",
+          "answer": "Ofrecemos soluciones personalizadas y escalables con tecnologías de vanguardia como Next.js y React"
+        }
+      ]
+    },
+    "tucuman/crm-automatizacion": {
+      "title": "CRM y Automatización en Tucumán",
+      "description": "Optimiza tus procesos con CRM y Automatización en Tucumán. PairProgramming ofrece soluciones personalizadas para la industria azucarera y citrícola en el NOA.",
+      "h1": "Automatiza tu negocio en Tucumán",
+      "intro": "En Tucumán, la industria azucarera y citrícola está en constante evolución. Para mantenerse competitivos, las empresas necesitan implementar soluciones de CRM y Automatización. En PairProgramming, ofrecemos soluciones personalizadas con Salesforce, HubSpot y pipelines de venta para ayudar a las empresas a optimizar sus procesos y aumentar su productividad.",
+      "faq": [
+        {
+          "question": "¿Qué es CRM y cómo puede ayudar a mi empresa en Tucumán?",
+          "answer": "El CRM te permite gestionar tus relaciones con clientes y prospects de manera eficiente."
+        },
+        {
+          "question": "¿Puedo integrar Salesforce con mi sistema de gestión existente?",
+          "answer": "Sí, en PairProgramming ofrecemos integraciones custom para conectar Salesforce con tus sistemas existentes."
+        }
+      ]
+    },
+    "tucuman/automatizacion-n8n": {
+      "title": "Automatización con n8n en Tucumán",
+      "description": "Automatiza procesos en Tucumán con n8n. Integraciones, scraping y ETL para la industria azucarera y citrícola. PairProgramming lo facilita.",
+      "h1": "Automatización con n8n",
+      "intro": "En Tucumán, la industria azucarera y citrícola se digitaliza rápidamente. PairProgramming, con sede en Tucumán, ofrece soluciones de automatización con n8n para mejorar la eficiencia de los procesos y reducir costos. Nuestro equipo experto en Next.js, React, TypeScript, Node.js y PostgreSQL se encarga de implementar workflows personalizados, integraciones y ETL para las empresas locales.",
+      "faq": [
+        {
+          "question": "¿Qué es la automatización con n8n?",
+          "answer": "Es un proceso que utiliza n8n para automatizar tareas y procesos en empresas de Tucumán."
+        },
+        {
+          "question": "¿Cómo puede ayudar PairProgramming?",
+          "answer": "Ofrecemos servicios de automatización con n8n, integraciones y ETL para mejorar la eficiencia de las empresas locales."
+        }
+      ]
+    },
+    "tucuman/cloud-devops": {
+      "title": "Cloud y DevOps en Tucumán",
+      "description": "Desarrolla infraestructuras escalables y seguras con nuestros servicios de Cloud y DevOps en Tucumán. Impulsa tu negocio con tecnología de vanguardia.",
+      "h1": "Cloud y DevOps Tucumán",
+      "intro": "En Tucumán, la industria azucarera y citrícola está en proceso de digitalización. Nuestra empresa, PairProgramming, ofrece soluciones de Cloud y DevOps personalizadas para empresas locales, mejorando su eficiencia y competitividad en el mercado.",
+      "faq": [
+        {
+          "question": "¿Qué beneficios ofrece el Cloud para las empresas de Tucumán?",
+          "answer": "Mayor escalabilidad y reducción de costos."
+        },
+        {
+          "question": "¿Cómo puede PairProgramming ayudar a implementar DevOps en mi empresa?",
+          "answer": "Con nuestra experiencia en AWS, Vercel y Docker."
+        }
+      ]
+    },
+    "tucuman/seo-contenido": {
+      "title": "SEO y Contenido en Tucumán",
+      "description": "Mejora la visibilidad de tu negocio en Tucumán con nuestros servicios de SEO y contenido personalizados para la industria azucarera y citrícola.",
+      "h1": "Posicionamiento en Tucumán",
+      "intro": "En Tucumán, la industria azucarera y citrícola se digitaliza rápidamente. Para mantenerse competitivos, los negocios locales necesitan una presencia en línea sólida. En PairProgramming, ofrecemos servicios de SEO y contenido personalizados para ayudar a las empresas de Tucumán a aumentar su visibilidad y atraer más clientes.",
+      "faq": [
+        {
+          "question": "¿Por qué necesito SEO en Tucumán?",
+          "answer": "El SEO te ayuda a aumentar la visibilidad en línea y atraer más clientes locales."
+        },
+        {
+          "question": "¿Cómo puedo mejorar mi contenido en línea?",
+          "answer": "Nuestros servicios de contenido programático y schema markup mejoran la experiencia del usuario y el posicionamiento en buscadores."
+        }
+      ]
+    },
+    "tucuman/modernizacion-legacy": {
+      "title": "Modernización Legacy Tucumán",
+      "description": "Migración a stack moderno para empresas de Tucumán. Refactoring y reescritura incremental con PairProgramming. Mejora la eficiencia y competitividad de tu negocio en el NOA.",
+      "h1": "Modernización Legacy en Tucumán",
+      "intro": "La industria azucarera y citrícola de Tucumán se digitaliza rápidamente. Para mantener la competitividad, las empresas necesitan modernizar sus sistemas legacy. En PairProgramming, ofrecemos migración a stack moderno, refactoring y reescritura incremental con tecnologías como Next.js, React y Node.js.",
+      "faq": [
+        {
+          "question": "¿Por qué necesito modernizar mi sistema legacy?",
+          "answer": "Mejora la eficiencia, reduce costos y aumenta la competitividad en el mercado."
+        },
+        {
+          "question": "¿Cuál es el proceso de modernización con PairProgramming?",
+          "answer": "Nuestro equipo experto en Next.js, React y Node.js realiza un análisis, refactoring y reescritura incremental para adecuar tu sistema a las necesidades actuales."
+        }
+      ]
+    },
+    "tucuman/qa-performance": {
+      "title": "QA y Performance en Tucumán",
+      "description": "Mejora la calidad y el rendimiento de tus aplicaciones en Tucumán con PairProgramming. Testing automatizado y optimización para la industria azucarera y citrícola digital",
+      "h1": "QA y Performance en Tucumán",
+      "intro": "En Tucumán, la industria azucarera y citrícola se digitaliza rápidamente. Para mantener la competitividad, las empresas necesitan garantizar la calidad y el rendimiento de sus aplicaciones. En PairProgramming, ofrecemos soluciones de testing automatizado y optimización para ayudar a las empresas de Tucumán a mejorar su presencia en línea.",
+      "faq": [
+        {
+          "question": "¿Por qué es importante el testing automatizado en Tucumán?",
+          "answer": "El testing automatizado en Tucumán ayuda a reducir errores y mejorar la calidad de las aplicaciones, lo que es crucial para la industria azucarera y citrícola en constante evolución."
+        },
+        {
+          "question": "¿Cómo puede PairProgramming ayudar a mejorar el rendimiento de mis aplicaciones en Tucumán?",
+          "answer": "PairProgramming utiliza herramientas como Lighthouse y Core Web Vitals para analizar y optimizar el rendimiento de tus aplicaciones, mejorando la experiencia del usuario y el posicionamiento en los motores de búsqueda."
+        }
+      ]
+    },
+    "tucuman/branding-identidad": {
+      "title": "Branding e Identidad Tucumán",
+      "description": "Desarrolla una identidad visual fuerte para tu empresa en Tucumán con nuestros servicios de diseño de marca y UI/UX. PairProgramming te ayuda a destacarte en el mercado local.",
+      "h1": "Branding e Identidad en Tucumán",
+      "intro": "En Tucumán, donde la industria azucarera y citrícola se están digitalizando, las empresas necesitan una identidad visual sólida para destacarse. En PairProgramming, ofrecemos servicios de diseño de marca, UI/UX y sistemas de diseño para ayudar a las empresas locales a prosperar en este entorno en constante evolución.",
+      "faq": [
+        {
+          "question": "¿Por qué mi empresa de Tucumán necesita Branding e Identidad?",
+          "answer": "Para destacarte en el mercado local y atraer a nuevos clientes con una identidad visual atractiva."
+        },
+        {
+          "question": "¿Cómo puedo mejorar la experiencia del usuario en mi sitio web?",
+          "answer": "Con nuestro servicio de UI/UX, podemos ayudarte a crear una experiencia de usuario intuitiva y atractiva."
+        }
+      ]
+    },
+    "mexico/saas-b2b": {
+      "title": "Arquitectura B2B SaaS México",
+      "description": "Desarrolla plataformas escalables con PairProgramming. Arquitectura B2B SaaS en México para empresas que buscan crecer en el mercado tech de USD 25B.",
+      "h1": "Arquitectura B2B SaaS México",
+      "intro": "En la segunda economía de Latinoamérica, el mercado tech de México ofrece oportunidades de crecimiento. Con PairProgramming, las empresas pueden desarrollar plataformas multi-tenant, billing y feature flags para satisfacer las necesidades del mercado en auge.",
+      "faq": [
+        {
+          "question": "¿Qué es Arquitectura B2B SaaS?",
+          "answer": "Es un enfoque de diseño para plataformas empresariales escalables."
+        },
+        {
+          "question": "¿Cómo ayuda PairProgramming?",
+          "answer": "Desarrolla soluciones personalizadas con Next.js, React y Node.js."
+        }
+      ]
+    },
+    "mexico/productos-digitales": {
+      "title": "Productos Digitales México - Soluciones Personalizadas",
+      "description": "Desarrollamos apps web, móviles y dashboards escalables para empresas mexicanas. Nuestro equipo en PairProgramming utiliza Next.js, React y TypeScript para crear soluciones tecnológicas innovadoras en el mercado de México.",
+      "h1": "Productos Digitales para Empresas Mexicanas",
+      "intro": "En México, segunda economía de Latinoamérica, el mercado tech alcanza los USD 25B. Con el auge del nearshoring desde EEUU, las empresas necesitan soluciones digitales personalizadas para destacarse. En PairProgramming, fundada en 2022, ofrecemos servicios de desarrollo de apps web, móviles, dashboards y MVPs escalables, aprovechando tecnologías como Next.js, React, TypeScript, Node.js y PostgreSQL para impulsar el crecimiento de nuestros clientes.",
+      "faq": [
+        {
+          "question": "¿Qué tecnologías utiliza PairProgramming?",
+          "answer": "Utilizamos Next.js, React, TypeScript, Node.js y PostgreSQL para desarrollar soluciones digitales innovadoras."
+        },
+        {
+          "question": "¿Cuál es el enfoque de PairProgramming en el desarrollo de Productos Digitales?",
+          "answer": "Nos enfocamos en crear soluciones personalizadas y escalables para empresas mexicanas, aprovechando el potencial del mercado tech local."
+        }
+      ]
+    },
+    "mexico/crm-automatizacion": {
+      "title": "CRM y Automatización en México",
+      "description": "Mejora la eficiencia de tus procesos con CRM y Automatización en México. PairProgramming ofrece soluciones personalizadas con Salesforce, HubSpot y más.",
+      "h1": "Automatiza tus procesos",
+      "intro": "En México, segunda economía de Latinoamérica, las empresas necesitan optimizar sus procesos para competir en un mercado tech de USD 25B en constante crecimiento. PairProgramming, con sede en México, ofrece soluciones de CRM y Automatización personalizadas con tecnologías como Salesforce y HubSpot, ayudando a las empresas a mejorar su eficiencia y aumentar sus ventas.",
+      "faq": [
+        {
+          "question": "¿Qué es CRM y Automatización?",
+          "answer": "Es un sistema para gestionar relaciones con clientes y automatizar procesos."
+        },
+        {
+          "question": "¿Cuál es el beneficio de nearshoring en México?",
+          "answer": "Permite a las empresas de EEUU ahorrar costos y mejorar la eficiencia con un equipo de desarrollo local."
+        }
+      ]
+    },
+    "mexico/automatizacion-n8n": {
+      "title": "Automatización con n8n en México",
+      "description": "Automatiza procesos en México con n8n. Integraciones, ETL y scraping para empresas. PairProgramming ofrece soluciones personalizadas para el mercado tech de México.",
+      "h1": "Automatización con n8n",
+      "intro": "En México, segunda economía de Latinoamérica, las empresas necesitan automatizar procesos para mantener su competitividad. Con un mercado tech de USD 25B y nearshoring en auge, PairProgramming ofrece soluciones de automatización con n8n para mejorar la eficiencia y productividad de las empresas mexicanas.",
+      "faq": [
+        {
+          "question": "¿Qué es la automatización con n8n?",
+          "answer": "Es un proceso que utiliza n8n para automatizar tareas y flujos de trabajo."
+        },
+        {
+          "question": "¿Cómo puede PairProgramming ayudar a mi empresa?",
+          "answer": "Ofrecemos soluciones personalizadas de automatización con n8n para mejorar la eficiencia y productividad."
+        }
+      ]
+    },
+    "mexico/cloud-devops": {
+      "title": "Cloud y DevOps México",
+      "description": "Desarrolla infraestructuras escalables y seguras con nuestros servicios de Cloud y DevOps en México, aprovechando tecnologías como AWS, Vercel y Kubernetes para impulsar tu negocio.",
+      "h1": "Cloud y DevOps México",
+      "intro": "En la segunda economía de Latinoamérica, con un mercado tech de USD 25B en auge, las empresas mexicanas necesitan soluciones de Cloud y DevOps para mantener su competitividad. En PairProgramming, con nuestro stack de Next.js, React, TypeScript, Node.js y PostgreSQL, ofrecemos servicios personalizados de AWS, Vercel, CI/CD, Docker, Kubernetes y monitoreo para ayudar a las empresas a alcanzar su máximo potencial.",
+      "faq": [
+        {
+          "question": "¿Qué beneficios ofrece el nearshoring en México?",
+          "answer": "Acceso a talento especializado y reducción de costos sin comprometer la calidad."
+        },
+        {
+          "question": "¿Cómo puedo implementar DevOps en mi empresa?",
+          "answer": "Nuestros expertos en PairProgramming te guían en la implementación de DevOps con tecnologías como Docker y Kubernetes."
+        }
+      ]
+    },
+    "mexico/seo-contenido": {
+      "title": "SEO y Contenido en México",
+      "description": "Mejora la visibilidad online de tu empresa en México con nuestros servicios de SEO y contenido personalizados, aumenta tus ventas y dominio en el mercado tech de USD 25B",
+      "h1": "SEO y Contenido en México",
+      "intro": "En México, segunda economía de Latinoamérica, el mercado tech en auge requiere estrategias de SEO y contenido efectivas. En PairProgramming, ayudamos a las empresas a destacarse en el mercado mediante nuestros servicios de posicionamiento, schema markup, contenido programático y analytics, aprovechando el nearshoring desde EEUU",
+      "faq": [
+        {
+          "question": "¿Por qué es importante el SEO en México?",
+          "answer": "El SEO es clave para destacar en el mercado tech de USD 25B y aumentar las ventas"
+        },
+        {
+          "question": "¿Cómo puede PairProgramming ayudar a mi empresa en México?",
+          "answer": "Ofrecemos servicios personalizados de SEO y contenido con tecnologías como Next.js y React"
+        }
+      ]
+    },
+    "mexico/modernizacion-legacy": {
+      "title": "Modernización Legacy en México",
+      "description": "Moderniza tus sistemas legacy en México con PairProgramming. Migración a stack moderno, refactoring y reescritura incremental para empresas mexicanas. Incrementa la eficiencia y competitividad en el mercado tech de USD 25B.",
+      "h1": "Modernización Legacy México",
+      "intro": "En la segunda economía de Latinoamérica, las empresas mexicanas necesitan modernizar sus sistemas legacy para mantenerse competitivas. PairProgramming, con sede en México, ofrece migración a stack moderno, refactoring y reescritura incremental con tecnologías como Next.js, React y Node.js, aprovechando el auge del nearshoring desde EEUU.",
+      "faq": [
+        {
+          "question": "¿Qué es la Modernización Legacy?",
+          "answer": "Es el proceso de migrar sistemas antiguos a tecnologías modernas para mejorar la eficiencia y competitividad."
+        },
+        {
+          "question": "¿Cuáles son los beneficios de la Modernización Legacy?",
+          "answer": "Mejora la eficiencia, reduce costos y aumenta la escalabilidad y seguridad de los sistemas."
+        }
+      ]
+    },
+    "mexico/qa-performance": {
+      "title": "QA y Performance en México",
+      "description": "Mejora la calidad y velocidad de tus aplicaciones en México con nuestros servicios de testing automatizado y optimización de rendimiento en PairProgramming",
+      "h1": "QA y Performance en México",
+      "intro": "En la segunda economía de Latinoamérica, con un mercado tech de USD 25B en auge, las empresas mexicanas necesitan garantizar la calidad y el rendimiento de sus aplicaciones para competir en el mercado global. En PairProgramming, ofrecemos servicios de testing automatizado y optimización de rendimiento para ayudar a las empresas a mejorar su posición en el mercado",
+      "faq": [
+        {
+          "question": "¿Por qué es importante el testing automatizado en México?",
+          "answer": "El testing automatizado en México ayuda a reducir costos y mejorar la calidad de las aplicaciones"
+        },
+        {
+          "question": "¿Cómo puedo mejorar el rendimiento de mi aplicación en México?",
+          "answer": "Con nuestros servicios de Lighthouse y Core Web Vitals, podemos ayudarte a optimizar el rendimiento de tu aplicación"
+        }
+      ]
+    },
+    "mexico/branding-identidad": {
+      "title": "Branding e Identidad en México",
+      "description": "Desarrolla una identidad única para tu marca en México con nuestros servicios de diseño de marca, UI/UX y sistemas de diseño. Incrementa tu presencia en el mercado tech de USD 25B",
+      "h1": "Branding e Identidad",
+      "intro": "En México, segunda economía de Latinoamérica, es crucial destacar en el mercado tech de USD 25B. PairProgramming, con experiencia en Next.js, React, TypeScript, Node.js y PostgreSQL, te ayuda a crear una identidad visual única y atractiva para tu marca, destacando en el nearshoring desde EEUU en auge.",
+      "faq": [
+        {
+          "question": "¿Por qué necesito Branding e Identidad para mi empresa en México?",
+          "answer": "Para destacar en el mercado tech de USD 25B y atraer a clientes potenciales."
+        },
+        {
+          "question": "¿Qué tecnologías utiliza PairProgramming para el diseño de marca?",
+          "answer": "Next.js, React, TypeScript, Node.js y PostgreSQL para crear soluciones personalizadas."
+        }
+      ]
+    },
+    "chile/saas-b2b": {
+      "title": "Arquitectura B2B SaaS Chile",
+      "description": "Desarrolla plataformas escalables y seguras con nuestra arquitectura B2B SaaS en Chile, líder en innovación y estabilidad económica, con soluciones de billing y seguridad de datos para empresas en crecimiento.",
+      "h1": "Arquitectura B2B SaaS",
+      "intro": "En Chile, donde la economía es estable y la adopción digital es fuerte, especialmente en banca y retail, las empresas necesitan soluciones de arquitectura B2B SaaS para escalar y proteger sus datos. PairProgramming, con su experiencia en Next.js, React y PostgreSQL, ofrece plataformas multi-tenant, billing y seguridad de nivel de fila para satisfacer estas necesidades.",
+      "faq": [
+        {
+          "question": "¿Qué es la arquitectura B2B SaaS?",
+          "answer": "Es un modelo de diseño de software como servicio para empresas, escalable y seguro."
+        },
+        {
+          "question": "¿Cómo puedo implementar feature flags en mi plataforma?",
+          "answer": "Con PairProgramming, puedes implementar feature flags para controlar y personalizar la experiencia del usuario de manera eficiente."
+        }
+      ]
+    },
+    "chile/productos-digitales": {
+      "title": "Productos Digitales en Chile",
+      "description": "Desarrollamos soluciones digitales personalizadas para empresas en Chile, impulsando la innovación y el crecimiento en la economía más estable de la región",
+      "h1": "Productos Digitales para Chile",
+      "intro": "En Chile, la economía más estable de la región, las empresas necesitan soluciones digitales para mantener su competitividad. En PairProgramming, desarrollamos apps web, móviles y dashboards personalizados con tecnologías como Next.js, React y Node.js, para impulsar la adopción digital en sectores como banca y retail.",
+      "faq": [
+        {
+          "question": "¿Cómo puedo mejorar la experiencia del cliente con soluciones digitales?",
+          "answer": "Nuestras soluciones personalizadas mejoran la experiencia del cliente y aumentan la eficiencia en la banca y retail."
+        },
+        {
+          "question": "¿Cuál es el beneficio de desarrollar un MVP en Chile?",
+          "answer": "Un MVP permite probar y validar ideas de negocio de manera rápida y eficiente en el mercado chileno."
+        }
+      ]
+    },
+    "chile/crm-automatizacion": {
+      "title": "CRM y Automatización en Chile",
+      "description": "Mejora la eficiencia de tus procesos con nuestro servicio de CRM y Automatización en Chile. Integraciones personalizadas con Salesforce y HubSpot para startups y empresas establecidas.",
+      "h1": "Automatiza tus procesos en Chile",
+      "intro": "En la economía más estable de la región, las empresas de Chile necesitan herramientas de CRM y Automatización para mantener su competitividad. En PairProgramming, ayudamos a startups y empresas a optimizar sus pipelines de venta con tecnologías como Next.js, React y TypeScript, aprovechando la fuerte adopción digital en banca y retail.",
+      "faq": [
+        {
+          "question": "¿Qué es CRM y Automatización?",
+          "answer": "Es la gestión y automatización de procesos de ventas y marketing para mejorar la eficiencia."
+        },
+        {
+          "question": "¿Cuáles son los beneficios de la integración con Salesforce?",
+          "answer": "Mejora la gestión de clientes y ventas, y aumenta la productividad de tus equipos."
+        }
+      ]
+    },
+    "chile/automatizacion-n8n": {
+      "title": "Automatización con n8n en Chile",
+      "description": "Automatización de procesos con n8n en Chile. Integraciones, workflows, ETL y scraping para empresas. PairProgramming, expertos en soluciones personalizadas.",
+      "h1": "Automatización con n8n",
+      "intro": "En Chile, la economía más estable de la región, las empresas necesitan automatizar procesos para mantener su competitividad. PairProgramming, con experiencia en Next.js, React y Node.js, ofrece soluciones de automatización con n8n para startups y empresas establecidas, mejorando la eficiencia en banca y retail.",
+      "faq": [
+        {
+          "question": "¿Qué es la automatización con n8n?",
+          "answer": "Es un proceso que utiliza n8n para automatizar tareas y workflows, mejorando la eficiencia empresarial."
+        },
+        {
+          "question": "¿Cómo puede PairProgramming ayudar a mi empresa en Chile?",
+          "answer": "Ofrecemos soluciones de automatización con n8n personalizadas para mejorar la eficiencia y productividad de tu negocio."
+        }
+      ]
+    },
+    "chile/cloud-devops": {
+      "title": "Cloud y DevOps en Chile",
+      "description": "Desarrolla infraestructuras escalables y seguras con nuestros servicios de Cloud y DevOps en Chile, impulsando la innovación y el crecimiento de tu negocio en la economía más estable de la región.",
+      "h1": "Cloud y DevOps en Chile",
+      "intro": "En Chile, donde la economía es líder en la región y Startup Chile es un referente para emprendedores, las empresas necesitan soluciones de Cloud y DevOps para mantener su competitividad. PairProgramming, con su experiencia en AWS, Vercel, CI/CD, Docker, Kubernetes y monitoreo, ayuda a las empresas a migrar a la nube y mejorar su infraestructura, aprovechando la fuerte adopción digital en sectores como banca y retail.",
+      "faq": [
+        {
+          "question": "¿Qué beneficios ofrece Cloud y DevOps para las empresas chilenas?",
+          "answer": "Mayor escalabilidad, seguridad y eficiencia en la gestión de infraestructura y aplicaciones."
+        },
+        {
+          "question": "¿Cómo PairProgramming ayuda a las empresas a implementar Cloud y DevOps?",
+          "answer": "Ofrecemos servicios personalizados de migración a la nube, implementación de CI/CD y monitoreo de infraestructura."
+        }
+      ]
+    },
+    "chile/seo-contenido": {
+      "title": "SEO y Contenido en Chile",
+      "description": "Mejora la visibilidad de tu negocio en Chile con nuestros servicios de posicionamiento, schema markup y contenido programático. Analíticas precisas para tomar decisiones informadas.",
+      "h1": "Posicionamiento en Chile",
+      "intro": "En la economía más estable de la región, con un fuerte impulso de Startup Chile y una creciente adopción digital en banca y retail, las empresas chilenas necesitan destacarse en línea. PairProgramming, con su experiencia en Next.js, React, TypeScript, Node.js y PostgreSQL, ofrece soluciones personalizadas de SEO y contenido para ayudar a los negocios locales a prosperar en el mercado digital.",
+      "faq": [
+        {
+          "question": "¿Cómo puedo mejorar mi posición en los motores de búsqueda en Chile?",
+          "answer": "Nuestros servicios de posicionamiento y contenido programático te ayudan a mejorar tu visibilidad en línea."
+        },
+        {
+          "question": "¿Cuál es el beneficio de implementar schema markup en mi sitio web?",
+          "answer": "El schema markup mejora la comprensión de tu sitio por parte de los motores de búsqueda, aumentando la visibilidad y el tráfico."
+        }
+      ]
+    },
+    "chile/modernizacion-legacy": {
+      "title": "Modernización Legacy en Chile",
+      "description": "Migración a stack moderno para empresas en Chile. Refactoring y reescritura incremental con Next.js, React y TypeScript. Mejora la eficiencia y competitividad de tu negocio con PairProgramming.",
+      "h1": "Moderniza tu Legacy",
+      "intro": "En Chile, donde la economía es estable y la adopción digital es fuerte, especialmente en banca y retail, las empresas necesitan modernizar sus sistemas legacy para mantenerse competitivas. PairProgramming, con su experiencia en Next.js, React y TypeScript, ofrece migración a stack moderno, refactoring y reescritura incremental para mejorar la eficiencia y escalabilidad de tus sistemas.",
+      "faq": [
+        {
+          "question": "¿Por qué necesito modernizar mi sistema legacy?",
+          "answer": "Para mejorar la eficiencia, escalabilidad y competitividad de tu negocio en el mercado chileno."
+        },
+        {
+          "question": "¿Cuál es el enfoque de PairProgramming en modernización legacy?",
+          "answer": "Migración a stack moderno, refactoring y reescritura incremental con tecnologías como Next.js, React y TypeScript."
+        }
+      ]
+    },
+    "chile/qa-performance": {
+      "title": "QA y Performance en Chile",
+      "description": "Mejora la calidad y el rendimiento de tus aplicaciones en Chile con PairProgramming. Testing automatizado y optimización para empresas líderes en la región.",
+      "h1": "QA y Performance",
+      "intro": "En Chile, donde la economía es estable y la adopción digital es alta, las empresas necesitan garantizar la calidad y el rendimiento de sus aplicaciones. PairProgramming ofrece soluciones de testing automatizado y optimización para mejorar la experiencia del usuario y aumentar la eficiencia en la banca y el retail.",
+      "faq": [
+        {
+          "question": "¿Qué es testing automatizado?",
+          "answer": "Es un proceso que utiliza software para probar aplicaciones y garantizar su calidad."
+        },
+        {
+          "question": "¿Cómo mejora Lighthouse la performance?",
+          "answer": "Lighthouse analiza y proporciona recomendaciones para mejorar la velocidad y la eficiencia de las aplicaciones web."
+        }
+      ]
+    },
+    "chile/branding-identidad": {
+      "title": "Branding e Identidad en Chile",
+      "description": "Desarrolla una marca sólida en Chile con PairProgramming. Diseño de marca, UI/UX y sistemas de diseño para startups y empresas en Santiago y todo Chile.",
+      "h1": "Branding e Identidad en Chile",
+      "intro": "En la economía más estable de la región, donde Startup Chile lidera la innovación y la adopción digital es fuerte en banca y retail, las empresas chilenas necesitan una identidad visual sólida para destacarse. PairProgramming, con su experiencia en Next.js, React, TypeScript, Node.js y PostgreSQL, ofrece soluciones de diseño de marca y UI/UX personalizadas para ayudar a las empresas de Chile a prosperar en el mercado.",
+      "faq": [
+        {
+          "question": "¿Por qué es importante el Branding en Chile?",
+          "answer": "El Branding es clave para destacar en un mercado competitivo y establecer una conexión emocional con los clientes."
+        },
+        {
+          "question": "¿Qué servicios de diseño ofrece PairProgramming?",
+          "answer": "Diseño de marca, UI/UX, sistemas de diseño e identidad visual para startups y empresas en Chile."
+        }
+      ]
+    },
+    "colombia/saas-b2b": {
+      "title": "Arquitectura B2B SaaS en Colombia",
+      "description": "Desarrollamos soluciones de Arquitectura B2B SaaS personalizadas para empresas en Colombia, con tecnologías como Next.js y PostgreSQL, en el corazón de Medellín, tercer mercado tech de LATAM.",
+      "h1": "Arquitectura B2B SaaS en Colombia",
+      "intro": "En Medellín, el tercer mercado tech de LATAM, las empresas necesitan soluciones de Arquitectura B2B SaaS personalizadas para innovar y crecer. PairProgramming, fundada en 2022, ofrece plataformas multi-tenant, billing y seguridad de nivel de fila para impulsar el emprendimiento en Colombia.",
+      "faq": [
+        {
+          "question": "¿Qué es la Arquitectura B2B SaaS?",
+          "answer": "Es un modelo de software como servicio para empresas, ofreciendo escalabilidad y flexibilidad."
+        },
+        {
+          "question": "¿Cómo PairProgramming ayuda a las empresas de Colombia?",
+          "answer": "Ofrecemos soluciones personalizadas de Arquitectura B2B SaaS con tecnologías como Next.js y PostgreSQL."
+        }
+      ]
+    },
+    "colombia/productos-digitales": {
+      "title": "Productos Digitales en Colombia",
+      "description": "Desarrollamos soluciones digitales personalizadas en Medellín, Colombia. Mejora la eficiencia de tu negocio con nuestros productos digitales innovadores y escalables.",
+      "h1": "Productos Digitales Innovadores",
+      "intro": "En Medellín, el tercer mercado tech de LATAM, las empresas necesitan soluciones digitales para mantenerse competitivas. En PairProgramming, desarrollamos apps web, móviles y dashboards personalizados con tecnologías como Next.js, React y Node.js, ayudando a las empresas a crecer en este ecosistema de innovación impulsado por la Ley de Emprendimiento.",
+      "faq": [
+        {
+          "question": "¿Qué tipo de productos digitales ofrece PairProgramming?",
+          "answer": "Desarrollamos apps web, móviles, dashboards y MVPs escalables con tecnologías como Next.js y React."
+        },
+        {
+          "question": "¿Cuál es el beneficio de trabajar con PairProgramming en Colombia?",
+          "answer": "Nuestro equipo experto en tecnologías como TypeScript y PostgreSQL te brinda soluciones personalizadas y eficientes."
+        }
+      ]
+    },
+    "colombia/crm-automatizacion": {
+      "title": "CRM y Automatización en Colombia",
+      "description": "Impulsa tu negocio en Medellín con soluciones de CRM y Automatización personalizadas de PairProgramming, expertos en Salesforce y HubSpot",
+      "h1": "Automatiza tu negocio",
+      "intro": "En Medellín, el tercer mercado tech de LATAM, las empresas necesitan soluciones de CRM y Automatización para crecer. Con la Ley de Emprendimiento activa, PairProgramming ofrece servicios de Salesforce, HubSpot e integraciones custom para impulsar tu negocio.",
+      "faq": [
+        {
+          "question": "¿Qué es CRM y Automatización?",
+          "answer": "Es la gestión de relaciones con clientes y procesos automatizados para mejorar la eficiencia"
+        },
+        {
+          "question": "¿Por qué elegir PairProgramming?",
+          "answer": "Porque ofrecemos soluciones personalizadas con tecnologías como Next.js y React para empresas en Colombia"
+        }
+      ]
+    },
+    "colombia/automatizacion-n8n": {
+      "title": "Automatización con n8n en Colombia",
+      "description": "Automatiza procesos en Medellín con n8n. Incrementa la eficiencia y reduce costos. Descubre cómo PairProgramming puede ayudar a tu empresa a innovar con tecnología de vanguardia.",
+      "h1": "Automatización con n8n",
+      "intro": "En Medellín, el tercer mercado tech de LATAM, las empresas necesitan innovar para crecer. Con la Ley de Emprendimiento activa, PairProgramming ofrece soluciones de automatización con n8n para workflows, integraciones y ETL, mejorando la eficiencia y competitividad en el mercado local.",
+      "faq": [
+        {
+          "question": "¿Qué es la automatización con n8n?",
+          "answer": "Es un proceso que utiliza n8n para automatizar tareas y procesos, mejorando la eficiencia y reduciendo costos."
+        },
+        {
+          "question": "¿Cómo puede PairProgramming ayudar a mi empresa?",
+          "answer": "Ofrecemos soluciones personalizadas de automatización con n8n para mejorar la eficiencia y competitividad de tu empresa en Medellín."
+        }
+      ]
+    },
+    "colombia/cloud-devops": {
+      "title": "Cloud y DevOps en Colombia",
+      "description": "Desarrolla infraestructuras escalables y seguras con nuestros servicios de Cloud y DevOps en Medellín, Colombia. Confía en PairProgramming para tu negocio.",
+      "h1": "Cloud y DevOps",
+      "intro": "En Medellín, el tercer mercado tech de LATAM, las empresas necesitan soluciones de Cloud y DevOps para innovar. Con la Ley de Emprendimiento activa, PairProgramming ofrece servicios de AWS, Vercel, CI/CD, Docker y Kubernetes para impulsar el crecimiento de tus proyectos.",
+      "faq": [
+        {
+          "question": "¿Qué es Cloud y DevOps?",
+          "answer": "Es una práctica que combina desarrollo y operaciones para entregar software de manera rápida y segura."
+        },
+        {
+          "question": "¿Por qué elegir PairProgramming?",
+          "answer": "Porque ofrecemos soluciones personalizadas con tecnologías como Next.js, React y Node.js para satisfacer tus necesidades de Cloud y DevOps."
+        }
+      ]
+    },
+    "colombia/seo-contenido": {
+      "title": "SEO y Contenido en Colombia",
+      "description": "Mejora la visibilidad de tu empresa en Medellín con nuestros servicios de posicionamiento, schema markup, contenido programático y analytics. Confía en PairProgramming para impulsar tu negocio en el tercer mercado tech de LATAM.",
+      "h1": "SEO y Contenido en Colombia",
+      "intro": "En Medellín, el tercer mercado tech de LATAM, las empresas necesitan destacarse en el competitivo mercado digital. Con la Ley de Emprendimiento activa, es fundamental contar con una estrategia de SEO y contenido efectiva. En PairProgramming, con nuestro stack de Next.js, React, TypeScript, Node.js y PostgreSQL, ayudamos a las empresas a mejorar su visibilidad y alcanzar sus objetivos.",
+      "faq": [
+        {
+          "question": "¿Por qué es importante el SEO en Medellín?",
+          "answer": "El SEO es clave para destacar en el mercado digital de Medellín y atraer clientes potenciales."
+        },
+        {
+          "question": "¿Qué tecnologías utiliza PairProgramming?",
+          "answer": "Utilizamos Next.js, React, TypeScript, Node.js y PostgreSQL para desarrollar soluciones personalizadas."
+        }
+      ]
+    },
+    "colombia/modernizacion-legacy": {
+      "title": "Modernización Legacy Colombia",
+      "description": "Moderniza tus sistemas legacy en Colombia con PairProgramming. Migración a stack moderno, refactoring y reescritura incremental para empresas en Medellín y todo el país.",
+      "h1": "Modernización Legacy",
+      "intro": "En Medellín, el tercer mercado tech de LATAM, las empresas necesitan modernizar sus sistemas legacy para competir. Con la Ley de Emprendimiento activa, PairProgramming ofrece migración a stack moderno con Next.js, React, TypeScript, Node.js y PostgreSQL.",
+      "faq": [
+        {
+          "question": "¿Qué es la modernización legacy?",
+          "answer": "Proceso de migración a tecnologías actuales para mejorar la eficiencia y competitividad."
+        },
+        {
+          "question": "¿Cuál es el beneficio de modernizar?",
+          "answer": "Mejora la escalabilidad, seguridad y reducción de costos en el largo plazo."
+        }
+      ]
+    },
+    "colombia/qa-performance": {
+      "title": "QA y Performance en Colombia",
+      "description": "Mejora la calidad y el rendimiento de tus aplicaciones en Medellín, Colombia, con PairProgramming. Servicios de testing automatizado y optimización para empresas innovadoras.",
+      "h1": "QA y Performance en Colombia",
+      "intro": "En Medellín, el tercer mercado tech de LATAM, las empresas necesitan asegurar la calidad y el rendimiento de sus aplicaciones. Con la Ley de Emprendimiento activa, PairProgramming ofrece soluciones de testing automatizado y optimización para impulsar el éxito de tus proyectos.",
+      "faq": [
+        {
+          "question": "¿Por qué es importante el testing automatizado en Colombia?",
+          "answer": "Asegura la calidad y reduce errores en aplicaciones críticas."
+        },
+        {
+          "question": "¿Cómo mejora Lighthouse y Core Web Vitals la experiencia del usuario?",
+          "answer": "Optimiza el rendimiento y la velocidad de carga de las aplicaciones web."
+        }
+      ]
+    },
+    "colombia/branding-identidad": {
+      "title": "Branding e Identidad en Colombia",
+      "description": "Desarrolla una identidad visual fuerte en Medellín, Colombia. PairProgramming ofrece diseño de marca, UI/UX y sistemas de diseño para empresas innovadoras.",
+      "h1": "Branding e Identidad en Medellín",
+      "intro": "En Medellín, el tercer mercado tech de LATAM, las empresas necesitan una identidad visual sólida para destacarse. PairProgramming, fundada en 2022, ofrece soluciones de diseño de marca, UI/UX y sistemas de diseño para impulsar el crecimiento empresarial en este hub de innovación.",
+      "faq": [
+        {
+          "question": "¿Por qué es importante el Branding en Medellín?",
+          "answer": "El Branding es clave para destacarse en el mercado tech de Medellín."
+        },
+        {
+          "question": "¿Qué tecnologías utiliza PairProgramming?",
+          "answer": "PairProgramming utiliza Next.js, React, TypeScript, Node.js y PostgreSQL."
+        }
+      ]
+    },
+    "uruguay/saas-b2b": {
+      "title": "Arquitectura B2B SaaS en Uruguay",
+      "description": "Desarrollamos plataformas multi-tenant y soluciones de billing para empresas en Uruguay, aprovechando la alta penetración de internet en la región",
+      "h1": "Arquitectura B2B SaaS en Uruguay",
+      "intro": "En Uruguay, donde la tecnología y la innovación son fundamentales, las empresas necesitan soluciones de Arquitectura B2B SaaS personalizadas para aprovechar al máximo su potencial. PairProgramming, con sede en Uruguay, ofrece soluciones de plataformas multi-tenant, billing, feature flags y Row Level Security para satisfacer las necesidades de las empresas locales y regionales, aprovechando la zona franca tech y la alta concentración de sedes regionales de empresas globales.",
+      "faq": [
+        {
+          "question": "¿Qué es la Arquitectura B2B SaaS y cómo puede ayudar a mi empresa en Uruguay?",
+          "answer": "La Arquitectura B2B SaaS es un enfoque de desarrollo de software que permite a las empresas ofrecer soluciones escalables y seguras a sus clientes, mejorando la experiencia del usuario y reduciendo costos."
+        },
+        {
+          "question": "¿Cómo puedo implementar feature flags y Row Level Security en mi plataforma B2B SaaS en Uruguay?",
+          "answer": "Nuestro equipo de expertos en PairProgramming puede ayudarte a diseñar e implementar feature flags y Row Level Security para mejorar la seguridad y personalización de tu plataforma B2B SaaS."
+        }
+      ]
+    },
+    "uruguay/productos-digitales": {
+      "title": "Productos Digitales en Uruguay",
+      "description": "Desarrollamos soluciones digitales personalizadas en Uruguay, con tecnologías como Next.js y React, para impulsar el crecimiento de tu empresa en la ciudad con mayor penetración de internet de LATAM.",
+      "h1": "Productos Digitales en Uruguay",
+      "intro": "En Uruguay, donde la tecnología avanza a pasos agigantados, las empresas necesitan soluciones digitales innovadoras para mantenerse competitivas. PairProgramming, con su experiencia en apps web y móviles, dashboards y sistemas escalables, ofrece soluciones personalizadas para satisfacer las necesidades únicas de cada negocio en este vibrante ecosistema tecnológico.",
+      "faq": [
+        {
+          "question": "¿Por qué necesito productos digitales para mi empresa en Uruguay?",
+          "answer": "Para mantener la competitividad y aprovechar el alto nivel de penetración de internet en la región."
+        },
+        {
+          "question": "¿Qué tecnologías utiliza PairProgramming para desarrollar productos digitales?",
+          "answer": "Utilizamos Next.js, React, TypeScript, Node.js y PostgreSQL para crear soluciones robustas y escalables."
+        }
+      ]
+    },
+    "uruguay/crm-automatizacion": {
+      "title": "CRM y Automatización en Uruguay",
+      "description": "Implementa soluciones de CRM y Automatización en Uruguay con PairProgramming. Mejora la eficiencia y aumenta las ventas con nuestras soluciones personalizadas de Salesforce y HubSpot.",
+      "h1": "Automatiza tu negocio en Uruguay",
+      "intro": "En Uruguay, donde la penetración de internet es la más alta de LATAM, las empresas necesitan soluciones de CRM y Automatización para mantener su competitividad. PairProgramming, con sede en Uruguay, ofrece soluciones personalizadas de Salesforce y HubSpot para empresas que buscan mejorar su eficiencia y aumentar sus ventas en la región.",
+      "faq": [
+        {
+          "question": "¿Qué es CRM y cómo puede ayudar a mi empresa en Uruguay?",
+          "answer": "CRM es un sistema que gestiona las interacciones con clientes, mejorando la eficiencia y aumentando las ventas."
+        },
+        {
+          "question": "¿Cuál es el beneficio de implementar Automatización en mi negocio en Uruguay?",
+          "answer": "La automatización te permite ahorrar tiempo y recursos, enfocándote en estrategias de crecimiento y expansión en el mercado uruguayo."
+        }
+      ]
+    },
+    "uruguay/automatizacion-n8n": {
+      "title": "Automatización con n8n en Uruguay",
+      "description": "Automatización de procesos con n8n en Uruguay, mejorando la eficiencia de las empresas. PairProgramming ofrece soluciones personalizadas de workflows, integraciones y ETL.",
+      "h1": "Automatización con n8n",
+      "intro": "En Uruguay, con la mayor penetración de internet en LATAM y una creciente zona franca tech, las empresas necesitan optimizar sus procesos. PairProgramming, con experiencia en Next.js, React y Node.js, ofrece soluciones de automatización con n8n para mejorar la eficiencia y competitividad en el mercado local.",
+      "faq": [
+        {
+          "question": "¿Qué es la automatización con n8n?",
+          "answer": "Es un proceso que optimiza tareas y flujos de trabajo con n8n, mejorando la eficiencia empresarial."
+        },
+        {
+          "question": "¿Cómo puede PairProgramming ayudar?",
+          "answer": "Ofrecemos soluciones personalizadas de automatización con n8n, integraciones y ETL para empresas uruguayas."
+        }
+      ]
+    },
+    "uruguay/cloud-devops": {
+      "title": "Cloud y DevOps en Uruguay",
+      "description": "Desarrolla infraestructuras escalables y seguras con nuestros servicios de Cloud y DevOps en Uruguay. AWS, Vercel, CI/CD y más. Confía en PairProgramming para tu negocio.",
+      "h1": "Cloud y DevOps Uruguay",
+      "intro": "En Uruguay, con la mayor penetración de internet de LATAM, las empresas necesitan infraestructuras ágiles y seguras. PairProgramming, con sede en Uruguay, ofrece servicios de Cloud y DevOps personalizados con tecnologías como AWS, Vercel, Docker y Kubernetes, ayudando a empresas a escalar y proteger sus datos.",
+      "faq": [
+        {
+          "question": "¿Qué es Cloud y DevOps?",
+          "answer": "Cloud y DevOps son prácticas que combinan desarrollo y operaciones para entregar software de manera rápida y segura."
+        },
+        {
+          "question": "¿Por qué elegir PairProgramming?",
+          "answer": "Porque ofrecemos soluciones personalizadas de Cloud y DevOps con tecnologías de vanguardia y un equipo experto en Next.js, React y Node.js."
+        }
+      ]
+    },
+    "uruguay/seo-contenido": {
+      "title": "SEO y Contenido en Uruguay",
+      "description": "Mejora la visibilidad online de tu empresa en Uruguay con nuestros servicios de posicionamiento, schema markup y contenido programático en PairProgramming",
+      "h1": "SEO y Contenido en Uruguay",
+      "intro": "En Montevideo, con la mayor penetración de internet de LATAM, las empresas necesitan destacarse en línea. PairProgramming, con sede en Uruguay, ofrece servicios de SEO y contenido personalizados para empresas que buscan expandirse en la región, aprovechando la zona franca tech y la presencia de sedes regionales de empresas globales.",
+      "faq": [
+        {
+          "question": "¿Por qué es importante el SEO en Uruguay?",
+          "answer": "El SEO es clave para destacar en la competencia en línea en Uruguay, donde la mayoría de la población utiliza internet para buscar productos y servicios."
+        },
+        {
+          "question": "¿Cómo puedo mejorar mi presencia en línea en Uruguay?",
+          "answer": "Con nuestros servicios de contenido programático y analytics, puedes mejorar tu presencia en línea y alcanzar a más clientes en Uruguay."
+        }
+      ]
+    },
+    "uruguay/modernizacion-legacy": {
+      "title": "Modernización Legacy en Uruguay",
+      "description": "Migración a stack moderno en Uruguay. Refactoring y reescritura incremental con Next.js, React y TypeScript. Mejora la eficiencia de tu negocio con PairProgramming.",
+      "h1": "Moderniza tu legado",
+      "intro": "En Uruguay, donde la penetración de internet es la más alta de LATAM, las empresas necesitan estar a la vanguardia. La modernización legacy es clave para mantener la competitividad. En PairProgramming, expertos en Next.js, React y TypeScript, ayudamos a las empresas a migrar a un stack moderno, mejorando su eficiencia y productividad.",
+      "faq": [
+        {
+          "question": "¿Por qué necesito modernizar mi legado?",
+          "answer": "Para mejorar la eficiencia y competitividad de tu negocio en el mercado uruguayo."
+        },
+        {
+          "question": "¿Cuál es el proceso de modernización?",
+          "answer": "Nuestro proceso incluye refactoring, reescritura incremental y migración a un stack moderno con tecnologías como Next.js y React."
+        }
+      ]
+    },
+    "uruguay/qa-performance": {
+      "title": "QA y Performance en Uruguay",
+      "description": "Mejora la calidad y el rendimiento de tus aplicaciones en Uruguay con PairProgramming. Testing automatizado y optimización para empresas de la región.",
+      "h1": "QA y Performance en Uruguay",
+      "intro": "En Uruguay, con la mayor penetración de internet de LATAM, las empresas necesitan garantizar la calidad y el rendimiento de sus aplicaciones. PairProgramming ofrece soluciones de testing automatizado y optimización para empresas de la región, aprovechando tecnologías como Next.js, React y Node.js.",
+      "faq": [
+        {
+          "question": "¿Por qué es importante el testing automatizado en Uruguay?",
+          "answer": "El testing automatizado reduce errores y aumenta la eficiencia en el desarrollo de software."
+        },
+        {
+          "question": "¿Cómo puede PairProgramming mejorar el rendimiento de mis aplicaciones?",
+          "answer": "PairProgramming utiliza herramientas como Lighthouse y Core Web Vitals para optimizar el rendimiento de tus aplicaciones."
+        }
+      ]
+    },
+    "uruguay/branding-identidad": {
+      "title": "Branding e Identidad en Uruguay",
+      "description": "Desarrolla una identidad visual fuerte en Uruguay con PairProgramming. Diseño de marca, UI/UX y sistemas de diseño para empresas que buscan destacarse en el mercado uruguayo.",
+      "h1": "Branding e Identidad en Uruguay",
+      "intro": "En Uruguay, donde la penetración de internet es la más alta de LATAM, las empresas necesitan una identidad visual sólida para destacarse. PairProgramming, con su experiencia en diseño de marca, UI/UX y sistemas de diseño, ayuda a las empresas uruguayas a crear una presencia digital atractiva y coherente, aprovechando el potencial de la zona franca tech y la sede regional de empresas globales.",
+      "faq": [
+        {
+          "question": "¿Por qué es importante el branding en Uruguay?",
+          "answer": "El branding es clave para destacarse en el mercado uruguayo y atraer a clientes."
+        },
+        {
+          "question": "¿Qué servicios de diseño ofrece PairProgramming?",
+          "answer": "Diseño de marca, UI/UX, sistemas de diseño e identidad visual para empresas uruguayas."
+        }
+      ]
+    }
+  },
+  "industries": {
+    "seguros": {
+      "title": "Desarrollo de software para Seguros",
+      "description": "Soluciones tecnológicas personalizadas para el sector de seguros, incluyendo cotizadores multi-compañía y gestión de pólizas digitales",
+      "h1": "Tecnología para Seguros",
+      "intro": "El sector de seguros enfrenta desafíos tecnológicos como la gestión de pólizas y siniestros digitales. En PairProgramming, desarrollamos soluciones a medida con Next.js, React y TypeScript para mejorar la eficiencia y el servicio al cliente.",
+      "challenges": [
+        "Integración de sistemas de cotización",
+        "Gestión de pólizas y siniestros digitales",
+        "Seguridad de la información del cliente",
+        "Personalización de experiencias de usuario"
+      ],
+      "faq": [
+        {
+          "question": "¿Qué tecnologías utiliza PairProgramming para el desarrollo de software de seguros?",
+          "answer": "Utilizamos Next.js, React, TypeScript, Node.js y PostgreSQL para desarrollar soluciones personalizadas."
+        },
+        {
+          "question": "¿Cómo puedo mejorar la eficiencia en la gestión de pólizas y siniestros?",
+          "answer": "Nuestras soluciones de software permiten automatizar procesos y mejorar la experiencia del cliente."
+        },
+        {
+          "question": "¿Por qué es importante la personalización en el desarrollo de software de seguros?",
+          "answer": "La personalización permite adaptar las soluciones a las necesidades específicas de cada cliente y mejorar su satisfacción."
+        }
+      ]
+    },
+    "salud": {
+      "title": "Desarrollo de software para Salud Digital",
+      "description": "Desarrollamos soluciones de software personalizadas para el sector Salud Digital, mejorando la experiencia del paciente y la eficiencia clínica con tecnologías como Next.js y React",
+      "h1": "Soluciones de software para Salud Digital",
+      "intro": "El sector Salud Digital enfrenta desafíos como la gestión de historias clínicas electrónicas y la implementación de la telemedicina. En PairProgramming, desarrollamos soluciones a medida para mejorar la experiencia del paciente y la eficiencia clínica, utilizando tecnologías como Next.js y React para crear aplicaciones personalizadas y escalables.",
+      "challenges": [
+        "Integración de sistemas de información de salud",
+        "Seguridad y privacidad de los datos de los pacientes",
+        "Desarrollo de aplicaciones de telemedicina eficaces",
+        "Gestión de turnos y citas en línea"
+      ],
+      "faq": [
+        {
+          "question": "¿Qué tecnologías utiliza PairProgramming para desarrollar soluciones de Salud Digital?",
+          "answer": "Utilizamos Next.js, React, TypeScript, Node.js y PostgreSQL para desarrollar soluciones personalizadas y escalables."
+        },
+        {
+          "question": "¿Cómo pueden las soluciones de software de PairProgramming mejorar la experiencia del paciente?",
+          "answer": "Nuestras soluciones permiten una mayor accesibilidad a la atención médica a través de la telemedicina y la gestión de turnos en línea."
+        },
+        {
+          "question": "¿Qué beneficios ofrece la implementación de historias clínicas electrónicas en las instituciones de salud?",
+          "answer": "Mejora la eficiencia clínica, reduce errores y facilita el acceso a la información de los pacientes."
+        }
+      ]
+    },
+    "real-estate": {
+      "title": "Desarrollo de Software para Real Estate",
+      "description": "Soluciones personalizadas para proptech y portales inmobiliarios con Next.js, React y TypeScript. Mejora la experiencia del cliente con PairProgramming.",
+      "h1": "Tecnología para Real Estate",
+      "intro": "El sector inmobiliario enfrenta desafíos como la gestión de propiedades y la experiencia del cliente. PairProgramming ofrece soluciones a medida con tecnologías como Next.js y React para mejorar la eficiencia y el engagement.",
+      "challenges": [
+        "Gestión de propiedades y listados",
+        "Integración de tecnologías para tours virtuales",
+        "Desarrollo de CRM inmobiliario personalizado",
+        "Optimización de portales inmobiliarios para mejor experiencia del usuario"
+      ],
+      "faq": [
+        {
+          "question": "¿Cómo puedo mejorar la experiencia del cliente en mi portal inmobiliario?",
+          "answer": "Con soluciones personalizadas de PairProgramming, como tours virtuales y CRM inmobiliario."
+        },
+        {
+          "question": "¿Qué tecnologías utiliza PairProgramming para desarrollar software para Real Estate?",
+          "answer": "Next.js, React, TypeScript, Node.js y PostgreSQL."
+        },
+        {
+          "question": "¿Por qué elegir a PairProgramming para mi proyecto de proptech?",
+          "answer": "Por nuestra experiencia en desarrollo de software a medida y nuestro enfoque en la satisfacción del cliente."
+        }
+      ]
+    },
+    "eventos": {
+      "title": "Desarrollo de software para Eventos",
+      "description": "Soluciones tecnológicas personalizadas para eventos con PairProgramming. Desarrollamos soluciones de ticketing y gestión de asistentes con Next.js y React.",
+      "h1": "Eventos tecnológicos",
+      "intro": "El sector de eventos enfrenta desafíos como la gestión de asistentes y la validación de entradas. PairProgramming ofrece soluciones personalizadas con tecnologías como Next.js, React y TypeScript para mejorar la experiencia del usuario.",
+      "challenges": [
+        "Gestión de asistentes y validación de entradas",
+        "Integración de sistemas de pago y ticketing",
+        "Análisis de datos y seguimiento de asistentes",
+        "Personalización de la experiencia del usuario"
+      ],
+      "faq": [
+        {
+          "question": "¿Qué tecnologías utiliza PairProgramming para desarrollo de software de eventos?",
+          "answer": "Utilizamos Next.js, React, TypeScript y Node.js para desarrollar soluciones personalizadas."
+        },
+        {
+          "question": "¿Cómo puedo gestionar asistentes y validar entradas en mi evento?",
+          "answer": "Nuestras soluciones de gestión de asistentes y validación QR te permiten controlar y analizar la asistencia a tu evento."
+        },
+        {
+          "question": "¿Puedo personalizar la experiencia del usuario en mi evento con PairProgramming?",
+          "answer": "Sí, nuestras soluciones están diseñadas para ser personalizadas y adaptadas a las necesidades específicas de tu evento."
+        }
+      ]
+    },
+    "automotriz": {
+      "title": "Desarrollo de software Automotriz",
+      "description": "Desarrollamos soluciones personalizadas para concesionarias digitales, cotizadores de vehículos y gestión de flota con tecnologías como Next.js y React en PairProgramming",
+      "h1": "Soluciones de software para Automotriz",
+      "intro": "El sector Automotriz enfrenta desafíos como la digitalización de concesionarias y la gestión eficiente de flotas. En PairProgramming, desarrollamos soluciones a medida con tecnologías como Next.js y React para mejorar la experiencia del cliente y optimizar procesos.",
+      "challenges": [
+        "Digitalización de concesionarias",
+        "Gestión de flotas eficiente",
+        "Integración de sistemas de cotización",
+        "Análisis de datos para toma de decisiones"
+      ],
+      "faq": [
+        {
+          "question": "¿Cómo puedo digitalizar mi concesionaria?",
+          "answer": "Desarrollamos plataformas personalizadas para concesionarias digitales con Next.js y React."
+        },
+        {
+          "question": "¿Qué tecnologías utilizan para gestión de flotas?",
+          "answer": "Utilizamos Node.js y PostgreSQL para desarrollar soluciones de gestión de flotas eficientes."
+        },
+        {
+          "question": "¿Pueden integrar sistemas de cotización existentes?",
+          "answer": "Sí, integramos sistemas de cotización con nuestras soluciones personalizadas para una experiencia fluida."
+        }
+      ]
+    },
+    "fintech": {
+      "title": "Desarrollo de software Fintech",
+      "description": "Soluciones personalizadas de desarrollo de software para empresas Fintech. Mejora la eficiencia y seguridad de tus plataformas de inversión y pago con PairProgramming.",
+      "h1": "Fintech Innovador",
+      "intro": "El sector Fintech enfrenta desafíos como la seguridad de los pagos y la complejidad regulatoria. En PairProgramming, creamos soluciones a medida con tecnologías como Next.js y TypeScript para mejorar la experiencia del usuario y cumplir con los requisitos de compliance.",
+      "challenges": [
+        "Seguridad de los pagos en línea",
+        "Cumplimiento de regulaciones financieras",
+        "Integración de pasarelas de pago",
+        "Optimización de procesos de inversión"
+      ],
+      "faq": [
+        {
+          "question": "¿Cómo puedo mejorar la seguridad de mis plataformas de pago?",
+          "answer": "Con nuestra experiencia en desarrollo de software, implementamos medidas de seguridad robustas como autenticación de dos factores y cifrado de datos."
+        },
+        {
+          "question": "¿Puedo personalizar mis soluciones de Fintech?",
+          "answer": "Sí, en PairProgramming ofrecemos soluciones a medida para adaptarnos a tus necesidades específicas de negocio."
+        },
+        {
+          "question": "¿Cuál es el stack tecnológico que utilizan?",
+          "answer": "Utilizamos Next.js, React, TypeScript, Node.js y PostgreSQL para desarrollar soluciones innovadoras y escalables."
+        }
+      ]
+    },
+    "retail": {
+      "title": "Desarrollo de software Retail y E-commerce",
+      "description": "Soluciones personalizadas de comercio electrónico B2B y B2C, marketplaces y gestión de inventario con Next.js, React y TypeScript",
+      "h1": "Soluciones de Retail y E-commerce",
+      "intro": "El sector Retail y E-commerce enfrenta desafíos como la escalabilidad, la seguridad y la integración de sistemas. En PairProgramming, desarrollamos soluciones a medida con tecnologías como Next.js, React y TypeScript para mejorar la experiencia del cliente y aumentar la eficiencia",
+      "challenges": [
+        "Integración de sistemas de pago y logística",
+        "Gestión de inventario y cadena de suministro",
+        "Personalización de la experiencia del cliente",
+        "Seguridad y protección de datos"
+      ],
+      "faq": [
+        {
+          "question": "¿Cómo puedo mejorar la experiencia del cliente en mi tienda en línea?",
+          "answer": "Con soluciones personalizadas de comercio electrónico y marketplace"
+        },
+        {
+          "question": "¿Cuál es la importancia de la gestión de inventario en el sector Retail?",
+          "answer": "Permite una mayor eficiencia y reducción de costos"
+        },
+        {
+          "question": "¿Qué tecnologías utiliza PairProgramming para desarrollar soluciones de Retail y E-commerce?",
+          "answer": "Next.js, React, TypeScript y PostgreSQL"
+        }
+      ]
+    }
+  }
+}

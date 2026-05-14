@@ -1,9 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
-import Sidebar from "../../components/Sidebar";
-import Footer from "../../components/Footer";
-import MainContainer from "../../components/MainContainer";
 import DashboardAdminContent from "../../components/DashboardAdminContent";
 
 export default function DashboardAdminPage() {
@@ -36,13 +33,5 @@ export default function DashboardAdminPage() {
     return null;
   }
 
-  return (
-    <div className="min-h-screen bg-background">
-      <Sidebar />
-      <MainContainer>
-        <DashboardAdminContent />
-        <Footer />
-      </MainContainer>
-    </div>
-  );
+  return <DashboardAdminContent />;
 }

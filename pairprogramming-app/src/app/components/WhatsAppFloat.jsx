@@ -18,10 +18,8 @@ export default function WhatsAppFloat() {
     } catch (e) {
       // fallback hardcoded
       return [
-        { name: "Aleart Esteban", phone: "+34673782934" },
-        { name: "Rendom Josue", phone: "+56940881083" },
-        { name: "Rubiño Pablo", phone: "+5492616396981" },
-        { name: "Sector Comercial -Bou Mauricio", phone: "+5493412696133" },
+        { name: "Esteban Aleart", phone: "+34673782934" },
+        { name: "Mauricio Bou", phone: "+5493412696133" },
       ];
     }
   }
@@ -100,7 +98,7 @@ export default function WhatsAppFloat() {
 
             {/* Opción rápida general si no selecciona */}
             <button
-              onClick={() => openWhatsApp(contacts[3].phone)} // Default al comercial por ejemplo
+              onClick={() => openWhatsApp(contacts[1].phone)} // Default al comercial
               className="w-full bg-[#25D366] hover:bg-[#20BA5A] text-white py-2.5 px-4 rounded-lg font-semibold transition-colors duration-150 flex items-center justify-center gap-2 mt-3"
             >
               <svg

@@ -7,7 +7,7 @@ export default function robots() {
         disallow: ["/admin/", "/api/", "/admin"],
       },
     ],
-    sitemap: "https://www.pairprogramming.com.ar/sitemap.xml",
-    host: "https://www.pairprogramming.com.ar",
+    sitemap: "https://pairprogramming.com.ar/sitemap.xml",
+    host: "https://pairprogramming.com.ar",
   };
 }

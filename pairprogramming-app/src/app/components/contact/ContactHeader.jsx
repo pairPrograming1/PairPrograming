@@ -1,4 +1,4 @@
-export function ContactHeader({ isSidebarExpanded }) {
+export function ContactHeader() {
   return (
     <div className="text-center mb-12">
       <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-brand-blue/10 border border-brand-blue/20 mb-6 animate-fade-in-up">
@@ -9,9 +9,7 @@ export function ContactHeader({ isSidebarExpanded }) {
       </div>
 
       <h1
-        className={`font-bold mb-4 text-foreground tracking-tight leading-tight transition-all duration-300 animate-fade-in-up stagger-1 ${
-          isSidebarExpanded ? "text-2xl lg:text-3xl" : "text-3xl lg:text-4xl"
-        }`}
+        className={`font-bold mb-4 text-foreground tracking-tight leading-tight transition-all duration-300 animate-fade-in-up stagger-1 text-3xl lg:text-4xl`}
       >
         Hablemos de tu{" "}
         <span className="text-brand-blue">Proyecto</span>

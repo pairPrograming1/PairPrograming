@@ -1,6 +1,5 @@
 "use client";
 import { useState } from "react";
-import { useSidebar } from "../context/SidebarContext";
 import { Container } from "./ui/Container";
 import { portfolioVideos } from "../data/portfolioVideos";
 import PortfolioHeader from "./portfolio/PortfolioHeader";
@@ -8,7 +7,6 @@ import ProjectList from "./portfolio/ProjectList";
 import PortfolioCTA from "./portfolio/PortfolioCTA";
 
 export default function Portfolio() {
-  const { isSidebarExpanded } = useSidebar();
   const [current, setCurrent] = useState(0);
 
   return (
@@ -23,7 +21,7 @@ export default function Portfolio() {
       </div>
 
       <Container size="full" className="relative z-10">
-        <PortfolioHeader isSidebarExpanded={isSidebarExpanded} />
+        <PortfolioHeader />
 
         <ProjectList
           projects={portfolioVideos}

@@ -1,13 +1,10 @@
 "use client";
-import { useSidebar } from "../context/SidebarContext";
 import { Container } from "./ui/Container";
 import { ContactHeader } from "./contact/ContactHeader";
 import { ContactForm } from "./contact/ContactForm";
 import { ContactInfo } from "./sections/ContactInfo";
 
 export default function Contacto() {
-  const { isSidebarExpanded } = useSidebar();
-
   return (
     <section className="py-16 lg:py-24 bg-background text-foreground min-h-screen relative overflow-hidden border-b border-border-color">
       {/* Background blobs */}
@@ -20,10 +17,10 @@ export default function Contacto() {
       </div>
 
       <Container
-        size={isSidebarExpanded ? "expanded" : "default"}
+        size="default"
         className="relative z-10"
       >
-        <ContactHeader isSidebarExpanded={isSidebarExpanded} />
+        <ContactHeader />
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch">
           <div className="lg:col-span-1 space-y-6 h-full animate-fade-in-up stagger-3">

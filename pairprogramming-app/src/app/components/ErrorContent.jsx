@@ -1,17 +1,14 @@
 
 "use client";
 import Link from "next/link";
-import { useSidebar } from "../context/SidebarContext";
 import { Container } from "./ui/Container";
 import { Card } from "./ui/Card";
 import { Button } from "./ui/Button";
 
 export default function ErrorContent() {
-  const { isSidebarExpanded } = useSidebar();
-
   return (
     <section className="py-16 lg:py-20 bg-black text-white min-h-screen flex items-center">
-      <Container size={isSidebarExpanded ? "expanded" : "default"}>
+      <Container size="default">
         <div className="text-center fade-in">
           <Card padding="lg" className="max-w-2xl mx-auto">
             {/* Icono animado */}
@@ -25,11 +22,7 @@ export default function ErrorContent() {
 
             {/* Título y descripción */}
             <h1
-              className={`font-bold mb-6 bg-gradient-to-r from-red-400 to-orange-400 bg-clip-text text-transparent ${
-                isSidebarExpanded
-                  ? "text-2xl lg:text-3xl"
-                  : "text-3xl lg:text-4xl"
-              }`}
+              className={`font-bold mb-6 bg-gradient-to-r from-red-400 to-orange-400 bg-clip-text text-transparent text-3xl lg:text-4xl`}
             >
               Ha Ocurrido un Error
             </h1>

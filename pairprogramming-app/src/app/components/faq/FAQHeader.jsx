@@ -1,7 +1,7 @@
 "use client";
 import { HelpCircle, Sparkles } from "lucide-react";
 
-export function FAQHeader({ isSidebarExpanded }) {
+export function FAQHeader() {
   return (
     <div className="text-center mb-12 fade-in">
       <div className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.12em] text-primary mb-4">
@@ -9,9 +9,7 @@ export function FAQHeader({ isSidebarExpanded }) {
         Centro de ayuda
       </div>
       <h1
-        className={`font-bold mb-4 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent transition-all duration-300 ${
-          isSidebarExpanded ? "text-2xl lg:text-3xl" : "text-3xl lg:text-4xl"
-        }`}
+        className={`font-bold mb-4 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent transition-all duration-300 text-3xl lg:text-4xl`}
       >
         Preguntas Frecuentes
       </h1>

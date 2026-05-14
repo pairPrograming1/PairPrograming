@@ -1,7 +1,6 @@
 
 "use client";
 import { useState, useEffect } from "react";
-import { useSidebar } from "../context/SidebarContext";
 import { Container } from "../components/ui/Container";
 import { Card } from "../components/ui/Card";
 import AdminHeader from "./admin/AdminHeader";
@@ -13,7 +12,6 @@ import UsersTab from "./admin/tabs/UsersTab";
 import SettingsTab from "./admin/tabs/SettingsTab";
 
 export default function DashboardAdminContent() {
-  const { isSidebarExpanded } = useSidebar();
   const [activeTab, setActiveTab] = useState("overview");
   const [projects, setProjects] = useState([]);
   const [messages, setMessages] = useState([]);
@@ -93,24 +91,17 @@ export default function DashboardAdminContent() {
     setUsers([
       {
         id: 1,
-        name: "Pablo Rubiño",
-        role: "Full-Stack Developer",
+        name: "Esteban Aleart",
+        role: "Founder & Lead Engineer",
         status: "activo",
         lastLogin: "2025-01-15",
       },
       {
         id: 2,
-        name: "Esteban Aleart",
-        role: "Full-Stack Developer",
+        name: "Mauricio Bou",
+        role: "Operations & Sales",
         status: "activo",
         lastLogin: "2025-01-15",
-      },
-      {
-        id: 3,
-        name: "Josue Rendom",
-        role: "Full-Stack Developer",
-        status: "activo",
-        lastLogin: "2025-01-14",
       },
     ]);
   }, []);
@@ -179,8 +170,8 @@ export default function DashboardAdminContent() {
 
   return (
     <section className="py-16 lg:py-20 bg-card-bg text-white min-h-screen">
-      <Container size={isSidebarExpanded ? "expanded" : "default"}>
-        <AdminHeader isSidebarExpanded={isSidebarExpanded} />
+      <Container size="default">
+        <AdminHeader />
 
         <Card padding="md" className="mb-6 mx-4 md:mx-0">
           <AdminTabs activeTab={activeTab} setActiveTab={setActiveTab} />

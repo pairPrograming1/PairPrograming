@@ -1,6 +1,5 @@
 "use client";
 import { useState, useEffect } from "react";
-import { useSidebar } from "../context/SidebarContext";
 import { Container } from "./ui/Container";
 import { Card } from "./ui/Card";
 import CalendarioHeader from "./calendario/CalendarioHeader";
@@ -11,7 +10,6 @@ import SelectedDateEvents from "./calendario/SelectedDateEvents";
 import { useCalendario } from "../hooks/useCalendario";
 
 export default function CalendarioContent() {
-  const { isSidebarExpanded } = useSidebar();
   const {
     currentDate,
     selectedDate,
@@ -34,9 +32,8 @@ export default function CalendarioContent() {
 
   return (
     <section className="py-16 lg:py-20 bg-card-bg text-white min-h-screen">
-      <Container size={isSidebarExpanded ? "expanded" : "default"}>
+      <Container size="default">
         <CalendarioHeader
-          isSidebarExpanded={isSidebarExpanded}
           currentDate={currentDate}
         />
 
@@ -53,7 +50,6 @@ export default function CalendarioContent() {
           <div className="lg:col-span-3">
             <Card padding="md">
               <CalendarioHeader
-                isSidebarExpanded={isSidebarExpanded}
                 currentDate={currentDate}
                 onPreviousMonth={goToPreviousMonth}
                 onNextMonth={goToNextMonth}
