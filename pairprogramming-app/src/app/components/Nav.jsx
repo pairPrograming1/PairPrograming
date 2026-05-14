@@ -8,6 +8,7 @@ import ChatDrawer from "./ChatDrawer";
 const NAV_LINKS = [
   { href: "/servicios", label: "Servicios" },
   { href: "/portafolio", label: "Portafolio" },
+  { href: "/blog", label: "Blog" },
   { href: "/nosotros", label: "Nosotros" },
   { href: "/faq", label: "FAQ" },
 ];

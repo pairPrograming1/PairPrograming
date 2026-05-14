@@ -201,6 +201,126 @@
   }
 }
 
+/* ── Blog prose ── */
+
+.prose-pp {
+  color: var(--ink-muted);
+  font-size: 16px;
+  line-height: 1.75;
+}
+.prose-pp h2 {
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--ink);
+  letter-spacing: -0.4px;
+  margin-top: 2.5em;
+  margin-bottom: 0.75em;
+}
+.prose-pp h3 {
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--ink);
+  letter-spacing: -0.3px;
+  margin-top: 2em;
+  margin-bottom: 0.5em;
+}
+.prose-pp p {
+  margin-bottom: 1.25em;
+}
+.prose-pp a {
+  color: var(--primary);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.prose-pp a:hover {
+  color: var(--primary-hover);
+}
+.prose-pp strong {
+  color: var(--ink);
+  font-weight: 600;
+}
+.prose-pp ul, .prose-pp ol {
+  padding-left: 1.5em;
+  margin-bottom: 1.25em;
+}
+.prose-pp ul {
+  list-style-type: disc;
+}
+.prose-pp ol {
+  list-style-type: decimal;
+}
+.prose-pp li {
+  margin-bottom: 0.5em;
+}
+.prose-pp blockquote {
+  border-left: 2px solid var(--primary);
+  padding-left: 1.25em;
+  margin: 1.5em 0;
+  color: var(--ink-subtle);
+  font-style: italic;
+}
+.prose-pp code {
+  font-family: var(--font-mono), "JetBrains Mono", monospace;
+  font-size: 0.875em;
+  background: var(--surface-1);
+  border: 1px solid var(--hairline);
+  padding: 0.15em 0.4em;
+  border-radius: 4px;
+  color: var(--ink);
+}
+.prose-pp pre {
+  background: var(--surface-1);
+  border: 1px solid var(--hairline);
+  border-radius: 8px;
+  padding: 1.25em;
+  margin: 1.5em 0;
+  overflow-x: auto;
+}
+.prose-pp pre code {
+  background: none;
+  border: none;
+  padding: 0;
+  font-size: 13px;
+  line-height: 1.6;
+}
+.prose-pp hr {
+  border: none;
+  border-top: 1px solid var(--hairline);
+  margin: 2.5em 0;
+}
+.prose-pp table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5em 0;
+  font-size: 14px;
+  line-height: 1.5;
+  display: block;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+.prose-pp th {
+  background: var(--surface-1);
+  color: var(--ink);
+  font-family: var(--font-mono), "JetBrains Mono", monospace;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+  text-align: left;
+  padding: 10px 14px;
+  border: 1px solid var(--hairline);
+  white-space: nowrap;
+}
+.prose-pp td {
+  padding: 10px 14px;
+  border: 1px solid var(--hairline);
+  color: var(--ink-muted);
+  vertical-align: top;
+}
+.prose-pp tbody tr:hover {
+  background: var(--surface-1);
+}
+
 /* ── Reveal on scroll ── */
 
 .reveal {

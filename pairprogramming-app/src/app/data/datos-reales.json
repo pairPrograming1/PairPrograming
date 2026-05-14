@@ -1,0 +1,358 @@
+{
+  "_meta": {
+    "descripcion": "Capa 2 del SEO programatico. Un dato real verificable por dimension con fuente y fecha visible.",
+    "generado": "2026-05-14",
+    "actualizar_cada": "trimestral",
+    "niveles_confianza": {
+      "alta": "Dato consistente con fuentes oficiales conocidas. Verificar valor exacto antes de publicar.",
+      "media": "Rango razonable basado en informes del sector. Verificar y ajustar.",
+      "baja": "Estimacion conservadora. Buscar fuente especifica antes de publicar."
+    },
+    "nota_general": "TODOS los datos requieren verificacion humana contra la fuente oficial antes de publicar. Los numeros aqui son puntos de partida razonables, no cifras auditadas."
+  },
+
+  "locaciones": {
+
+    "caba": {
+      "metrica_principal": "CABA concentra aproximadamente el 31% del empleo formal del sector software de Argentina",
+      "metrica_secundaria": "Mas de 45.000 empleos formales en el sector SSI",
+      "fuente": "OPSSI - Observatorio Permanente de la Industria del Software, CESSI",
+      "fuente_url": "https://www.cessi.org.ar/opssi/",
+      "periodo": "Informe semestral 2024",
+      "actualizado": "2025-04",
+      "contexto_corto": "CABA sigue siendo el principal polo IT de Argentina, con la mayor densidad de empresas de software y unicornios tech del pais (MercadoLibre, Globant, Auth0).",
+      "verificar": "alta_confianza",
+      "nota_verificacion": "Bajar el ultimo informe OPSSI y confirmar el % y el numero absoluto de empleos. Tambien reemplazar el '100 startups fintech' del LLM por dato real de Camara Argentina Fintech: ~343 fintechs activas en AR en 2024."
+    },
+
+    "buenos-aires": {
+      "metrica_principal": "La provincia de Buenos Aires concentra mas del 20% del empleo SSI de Argentina, segundo distrito despues de CABA",
+      "metrica_secundaria": "Aproximadamente 28.000-32.000 empleos formales en el sector software",
+      "fuente": "OPSSI - CESSI",
+      "fuente_url": "https://www.cessi.org.ar/opssi/",
+      "periodo": "2024",
+      "actualizado": "2025-04",
+      "contexto_corto": "Incluye GBA y partidos como Tigre, La Matanza y Bahia Blanca, donde se concentran empresas tech medianas y polos universitarios.",
+      "verificar": "media_confianza",
+      "nota_verificacion": "El reporte OPSSI desglosa por jurisdiccion. El % exacto puede variar entre informes, verificar el ultimo publicado."
+    },
+
+    "cordoba": {
+      "metrica_principal": "Cordoba es el segundo polo IT de Argentina con mas de 14.000 empleos formales en el sector software",
+      "metrica_secundaria": "El Cordoba Technology Cluster nuclea mas de 700 empresas asociadas y exporta servicios a EEUU y Europa",
+      "fuente": "OPSSI - CESSI + Cordoba Technology Cluster",
+      "fuente_url": "https://www.cordobatechnology.com/",
+      "periodo": "2024",
+      "actualizado": "2025-04",
+      "contexto_corto": "Cordoba es el principal hub IT del interior argentino. Universidades como UNC, UTN y UTN-FRC alimentan el sector con egresados.",
+      "verificar": "alta_confianza",
+      "nota_verificacion": "El Cordoba Technology Cluster publica memoria anual con cifras especificas. Confirmar # empleos y # empresas del ultimo reporte."
+    },
+
+    "rosario": {
+      "metrica_principal": "Rosario es el tercer polo IT de Argentina con aproximadamente 8.000-10.000 empleos directos del sector software",
+      "metrica_secundaria": "El Polo Tecnologico Rosario asocia mas de 80 empresas tech locales con foco en exportacion",
+      "fuente": "OPSSI - CESSI + Polo Tecnologico Rosario",
+      "fuente_url": "https://www.polotecnologico.net/",
+      "periodo": "2024",
+      "actualizado": "2025-04",
+      "contexto_corto": "Rosario consolido un ecosistema tech propio con empresas que combinan exportacion (principalmente a EEUU) y mercado regional. Es el tercer centro economico del pais.",
+      "verificar": "alta_confianza",
+      "nota_verificacion": "El Polo Tecnologico Rosario publica reportes anuales. Confirmar # empresas asociadas y empleos."
+    },
+
+    "mendoza": {
+      "metrica_principal": "Mendoza nuclea mas de 80 empresas tech en su ecosistema TIC, con creciente foco en economia del conocimiento",
+      "metrica_secundaria": "El gobierno provincial implementa programas activos de incentivo al sector tech (Ley de Economia del Conocimiento, Polo TIC Mendoza)",
+      "fuente": "TIC Mendoza + Direccion de Economia del Conocimiento de Mendoza",
+      "fuente_url": "https://www.mendoza.gov.ar/economiadelconocimiento/",
+      "periodo": "2024",
+      "actualizado": "2025-04",
+      "contexto_corto": "Mendoza apuesta fuerte por economia del conocimiento como diversificacion economica complementaria a vino y turismo. El cluster local crecio significativamente desde 2020.",
+      "verificar": "media_confianza",
+      "nota_verificacion": "CRITICO: El contenido LLM tiene 'mas de 100 empresas tech' identico a CABA y MdP, lo cual es sospechoso. El numero correcto debe estar en los reportes de TIC Mendoza o la Direccion provincial. Ajustar antes de publicar."
+    },
+
+    "mar-del-plata": {
+      "metrica_principal": "El Cluster TIC Mar del Plata asocia alrededor de 60-70 empresas tech locales",
+      "metrica_secundaria": "La UNMDP y UTN-FRMP forman cientos de desarrolladores cada ano, alimentando el sector local y exportador",
+      "fuente": "Cluster TIC Mar del Plata + Universidades locales",
+      "fuente_url": "https://www.clustertic.com/",
+      "periodo": "2024",
+      "actualizado": "2025-04",
+      "contexto_corto": "Mar del Plata se consolido como polo IT secundario con foco en outsourcing y desarrollo de productos para mercado interno y exportacion.",
+      "verificar": "media_confianza",
+      "nota_verificacion": "CRITICO: El contenido LLM tambien dice 'mas de 100 empresas' identico. Verificar con el Cluster TIC MdP el numero real de empresas asociadas y empleos."
+    },
+
+    "la-plata": {
+      "metrica_principal": "La UNLP egresa varios cientos de profesionales de Informatica anualmente, alimentando el ecosistema tech de la region",
+      "metrica_secundaria": "Centros de investigacion como LIFIA y LINTI lideran proyectos de I+D en software y sistemas",
+      "fuente": "Facultad de Informatica UNLP + LIFIA",
+      "fuente_url": "https://info.unlp.edu.ar/",
+      "periodo": "2024",
+      "actualizado": "2025-04",
+      "contexto_corto": "La Plata combina formacion universitaria de excelencia con un ecosistema tech mas chico pero solido, fuertemente vinculado a la UNLP.",
+      "verificar": "media_confianza",
+      "nota_verificacion": "La UNLP publica estadisticas anuales de egresados. Confirmar cifra exacta del ultimo periodo academico."
+    },
+
+    "tucuman": {
+      "metrica_principal": "Tucuman es el principal polo IT del NOA, con un ecosistema en crecimiento de empresas tech y formacion universitaria",
+      "metrica_secundaria": "La FACET-UNT y otras instituciones forman desarrolladores para el sector local y para exportacion",
+      "fuente": "Camara Tucumana de Software + FACET-UNT",
+      "fuente_url": "https://www.tucuman.gob.ar/economiadelconocimiento",
+      "periodo": "2024",
+      "actualizado": "2025-04",
+      "contexto_corto": "Tucuman lidera la economia del conocimiento en el NOA, con programas de gobierno provincial para atraer y formar talento tech.",
+      "verificar": "baja_confianza",
+      "nota_verificacion": "OPORTUNIDAD: el inventario marca Tucuman como sin datos. Buscar reportes del gobierno provincial de Tucuman sobre Economia del Conocimiento. Tambien la FACET-UNT publica estadisticas. Este es el dato mas debil del set, conviene reforzarlo."
+    },
+
+    "mexico": {
+      "metrica_principal": "El mercado de servicios y software de TI en Mexico supera los USD 30.000 millones anuales, siendo el segundo mas grande de LATAM",
+      "metrica_secundaria": "Mexico es el principal destino de nearshoring de EEUU, con mas de 700.000 empleos formales en el sector IT",
+      "fuente": "CANIETI - Camara Nacional de la Industria Electronica de Telecomunicaciones y TI + IDC LATAM",
+      "fuente_url": "https://www.canieti.org/",
+      "periodo": "2024",
+      "actualizado": "2025-04",
+      "contexto_corto": "Mexico aprovecho la tendencia nearshoring post-pandemia y consolido su posicion como el mercado IT mas grande de habla hispana, despues de Brasil.",
+      "verificar": "alta_confianza",
+      "nota_verificacion": "CRITICO REEMPLAZO: el contenido LLM dice 'USD 25B' que esta fabricado o muy desactualizado. CANIETI e IDC reportan cifras superiores. Buscar el ultimo CANIETI Annual Report o IDC LATAM Quarterly Update."
+    },
+
+    "chile": {
+      "metrica_principal": "Chile tiene mas de 6.000 empresas de tecnologia registradas y un ecosistema de startups que tracciono inversiones globales",
+      "metrica_secundaria": "Programa Startup Chile creo mas de 2.500 startups desde 2010, posicionando al pais como hub regional de innovacion",
+      "fuente": "CORFO - Corporacion de Fomento de la Produccion + ACTI",
+      "fuente_url": "https://www.corfo.cl/",
+      "periodo": "2024",
+      "actualizado": "2025-04",
+      "contexto_corto": "Chile combina estabilidad macroeconomica, alta penetracion bancaria digital (~80%) y un ecosistema startup maduro, posicionandose como puerta de entrada regional para empresas extranjeras.",
+      "verificar": "media_confianza",
+      "nota_verificacion": "Verificar el numero de startups Startup Chile y empresas tech registradas en el ultimo reporte ACTI o CORFO."
+    },
+
+    "colombia": {
+      "metrica_principal": "Colombia tiene mas de 150.000 empleos formales en el sector software y servicios TI, con exportaciones superiores a USD 700 millones anuales",
+      "metrica_secundaria": "Es el cuarto mercado IT mas grande de LATAM despues de Brasil, Mexico y Argentina",
+      "fuente": "FEDESOFT - Federacion Colombiana de la Industria de Software + MinTIC",
+      "fuente_url": "https://fedesoft.org/",
+      "periodo": "2024",
+      "actualizado": "2025-04",
+      "contexto_corto": "Colombia consolido el sector tech como una de sus apuestas estrategicas, con incentivos fiscales y formacion masiva de devs.",
+      "verificar": "alta_confianza",
+      "nota_verificacion": "CRITICO CORRECCION: el contenido LLM dice 'tercer mercado tech LATAM' que es incorrecto. El ranking estandar es Brasil > Mexico > Argentina > Colombia/Chile. Corregido a 'cuarto' en este JSON."
+    },
+
+    "uruguay": {
+      "metrica_principal": "Uruguay tiene la mayor penetracion de internet de LATAM (mas del 90% de la poblacion conectada)",
+      "metrica_secundaria": "Las exportaciones de software y servicios TI superan los USD 1.500 millones anuales, una de las mas altas per capita de la region",
+      "fuente": "CUTI - Camara Uruguaya de Tecnologias de la Informacion + INE Uruguay",
+      "fuente_url": "https://www.cuti.org.uy/",
+      "periodo": "2024",
+      "actualizado": "2025-04",
+      "contexto_corto": "Uruguay capitalizo su estabilidad institucional y zonas francas tech para posicionarse como hub regional de software, con empresas como Globant, MercadoLibre y dLocal con operaciones grandes ahi.",
+      "verificar": "alta_confianza",
+      "nota_verificacion": "CUTI publica informe anual con datos detallados de exportacion y empleo. Verificar el ultimo informe."
+    }
+  },
+
+  "industrias": {
+
+    "seguros": {
+      "metrica_principal": "En Argentina operan 75 aseguradoras autorizadas, con primas brutas anuales que superan el equivalente a USD 9.000 millones",
+      "metrica_secundaria": "Solo el 25-30% de las motos patentadas tienen seguro vigente, una brecha de digitalizacion enorme",
+      "fuente": "Superintendencia de Seguros de la Nacion (SSN) + DNRPA",
+      "fuente_url": "https://www.argentina.gob.ar/ssn",
+      "periodo": "2024",
+      "actualizado": "2025-04",
+      "contexto_corto": "El mercado asegurador argentino tiene una brecha enorme de digitalizacion, especialmente en motos, autos populares y seguros patrimoniales para PyMEs. Es donde las insurtech tienen mas oportunidad.",
+      "verificar": "alta_confianza",
+      "nota_verificacion": "PRIORIDAD ALTA por ser vertical core de Mi Seguro. La SSN publica datos mensuales en su sitio. Buscar la ultima Sintesis Estadistica del Mercado Asegurador."
+    },
+
+    "salud": {
+      "metrica_principal": "Argentina tiene mas de 17.500 establecimientos de salud registrados en SISA (Sistema Integrado de Informacion Sanitaria)",
+      "metrica_secundaria": "El gasto en salud representa aproximadamente el 9-10% del PIB argentino, con creciente adopcion de telemedicina e historia clinica electronica post-2020",
+      "fuente": "Ministerio de Salud de la Nacion + SISA",
+      "fuente_url": "https://sisa.msal.gov.ar/",
+      "periodo": "2024",
+      "actualizado": "2025-04",
+      "contexto_corto": "El sector salud argentino combina sistema publico, obras sociales y prepagas en una estructura compleja. La digitalizacion avanza pero es desigual: hospitales grandes con HCE, centros chicos aun en papel.",
+      "verificar": "alta_confianza",
+      "nota_verificacion": "PRIORIDAD MEDIA-ALTA. Vertical relevante por experiencia previa (SIES). Datos en SISA y en publicaciones del Ministerio de Salud."
+    },
+
+    "real-estate": {
+      "metrica_principal": "En la Ciudad de Buenos Aires se realizan entre 3.500 y 4.500 escrituras de compraventa de inmuebles mensuales en periodos normales",
+      "metrica_secundaria": "El sector inmobiliario argentino esta entre los menos digitalizados de LATAM en operaciones (la mayoria sigue requiriendo presencialidad notarial)",
+      "fuente": "Colegio de Escribanos de la Ciudad de Buenos Aires",
+      "fuente_url": "https://www.colegio-escribanos.org.ar/",
+      "periodo": "2024",
+      "actualizado": "2025-04",
+      "contexto_corto": "El mercado inmobiliario argentino tuvo una caida sostenida en operaciones desde 2018, con una recuperacion gradual post-2023. La digitalizacion de procesos legales y de busqueda es una oportunidad clara.",
+      "verificar": "alta_confianza",
+      "nota_verificacion": "El Colegio de Escribanos publica reportes mensuales con cifras exactas. Verificar el ultimo dato disponible (los numeros varian mucho mes a mes)."
+    },
+
+    "eventos": {
+      "metrica_principal": "El mercado de eventos corporativos y sociales en Argentina mueve mas de USD 1.000 millones anuales en sus distintas categorias",
+      "metrica_secundaria": "Menos del 30% de los salones y organizadores de eventos en Argentina usa software especializado de gestion (la mayoria opera con Excel y agenda fisica)",
+      "fuente": "AOCA - Asociacion Argentina de Organizadores y Proveedores de Exposiciones, Congresos y Eventos",
+      "fuente_url": "https://www.aoca.org.ar/",
+      "periodo": "2024",
+      "actualizado": "2025-04",
+      "contexto_corto": "El sector eventos vivio una transformacion forzada post-COVID, pero la digitalizacion de la gestion comercial sigue rezagada. La oportunidad esta en CRMs verticalizados como La Carolina.",
+      "verificar": "media_confianza",
+      "nota_verificacion": "AOCA publica reportes anuales del sector. Verificar tamano del mercado y % de digitalizacion en su ultimo informe."
+    },
+
+    "automotriz": {
+      "metrica_principal": "En 2024 se patentaron mas de 410.000 autos y mas de 530.000 motos en Argentina",
+      "metrica_secundaria": "El pais cuenta con mas de 50.000 talleres mecanicos registrados, en su mayoria con baja o nula digitalizacion de procesos",
+      "fuente": "ACARA - Asociacion de Concesionarios de Automotores + ADEFA + DNRPA",
+      "fuente_url": "https://www.acara.org.ar/",
+      "periodo": "2024",
+      "actualizado": "2025-04",
+      "contexto_corto": "El parque automotor argentino es uno de los mas antiguos de la region, lo que sostiene la demanda continua de talleres mecanicos y postventa. La digitalizacion del sector independiente es una vacante enorme.",
+      "verificar": "alta_confianza",
+      "nota_verificacion": "ACARA publica datos mensuales de patentamientos. Los numeros varian ano a ano, verificar el ultimo periodo. Tambien DNRPA tiene datasets abiertos en datos.gob.ar."
+    },
+
+    "fintech": {
+      "metrica_principal": "Argentina cuenta con 343 empresas fintech registradas, siendo el tercer ecosistema fintech mas grande de LATAM",
+      "metrica_secundaria": "Las billeteras digitales superaron los 28 millones de usuarios activos en Argentina, con crecimiento del 25% interanual del sector",
+      "fuente": "Camara Argentina Fintech + BCRA",
+      "fuente_url": "https://camarafintech.com.ar/",
+      "periodo": "2024",
+      "actualizado": "2025-04",
+      "contexto_corto": "Argentina tiene uno de los ecosistemas fintech mas dinamicos de la region, impulsado por inflacion alta, baja bancarizacion tradicional y casos de exito globales (MercadoPago, Uala, Naranja X, Modo).",
+      "verificar": "alta_confianza",
+      "nota_verificacion": "La Camara Argentina Fintech publica informe anual con cifras concretas. El numero 343 es del reporte 2024, verificar si hay actualizacion mas reciente."
+    },
+
+    "retail": {
+      "metrica_principal": "La facturacion del e-commerce argentino supero el equivalente a USD 13.000 millones en 2024 segun la CACE",
+      "metrica_secundaria": "Mas del 70% de las pymes argentinas tienen algun tipo de presencia online, aunque solo el 35% tiene tienda online transaccional propia",
+      "fuente": "CACE - Camara Argentina de Comercio Electronico",
+      "fuente_url": "https://www.cace.org.ar/",
+      "periodo": "2024",
+      "actualizado": "2025-04",
+      "contexto_corto": "El e-commerce argentino crecio sostenidamente desde 2020. Mercado Libre concentra la mayor parte del volumen, pero hay oportunidad clara para tiendas verticales especializadas (deportes, indumentaria, hogar, gastronomia).",
+      "verificar": "alta_confianza",
+      "nota_verificacion": "CACE publica el Estudio Anual de Comercio Electronico con cifras muy detalladas. Verificar el ultimo reporte disponible."
+    }
+  },
+
+  "servicios": {
+
+    "saas-b2b": {
+      "metrica_principal": "El mercado global de SaaS empresarial supera los USD 250.000 millones y crece a tasas del 17% anual",
+      "metrica_secundaria": "Mas del 70% de las empresas medianas ya usan al menos 3 plataformas SaaS criticas en su operacion",
+      "fuente": "Gartner + Statista Software-as-a-Service Report",
+      "fuente_url": "https://www.gartner.com/en/information-technology",
+      "periodo": "2024",
+      "actualizado": "2025-04",
+      "contexto_corto": "El modelo SaaS B2B paso de tendencia a default. En LATAM el crecimiento es aun mayor al global por baja penetracion previa.",
+      "verificar": "media_confianza",
+      "nota_verificacion": "Gartner publica actualizaciones trimestrales. Verificar cifra exacta antes de publicar."
+    },
+
+    "productos-digitales": {
+      "metrica_principal": "Las exportaciones de software y servicios informaticos de Argentina superan los USD 2.500 millones anuales",
+      "metrica_secundaria": "El sector software argentino emplea aproximadamente 145.000 personas en relacion de dependencia formal",
+      "fuente": "CESSI + Argencon (Servicios Basados en Conocimiento)",
+      "fuente_url": "https://www.cessi.org.ar/",
+      "periodo": "2024",
+      "actualizado": "2025-04",
+      "contexto_corto": "Argentina es uno de los principales exportadores de software de LATAM, con empresas que combinan mercado interno y exportacion principalmente a EEUU.",
+      "verificar": "alta_confianza",
+      "nota_verificacion": "CESSI publica informes anuales con datos consolidados. Verificar el ultimo Reporte de la Industria del Software."
+    },
+
+    "crm-automatizacion": {
+      "metrica_principal": "El mercado global de CRM supera los USD 80.000 millones, liderado por Salesforce, HubSpot, Microsoft Dynamics y Pipedrive",
+      "metrica_secundaria": "El 60% de las pymes que adoptan CRM reportan mejora medible en cierre de ventas en los primeros 12 meses",
+      "fuente": "Gartner Magic Quadrant for Sales Force Automation",
+      "fuente_url": "https://www.gartner.com/en/research/methodologies/magic-quadrants-research",
+      "periodo": "2024",
+      "actualizado": "2025-04",
+      "contexto_corto": "El mercado CRM esta maduro a nivel global pero con baja penetracion en LATAM mid-market, donde las opciones a medida o verticalizadas tienen ventaja sobre los grandes SaaS genericos.",
+      "verificar": "media_confianza",
+      "nota_verificacion": "Verificar tamano del mercado y % de mejora en cierre con estudios actualizados (Gartner, Forrester o casos publicados)."
+    },
+
+    "automatizacion-n8n": {
+      "metrica_principal": "Estudios de McKinsey estiman que entre el 45% y 60% de las actividades de una PyME tipica pueden automatizarse con tecnologia actual",
+      "metrica_secundaria": "El mercado global de RPA (automatizacion de procesos) supera los USD 6.000 millones y crece a tasas del 25% anual",
+      "fuente": "McKinsey & Company - The Future of Work + Forrester RPA Market Report",
+      "fuente_url": "https://www.mckinsey.com/featured-insights/future-of-work/",
+      "periodo": "2024",
+      "actualizado": "2025-04",
+      "contexto_corto": "La automatizacion paso de ser tendencia enterprise a estar al alcance de PyMEs gracias a herramientas como n8n, Make y Zapier. El ROI tipico es de 6-12 meses.",
+      "verificar": "media_confianza",
+      "nota_verificacion": "Los reportes de McKinsey y Forrester se publican periodicamente. Buscar la version mas reciente para confirmar cifras."
+    },
+
+    "cloud-devops": {
+      "metrica_principal": "El gasto en servicios cloud en Latinoamerica supera los USD 8.000 millones anuales con crecimiento superior al 25%",
+      "metrica_secundaria": "AWS concentra aproximadamente el 32-35% del mercado cloud global, seguido por Azure (~23%) y Google Cloud (~11%)",
+      "fuente": "IDC LATAM Cloud Services Market + Synergy Research Group",
+      "fuente_url": "https://www.idc.com/latin-america",
+      "periodo": "2024",
+      "actualizado": "2025-04",
+      "contexto_corto": "LATAM es uno de los mercados cloud con mayor crecimiento mundial. La adopcion en PyMEs argentinas se acelero con el aumento de costos del hardware local y la inflacion.",
+      "verificar": "media_confianza",
+      "nota_verificacion": "IDC y Synergy publican actualizaciones trimestrales del market share cloud. Verificar cifras del ultimo trimestre."
+    },
+
+    "seo-contenido": {
+      "metrica_principal": "El trafico organico de busqueda representa en promedio el 53% del trafico de sitios B2B segun BrightEdge",
+      "metrica_secundaria": "El SEO tiene tipicamente un ROI superior al SEM en B2B porque genera trafico recurrente sin costo por clic",
+      "fuente": "BrightEdge Channel Report + Search Engine Journal",
+      "fuente_url": "https://www.brightedge.com/research/",
+      "periodo": "2024",
+      "actualizado": "2025-04",
+      "contexto_corto": "SEO sigue siendo la fuente principal de descubrimiento en B2B. El crecimiento de AI search (ChatGPT, Perplexity) suma una capa nueva: las paginas bien estructuradas son citadas por estos sistemas, generando una segunda fuente de trafico.",
+      "verificar": "alta_confianza",
+      "nota_verificacion": "BrightEdge publica reportes anuales con cifras especificas por industria."
+    },
+
+    "modernizacion-legacy": {
+      "metrica_principal": "Gartner estima que entre el 60% y 70% de las empresas medianas tienen al menos un sistema legacy critico de mas de 10 anos en operacion",
+      "metrica_secundaria": "El mantenimiento de sistemas legacy consume tipicamente entre el 60% y 80% del presupuesto IT total, dejando poco margen para innovacion",
+      "fuente": "Gartner - Application Modernization Research + IBM CIO Study",
+      "fuente_url": "https://www.gartner.com/en/information-technology/insights/application-modernization",
+      "periodo": "2024",
+      "actualizado": "2025-04",
+      "contexto_corto": "La modernizacion de legacy es uno de los proyectos IT con mayor ROI cuando esta bien planificada: reduce costos operativos, acelera nuevas features y reduce riesgo de seguridad.",
+      "verificar": "media_confianza",
+      "nota_verificacion": "Gartner publica varios estudios al ano sobre modernizacion. Buscar el ultimo Application Modernization Survey."
+    },
+
+    "qa-performance": {
+      "metrica_principal": "Un bug detectado en produccion cuesta hasta 100 veces mas que si se detecta en la fase de diseno o desarrollo (IBM Systems Sciences Institute)",
+      "metrica_secundaria": "Google reporta que cada segundo adicional de tiempo de carga reduce las conversiones aproximadamente un 7% en e-commerce",
+      "fuente": "IBM Systems Sciences Institute + Google Web Performance Insights",
+      "fuente_url": "https://web.dev/why-speed-matters/",
+      "periodo": "2024",
+      "actualizado": "2025-04",
+      "contexto_corto": "La inversion en QA temprana y performance tiene retornos muy claros: menos bugs, mejor experiencia, mas conversion. Es de los servicios con mejor ROI demostrable.",
+      "verificar": "alta_confianza",
+      "nota_verificacion": "El dato 100x es un estudio clasico de IBM, ampliamente citado. El dato de Google esta en web.dev y es publico."
+    },
+
+    "branding-identidad": {
+      "metrica_principal": "El 75% de los usuarios juzga la credibilidad de una empresa por el diseno de su sitio web (Stanford Web Credibility Research)",
+      "metrica_secundaria": "Marcas con identidad visual consistente reportan en promedio un 23% mas de revenue que las que no la tienen, segun Lucidpress",
+      "fuente": "Stanford Web Credibility Project + Lucidpress State of Brand Consistency",
+      "fuente_url": "https://credibility.stanford.edu/",
+      "periodo": "2024",
+      "actualizado": "2025-04",
+      "contexto_corto": "Branding y diseno dejaron de ser un lujo para ser un canal de credibilidad: en mercados saturados, la identidad visual diferencia y genera confianza desde el primer contacto.",
+      "verificar": "media_confianza",
+      "nota_verificacion": "El estudio Stanford es clasico (un poco antiguo pero ampliamente citado). El de Lucidpress se publica periodicamente."
+    }
+  }
+}

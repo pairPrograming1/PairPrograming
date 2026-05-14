@@ -1,6 +1,7 @@
 import { SERVICES } from "./data/services";
 import { portfolioVideos } from "./data/portfolioVideos";
 import { LOCATIONS, INDUSTRIES } from "./data/seo-dimensions";
+import { ARTICLES } from "./data/articles";
 
 const BASE_URL = "https://pairprogramming.com.ar";
 
@@ -71,10 +72,27 @@ export default function sitemap() {
     priority: 0.7,
   }));
 
+  // Blog pages
+  const blogHub = {
+    url: `${BASE_URL}/blog`,
+    lastModified: now,
+    changeFrequency: "weekly",
+    priority: 0.9,
+  };
+
+  const blogPages = ARTICLES.map((a) => ({
+    url: `${BASE_URL}/blog/${a.slug}`,
+    lastModified: now,
+    changeFrequency: "monthly",
+    priority: 0.7,
+  }));
+
   return [
     ...staticPages,
     ...servicePages,
     ...portfolioPages,
+    blogHub,
+    ...blogPages,
     ...locationPages,
     ...locationServicePages,
     ...industryPages,

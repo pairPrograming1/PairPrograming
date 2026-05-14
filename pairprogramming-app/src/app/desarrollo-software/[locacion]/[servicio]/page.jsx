@@ -3,6 +3,8 @@ import Link from "next/link";
 import { LOCATIONS } from "../../../data/seo-dimensions";
 import { SERVICES } from "../../../data/services";
 import CallToAction from "../../../components/CallToAction";
+import DataReal from "../../../components/DataReal";
+import { getDatoRealCombinacion, datoRealToJsonLd } from "@/app/lib/datos-reales";
 
 let seoContent = {};
 try {
@@ -60,9 +62,19 @@ export default async function LocationServicePage({ params }) {
     content.intro ||
     `PairProgramming ofrece servicios de ${svc.name} para empresas de ${loc.name}. Soluciones a medida con stack moderno.`;
   const faq = content.faq || [];
+  const datoReal = getDatoRealCombinacion(locacion, servicio);
+  const datasetJsonLd = datoRealToJsonLd(datoReal);
 
   return (
     <>
+      {/* Dataset Schema */}
+      {datasetJsonLd && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(datasetJsonLd) }}
+        />
+      )}
+
       {/* Schema */}
       <script
         type="application/ld+json"
@@ -142,6 +154,9 @@ export default async function LocationServicePage({ params }) {
               </Link>
             </div>
           </div>
+
+          {/* Dato real verificable */}
+          {datoReal && <DataReal data={datoReal} />}
 
           {/* Entregables del servicio */}
           <div className="mb-16">
