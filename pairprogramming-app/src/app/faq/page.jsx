@@ -1,6 +1,3 @@
-import Sidebar from "../components/Sidebar";
-import Footer from "../components/Footer";
-import MainContainer from "../components/MainContainer";
 import FAQContent from "../components/FAQContent";
 import { faqData } from "../data/faqData";
 
@@ -36,16 +33,12 @@ const faqJsonLd = {
 
 export default function FAQPage() {
   return (
-    <div className="min-h-screen bg-background">
+    <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
-      <Sidebar />
-      <MainContainer>
-        <FAQContent />
-        <Footer />
-      </MainContainer>
-    </div>
+      <FAQContent />
+    </>
   );
 }

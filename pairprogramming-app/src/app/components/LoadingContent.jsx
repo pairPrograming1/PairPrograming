@@ -1,15 +1,12 @@
 
 "use client";
-import { useSidebar } from "../context/SidebarContext";
 import { Container } from "./ui/Container";
 import { Card } from "./ui/Card";
 
 export default function LoadingContent() {
-  const { isSidebarExpanded } = useSidebar();
-
   return (
     <section className="py-16 lg:py-20 bg-card-bg text-white min-h-screen flex items-center">
-      <Container size={isSidebarExpanded ? "expanded" : "default"}>
+      <Container size="default">
         <div className="text-center fade-in">
           <Card padding="lg" className="max-w-md mx-auto">
             {/* Spinner animado */}
@@ -22,11 +19,7 @@ export default function LoadingContent() {
 
             {/* Título y descripción */}
             <h1
-              className={`font-bold mb-4 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent ${
-                isSidebarExpanded
-                  ? "text-xl lg:text-2xl"
-                  : "text-2xl lg:text-3xl"
-              }`}
+              className={`font-bold mb-4 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent text-2xl lg:text-3xl`}
             >
               Cargando Contenido
             </h1>

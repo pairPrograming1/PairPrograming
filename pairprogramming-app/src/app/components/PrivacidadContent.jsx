@@ -1,12 +1,9 @@
 
 "use client";
-import { useSidebar } from "../context/SidebarContext";
 import { Container } from "./ui/Container";
 import { Card } from "./ui/Card";
 
 export default function PrivacidadContent() {
-  const { isSidebarExpanded } = useSidebar();
-
   const sections = [
     {
       title: "1. Información que Recopilamos",
@@ -111,14 +108,10 @@ Implementamos cláusulas contractuales estándar para transferencias.`,
 
   return (
     <section className="py-16 lg:py-20 bg-card-bg text-white min-h-screen">
-      <Container size={isSidebarExpanded ? "expanded" : "default"}>
+      <Container size="default">
         <div className="text-center mb-12 fade-in">
           <h1
-            className={`font-bold mb-4 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent transition-all duration-300 ${
-              isSidebarExpanded
-                ? "text-2xl lg:text-3xl"
-                : "text-3xl lg:text-4xl"
-            }`}
+            className={`font-bold mb-4 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent transition-all duration-300 text-3xl lg:text-4xl`}
           >
             Política de Privacidad
           </h1>

@@ -1,14 +1,11 @@
 
 "use client";
 import Link from "next/link";
-import { useSidebar } from "../context/SidebarContext";
 import { Container } from "./ui/Container";
 import { Card } from "./ui/Card";
 import { Button } from "./ui/Button";
 
 export default function ErrorPage() {
-  const { isSidebarExpanded } = useSidebar();
-
   return (
     <div className="min-h-screen bg-background flex items-center justify-center">
       <Container size="full">

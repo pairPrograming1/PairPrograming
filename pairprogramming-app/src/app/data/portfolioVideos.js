@@ -1,5 +1,47 @@
 export const portfolioVideos = [
   {
+    id: 15,
+    title: "Mi Seguro - Portal de Seguros Online",
+    description:
+      "Portal principal de la marca Mi Seguro, hub digital que centraliza el acceso a todos los productos y servicios de seguros. Diseño orientado a la conversión con experiencia de usuario intuitiva, integración con los verticales de auto y moto, y proceso de contratación simplificado.",
+    url: "http://miseguro.com.ar/",
+    image: "/projects/miseguro.png",
+    category: "Seguros",
+    technologies: ["Next.js", "React", "TypeScript", "Tailwind CSS", "API REST"],
+    duration: "Producción",
+    features: [
+      "Hub central de productos de seguros",
+      "Navegación intuitiva entre verticales",
+      "Cotización rápida multi-producto",
+      "Diseño orientado a conversión",
+      "Integración con aseguradoras líderes",
+      "Experiencia mobile-first optimizada",
+    ],
+    categoryColor: "blue",
+    gradient: "from-blue-500/20 via-sky-500/10 to-blue-700/20",
+  },
+  {
+    id: 10,
+    title: "Tontin - Asistente IA para el Navegador",
+    description:
+      "Extensión de navegador con inteligencia artificial que potencia la productividad directamente en cualquier página web. Integra el modelo LLaMA 3.3 70B via Groq para chat contextual, revisión de código en GitHub/GitLab, adaptación de CV para ofertas de trabajo y resumen de artículos. Código abierto y gratuito.",
+    url: "https://tontin.vercel.app/",
+    image: "/projects/tontin.png",
+    category: "IA / Productividad",
+    technologies: ["Next.js", "JavaScript", "Chrome Extension API", "Groq API", "LLaMA 3.3"],
+    duration: "Producción",
+    features: [
+      "Chat IA en cualquier página web",
+      "Revisión de código en GitHub/GitLab",
+      "Adaptación automática de CV",
+      "Lectura y resumen de artículos",
+      "Privacidad total: datos en el navegador",
+      "Open source y gratuito",
+    ],
+    categoryColor: "violet",
+    gradient: "from-violet-500/20 via-purple-500/10 to-violet-700/20",
+  },
+  {
     id: 1,
     title: "Mi Seguro de Auto - Cotizador de Seguros",
     description:
@@ -189,27 +231,6 @@ export const portfolioVideos = [
     gradient: "from-rose-500/20 via-pink-500/10 to-rose-700/20",
   },
   {
-    id: 10,
-    title: "Tontin - Asistente IA para el Navegador",
-    description:
-      "Extensión de navegador con inteligencia artificial que potencia la productividad directamente en cualquier página web. Integra el modelo LLaMA 3.3 70B via Groq para chat contextual, revisión de código en GitHub/GitLab, adaptación de CV para ofertas de trabajo y resumen de artículos. Código abierto y gratuito.",
-    url: "https://tontin.vercel.app/",
-    image: "/projects/tontin.png",
-    category: "IA / Productividad",
-    technologies: ["Next.js", "JavaScript", "Chrome Extension API", "Groq API", "LLaMA 3.3"],
-    duration: "Producción",
-    features: [
-      "Chat IA en cualquier página web",
-      "Revisión de código en GitHub/GitLab",
-      "Adaptación automática de CV",
-      "Lectura y resumen de artículos",
-      "Privacidad total: datos en el navegador",
-      "Open source y gratuito",
-    ],
-    categoryColor: "violet",
-    gradient: "from-violet-500/20 via-purple-500/10 to-violet-700/20",
-  },
-  {
     id: 11,
     title: "TaskManager - Gestión de Proyectos",
     description:
@@ -292,27 +313,6 @@ export const portfolioVideos = [
     ],
     categoryColor: "indigo",
     gradient: "from-indigo-500/20 via-blue-500/10 to-indigo-700/20",
-  },
-  {
-    id: 15,
-    title: "Mi Seguro - Portal de Seguros Online",
-    description:
-      "Portal principal de la marca Mi Seguro, hub digital que centraliza el acceso a todos los productos y servicios de seguros. Diseño orientado a la conversión con experiencia de usuario intuitiva, integración con los verticales de auto y moto, y proceso de contratación simplificado.",
-    url: "http://miseguro.com.ar/",
-    image: "/projects/miseguro.png",
-    category: "Seguros",
-    technologies: ["Next.js", "React", "TypeScript", "Tailwind CSS", "API REST"],
-    duration: "Producción",
-    features: [
-      "Hub central de productos de seguros",
-      "Navegación intuitiva entre verticales",
-      "Cotización rápida multi-producto",
-      "Diseño orientado a conversión",
-      "Integración con aseguradoras líderes",
-      "Experiencia mobile-first optimizada",
-    ],
-    categoryColor: "blue",
-    gradient: "from-blue-500/20 via-sky-500/10 to-blue-700/20",
   },
   {
     id: 16,

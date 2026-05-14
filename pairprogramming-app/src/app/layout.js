@@ -1,29 +1,20 @@
-
-import { Inter, Bricolage_Grotesque, Instrument_Sans } from "next/font/google";
+import { Inter, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
-import { SidebarProvider } from "./context/SidebarContext";
-import FloatingWidgets from "./components/FloatingWidgets";
-import Header from "./components/Header";
+import Nav from "./components/Nav";
+import Footer from "./components/Footer";
 import Script from "next/script";
-import ClickListener from "./components/utils/clickListener";
 
 const inter = Inter({
   variable: "--font-inter",
   subsets: ["latin"],
-});
-
-const bricolage = Bricolage_Grotesque({
-  variable: "--font-bricolage",
-  subsets: ["latin"],
-  weight: ["300", "400", "600", "700", "800"],
+  weight: ["400", "500", "600"],
   display: "swap",
 });
 
-const instrument = Instrument_Sans({
-  variable: "--font-instrument",
+const mono = JetBrains_Mono({
+  variable: "--font-mono",
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-  style: ["normal", "italic"],
+  weight: ["400", "500"],
   display: "swap",
 });
 
@@ -34,11 +25,11 @@ export const metadata = {
   metadataBase: new URL(BASE_URL),
 
   title: {
-    default: "PairProgramming - Desarrollo de Software B2B SaaS",
+    default: "PairProgramming — Desarrollo de Software B2B SaaS",
     template: "%s | PairProgramming",
   },
   description:
-    "Diseñamos y construimos plataformas B2B SaaS, CRM, ERP y productos digitales escalables para empresas de Latinoamérica. +5 años de experiencia, 100% clientes satisfechos.",
+    "Diseñamos y construimos plataformas B2B SaaS, CRM, ERP y productos digitales escalables para empresas de Latinoamérica. Desde 2022, 100% clientes satisfechos.",
   keywords: [
     "desarrollo software B2B SaaS",
     "arquitectura SaaS multi-tenant",
@@ -63,19 +54,19 @@ export const metadata = {
   },
 
   openGraph: {
-    title: "PairProgramming - Desarrollo de Software B2B SaaS",
+    title: "PairProgramming — Desarrollo de Software B2B SaaS",
     description:
       "Diseñamos y construimos plataformas B2B SaaS, CRM, ERP y productos digitales escalables para empresas de Latinoamérica.",
     url: BASE_URL,
     siteName: "PairProgramming",
-    images: [{ url: OG_IMAGE, width: 1200, height: 630, alt: "PairProgramming - Desarrollo B2B SaaS" }],
+    images: [{ url: OG_IMAGE, width: 1200, height: 630, alt: "PairProgramming — Desarrollo B2B SaaS" }],
     locale: "es_AR",
     type: "website",
   },
 
   twitter: {
     card: "summary_large_image",
-    title: "PairProgramming - Desarrollo de Software B2B SaaS",
+    title: "PairProgramming — Desarrollo de Software B2B SaaS",
     description:
       "Diseñamos y construimos plataformas B2B SaaS, CRM, ERP y productos digitales escalables.",
     images: [OG_IMAGE],
@@ -96,21 +87,20 @@ export const metadata = {
   },
 };
 
-
 export default function RootLayout({ children }) {
   return (
-    <html lang="es" className="dark">
+    <html lang="es" className={`${inter.variable} ${mono.variable}`}>
       <head>
-        {/* Google analytics */}
+        {/* Google Analytics */}
         <Script
           id="ga4-init"
           strategy="afterInteractive"
           dangerouslySetInnerHTML={{
-          __html: `
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-ZMRX7X4E49'); // tu Measurement ID GA4`,
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-ZMRX7X4E49');`,
           }}
         />
         {/* Google Tag Manager */}
@@ -121,10 +111,9 @@ export default function RootLayout({ children }) {
           'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
           })(window,document,'script','dataLayer','GTM-W9B7K49F');`}
         </Script>
-        {/* End Google Tag Manager */}
       </head>
 
-      <body className={`${inter.variable} ${bricolage.variable} ${instrument.variable} antialiased`}>
+      <body className="antialiased">
         {/* JSON-LD Organization schema */}
         <script
           type="application/ld+json"
@@ -133,11 +122,20 @@ export default function RootLayout({ children }) {
               "@context": "https://schema.org",
               "@type": "Organization",
               name: "PairProgramming",
-              url: "https://www.pairprogramming.com.ar",
-              logo: "https://www.pairprogramming.com.ar/icon.svg",
+              url: BASE_URL,
+              logo: `${BASE_URL}/icon.svg`,
               description:
                 "Agencia especializada en desarrollo de software B2B SaaS, arquitectura multi-tenant, CRM, ERP y productos digitales escalables para empresas de Latinoamérica.",
-              foundingDate: "2020",
+              foundingDate: "2022",
+              founder: {
+                "@type": "Person",
+                name: "Esteban Aleart",
+                url: `${BASE_URL}/equipo/esteban-aleart`,
+              },
+              numberOfEmployees: {
+                "@type": "QuantitativeValue",
+                value: 2,
+              },
               areaServed: ["AR", "MX", "CL", "CO", "UY", "ES"],
               knowsAbout: [
                 "Arquitectura B2B SaaS",
@@ -151,7 +149,7 @@ export default function RootLayout({ children }) {
                 "@type": "ContactPoint",
                 contactType: "customer service",
                 availableLanguage: "Spanish",
-                url: "https://www.pairprogramming.com.ar/contacto",
+                url: `${BASE_URL}/contacto`,
               },
               sameAs: [
                 "https://www.linkedin.com/company/pairprogramming",
@@ -168,14 +166,10 @@ export default function RootLayout({ children }) {
             style={{ display: "none", visibility: "hidden" }}
           />
         </noscript>
-        {/* End Google Tag Manager (noscript) */}
 
-        <SidebarProvider>
-          <Header />
-          <ClickListener />
-          {children}
-          <FloatingWidgets />
-        </SidebarProvider>
+        <Nav />
+        <main className="min-h-screen pt-14">{children}</main>
+        <Footer />
       </body>
     </html>
   );

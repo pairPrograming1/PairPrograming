@@ -1,11 +1,9 @@
 
-export default function SoporteHeader({ isSidebarExpanded }) {
+export default function SoporteHeader() {
   return (
     <div className="text-center mb-8 fade-in">
       <h1
-        className={`font-bold mb-4 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent transition-all duration-300 ${
-          isSidebarExpanded ? "text-2xl lg:text-3xl" : "text-3xl lg:text-4xl"
-        }`}
+        className={`font-bold mb-4 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent transition-all duration-300 text-3xl lg:text-4xl`}
       >
         Soporte Técnico
       </h1>

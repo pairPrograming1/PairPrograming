@@ -1,7 +1,6 @@
 
 "use client";
 import { useState, useRef, useEffect } from "react";
-import { useSidebar } from "../context/SidebarContext";
 import { Container } from "./ui/Container";
 import { Card } from "./ui/Card";
 import SoporteHeader from "./soporte/SoporteHeader";
@@ -11,7 +10,6 @@ import ChatContainer from "./soporte/ChatContainer";
 import SupportFeatures from "./soporte/SupportFeatures";
 
 export default function SoporteContent() {
-  const { isSidebarExpanded } = useSidebar();
   const [messages, setMessages] = useState([
     {
       id: 1,
@@ -34,8 +32,8 @@ export default function SoporteContent() {
 
   return (
     <section className="py-16 lg:py-20 bg-card-bg text-white min-h-screen">
-      <Container size={isSidebarExpanded ? "expanded" : "default"}>
-        <SoporteHeader isSidebarExpanded={isSidebarExpanded} />
+      <Container size="default">
+        <SoporteHeader />
 
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-6 lg:gap-8">
           {/* Panel lateral */}

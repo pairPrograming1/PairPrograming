@@ -2,7 +2,7 @@
 
 import { portfolioVideos } from "../../data/portfolioVideos";
 
-export default function PortfolioHeader({ isSidebarExpanded }) {
+export default function PortfolioHeader() {
   const productionCount = portfolioVideos.filter(
     (p) => p.duration === "Producción"
   ).length;
@@ -19,9 +19,7 @@ export default function PortfolioHeader({ isSidebarExpanded }) {
       </div>
 
       <h1
-        className={`font-bold mb-6 text-foreground tracking-tight leading-tight transition-all duration-300 animate-fade-in-up stagger-1 ${
-          isSidebarExpanded ? "text-3xl lg:text-4xl" : "text-4xl lg:text-5xl"
-        }`}
+        className={`font-bold mb-6 text-foreground tracking-tight leading-tight transition-all duration-300 animate-fade-in-up stagger-1 text-4xl lg:text-5xl`}
       >
         Nuestro{" "}
         <span className="text-brand-blue">Portafolio</span>

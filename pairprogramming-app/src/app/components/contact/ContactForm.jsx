@@ -68,28 +68,6 @@ export function ContactForm() {
             </a>
           </li>
           <li className="flex items-center justify-between text-sm">
-            <span className="text-secondary-text">Rendom Josue</span>
-            <a
-              href="https://wa.me/56940881083"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-emerald-400 hover:text-emerald-300 font-medium transition-colors"
-            >
-              +56 9 4088 1083
-            </a>
-          </li>
-          <li className="flex items-center justify-between text-sm">
-            <span className="text-secondary-text">Rubiño Pablo</span>
-            <a
-              href="https://wa.me/5492616396981"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-emerald-400 hover:text-emerald-300 font-medium transition-colors"
-            >
-              +54 9 261 639 6981
-            </a>
-          </li>
-          <li className="flex items-center justify-between text-sm">
             <span className="text-secondary-text">Bou Mauricio <span className="text-brand-gold text-xs">(Comercial)</span></span>
             <a
               href="https://wa.me/5493412696133"
