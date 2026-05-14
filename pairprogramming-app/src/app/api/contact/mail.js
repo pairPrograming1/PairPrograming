@@ -35,7 +35,7 @@ export async function sendTeamMail({ name, email, phone, company, message }) {
             <!-- Header -->
             <tr><td style="padding:0 0 32px 0">
               <table cellpadding="0" cellspacing="0"><tr>
-                <td style="width:16px;height:16px;background-color:#5e6ad2;border-radius:3px"></td>
+                <td style="width:24px;height:24px"><img src="https://www.pairprogramming.com.ar/favicon.ico" width="24" height="24" alt="PP" style="display:block;border:0;border-radius:4px" /></td>
                 <td style="padding-left:10px;font-size:15px;font-weight:600;color:#f7f8f8;letter-spacing:-0.3px">PairProgramming</td>
               </tr></table>
             </td></tr>
@@ -101,7 +101,7 @@ export async function sendAutoResponder({ name, email, message }) {
             <!-- Header -->
             <tr><td style="padding:0 0 32px 0">
               <table cellpadding="0" cellspacing="0"><tr>
-                <td style="width:16px;height:16px;background-color:#5e6ad2;border-radius:3px"></td>
+                <td style="width:24px;height:24px"><img src="https://www.pairprogramming.com.ar/favicon.ico" width="24" height="24" alt="PP" style="display:block;border:0;border-radius:4px" /></td>
                 <td style="padding-left:10px;font-size:15px;font-weight:600;color:#f7f8f8;letter-spacing:-0.3px">PairProgramming</td>
               </tr></table>
             </td></tr>
