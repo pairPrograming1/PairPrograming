@@ -1,7 +1,7 @@
 import { SERVICES } from "./data/services";
 import { portfolioVideos } from "./data/portfolioVideos";
 
-const BASE_URL = "https://www.pairprogramming.com.ar";
+const BASE_URL = "https://pairprogramming.com.ar";
 
 function slugify(title) {
   return title

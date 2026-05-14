@@ -319,7 +319,7 @@ export const portfolioVideos = [
     title: "PairProgramming - Studio de Desarrollo Web",
     description:
       "Nuestro propio sitio. Studio de desarrollo web full-stack especializado en soluciones digitales de alto impacto para el mercado latinoamericano. Portfolio institucional con showcase de proyectos, sistema de contacto, blog técnico y presentación de servicios de desarrollo a medida.",
-    url: "https://www.pairprogramming.com.ar",
+    url: "https://pairprogramming.com.ar",
     image: "/projects/pp.png",
     category: "Agencia Digital",
     technologies: ["Next.js", "React", "Tailwind CSS", "Vercel", "SEO"],

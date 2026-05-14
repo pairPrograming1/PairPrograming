@@ -116,7 +116,7 @@ export async function sendAutoResponder({ name, email, message }) {
 
   const autoSubject = `Gracias por contactarte, ${name} — PairProgramming`;
   const now = new Date().toLocaleString();
-  const autoText = `Hola ${name},\n\nGracias por contactarte con nosotros. Recibimos tu mensaje y te vamos a responder lo antes posible.\n\nResumen de tu mensaje:\n${message}\n\nMientras tanto, podes ver nuestro portafolio en https://www.pairprogramming.com.ar/portafolio\n\nSaludos,\nEsteban Aleart\nFounder & Lead Engineer — PairProgramming\n\n---\n\nHi ${name},\n\nThank you for reaching out. We received your message and will get back to you shortly.\n\nYour message:\n${message}\n\nIn the meantime, check out our portfolio at https://www.pairprogramming.com.ar/portafolio\n\nBest,\nEsteban Aleart\nFounder & Lead Engineer — PairProgramming`;
+  const autoText = `Hola ${name},\n\nGracias por contactarte con nosotros. Recibimos tu mensaje y te vamos a responder lo antes posible.\n\nResumen de tu mensaje:\n${message}\n\nMientras tanto, podes ver nuestro portafolio en https://pairprogramming.com.ar/portafolio\n\nSaludos,\nEsteban Aleart\nFounder & Lead Engineer — PairProgramming\n\n---\n\nHi ${name},\n\nThank you for reaching out. We received your message and will get back to you shortly.\n\nYour message:\n${message}\n\nIn the meantime, check out our portfolio at https://pairprogramming.com.ar/portafolio\n\nBest,\nEsteban Aleart\nFounder & Lead Engineer — PairProgramming`;
 
   const autoHtml = `
     <div style="background-color:#010102;padding:0;margin:0;width:100%">
@@ -151,7 +151,7 @@ export async function sendAutoResponder({ name, email, message }) {
               <!-- CTA -->
               <table cellpadding="0" cellspacing="0" style="margin:0 0 24px 0"><tr>
                 <td style="background-color:#5e6ad2;border-radius:8px;padding:12px 24px">
-                  <a href="https://www.pairprogramming.com.ar/portafolio" style="font-size:14px;font-weight:500;color:#ffffff;text-decoration:none">Ver nuestro portafolio</a>
+                  <a href="https://pairprogramming.com.ar/portafolio" style="font-size:14px;font-weight:500;color:#ffffff;text-decoration:none">Ver nuestro portafolio</a>
                 </td>
               </tr></table>
 
@@ -183,7 +183,7 @@ export async function sendAutoResponder({ name, email, message }) {
             <!-- Footer -->
             <tr><td style="padding:24px 0 0 0;text-align:center">
               <p style="font-size:12px;color:#62666d;margin:0 0 4px 0">
-                <a href="https://www.pairprogramming.com.ar" style="color:#5e6ad2;text-decoration:none">pairprogramming.com.ar</a>
+                <a href="https://pairprogramming.com.ar" style="color:#5e6ad2;text-decoration:none">pairprogramming.com.ar</a>
               </p>
               <p style="font-size:11px;color:#62666d;margin:0">${now}</p>
             </td></tr>

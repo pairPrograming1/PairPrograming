@@ -17,12 +17,12 @@ export async function generateMetadata({ params }) {
     title: `${service.name} — Servicios`,
     description: service.longDesc,
     alternates: {
-      canonical: `https://www.pairprogramming.com.ar/servicios/${slug}`,
+      canonical: `https://pairprogramming.com.ar/servicios/${slug}`,
     },
     openGraph: {
       title: `${service.name} | PairProgramming`,
       description: service.desc,
-      url: `https://www.pairprogramming.com.ar/servicios/${slug}`,
+      url: `https://pairprogramming.com.ar/servicios/${slug}`,
       type: "website",
     },
   };
@@ -63,7 +63,7 @@ export default async function ServicioPage({ params }) {
               provider: {
                 "@type": "Organization",
                 name: "PairProgramming",
-                url: "https://www.pairprogramming.com.ar",
+                url: "https://pairprogramming.com.ar",
               },
             },
             ...(service.faq?.length
@@ -94,8 +94,8 @@ export default async function ServicioPage({ params }) {
             "@context": "https://schema.org",
             "@type": "BreadcrumbList",
             itemListElement: [
-              { "@type": "ListItem", position: 1, name: "Inicio", item: "https://www.pairprogramming.com.ar" },
-              { "@type": "ListItem", position: 2, name: "Servicios", item: "https://www.pairprogramming.com.ar/servicios" },
+              { "@type": "ListItem", position: 1, name: "Inicio", item: "https://pairprogramming.com.ar" },
+              { "@type": "ListItem", position: 2, name: "Servicios", item: "https://pairprogramming.com.ar/servicios" },
               { "@type": "ListItem", position: 3, name: service.name },
             ],
           }),

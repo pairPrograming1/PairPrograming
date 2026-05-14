@@ -5,12 +5,12 @@ export const metadata = {
   title: "Preguntas Frecuentes",
   description:
     "Respondemos las dudas más comunes sobre nuestros servicios de desarrollo de software: procesos, tecnologías, precios, tiempos y garantías.",
-  alternates: { canonical: "https://www.pairprogramming.com.ar/faq" },
+  alternates: { canonical: "https://pairprogramming.com.ar/faq" },
   openGraph: {
     title: "Preguntas Frecuentes | PairProgramming",
     description:
       "Todo lo que necesitás saber sobre nuestros servicios de desarrollo B2B SaaS, procesos y garantías.",
-    url: "https://www.pairprogramming.com.ar/faq",
+    url: "https://pairprogramming.com.ar/faq",
     type: "website",
   },
 };

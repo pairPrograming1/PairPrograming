@@ -6,13 +6,13 @@ export const metadata = {
   description:
     "Full-stack engineer especializado en arquitecturas B2B SaaS y sistemas de IA aplicada. Founder de PairProgramming. Madrid, España · LATAM y EU.",
   alternates: {
-    canonical: "https://www.pairprogramming.com.ar/equipo/esteban-aleart",
+    canonical: "https://pairprogramming.com.ar/equipo/esteban-aleart",
   },
   openGraph: {
     title: "Esteban Aleart — Founder & Lead Engineer | PairProgramming",
     description:
       "Full-stack engineer especializado en arquitecturas B2B SaaS y sistemas de IA aplicada.",
-    url: "https://www.pairprogramming.com.ar/equipo/esteban-aleart",
+    url: "https://pairprogramming.com.ar/equipo/esteban-aleart",
     type: "profile",
   },
 };
@@ -67,11 +67,11 @@ export default function EstebanAleartPage() {
             name: "Esteban Aleart",
             alternateName: "Esteban Aleart Salas",
             jobTitle: "Full-Stack Engineer & Founder",
-            url: "https://www.pairprogramming.com.ar/equipo/esteban-aleart",
+            url: "https://pairprogramming.com.ar/equipo/esteban-aleart",
             worksFor: {
               "@type": "Organization",
               name: "PairProgramming",
-              url: "https://www.pairprogramming.com.ar",
+              url: "https://pairprogramming.com.ar",
             },
             alumniOf: "SoyHenry",
             address: {
@@ -103,8 +103,8 @@ export default function EstebanAleartPage() {
             "@context": "https://schema.org",
             "@type": "BreadcrumbList",
             itemListElement: [
-              { "@type": "ListItem", position: 1, name: "Inicio", item: "https://www.pairprogramming.com.ar" },
-              { "@type": "ListItem", position: 2, name: "Equipo", item: "https://www.pairprogramming.com.ar/nosotros" },
+              { "@type": "ListItem", position: 1, name: "Inicio", item: "https://pairprogramming.com.ar" },
+              { "@type": "ListItem", position: 2, name: "Equipo", item: "https://pairprogramming.com.ar/nosotros" },
               { "@type": "ListItem", position: 3, name: "Esteban Aleart" },
             ],
           }),

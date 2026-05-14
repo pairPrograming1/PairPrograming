@@ -18,7 +18,7 @@ const mono = JetBrains_Mono({
   display: "swap",
 });
 
-const BASE_URL = "https://www.pairprogramming.com.ar";
+const BASE_URL = "https://pairprogramming.com.ar";
 const OG_IMAGE = "https://res.cloudinary.com/dmjusy7sn/image/upload/v1758981340/usuarios/xkajcqpxdbggr4q7ywjy.jpg";
 
 export const metadata = {

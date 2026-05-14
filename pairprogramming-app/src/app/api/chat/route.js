@@ -35,7 +35,7 @@ PROYECTOS DESTACADOS (solo mencionar si preguntan):
 - DoctorCar — gestion para brokers de seguros
 
 EQUIPO: Esteban Aleart (Founder & Lead Engineer) + Mauricio Bou (Operations & Sales)
-WEB: https://www.pairprogramming.com.ar`;
+WEB: https://pairprogramming.com.ar`;
 
 async function callGroq(messages) {
   const key = process.env.GROQ_KEY_4;

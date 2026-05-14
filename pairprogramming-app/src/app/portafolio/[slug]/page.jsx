@@ -26,12 +26,12 @@ export async function generateMetadata({ params }) {
     title: `${project.title} — Portafolio`,
     description: project.description,
     alternates: {
-      canonical: `https://www.pairprogramming.com.ar/portafolio/${slug}`,
+      canonical: `https://pairprogramming.com.ar/portafolio/${slug}`,
     },
     openGraph: {
       title: `${project.title} | PairProgramming`,
       description: project.description.slice(0, 160),
-      url: `https://www.pairprogramming.com.ar/portafolio/${slug}`,
+      url: `https://pairprogramming.com.ar/portafolio/${slug}`,
       type: "website",
     },
   };
@@ -64,7 +64,7 @@ export default async function ProyectoPage({ params }) {
             creator: {
               "@type": "Organization",
               name: "PairProgramming",
-              url: "https://www.pairprogramming.com.ar",
+              url: "https://pairprogramming.com.ar",
             },
             keywords: project.technologies.join(", "),
           }),
@@ -79,8 +79,8 @@ export default async function ProyectoPage({ params }) {
             "@context": "https://schema.org",
             "@type": "BreadcrumbList",
             itemListElement: [
-              { "@type": "ListItem", position: 1, name: "Inicio", item: "https://www.pairprogramming.com.ar" },
-              { "@type": "ListItem", position: 2, name: "Portafolio", item: "https://www.pairprogramming.com.ar/portafolio" },
+              { "@type": "ListItem", position: 1, name: "Inicio", item: "https://pairprogramming.com.ar" },
+              { "@type": "ListItem", position: 2, name: "Portafolio", item: "https://pairprogramming.com.ar/portafolio" },
               { "@type": "ListItem", position: 3, name: project.title },
             ],
           }),
