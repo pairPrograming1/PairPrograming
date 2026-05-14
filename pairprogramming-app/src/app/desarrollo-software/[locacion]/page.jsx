@@ -3,6 +3,8 @@ import Link from "next/link";
 import { LOCATIONS } from "../../data/seo-dimensions";
 import { SERVICES } from "../../data/services";
 import CallToAction from "../../components/CallToAction";
+import DataReal from "../../components/DataReal";
+import { getDatoRealLocacion, datoRealToJsonLd } from "@/app/lib/datos-reales";
 
 let seoContent = {};
 try {
@@ -50,9 +52,19 @@ export default async function LocationPage({ params }) {
     content.intro ||
     `PairProgramming ofrece servicios de desarrollo de software a medida para empresas de ${loc.name}. Desde plataformas B2B SaaS hasta productos digitales escalables.`;
   const faq = content.faq || [];
+  const datoReal = getDatoRealLocacion(locacion);
+  const datasetJsonLd = datoRealToJsonLd(datoReal);
 
   return (
     <>
+      {/* Dataset Schema */}
+      {datasetJsonLd && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(datasetJsonLd) }}
+        />
+      )}
+
       {/* Breadcrumb + FAQ Schema */}
       <script
         type="application/ld+json"
@@ -109,6 +121,9 @@ export default async function LocationPage({ params }) {
               </Link>
             </div>
           </div>
+
+          {/* Dato real verificable */}
+          {datoReal && <DataReal data={datoReal} />}
 
           {/* Servicios disponibles */}
           <div className="mb-16">

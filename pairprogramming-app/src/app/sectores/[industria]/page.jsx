@@ -4,6 +4,8 @@ import { INDUSTRIES } from "../../data/seo-dimensions";
 import { portfolioVideos } from "../../data/portfolioVideos";
 import { SERVICES } from "../../data/services";
 import CallToAction from "../../components/CallToAction";
+import DataReal from "../../components/DataReal";
+import { getDatoRealIndustria, datoRealToJsonLd } from "@/app/lib/datos-reales";
 
 let seoContent = {};
 try {
@@ -61,6 +63,8 @@ export default async function IndustryPage({ params }) {
     `PairProgramming desarrolla soluciones de software a medida para el sector ${ind.name}. Plataformas escalables y productos digitales que resuelven desafíos reales del sector.`;
   const challenges = content.challenges || [];
   const faq = content.faq || [];
+  const datoReal = getDatoRealIndustria(industria);
+  const datasetJsonLd = datoRealToJsonLd(datoReal);
 
   // Related projects from portfolio
   const relatedProjects = portfolioVideos.filter((p) =>
@@ -71,6 +75,14 @@ export default async function IndustryPage({ params }) {
 
   return (
     <>
+      {/* Dataset Schema */}
+      {datasetJsonLd && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(datasetJsonLd) }}
+        />
+      )}
+
       {/* Schema */}
       <script
         type="application/ld+json"
@@ -133,6 +145,9 @@ export default async function IndustryPage({ params }) {
               </Link>
             </div>
           </div>
+
+          {/* Dato real verificable */}
+          {datoReal && <DataReal data={datoReal} />}
 
           {/* Desafíos del sector */}
           {challenges.length > 0 && (

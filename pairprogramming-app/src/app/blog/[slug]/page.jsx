@@ -1,9 +1,58 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
+import { marked } from "marked";
 import { ARTICLES } from "../../data/articles";
 import CallToAction from "../../components/CallToAction";
 
 const BASE_URL = "https://pairprogramming.com.ar";
+
+/** Estimate read time from markdown content */
+function estimateReadTime(content) {
+  const words = content.replace(/[#*\[\]()>`|_\-]/g, " ").split(/\s+/).length;
+  return Math.max(1, Math.round(words / 200));
+}
+
+/** Get description from article (handles both old and new format) */
+function getDescription(article) {
+  return article.metaDescription || article.description || "";
+}
+
+/** Get date from article (handles both old and new format) */
+function getDate(article) {
+  return article.publishedAt || article.date || "";
+}
+
+/** Get read time from article (calculate if missing) */
+function getReadTime(article) {
+  return article.readTime || estimateReadTime(article.content || "");
+}
+
+/** Get FAQs normalized to [{question, answer}] */
+function getFaqs(article) {
+  if (article.faqs?.length > 0) {
+    return article.faqs.map((f) => ({
+      question: f.q || f.question,
+      answer: f.a || f.answer,
+    }));
+  }
+  if (article.faq?.length > 0) {
+    return article.faq.map((f) => ({
+      question: f.question || f.q,
+      answer: f.answer || f.a,
+    }));
+  }
+  return [];
+}
+
+/** Convert content to HTML (markdown or already HTML) */
+function getContentHtml(content) {
+  if (!content) return "";
+  // If content starts with < it's probably already HTML
+  const trimmed = content.trim();
+  if (trimmed.startsWith("<h") || trimmed.startsWith("<p")) return trimmed;
+  // Otherwise parse as markdown
+  return marked.parse(content);
+}
 
 export async function generateStaticParams() {
   return ARTICLES.map((a) => ({ slug: a.slug }));
@@ -14,16 +63,19 @@ export async function generateMetadata({ params }) {
   const article = ARTICLES.find((a) => a.slug === slug);
   if (!article) return {};
 
+  const description = getDescription(article);
+  const date = getDate(article);
+
   return {
     title: article.title,
-    description: article.description,
+    description,
     alternates: { canonical: `${BASE_URL}/blog/${slug}` },
     openGraph: {
       title: `${article.title} | PairProgramming`,
-      description: article.description,
+      description,
       url: `${BASE_URL}/blog/${slug}`,
       type: "article",
-      publishedTime: article.date,
+      publishedTime: date,
       authors: [article.author?.name || "Esteban Aleart"],
     },
   };
@@ -33,6 +85,12 @@ export default async function ArticlePage({ params }) {
   const { slug } = await params;
   const article = ARTICLES.find((a) => a.slug === slug);
   if (!article) notFound();
+
+  const description = getDescription(article);
+  const date = getDate(article);
+  const readTime = getReadTime(article);
+  const faqs = getFaqs(article);
+  const contentHtml = getContentHtml(article.content);
 
   const related = ARTICLES.filter(
     (a) =>
@@ -51,9 +109,9 @@ export default async function ArticlePage({ params }) {
             "@context": "https://schema.org",
             "@type": "BlogPosting",
             headline: article.title,
-            description: article.description,
-            datePublished: article.date,
-            dateModified: article.updatedDate || article.date,
+            description,
+            datePublished: date,
+            dateModified: article.updatedDate || date,
             author: {
               "@type": "Person",
               name: article.author?.name || "Esteban Aleart",
@@ -78,14 +136,14 @@ export default async function ArticlePage({ params }) {
       />
 
       {/* FAQ schema */}
-      {article.faq?.length > 0 && (
+      {faqs.length > 0 && (
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "FAQPage",
-              mainEntity: article.faq.map((f) => ({
+              mainEntity: faqs.map((f) => ({
                 "@type": "Question",
                 name: f.question,
                 acceptedAnswer: { "@type": "Answer", text: f.answer },
@@ -143,20 +201,29 @@ export default async function ArticlePage({ params }) {
                 {article.category}
               </span>
               <span className="text-ink-tertiary font-mono text-[12px]">
-                {article.readTime} min de lectura
+                {readTime} min de lectura
               </span>
             </div>
             <h1 className="display-lg text-ink mb-4">{article.title}</h1>
             <p className="text-body-lg text-ink-subtle mb-6">
-              {article.description}
+              {article.excerpt || description}
             </p>
             <div className="flex items-center gap-4 pb-8 border-b border-hairline">
               <div>
-                <p className="text-body-sm text-ink font-medium">
-                  {article.author?.name || "Esteban Aleart"}
-                </p>
+                {article.author?.url ? (
+                  <Link
+                    href={article.author.url}
+                    className="text-body-sm text-ink font-medium hover:text-primary transition-colors"
+                  >
+                    {article.author?.name || "Esteban Aleart"}
+                  </Link>
+                ) : (
+                  <p className="text-body-sm text-ink font-medium">
+                    {article.author?.name || "Esteban Aleart"}
+                  </p>
+                )}
                 <p className="font-mono text-[12px] text-ink-tertiary">
-                  {new Date(article.date).toLocaleDateString("es-AR", {
+                  {new Date(date).toLocaleDateString("es-AR", {
                     year: "numeric",
                     month: "long",
                     day: "numeric",
@@ -169,8 +236,30 @@ export default async function ArticlePage({ params }) {
           {/* Article body */}
           <div
             className="prose-pp max-w-[720px] mb-16"
-            dangerouslySetInnerHTML={{ __html: article.content }}
+            dangerouslySetInnerHTML={{ __html: contentHtml }}
           />
+
+          {/* Related links */}
+          {(article.relatedService || article.relatedProject) && (
+            <div className="max-w-[720px] flex flex-wrap gap-3 mb-8">
+              {article.relatedService && (
+                <Link
+                  href={article.relatedService}
+                  className="bg-surface-1 border border-hairline text-ink-subtle font-mono text-[12px] px-3 py-1.5 rounded-md hover:border-primary hover:text-primary transition-colors"
+                >
+                  Ver servicio relacionado →
+                </Link>
+              )}
+              {article.relatedProject && (
+                <Link
+                  href={article.relatedProject}
+                  className="bg-surface-1 border border-hairline text-ink-subtle font-mono text-[12px] px-3 py-1.5 rounded-md hover:border-primary hover:text-primary transition-colors"
+                >
+                  Ver proyecto relacionado →
+                </Link>
+              )}
+            </div>
+          )}
 
           {/* Tags */}
           {article.tags?.length > 0 && (
@@ -187,14 +276,14 @@ export default async function ArticlePage({ params }) {
           )}
 
           {/* FAQ */}
-          {article.faq?.length > 0 && (
+          {faqs.length > 0 && (
             <div className="max-w-[720px] mb-16">
               <span className="eyebrow-mono text-ink-tertiary block mb-3">
                 Preguntas frecuentes
               </span>
               <h2 className="headline text-ink mb-8">FAQ</h2>
               <div className="space-y-4">
-                {article.faq.map((item, i) => (
+                {faqs.map((item, i) => (
                   <div
                     key={i}
                     className="bg-surface-1 border border-hairline rounded-lg p-6"
@@ -232,7 +321,7 @@ export default async function ArticlePage({ params }) {
                       {rel.title}
                     </h3>
                     <p className="text-body-sm text-ink-subtle line-clamp-2">
-                      {rel.description}
+                      {rel.excerpt || getDescription(rel)}
                     </p>
                   </Link>
                 ))}

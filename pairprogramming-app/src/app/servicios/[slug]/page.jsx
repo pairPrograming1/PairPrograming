@@ -3,6 +3,8 @@ import Link from "next/link";
 import { SERVICES } from "../../data/services";
 import { portfolioVideos } from "../../data/portfolioVideos";
 import CallToAction from "../../components/CallToAction";
+import DataReal from "../../components/DataReal";
+import { getDatoRealServicio, datoRealToJsonLd } from "@/app/lib/datos-reales";
 
 export async function generateStaticParams() {
   return SERVICES.map((s) => ({ slug: s.slug }));
@@ -42,6 +44,9 @@ export default async function ServicioPage({ params }) {
   const service = SERVICES.find((s) => s.slug === slug);
   if (!service) notFound();
 
+  const datoReal = getDatoRealServicio(slug);
+  const datasetJsonLd = datoRealToJsonLd(datoReal);
+
   const relatedProjects = portfolioVideos.filter((p) =>
     service.casosRelacionados?.some(
       (ref) => slugifyProject(p.title).includes(ref)
@@ -50,6 +55,14 @@ export default async function ServicioPage({ params }) {
 
   return (
     <>
+      {/* Dataset Schema */}
+      {datasetJsonLd && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(datasetJsonLd) }}
+        />
+      )}
+
       {/* Service + FAQ Schema */}
       <script
         type="application/ld+json"
@@ -133,6 +146,9 @@ export default async function ServicioPage({ params }) {
               </Link>
             </div>
           </div>
+
+          {/* Dato real verificable */}
+          {datoReal && <DataReal data={datoReal} />}
 
           {/* Entregables */}
           <div className="mb-16">

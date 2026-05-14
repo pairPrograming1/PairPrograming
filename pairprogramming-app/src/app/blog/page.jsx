@@ -16,11 +16,30 @@ export const metadata = {
   },
 };
 
+/** Get description from article (handles both old and new format) */
+function getDescription(article) {
+  return article.metaDescription || article.description || "";
+}
+
+/** Get date from article (handles both old and new format) */
+function getDate(article) {
+  return article.publishedAt || article.date || "";
+}
+
+/** Estimate read time from markdown content */
+function getReadTime(article) {
+  if (article.readTime) return article.readTime;
+  const words = (article.content || "")
+    .replace(/[#*\[\]()>`|_\-]/g, " ")
+    .split(/\s+/).length;
+  return Math.max(1, Math.round(words / 200));
+}
+
 const CATEGORIES = [...new Set(ARTICLES.map((a) => a.category))];
 
 export default function BlogHub() {
   const sorted = [...ARTICLES].sort(
-    (a, b) => new Date(b.date) - new Date(a.date)
+    (a, b) => new Date(getDate(b)) - new Date(getDate(a))
   );
 
   return (
@@ -96,18 +115,18 @@ export default function BlogHub() {
                       {article.category}
                     </span>
                     <span className="text-ink-tertiary font-mono text-[12px]">
-                      {article.readTime} min
+                      {getReadTime(article)} min
                     </span>
                   </div>
                   <h2 className="text-card-title text-ink mb-3 group-hover:text-primary transition-colors">
                     {article.title}
                   </h2>
                   <p className="text-body-sm text-ink-subtle line-clamp-3 mb-4">
-                    {article.description}
+                    {article.excerpt || getDescription(article)}
                   </p>
                   <div className="flex items-center justify-between">
                     <span className="font-mono text-[12px] text-ink-tertiary">
-                      {new Date(article.date).toLocaleDateString("es-AR", {
+                      {new Date(getDate(article)).toLocaleDateString("es-AR", {
                         year: "numeric",
                         month: "short",
                         day: "numeric",
