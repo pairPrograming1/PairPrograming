@@ -1,20 +1,30 @@
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import Link from "next/link";
 import { ARTICLES } from "@/app/data/articles";
 import CallToAction from "@/app/components/CallToAction";
 
-export const metadata = {
-  title: "Blog",
-  description:
-    "Artículos sobre desarrollo de software, inteligencia artificial, agentes, RAG, SEO programático, CRM y más. Experiencias reales del equipo de PairProgramming.",
-  alternates: { canonical: "https://pairprogramming.com.ar/blog" },
-  openGraph: {
-    title: "Blog | PairProgramming",
-    description:
-      "Artículos técnicos sobre IA, desarrollo de software, SEO programático y transformación digital.",
-    url: "https://pairprogramming.com.ar/blog",
-    type: "website",
-  },
-};
+export async function generateMetadata({ params }) {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "metadata" });
+
+  return {
+    title: t("blogTitle"),
+    description: t("blogDescription"),
+    alternates: {
+      canonical: "https://pairprogramming.com.ar/blog",
+      languages: {
+        es: "https://pairprogramming.com.ar/blog",
+        en: "https://pairprogramming.com.ar/en/blog",
+      },
+    },
+    openGraph: {
+      title: `${t("blogTitle")} | PairProgramming`,
+      description: t("blogDescription"),
+      url: "https://pairprogramming.com.ar/blog",
+      type: "website",
+    },
+  };
+}
 
 /** Get description from article (handles both old and new format) */
 function getDescription(article) {
@@ -37,7 +47,10 @@ function getReadTime(article) {
 
 const CATEGORIES = [...new Set(ARTICLES.map((a) => a.category))];
 
-export default function BlogHub() {
+export default async function BlogHub({ params }) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+
   const sorted = [...ARTICLES].sort(
     (a, b) => new Date(getDate(b)) - new Date(getDate(a))
   );

@@ -205,6 +205,12 @@
     "faqTitle": "Preguntas Frecuentes",
     "faqDescription": "Respuestas a las preguntas más comunes sobre nuestros servicios de desarrollo de software.",
     "blogTitle": "Blog — Artículos sobre Desarrollo de Software e IA",
-    "blogDescription": "Artículos y recursos sobre desarrollo de software, inteligencia artificial, arquitectura SaaS y tecnología."
+    "blogDescription": "Artículos y recursos sobre desarrollo de software, inteligencia artificial, arquitectura SaaS y tecnología.",
+    "privacyTitle": "Política de Privacidad",
+    "privacyDescription": "Política de privacidad de PairProgramming. Cómo recopilamos, usamos y protegemos tu información personal.",
+    "termsTitle": "Términos y Condiciones",
+    "termsDescription": "Términos y condiciones de uso de los servicios de PairProgramming.",
+    "teamEstebanTitle": "Esteban Aleart — Founder & Lead Engineer",
+    "teamEstebanDescription": "Full-stack engineer especializado en arquitecturas B2B SaaS y sistemas de IA aplicada. Founder de PairProgramming."
   }
 }

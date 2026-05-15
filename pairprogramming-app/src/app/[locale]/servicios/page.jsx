@@ -1,21 +1,34 @@
-export const metadata = {
-  title: "Servicios",
-  description:
-    "Arquitectura B2B SaaS multi-tenant, desarrollo de plataformas digitales, CRM, ERP, automatización con n8n, Cloud & DevOps y más. Soluciones a medida para empresas.",
-  alternates: { canonical: "https://pairprogramming.com.ar/servicios" },
-  openGraph: {
-    title: "Servicios de Desarrollo de Software | PairProgramming",
-    description:
-      "Arquitectura B2B SaaS, CRM, ERP, automatización y Cloud & DevOps. Transformamos tu negocio con tecnología escalable.",
-    url: "https://pairprogramming.com.ar/servicios",
-    type: "website",
-  },
-};
-
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import Services from "@/app/components/Services";
 import CallToAction from "@/app/components/CallToAction";
 
-export default function Servicios() {
+export async function generateMetadata({ params }) {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "metadata" });
+
+  return {
+    title: t("servicesTitle"),
+    description: t("servicesDescription"),
+    alternates: {
+      canonical: "https://pairprogramming.com.ar/servicios",
+      languages: {
+        es: "https://pairprogramming.com.ar/servicios",
+        en: "https://pairprogramming.com.ar/en/servicios",
+      },
+    },
+    openGraph: {
+      title: `${t("servicesTitle")} | PairProgramming`,
+      description: t("servicesDescription"),
+      url: "https://pairprogramming.com.ar/servicios",
+      type: "website",
+    },
+  };
+}
+
+export default async function Servicios({ params }) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+
   return (
     <>
       <Services />

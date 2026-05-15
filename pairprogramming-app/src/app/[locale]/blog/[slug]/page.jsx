@@ -1,6 +1,7 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { marked } from "marked";
+import { setRequestLocale } from "next-intl/server";
 import { ARTICLES } from "@/app/data/articles";
 import CallToAction from "@/app/components/CallToAction";
 
@@ -82,7 +83,8 @@ export async function generateMetadata({ params }) {
 }
 
 export default async function ArticlePage({ params }) {
-  const { slug } = await params;
+  const { slug, locale } = await params;
+  setRequestLocale(locale);
   const article = ARTICLES.find((a) => a.slug === slug);
   if (!article) notFound();
 

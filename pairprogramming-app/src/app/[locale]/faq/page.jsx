@@ -1,4 +1,4 @@
-import { getTranslations } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import FAQContent from "@/app/components/FAQContent";
 import { faqData } from "@/app/data/faqData";
 import { getLocalizedItem } from "@/app/lib/i18n-helpers";
@@ -28,6 +28,7 @@ export async function generateMetadata({ params }) {
 
 export default async function FAQPage({ params }) {
   const { locale } = await params;
+  setRequestLocale(locale);
 
   // Localize FAQ data for JSON-LD
   const localizedCategories = faqData.map((cat) => getLocalizedItem(cat, locale));

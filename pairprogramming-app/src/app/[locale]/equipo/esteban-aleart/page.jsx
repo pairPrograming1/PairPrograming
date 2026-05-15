@@ -1,21 +1,29 @@
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import Link from "next/link";
 import CallToAction from "@/app/components/CallToAction";
 
-export const metadata = {
-  title: "Esteban Aleart — Founder & Lead Engineer",
-  description:
-    "Full-stack engineer especializado en arquitecturas B2B SaaS y sistemas de IA aplicada. Founder de PairProgramming. Madrid, España · LATAM y EU.",
-  alternates: {
-    canonical: "https://pairprogramming.com.ar/equipo/esteban-aleart",
-  },
-  openGraph: {
-    title: "Esteban Aleart — Founder & Lead Engineer | PairProgramming",
-    description:
-      "Full-stack engineer especializado en arquitecturas B2B SaaS y sistemas de IA aplicada.",
-    url: "https://pairprogramming.com.ar/equipo/esteban-aleart",
-    type: "profile",
-  },
-};
+export async function generateMetadata({ params }) {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "metadata" });
+
+  return {
+    title: t("teamEstebanTitle"),
+    description: t("teamEstebanDescription"),
+    alternates: {
+      canonical: "https://pairprogramming.com.ar/equipo/esteban-aleart",
+      languages: {
+        es: "https://pairprogramming.com.ar/equipo/esteban-aleart",
+        en: "https://pairprogramming.com.ar/en/equipo/esteban-aleart",
+      },
+    },
+    openGraph: {
+      title: `${t("teamEstebanTitle")} | PairProgramming`,
+      description: t("teamEstebanDescription"),
+      url: "https://pairprogramming.com.ar/equipo/esteban-aleart",
+      type: "profile",
+    },
+  };
+}
 
 const STACK = [
   "Next.js", "React", "TypeScript", "Node.js",
@@ -54,7 +62,10 @@ const LINKS = [
   { label: "LinkedIn", href: "https://www.linkedin.com/in/estebanaleart/" },
 ];
 
-export default function EstebanAleartPage() {
+export default async function EstebanAleartPage({ params }) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+
   return (
     <>
       {/* Person Schema */}

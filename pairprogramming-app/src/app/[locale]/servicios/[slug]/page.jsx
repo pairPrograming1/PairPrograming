@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation";
 import { Link } from "@/i18n/navigation";
-import { getTranslations } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import { SERVICES } from "@/app/data/services";
 import { portfolioVideos } from "@/app/data/portfolioVideos";
 import { getLocalizedService, getLocalizedItem } from "@/app/lib/i18n-helpers";
@@ -49,6 +49,7 @@ function slugifyProject(title) {
 
 export default async function ServicioPage({ params }) {
   const { slug, locale } = await params;
+  setRequestLocale(locale);
   const service = SERVICES.find((s) => s.slug === slug);
   if (!service) notFound();
 

@@ -1,7 +1,7 @@
 import { notFound } from "next/navigation";
 import { Link } from "@/i18n/navigation";
 import Image from "next/image";
-import { getTranslations } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import { portfolioVideos } from "@/app/data/portfolioVideos";
 import { getLocalizedItem } from "@/app/lib/i18n-helpers";
 import CallToAction from "@/app/components/CallToAction";
@@ -47,6 +47,7 @@ export async function generateMetadata({ params }) {
 
 export default async function ProyectoPage({ params }) {
   const { slug, locale } = await params;
+  setRequestLocale(locale);
   const project = portfolioVideos.find((p) => slugify(p.title) === slug);
   if (!project) notFound();
 
