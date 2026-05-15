@@ -1,6 +1,7 @@
 import { Link } from "@/i18n/navigation";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 import { SERVICES } from "@/app/data/services";
+import { getLocalizedService } from "@/app/lib/i18n-helpers";
 import {
   Layers, Monitor, LayoutGrid, Code2, Cloud,
   Search, Zap, CheckCircle, Star,
@@ -50,6 +51,7 @@ function ServiceCard({ n, slug, name, desc, viewMore }) {
 
 export default function Services() {
   const t = useTranslations("services");
+  const locale = useLocale();
 
   return (
     <section className="py-section px-8">
@@ -73,9 +75,12 @@ export default function Services() {
 
         {/* Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-          {SERVICES.map((s) => (
-            <ServiceCard key={s.n} {...s} viewMore={t("viewMore")} />
-          ))}
+          {SERVICES.map((s) => {
+            const localized = getLocalizedService(s, locale);
+            return (
+              <ServiceCard key={s.n} {...localized} viewMore={t("viewMore")} />
+            );
+          })}
         </div>
       </div>
     </section>

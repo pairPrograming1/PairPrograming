@@ -1,5 +1,6 @@
 import { TEAM } from "@/app/data/team";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
+import { getLocalizedItem } from "@/app/lib/i18n-helpers";
 import { Search, PenTool, Code2, Rocket } from "lucide-react";
 
 const STEP_ICONS = [Search, PenTool, Code2, Rocket];
@@ -43,6 +44,7 @@ function TeamCard({ name, role, description, expertise, location }) {
 
 export default function Nosotros() {
   const t = useTranslations("about");
+  const locale = useLocale();
 
   const STATS = [
     { number: "20+", label: t("statsProjects") },
@@ -108,9 +110,10 @@ export default function Nosotros() {
             {t("teamHeading")}
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            {TEAM.map((member) => (
-              <TeamCard key={member.name} {...member} />
-            ))}
+            {TEAM.map((member) => {
+              const localized = getLocalizedItem(member, locale);
+              return <TeamCard key={member.name} {...localized} />;
+            })}
           </div>
         </div>
 

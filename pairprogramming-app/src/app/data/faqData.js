@@ -20,6 +20,28 @@ export const faqData = [
           "Sí, ofrecemos planes de mantenimiento y soporte continuo:\n\n• Soporte técnico 24/7\n• Actualizaciones de seguridad\n• Mejoras y nuevas funcionalidades\n• Monitoreo y optimización\n• Backup y recuperación\n• Consultoría técnica permanente",
       },
     ],
+    i18n: {
+      en: {
+        title: "Services & Development",
+        questions: [
+          {
+            question: "What types of projects do you develop?",
+            answer:
+              "We develop a wide range of digital projects:\n\n• Web and mobile applications\n• SaaS platforms\n• CRM and ERP systems\n• E-commerce\n• Enterprise dashboards\n• APIs and microservices\n• Automation solutions",
+          },
+          {
+            question: "What technologies do you use?",
+            answer:
+              "We work with the most modern and reliable technologies:\n\nFrontend: React, Next.js, Vue.js, Angular\nBackend: Node.js, Python\nMobile: React Native, Flutter\nDatabases: PostgreSQL, MongoDB, MySQL\nCloud: AWS\nDevOps: CI/CD",
+          },
+          {
+            question: "Do you offer maintenance and support?",
+            answer:
+              "Yes, we offer ongoing maintenance and support plans:\n\n• 24/7 technical support\n• Security updates\n• Improvements and new features\n• Monitoring and optimization\n• Backup and recovery\n• Permanent technical consulting",
+          },
+        ],
+      },
+    },
   },
   {
     title: "Proceso y Metodología",
@@ -41,6 +63,28 @@ export const faqData = [
           "¡Absolutamente! Proporcionamos:\n\n• Acceso a entornos de desarrollo\n• Demos funcionales cada 2 semanas\n• Tableros de progreso en tiempo real\n• Reportes detallados de avance\n• Reuniones de revisión periódicas\n• Control total sobre el desarrollo",
       },
     ],
+    i18n: {
+      en: {
+        title: "Process & Methodology",
+        questions: [
+          {
+            question: "What is your development process?",
+            answer:
+              "We follow an agile and transparent methodology:\n\n1. Discovery and analysis\n2. UX/UI design\n3. Iterative development\n4. Testing and quality\n5. Deployment and launch\n6. Support and maintenance\n\nWe work in 2-week sprints with constant deliverables.",
+          },
+          {
+            question: "How do you handle communication?",
+            answer:
+              "We maintain constant and transparent communication:\n\n• Weekly follow-up meetings\n• Dedicated Slack/Teams channel\n• Regular progress reports\n• Progress demo every sprint\n• Direct contact with the technical team\n• Full process transparency",
+          },
+          {
+            question: "Can I see my project's progress?",
+            answer:
+              "Absolutely! We provide:\n\n• Access to development environments\n• Functional demos every 2 weeks\n• Real-time progress boards\n• Detailed progress reports\n• Periodic review meetings\n• Full control over development",
+          },
+        ],
+      },
+    },
   },
   {
     title: "Precios y Pagos",
@@ -62,6 +106,28 @@ export const faqData = [
           "Sí, ofrecemos garantía completa:\n\n• 90 días de garantía en desarrollo\n• Soporte prioritario incluido\n• Corrección de bugs sin costo\n• Optimizaciones iniciales\n• Documentación técnica completa\n• Capacitación del equipo",
       },
     ],
+    i18n: {
+      en: {
+        title: "Pricing & Payments",
+        questions: [
+          {
+            question: "How do you determine pricing?",
+            answer:
+              "Our pricing is based on:\n\n• Project complexity\n• Required technologies\n• Development timeline\n• Assigned team\n• Required resources\n• Post-launch support\n\nWe offer custom quotes with no commitment.",
+          },
+          {
+            question: "What payment methods do you accept?",
+            answer:
+              "We accept multiple payment methods:\n\n• Bank transfer\n• Credit/debit cards\n• PayPal\n• Mercado Pago\n• Cryptocurrency (inquire)\n• Enterprise invoicing\n\nFlexible payment plans depending on the project.",
+          },
+          {
+            question: "Do you offer a warranty?",
+            answer:
+              "Yes, we offer a complete warranty:\n\n• 90-day development warranty\n• Priority support included\n• Bug fixes at no cost\n• Initial optimizations\n• Complete technical documentation\n• Team training",
+          },
+        ],
+      },
+    },
   },
   {
     title: "Tiempos y Entregas",
@@ -83,5 +149,27 @@ export const faqData = [
           "Cada entrega incluye:\n\n• Código fuente completo\n• Documentación técnica\n• Manual de usuario\n• Certificado de seguridad\n• Plan de despliegue\n• Sesión de capacitación\n• Soporte post-lanzamiento",
       },
     ],
+    i18n: {
+      en: {
+        title: "Timelines & Deliverables",
+        questions: [
+          {
+            question: "How long does it take to develop a project?",
+            answer:
+              "Timelines vary depending on complexity:\n\n• MVP: 4-8 weeks\n• Mid-size application: 8-16 weeks\n• Enterprise project: 16-24 weeks\n• Agile development with incremental deliveries\n• Detailed timeline in the proposal\n• Flexibility based on priorities",
+          },
+          {
+            question: "Do you work with tight deadlines?",
+            answer:
+              "Yes, we're experienced in handling deadlines:\n\n• Agile methodologies for speed\n• Scalable team based on needs\n• Feature prioritization\n• Constant progress communication\n• Commitment to agreed dates\n• Contingency plan for unexpected issues",
+          },
+          {
+            question: "What's included in the final delivery?",
+            answer:
+              "Every delivery includes:\n\n• Complete source code\n• Technical documentation\n• User manual\n• Security certificate\n• Deployment plan\n• Training session\n• Post-launch support",
+          },
+        ],
+      },
+    },
   },
 ];

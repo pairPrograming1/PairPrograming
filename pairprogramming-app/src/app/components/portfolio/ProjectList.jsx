@@ -1,5 +1,6 @@
 "use client";
 import { useRef, useCallback, useEffect, useState } from "react";
+import { useTranslations } from "next-intl";
 import Image from "next/image";
 
 const categoryColors = {
@@ -16,13 +17,17 @@ const categoryColors = {
 };
 
 const statusConfig = {
-  "Producción":    { bg: "bg-emerald-500/10", text: "text-emerald-400", border: "border-emerald-500/30", dot: "bg-emerald-400" },
-  "Demo Activo":   { bg: "bg-brand-blue/10",  text: "text-brand-blue-light", border: "border-brand-blue/30",  dot: "bg-brand-blue-light" },
-  "En Desarrollo": { bg: "bg-brand-gold/10",  text: "text-brand-gold-light", border: "border-brand-gold/30",  dot: "bg-brand-gold-light" },
+  "Producción":     { bg: "bg-emerald-500/10", text: "text-emerald-400", border: "border-emerald-500/30", dot: "bg-emerald-400" },
+  "Production":     { bg: "bg-emerald-500/10", text: "text-emerald-400", border: "border-emerald-500/30", dot: "bg-emerald-400" },
+  "Demo Activo":    { bg: "bg-brand-blue/10",  text: "text-brand-blue-light", border: "border-brand-blue/30",  dot: "bg-brand-blue-light" },
+  "Active Demo":    { bg: "bg-brand-blue/10",  text: "text-brand-blue-light", border: "border-brand-blue/30",  dot: "bg-brand-blue-light" },
+  "En Desarrollo":  { bg: "bg-brand-gold/10",  text: "text-brand-gold-light", border: "border-brand-gold/30",  dot: "bg-brand-gold-light" },
+  "In Development": { bg: "bg-brand-gold/10",  text: "text-brand-gold-light", border: "border-brand-gold/30",  dot: "bg-brand-gold-light" },
 };
 
 // ── Modal de detalle completo ──────────────────────────────────────────────────
 function ProjectModal({ project, onClose }) {
+  const t = useTranslations("projectCard");
   const colors = categoryColors[project.categoryColor] || categoryColors.blue;
   const status = statusConfig[project.duration] || statusConfig["Producción"];
 
@@ -79,7 +84,7 @@ function ProjectModal({ project, onClose }) {
           <button
             onClick={onClose}
             className="absolute top-4 right-4 w-9 h-9 rounded-xl bg-black/40 hover:bg-black/60 backdrop-blur-sm border border-white/10 flex items-center justify-center transition-all duration-200 group"
-            aria-label="Cerrar"
+            aria-label={t("close")}
           >
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="text-white/70 group-hover:text-white transition-colors">
               <line x1="18" y1="6" x2="6" y2="18" />
@@ -106,7 +111,7 @@ function ProjectModal({ project, onClose }) {
           {/* Stack completo */}
           <div className="mb-6">
             <p className="text-xs font-semibold uppercase tracking-widest text-secondary-text mb-3">
-              Stack Tecnológico
+              {t("techStack")}
             </p>
             <div className="flex flex-wrap gap-2">
               {project.technologies.map((tech, i) => (
@@ -124,7 +129,7 @@ function ProjectModal({ project, onClose }) {
           {project.features?.length > 0 && (
             <div className="mb-6">
               <p className="text-xs font-semibold uppercase tracking-widest text-secondary-text mb-3">
-                Características Destacadas
+                {t("keyFeatures")}
               </p>
               <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                 {project.features.map((feature, i) => (
@@ -146,7 +151,7 @@ function ProjectModal({ project, onClose }) {
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 bg-brand-blue hover:bg-brand-blue-light text-white px-5 py-2.5 rounded-xl font-semibold text-sm transition-all duration-200 group shadow-lg shadow-brand-blue/20"
               >
-                Visitar Proyecto
+                {t("visitProject")}
                 <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="group-hover:translate-x-0.5 transition-transform duration-200">
                   <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
                   <polyline points="15 3 21 3 21 9" />
@@ -158,7 +163,7 @@ function ProjectModal({ project, onClose }) {
               onClick={onClose}
               className="px-5 py-2.5 rounded-xl border border-border-color hover:border-brand-blue/40 text-secondary-text hover:text-foreground text-sm font-medium transition-all duration-200"
             >
-              Cerrar
+              {t("close")}
             </button>
           </div>
         </div>
@@ -169,6 +174,7 @@ function ProjectModal({ project, onClose }) {
 
 // ── Card individual ────────────────────────────────────────────────────────────
 function ProjectCard({ project, onDetail }) {
+  const t = useTranslations("projectCard");
   const colors = categoryColors[project.categoryColor] || categoryColors.blue;
   const status = statusConfig[project.duration] || statusConfig["Producción"];
 
@@ -216,7 +222,7 @@ function ProjectCard({ project, onDetail }) {
         {/* Hover overlay hint */}
         <div className="absolute inset-0 bg-brand-blue/0 group-hover:bg-brand-blue/5 transition-colors duration-300 flex items-center justify-center">
           <span className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black/50 backdrop-blur-sm text-white text-xs font-semibold px-3 py-1.5 rounded-full border border-white/20">
-            Ver detalles
+            {t("viewDetails").replace(" →", "")}
           </span>
         </div>
       </div>
@@ -258,7 +264,7 @@ function ProjectCard({ project, onDetail }) {
             onClick={onDetail}
             className={`text-xs font-semibold ${colors.text} hover:opacity-80 transition-opacity`}
           >
-            Ver detalles →
+            {t("viewDetails")}
           </button>
 
           {project.url && (
@@ -274,7 +280,7 @@ function ProjectCard({ project, onDetail }) {
                 <polyline points="15 3 21 3 21 9" />
                 <line x1="10" y1="14" x2="21" y2="3" />
               </svg>
-              Visitar
+              {t("visit")}
             </a>
           )}
         </div>
@@ -285,6 +291,7 @@ function ProjectCard({ project, onDetail }) {
 
 // ── Carrusel principal ─────────────────────────────────────────────────────────
 export default function ProjectList({ projects, currentVideo, onVideoSelect }) {
+  const t = useTranslations("projectCard");
   const trackRef = useRef(null);
   const total = projects.length;
   const [selectedProject, setSelectedProject] = useState(null);
@@ -365,7 +372,7 @@ export default function ProjectList({ projects, currentVideo, onVideoSelect }) {
               style={{ background: "#0d1520", border: "1px solid rgba(238,242,247,0.07)" }}
               onMouseEnter={e => { if (!e.currentTarget.disabled) e.currentTarget.style.borderColor = "rgba(74,143,196,0.3)"; }}
               onMouseLeave={e => { e.currentTarget.style.borderColor = "rgba(238,242,247,0.07)"; }}
-              aria-label="Proyecto anterior"
+              aria-label={t("prevProject")}
             >
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" style={{ color: "rgba(238,242,247,0.42)" }}>
                 <polyline points="15 18 9 12 15 6" />
@@ -378,7 +385,7 @@ export default function ProjectList({ projects, currentVideo, onVideoSelect }) {
               style={{ background: "#0d1520", border: "1px solid rgba(238,242,247,0.07)" }}
               onMouseEnter={e => { if (!e.currentTarget.disabled) e.currentTarget.style.borderColor = "rgba(74,143,196,0.3)"; }}
               onMouseLeave={e => { e.currentTarget.style.borderColor = "rgba(238,242,247,0.07)"; }}
-              aria-label="Proyecto siguiente"
+              aria-label={t("nextProject")}
             >
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" style={{ color: "rgba(238,242,247,0.42)" }}>
                 <polyline points="9 18 15 12 9 6" />

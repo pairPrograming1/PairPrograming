@@ -1,7 +1,9 @@
 import { notFound } from "next/navigation";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import Image from "next/image";
+import { getTranslations } from "next-intl/server";
 import { portfolioVideos } from "@/app/data/portfolioVideos";
+import { getLocalizedItem } from "@/app/lib/i18n-helpers";
 import CallToAction from "@/app/components/CallToAction";
 
 function slugify(title) {
@@ -18,19 +20,25 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }) {
-  const { slug } = await params;
+  const { slug, locale } = await params;
   const project = portfolioVideos.find((p) => slugify(p.title) === slug);
   if (!project) return {};
 
+  const localized = getLocalizedItem(project, locale);
+
   return {
-    title: `${project.title} — Portafolio`,
-    description: project.description,
+    title: `${localized.title} — ${locale === "en" ? "Portfolio" : "Portafolio"}`,
+    description: localized.description,
     alternates: {
       canonical: `https://pairprogramming.com.ar/portafolio/${slug}`,
+      languages: {
+        es: `https://pairprogramming.com.ar/portafolio/${slug}`,
+        en: `https://pairprogramming.com.ar/en/portafolio/${slug}`,
+      },
     },
     openGraph: {
-      title: `${project.title} | PairProgramming`,
-      description: project.description.slice(0, 160),
+      title: `${localized.title} | PairProgramming`,
+      description: localized.description.slice(0, 160),
       url: `https://pairprogramming.com.ar/portafolio/${slug}`,
       type: "website",
     },
@@ -38,15 +46,20 @@ export async function generateMetadata({ params }) {
 }
 
 export default async function ProyectoPage({ params }) {
-  const { slug } = await params;
+  const { slug, locale } = await params;
   const project = portfolioVideos.find((p) => slugify(p.title) === slug);
   if (!project) notFound();
 
+  const t = await getTranslations({ locale, namespace: "portfolioDetail" });
+  const tCommon = await getTranslations({ locale, namespace: "common" });
+
+  const localized = getLocalizedItem(project, locale);
+
   const metrics = [
-    { label: "Categoría", value: project.category },
-    { label: "Estado", value: project.duration },
-    { label: "Stack principal", value: project.technologies[0] },
-    { label: "Tecnologías", value: `${project.technologies.length} techs` },
+    { label: t("category"), value: localized.category },
+    { label: t("status"), value: localized.duration },
+    { label: t("mainStack"), value: project.technologies[0] },
+    { label: t("technologies"), value: `${project.technologies.length} ${t("techs")}` },
   ];
 
   return (
@@ -58,8 +71,8 @@ export default async function ProyectoPage({ params }) {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "CreativeWork",
-            name: project.title,
-            description: project.description,
+            name: localized.title,
+            description: localized.description,
             url: project.url,
             creator: {
               "@type": "Organization",
@@ -79,9 +92,9 @@ export default async function ProyectoPage({ params }) {
             "@context": "https://schema.org",
             "@type": "BreadcrumbList",
             itemListElement: [
-              { "@type": "ListItem", position: 1, name: "Inicio", item: "https://pairprogramming.com.ar" },
-              { "@type": "ListItem", position: 2, name: "Portafolio", item: "https://pairprogramming.com.ar/portafolio" },
-              { "@type": "ListItem", position: 3, name: project.title },
+              { "@type": "ListItem", position: 1, name: tCommon("home"), item: "https://pairprogramming.com.ar" },
+              { "@type": "ListItem", position: 2, name: tCommon("portfolio"), item: "https://pairprogramming.com.ar/portafolio" },
+              { "@type": "ListItem", position: 3, name: localized.title },
             ],
           }),
         }}
@@ -91,19 +104,19 @@ export default async function ProyectoPage({ params }) {
         <div className="max-w-container mx-auto">
           {/* Breadcrumb visual */}
           <nav className="font-mono text-[13px] text-ink-subtle mb-8">
-            <Link href="/" className="hover:text-ink transition-colors">Inicio</Link>
+            <Link href="/" className="hover:text-ink transition-colors">{tCommon("home")}</Link>
             <span className="mx-2 text-ink-tertiary">/</span>
-            <Link href="/portafolio" className="hover:text-ink transition-colors">Portafolio</Link>
+            <Link href="/portafolio" className="hover:text-ink transition-colors">{tCommon("portfolio")}</Link>
             <span className="mx-2 text-ink-tertiary">/</span>
-            <span className="text-ink">{project.title.split(" - ")[0]}</span>
+            <span className="text-ink">{localized.title.split(" - ")[0]}</span>
           </nav>
 
           {/* Hero */}
           <div className="mb-12">
             <span className="eyebrow-mono text-primary block mb-3">
-              {project.category}
+              {localized.category}
             </span>
-            <h1 className="display-lg text-ink mb-4">{project.title}</h1>
+            <h1 className="display-lg text-ink mb-4">{localized.title}</h1>
 
             {/* Metrics grid */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8">
@@ -121,7 +134,7 @@ export default async function ProyectoPage({ params }) {
             <div className="bg-surface-1 border border-hairline rounded-xl overflow-hidden mb-12">
               <Image
                 src={project.image}
-                alt={`Captura de ${project.title}`}
+                alt={localized.title}
                 width={1280}
                 height={720}
                 className="w-full h-auto"
@@ -132,21 +145,21 @@ export default async function ProyectoPage({ params }) {
           {/* Description */}
           <div className="max-w-[720px] mx-auto mb-16">
             <span className="eyebrow-mono text-ink-tertiary block mb-3">
-              Sobre el proyecto
+              {t("aboutProject")}
             </span>
             <p className="text-body-lg text-ink-muted leading-relaxed">
-              {project.description}
+              {localized.description}
             </p>
           </div>
 
           {/* Features */}
           <div className="mb-16">
             <span className="eyebrow-mono text-ink-tertiary block mb-3">
-              Funcionalidades clave
+              {t("keyFeatures")}
             </span>
-            <h2 className="headline text-ink mb-8">Qué construimos</h2>
+            <h2 className="headline text-ink mb-8">{t("whatWeBuilt")}</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              {project.features.map((feature, i) => (
+              {localized.features.map((feature, i) => (
                 <div
                   key={i}
                   className="flex items-start gap-3 bg-surface-1 border border-hairline rounded-lg p-4"
@@ -161,7 +174,7 @@ export default async function ProyectoPage({ params }) {
           {/* Stack */}
           <div className="bg-surface-1 border border-hairline rounded-xl p-8 mb-16">
             <span className="eyebrow-mono text-ink-tertiary block mb-4">
-              Stack utilizado
+              {t("stackUsed")}
             </span>
             <div className="flex flex-wrap gap-2">
               {project.technologies.map((tech) => (
@@ -184,14 +197,14 @@ export default async function ProyectoPage({ params }) {
                 rel="noopener noreferrer"
                 className="bg-primary hover:bg-primary-hover text-on-primary font-medium text-[15px] px-5 py-3 rounded-md transition-colors"
               >
-                Visitar proyecto
+                {t("visitProject")}
               </a>
             )}
             <Link
               href="/portafolio"
               className="bg-surface-1 hover:bg-surface-2 text-ink border border-hairline hover:border-hairline-strong font-medium text-[15px] px-5 py-3 rounded-md transition-all"
             >
-              Ver más casos
+              {t("viewMoreCases")}
             </Link>
           </div>
         </div>

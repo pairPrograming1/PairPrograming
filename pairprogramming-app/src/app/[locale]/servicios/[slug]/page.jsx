@@ -1,7 +1,9 @@
 import { notFound } from "next/navigation";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
+import { getTranslations } from "next-intl/server";
 import { SERVICES } from "@/app/data/services";
 import { portfolioVideos } from "@/app/data/portfolioVideos";
+import { getLocalizedService, getLocalizedItem } from "@/app/lib/i18n-helpers";
 import CallToAction from "@/app/components/CallToAction";
 import DataReal from "@/app/components/DataReal";
 import { getDatoRealServicio, datoRealToJsonLd } from "@/app/lib/datos-reales";
@@ -11,19 +13,25 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }) {
-  const { slug } = await params;
+  const { slug, locale } = await params;
   const service = SERVICES.find((s) => s.slug === slug);
   if (!service) return {};
 
+  const localized = getLocalizedService(service, locale);
+
   return {
-    title: `${service.name} — Servicios`,
-    description: service.longDesc,
+    title: `${localized.name} — ${locale === "en" ? "Services" : "Servicios"}`,
+    description: localized.longDesc,
     alternates: {
       canonical: `https://pairprogramming.com.ar/servicios/${slug}`,
+      languages: {
+        es: `https://pairprogramming.com.ar/servicios/${slug}`,
+        en: `https://pairprogramming.com.ar/en/servicios/${slug}`,
+      },
     },
     openGraph: {
-      title: `${service.name} | PairProgramming`,
-      description: service.desc,
+      title: `${localized.name} | PairProgramming`,
+      description: localized.desc,
       url: `https://pairprogramming.com.ar/servicios/${slug}`,
       type: "website",
     },
@@ -40,18 +48,24 @@ function slugifyProject(title) {
 }
 
 export default async function ServicioPage({ params }) {
-  const { slug } = await params;
+  const { slug, locale } = await params;
   const service = SERVICES.find((s) => s.slug === slug);
   if (!service) notFound();
 
+  const t = await getTranslations({ locale, namespace: "serviceDetail" });
+  const tCommon = await getTranslations({ locale, namespace: "common" });
+
+  const localized = getLocalizedService(service, locale);
   const datoReal = getDatoRealServicio(slug);
   const datasetJsonLd = datoRealToJsonLd(datoReal);
 
-  const relatedProjects = portfolioVideos.filter((p) =>
-    service.casosRelacionados?.some(
-      (ref) => slugifyProject(p.title).includes(ref)
+  const relatedProjects = portfolioVideos
+    .filter((p) =>
+      service.casosRelacionados?.some(
+        (ref) => slugifyProject(p.title).includes(ref)
+      )
     )
-  );
+    .map((p) => getLocalizedItem(p, locale));
 
   return (
     <>
@@ -71,20 +85,20 @@ export default async function ServicioPage({ params }) {
             {
               "@context": "https://schema.org",
               "@type": "Service",
-              name: service.name,
-              description: service.longDesc,
+              name: localized.name,
+              description: localized.longDesc,
               provider: {
                 "@type": "Organization",
                 name: "PairProgramming",
                 url: "https://pairprogramming.com.ar",
               },
             },
-            ...(service.faq?.length
+            ...(localized.faq?.length
               ? [
                   {
                     "@context": "https://schema.org",
                     "@type": "FAQPage",
-                    mainEntity: service.faq.map((f) => ({
+                    mainEntity: localized.faq.map((f) => ({
                       "@type": "Question",
                       name: f.question,
                       acceptedAnswer: {
@@ -107,9 +121,9 @@ export default async function ServicioPage({ params }) {
             "@context": "https://schema.org",
             "@type": "BreadcrumbList",
             itemListElement: [
-              { "@type": "ListItem", position: 1, name: "Inicio", item: "https://pairprogramming.com.ar" },
-              { "@type": "ListItem", position: 2, name: "Servicios", item: "https://pairprogramming.com.ar/servicios" },
-              { "@type": "ListItem", position: 3, name: service.name },
+              { "@type": "ListItem", position: 1, name: tCommon("home"), item: "https://pairprogramming.com.ar" },
+              { "@type": "ListItem", position: 2, name: tCommon("services"), item: "https://pairprogramming.com.ar/servicios" },
+              { "@type": "ListItem", position: 3, name: localized.name },
             ],
           }),
         }}
@@ -119,30 +133,30 @@ export default async function ServicioPage({ params }) {
         <div className="max-w-container mx-auto">
           {/* Breadcrumb visual */}
           <nav className="font-mono text-[13px] text-ink-subtle mb-8">
-            <Link href="/" className="hover:text-ink transition-colors">Inicio</Link>
+            <Link href="/" className="hover:text-ink transition-colors">{tCommon("home")}</Link>
             <span className="mx-2 text-ink-tertiary">/</span>
-            <Link href="/servicios" className="hover:text-ink transition-colors">Servicios</Link>
+            <Link href="/servicios" className="hover:text-ink transition-colors">{tCommon("services")}</Link>
             <span className="mx-2 text-ink-tertiary">/</span>
-            <span className="text-ink">{service.name}</span>
+            <span className="text-ink">{localized.name}</span>
           </nav>
 
           {/* Hero */}
           <div className="max-w-[720px] mb-16">
             <span className="eyebrow-mono text-primary block mb-3">{service.n}</span>
-            <h1 className="display-lg text-ink mb-4">{service.name}</h1>
-            <p className="text-body-lg text-ink-subtle mb-8">{service.longDesc}</p>
+            <h1 className="display-lg text-ink mb-4">{localized.name}</h1>
+            <p className="text-body-lg text-ink-subtle mb-8">{localized.longDesc}</p>
             <div className="flex flex-wrap gap-3">
               <Link
                 href="/contacto"
                 className="bg-primary hover:bg-primary-hover text-on-primary font-medium text-[15px] px-5 py-3 rounded-md transition-colors"
               >
-                Solicitar cotización
+                {t("requestQuote")}
               </Link>
               <Link
                 href="/portafolio"
                 className="bg-surface-1 hover:bg-surface-2 text-ink border border-hairline hover:border-hairline-strong font-medium text-[15px] px-5 py-3 rounded-md transition-all"
               >
-                Ver casos
+                {t("viewCases")}
               </Link>
             </div>
           </div>
@@ -152,10 +166,10 @@ export default async function ServicioPage({ params }) {
 
           {/* Entregables */}
           <div className="mb-16">
-            <span className="eyebrow-mono text-ink-tertiary block mb-3">Qué incluye</span>
-            <h2 className="headline text-ink mb-8">Entregables</h2>
+            <span className="eyebrow-mono text-ink-tertiary block mb-3">{t("whatsIncluded")}</span>
+            <h2 className="headline text-ink mb-8">{t("deliverables")}</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              {service.entregables.map((item, i) => (
+              {localized.entregables.map((item, i) => (
                 <div
                   key={i}
                   className="flex items-start gap-3 bg-surface-1 border border-hairline rounded-lg p-4"
@@ -170,7 +184,7 @@ export default async function ServicioPage({ params }) {
           {/* Stack */}
           <div className="bg-surface-1 border border-hairline rounded-xl p-8 mb-16">
             <span className="eyebrow-mono text-ink-tertiary block mb-4">
-              Stack tecnológico
+              {t("techStack")}
             </span>
             <div className="flex flex-wrap gap-2">
               {service.stack.map((tech) => (
@@ -185,12 +199,12 @@ export default async function ServicioPage({ params }) {
           </div>
 
           {/* Proceso */}
-          {service.proceso?.length > 0 && (
+          {localized.proceso?.length > 0 && (
             <div className="mb-16">
-              <span className="eyebrow-mono text-ink-tertiary block mb-3">Cómo lo hacemos</span>
-              <h2 className="headline text-ink mb-8">Proceso</h2>
+              <span className="eyebrow-mono text-ink-tertiary block mb-3">{t("howWeDoIt")}</span>
+              <h2 className="headline text-ink mb-8">{t("process")}</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                {service.proceso.map((step, i) => (
+                {localized.proceso.map((step, i) => (
                   <div key={i}>
                     <div className="flex items-center gap-3 mb-3">
                       <span className="font-mono text-[13px] font-medium text-primary tracking-[0.4px]">
@@ -211,9 +225,9 @@ export default async function ServicioPage({ params }) {
           {relatedProjects.length > 0 && (
             <div className="mb-16">
               <span className="eyebrow-mono text-ink-tertiary block mb-3">
-                Casos relacionados
+                {t("relatedCases")}
               </span>
-              <h2 className="headline text-ink mb-8">Proyectos con este servicio</h2>
+              <h2 className="headline text-ink mb-8">{t("projectsWithService")}</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 {relatedProjects.slice(0, 4).map((project) => (
                   <Link
@@ -235,12 +249,12 @@ export default async function ServicioPage({ params }) {
           )}
 
           {/* FAQ */}
-          {service.faq?.length > 0 && (
+          {localized.faq?.length > 0 && (
             <div className="mb-16">
-              <span className="eyebrow-mono text-ink-tertiary block mb-3">Preguntas frecuentes</span>
-              <h2 className="headline text-ink mb-8">FAQ</h2>
+              <span className="eyebrow-mono text-ink-tertiary block mb-3">{t("faqEyebrow")}</span>
+              <h2 className="headline text-ink mb-8">{t("faq")}</h2>
               <div className="space-y-4">
-                {service.faq.map((item, i) => (
+                {localized.faq.map((item, i) => (
                   <div
                     key={i}
                     className="bg-surface-1 border border-hairline rounded-lg p-6"

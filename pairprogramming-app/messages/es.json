@@ -130,12 +130,63 @@
     "eyebrow": "FAQ",
     "heading": "Preguntas frecuentes",
     "lead": "Encontrá respuestas a las preguntas más comunes sobre nuestros servicios, proceso y metodología.",
-    "contactHeading": "¿No encontraste lo que buscabas?",
-    "contactText": "Nuestro equipo está listo para ayudarte con cualquier pregunta adicional.",
-    "contactCta": "Contactanos"
+    "helpCenter": "Centro de ayuda",
+    "clearAnswers": "Respuestas claras, sin vueltas",
+    "humanSupport": "Soporte humano",
+    "contactHeading": "¿No encontraste tu respuesta?",
+    "contactText": "Estamos aquí para ayudarte. Contáctanos directamente y resolveremos todas tus dudas.",
+    "contactCta": "Contáctanos"
+  },
+  "portfolioHeader": {
+    "badge": "Proyectos Destacados",
+    "heading1": "Nuestro ",
+    "heading2": "Portafolio",
+    "lead": "Explora nuestros proyectos más destacados. Cada uno representa soluciones reales que hemos desarrollado con tecnologías modernas y las mejores prácticas de la industria.",
+    "projects": "Proyectos",
+    "inProduction": "En Producción",
+    "industries": "Industrias"
+  },
+  "projectCard": {
+    "viewDetails": "Ver detalles →",
+    "visit": "Visitar",
+    "close": "Cerrar",
+    "techStack": "Stack Tecnológico",
+    "keyFeatures": "Características Destacadas",
+    "visitProject": "Visitar Proyecto",
+    "prevProject": "Proyecto anterior",
+    "nextProject": "Proyecto siguiente"
+  },
+  "serviceDetail": {
+    "requestQuote": "Solicitar cotización",
+    "viewCases": "Ver casos",
+    "whatsIncluded": "Qué incluye",
+    "deliverables": "Entregables",
+    "techStack": "Stack tecnológico",
+    "howWeDoIt": "Cómo lo hacemos",
+    "process": "Proceso",
+    "relatedCases": "Casos relacionados",
+    "projectsWithService": "Proyectos con este servicio",
+    "faqEyebrow": "Preguntas frecuentes",
+    "faq": "FAQ"
+  },
+  "portfolioDetail": {
+    "category": "Categoría",
+    "status": "Estado",
+    "mainStack": "Stack principal",
+    "technologies": "Tecnologías",
+    "techs": "techs",
+    "aboutProject": "Sobre el proyecto",
+    "keyFeatures": "Funcionalidades clave",
+    "whatWeBuilt": "Qué construimos",
+    "stackUsed": "Stack utilizado",
+    "visitProject": "Visitar proyecto",
+    "viewMoreCases": "Ver más casos",
+    "screenshotAlt": "Captura de {title}"
   },
   "common": {
     "home": "Inicio",
+    "services": "Servicios",
+    "portfolio": "Portafolio",
     "viewMore": "Ver más",
     "readMore": "Leer más",
     "backToHome": "Volver al inicio"
