@@ -5,7 +5,7 @@ export default function manifest() {
     description:
       "Desarrollo de software B2B SaaS, CRM, ERP y productos digitales escalables.",
     start_url: "/",
-    display: "standalone",
+    display: "browser",
     background_color: "#010102",
     theme_color: "#5e6ad2",
     icons: [
