@@ -94,18 +94,6 @@ export default function RootLayout({ children }) {
   return (
     <html lang="es" className={`${inter.variable} ${mono.variable}`}>
       <head>
-        {/* Google Analytics */}
-        <Script
-          id="ga4-init"
-          strategy="afterInteractive"
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'G-ZMRX7X4E49');`,
-          }}
-        />
         {/* Google Tag Manager */}
         <Script id="gtm-init" strategy="afterInteractive">
           {`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
