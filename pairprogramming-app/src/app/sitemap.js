@@ -17,36 +17,135 @@ function slugify(title) {
 export default function sitemap() {
   const now = new Date();
 
-  // Static pages
-  const staticPages = [
-    { url: BASE_URL, changeFrequency: "weekly", priority: 1.0 },
-    { url: `${BASE_URL}/servicios`, changeFrequency: "monthly", priority: 0.9 },
-    { url: `${BASE_URL}/portafolio`, changeFrequency: "weekly", priority: 0.9 },
-    { url: `${BASE_URL}/nosotros`, changeFrequency: "monthly", priority: 0.8 },
-    { url: `${BASE_URL}/contacto`, changeFrequency: "monthly", priority: 0.8 },
-    { url: `${BASE_URL}/faq`, changeFrequency: "monthly", priority: 0.6 },
-    { url: `${BASE_URL}/equipo/esteban-aleart`, changeFrequency: "monthly", priority: 0.7 },
-    { url: `${BASE_URL}/privacidad`, changeFrequency: "yearly", priority: 0.3 },
-    { url: `${BASE_URL}/terminos-condiciones`, changeFrequency: "yearly", priority: 0.3 },
-  ].map((page) => ({ ...page, lastModified: now }));
+  // Static pages — bilingual (es + en)
+  const staticPaths = [
+    { path: "", changeFrequency: "weekly", priority: 1.0 },
+    { path: "/servicios", changeFrequency: "monthly", priority: 0.9 },
+    { path: "/portafolio", changeFrequency: "weekly", priority: 0.9 },
+    { path: "/nosotros", changeFrequency: "monthly", priority: 0.8 },
+    { path: "/contacto", changeFrequency: "monthly", priority: 0.8 },
+    { path: "/faq", changeFrequency: "monthly", priority: 0.6 },
+    { path: "/blog", changeFrequency: "weekly", priority: 0.9 },
+    { path: "/equipo/esteban-aleart", changeFrequency: "monthly", priority: 0.7 },
+    { path: "/privacidad", changeFrequency: "yearly", priority: 0.3 },
+    { path: "/terminos-condiciones", changeFrequency: "yearly", priority: 0.3 },
+  ];
 
-  // Service pages
-  const servicePages = SERVICES.map((s) => ({
-    url: `${BASE_URL}/servicios/${s.slug}`,
-    lastModified: now,
-    changeFrequency: "monthly",
-    priority: 0.8,
-  }));
+  const bilingualStatic = staticPaths.flatMap((page) => [
+    {
+      url: `${BASE_URL}${page.path}`,
+      lastModified: now,
+      changeFrequency: page.changeFrequency,
+      priority: page.priority,
+      alternates: {
+        languages: {
+          es: `${BASE_URL}${page.path}`,
+          en: `${BASE_URL}/en${page.path}`,
+        },
+      },
+    },
+    {
+      url: `${BASE_URL}/en${page.path}`,
+      lastModified: now,
+      changeFrequency: page.changeFrequency,
+      priority: page.priority * 0.9,
+      alternates: {
+        languages: {
+          es: `${BASE_URL}${page.path}`,
+          en: `${BASE_URL}/en${page.path}`,
+        },
+      },
+    },
+  ]);
 
-  // Portfolio pages
-  const portfolioPages = portfolioVideos.map((p) => ({
-    url: `${BASE_URL}/portafolio/${slugify(p.title)}`,
-    lastModified: now,
-    changeFrequency: "monthly",
-    priority: 0.7,
-  }));
+  // Service pages — bilingual
+  const servicePages = SERVICES.flatMap((s) => [
+    {
+      url: `${BASE_URL}/servicios/${s.slug}`,
+      lastModified: now,
+      changeFrequency: "monthly",
+      priority: 0.8,
+      alternates: {
+        languages: {
+          es: `${BASE_URL}/servicios/${s.slug}`,
+          en: `${BASE_URL}/en/servicios/${s.slug}`,
+        },
+      },
+    },
+    {
+      url: `${BASE_URL}/en/servicios/${s.slug}`,
+      lastModified: now,
+      changeFrequency: "monthly",
+      priority: 0.72,
+      alternates: {
+        languages: {
+          es: `${BASE_URL}/servicios/${s.slug}`,
+          en: `${BASE_URL}/en/servicios/${s.slug}`,
+        },
+      },
+    },
+  ]);
 
-  // Location pages (/desarrollo-software/[locacion])
+  // Portfolio pages — bilingual
+  const portfolioPages = portfolioVideos.flatMap((p) => {
+    const slug = slugify(p.title);
+    return [
+      {
+        url: `${BASE_URL}/portafolio/${slug}`,
+        lastModified: now,
+        changeFrequency: "monthly",
+        priority: 0.7,
+        alternates: {
+          languages: {
+            es: `${BASE_URL}/portafolio/${slug}`,
+            en: `${BASE_URL}/en/portafolio/${slug}`,
+          },
+        },
+      },
+      {
+        url: `${BASE_URL}/en/portafolio/${slug}`,
+        lastModified: now,
+        changeFrequency: "monthly",
+        priority: 0.63,
+        alternates: {
+          languages: {
+            es: `${BASE_URL}/portafolio/${slug}`,
+            en: `${BASE_URL}/en/portafolio/${slug}`,
+          },
+        },
+      },
+    ];
+  });
+
+  // Blog pages — bilingual (UI in English, articles in Spanish)
+  const blogPages = ARTICLES.flatMap((a) => [
+    {
+      url: `${BASE_URL}/blog/${a.slug}`,
+      lastModified: now,
+      changeFrequency: "monthly",
+      priority: 0.7,
+      alternates: {
+        languages: {
+          es: `${BASE_URL}/blog/${a.slug}`,
+          en: `${BASE_URL}/en/blog/${a.slug}`,
+        },
+      },
+    },
+    {
+      url: `${BASE_URL}/en/blog/${a.slug}`,
+      lastModified: now,
+      changeFrequency: "monthly",
+      priority: 0.63,
+      alternates: {
+        languages: {
+          es: `${BASE_URL}/blog/${a.slug}`,
+          en: `${BASE_URL}/en/blog/${a.slug}`,
+        },
+      },
+    },
+  ]);
+
+  // Location pages — Spanish only (no English version)
   const locationPages = LOCATIONS.map((l) => ({
     url: `${BASE_URL}/desarrollo-software/${l.slug}`,
     lastModified: now,
@@ -54,7 +153,7 @@ export default function sitemap() {
     priority: 0.7,
   }));
 
-  // Location × Service pages (/desarrollo-software/[locacion]/[servicio])
+  // Location × Service pages — Spanish only
   const locationServicePages = LOCATIONS.flatMap((l) =>
     SERVICES.map((s) => ({
       url: `${BASE_URL}/desarrollo-software/${l.slug}/${s.slug}`,
@@ -64,7 +163,7 @@ export default function sitemap() {
     }))
   );
 
-  // Industry pages (/sectores/[industria])
+  // Industry pages — Spanish only
   const industryPages = INDUSTRIES.map((i) => ({
     url: `${BASE_URL}/sectores/${i.slug}`,
     lastModified: now,
@@ -72,26 +171,10 @@ export default function sitemap() {
     priority: 0.7,
   }));
 
-  // Blog pages
-  const blogHub = {
-    url: `${BASE_URL}/blog`,
-    lastModified: now,
-    changeFrequency: "weekly",
-    priority: 0.9,
-  };
-
-  const blogPages = ARTICLES.map((a) => ({
-    url: `${BASE_URL}/blog/${a.slug}`,
-    lastModified: now,
-    changeFrequency: "monthly",
-    priority: 0.7,
-  }));
-
   return [
-    ...staticPages,
+    ...bilingualStatic,
     ...servicePages,
     ...portfolioPages,
-    blogHub,
     ...blogPages,
     ...locationPages,
     ...locationServicePages,

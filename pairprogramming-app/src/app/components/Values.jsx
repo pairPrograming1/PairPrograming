@@ -1,14 +1,15 @@
+import { useTranslations } from "next-intl";
 import {
   Star, Users, Lightbulb, TrendingUp, Target, Headphones,
 } from "lucide-react";
 
-const VALUES = [
-  { n: "01", icon: Star, title: "Calidad sin concesiones", text: "No entregamos algo que no usaríamos nosotros mismos. El estándar es siempre el máximo." },
-  { n: "02", icon: Users, title: "Colaboración real", text: "Somos socios tecnológicos. Trabajamos codo a codo con vos, no para vos." },
-  { n: "03", icon: Lightbulb, title: "Innovación con propósito", text: "Tecnologías modernas cuando tiene sentido. Sin hype, con resultados medibles." },
-  { n: "04", icon: TrendingUp, title: "Escalabilidad por diseño", text: "Arquitecturas que crecen desde el primer commit. No hay excusas técnicas para no escalar." },
-  { n: "05", icon: Target, title: "Simplicidad elegante", text: "La mejor solución es la más simple que funciona. Complejidad innecesaria es deuda técnica." },
-  { n: "06", icon: Headphones, title: "Escucha activa", text: "Entendemos tu negocio antes de escribir una línea. El problema correcto primero." },
+const VALUE_KEYS = [
+  { n: "01", icon: Star, key: "v01" },
+  { n: "02", icon: Users, key: "v02" },
+  { n: "03", icon: Lightbulb, key: "v03" },
+  { n: "04", icon: TrendingUp, key: "v04" },
+  { n: "05", icon: Target, key: "v05" },
+  { n: "06", icon: Headphones, key: "v06" },
 ];
 
 function ValueCard({ n, icon: Icon, title, text }) {
@@ -29,23 +30,31 @@ function ValueCard({ n, icon: Icon, title, text }) {
 }
 
 export default function Values() {
+  const t = useTranslations("values");
+
   return (
     <section className="py-section px-8">
       <div className="max-w-container mx-auto">
         {/* Header */}
         <div className="mb-12">
           <span className="eyebrow-mono text-ink-tertiary block mb-3">
-            Cómo trabajamos
+            {t("eyebrow")}
           </span>
           <h2 className="display-md text-ink">
-            Principios que nos definen
+            {t("heading")}
           </h2>
         </div>
 
         {/* Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-          {VALUES.map((v) => (
-            <ValueCard key={v.n} {...v} />
+          {VALUE_KEYS.map((v) => (
+            <ValueCard
+              key={v.n}
+              n={v.n}
+              icon={v.icon}
+              title={t(`${v.key}Title`)}
+              text={t(`${v.key}Text`)}
+            />
           ))}
         </div>
       </div>

@@ -1,22 +1,31 @@
 "use client";
 import { useState } from "react";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { Link, usePathname, useRouter } from "@/i18n/navigation";
+import { useLocale, useTranslations } from "next-intl";
 import { Menu, X, MessageSquare } from "lucide-react";
 import ChatDrawer from "./ChatDrawer";
-
-const NAV_LINKS = [
-  { href: "/servicios", label: "Servicios" },
-  { href: "/portafolio", label: "Portafolio" },
-  { href: "/blog", label: "Blog" },
-  { href: "/nosotros", label: "Nosotros" },
-  { href: "/faq", label: "FAQ" },
-];
 
 export default function Nav() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [chatOpen, setChatOpen] = useState(false);
   const pathname = usePathname();
+  const locale = useLocale();
+  const router = useRouter();
+  const t = useTranslations("nav");
+
+  const NAV_LINKS = [
+    { href: "/servicios", label: t("services") },
+    { href: "/portafolio", label: t("portfolio") },
+    { href: "/blog", label: t("blog") },
+    { href: "/nosotros", label: t("about") },
+    { href: "/faq", label: t("faq") },
+  ];
+
+  const otherLocale = locale === "es" ? "en" : "es";
+
+  function switchLocale() {
+    router.replace(pathname, { locale: otherLocale });
+  }
 
   return (
     <>
@@ -73,35 +82,48 @@ export default function Nav() {
 
           {/* CTA — desktop */}
           <div className="hidden md:flex items-center gap-2">
+            {/* Language switcher */}
+            <button
+              onClick={switchLocale}
+              className="px-2 py-1.5 rounded-md text-body-sm text-ink-subtle hover:text-ink transition-colors duration-150 font-mono text-[13px]"
+            >
+              {otherLocale.toUpperCase()}
+            </button>
             <button
               onClick={() => setChatOpen(true)}
               className="flex items-center gap-1.5 px-3 py-2 rounded-md text-body-sm text-ink-subtle hover:text-ink hover:bg-surface-1 transition-colors duration-150"
-              aria-label="Abrir chat"
+              aria-label={t("openChat")}
             >
               <MessageSquare size={15} />
-              <span>Chat</span>
+              <span>{t("chat")}</span>
             </button>
             <Link
               href="/contacto"
               className="bg-primary hover:bg-primary-hover text-on-primary text-button font-medium px-3.5 py-2 rounded-md transition-colors duration-150"
             >
-              Hablemos
+              {t("cta")}
             </Link>
           </div>
 
           {/* Hamburger — mobile */}
           <div className="md:hidden flex items-center gap-1">
             <button
+              onClick={switchLocale}
+              className="p-2 text-ink-subtle hover:text-ink transition-colors font-mono text-[13px]"
+            >
+              {otherLocale.toUpperCase()}
+            </button>
+            <button
               onClick={() => setChatOpen(true)}
               className="p-2 text-ink-subtle hover:text-ink transition-colors"
-              aria-label="Abrir chat"
+              aria-label={t("openChat")}
             >
               <MessageSquare size={20} />
             </button>
             <button
               onClick={() => setMobileOpen(!mobileOpen)}
               className="p-2 text-ink-subtle hover:text-ink transition-colors"
-              aria-label={mobileOpen ? "Cerrar menú" : "Abrir menú"}
+              aria-label={mobileOpen ? t("closeMenu") : t("openMenu")}
             >
               {mobileOpen ? <X size={20} /> : <Menu size={20} />}
             </button>
@@ -134,7 +156,7 @@ export default function Nav() {
                 onClick={() => setMobileOpen(false)}
                 className="mt-2 bg-primary hover:bg-primary-hover text-on-primary text-button font-medium px-4 py-3 rounded-md text-center transition-colors"
               >
-                Hablemos
+                {t("cta")}
               </Link>
             </div>
           </div>
