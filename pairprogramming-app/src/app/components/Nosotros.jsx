@@ -1,19 +1,9 @@
-import { TEAM } from "../data/team";
+import { TEAM } from "@/app/data/team";
+import { useTranslations, useLocale } from "next-intl";
+import { getLocalizedItem } from "@/app/lib/i18n-helpers";
 import { Search, PenTool, Code2, Rocket } from "lucide-react";
 
-const METHODOLOGY = [
-  { step: "01", title: "Descubrimiento", description: "Analizamos tus necesidades y objetivos para crear la estrategia correcta.", icon: Search },
-  { step: "02", title: "Diseño", description: "Creamos interfaces intuitivas y experiencias de usuario que convierten.", icon: PenTool },
-  { step: "03", title: "Desarrollo", description: "Implementamos soluciones robustas con las mejores tecnologías.", icon: Code2 },
-  { step: "04", title: "Entrega", description: "Desplegamos y damos soporte continuo para garantizar el éxito.", icon: Rocket },
-];
-
-const STATS = [
-  { number: "20+", label: "Proyectos completados" },
-  { number: "2022", label: "Año de fundación" },
-  { number: "100%", label: "Clientes satisfechos" },
-  { number: "6", label: "Países servidos" },
-];
+const STEP_ICONS = [Search, PenTool, Code2, Rocket];
 
 function TeamCard({ name, role, description, expertise, location }) {
   return (
@@ -53,39 +43,44 @@ function TeamCard({ name, role, description, expertise, location }) {
 }
 
 export default function Nosotros() {
+  const t = useTranslations("about");
+  const locale = useLocale();
+
+  const STATS = [
+    { number: "20+", label: t("statsProjects") },
+    { number: "2022", label: t("statsFounded") },
+    { number: "100%", label: t("statsClients") },
+    { number: "6", label: t("statsCountries") },
+  ];
+
+  const steps = ["01", "02", "03", "04"];
+
   return (
     <section className="py-section px-8">
       <div className="max-w-container mx-auto">
         {/* Header */}
         <div className="text-center mb-16">
           <span className="eyebrow-mono text-ink-tertiary block mb-3">
-            Quiénes somos
+            {t("eyebrow")}
           </span>
-          <h1 className="display-lg text-ink mb-6">Sobre nosotros</h1>
+          <h1 className="display-lg text-ink mb-6">{t("heading")}</h1>
           <p className="text-body-lg text-ink-subtle max-w-[600px] mx-auto">
-            Somos un equipo especializado en transformar ideas en plataformas
-            digitales escalables. Tecnología, estrategia y ejecución desde 2022.
+            {t("lead")}
           </p>
         </div>
 
         {/* Historia */}
         <div className="bg-surface-1 border border-hairline rounded-xl p-8 md:p-12 mb-16">
           <span className="eyebrow-mono text-ink-tertiary block mb-3">
-            Nuestra historia
+            {t("historyEyebrow")}
           </span>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             <div>
               <p className="text-body-lg text-ink-muted mb-4">
-                Fundada en 2022, PairProgramming nació de la visión de crear
-                soluciones digitales que realmente importen. Comenzamos como
-                un equipo de desarrolladores y crecimos hasta convertirnos en
-                una agencia de desarrollo full-stack con presencia en Argentina
-                y España.
+                {t("historyP1")}
               </p>
               <p className="text-body text-ink-subtle">
-                Nuestro nombre refleja nuestra metodología: trabajamos en
-                pareja con nuestros clientes, asegurando que cada paso del
-                desarrollo sea transparente y colaborativo.
+                {t("historyP2")}
               </p>
             </div>
             <div className="grid grid-cols-2 gap-4">
@@ -109,41 +104,42 @@ export default function Nosotros() {
         {/* Equipo */}
         <div className="mb-16">
           <span className="eyebrow-mono text-ink-tertiary block mb-3">
-            El equipo
+            {t("teamEyebrow")}
           </span>
           <h2 className="headline text-ink mb-8">
-            Las personas detrás de los proyectos
+            {t("teamHeading")}
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            {TEAM.map((member) => (
-              <TeamCard key={member.name} {...member} />
-            ))}
+            {TEAM.map((member) => {
+              const localized = getLocalizedItem(member, locale);
+              return <TeamCard key={member.name} {...localized} />;
+            })}
           </div>
         </div>
 
         {/* Metodología */}
         <div className="bg-surface-1 border border-hairline rounded-xl p-8 md:p-12">
           <span className="eyebrow-mono text-ink-tertiary block mb-3">
-            Proceso
+            {t("methodEyebrow")}
           </span>
-          <h2 className="headline text-ink mb-8">Nuestra metodología</h2>
+          <h2 className="headline text-ink mb-8">{t("methodHeading")}</h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {METHODOLOGY.map((item) => {
-              const Icon = item.icon;
+            {steps.map((step, i) => {
+              const Icon = STEP_ICONS[i];
               return (
-                <div key={item.step}>
+                <div key={step}>
                   <div className="flex items-center gap-3 mb-3">
                     <Icon size={20} className="text-primary" />
                     <span className="font-mono text-[13px] font-medium text-primary tracking-[0.4px]">
-                      {item.step}
+                      {step}
                     </span>
                   </div>
                   <h3 className="text-card-title text-ink mb-2" style={{ fontSize: 18 }}>
-                    {item.title}
+                    {t(`step${step}`)}
                   </h3>
                   <p className="text-body-sm text-ink-subtle">
-                    {item.description}
+                    {t(`step${step}Desc`)}
                   </p>
                 </div>
               );

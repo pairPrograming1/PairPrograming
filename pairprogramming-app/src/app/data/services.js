@@ -39,6 +39,45 @@ export const SERVICES = [
         answer: "Usamos deploys zero-downtime con blue-green deployment o rolling updates. Los feature flags permiten activar funcionalidades por tenant sin necesidad de hacer deploy.",
       },
     ],
+    i18n: {
+      en: {
+        name: "B2B SaaS Architecture",
+        desc: "Multi-tenant platforms from scratch. Pricing plans, feature flags, onboarding, billing, and scale. Our core expertise and where we deliver the most value.",
+        longDesc: "We design and implement complete multi-tenant SaaS architectures, from data modeling to deployment infrastructure. Includes plan and billing systems, feature flags, automated onboarding, and per-tenant usage metrics. We use the shared-database pattern with Row Level Security in PostgreSQL to isolate tenant data without sacrificing operational efficiency. The result is a platform ready to scale from 10 to 10,000 customers without rewriting code.",
+        entregables: [
+          "Multi-tenant architecture (shared DB / schema isolation)",
+          "Plans, billing & feature flags system",
+          "Automated onboarding for new tenants",
+          "Per-tenant metrics dashboard",
+          "Documented REST / GraphQL API",
+          "CI/CD pipeline for zero-downtime deploys",
+        ],
+        proceso: [
+          { paso: "Discovery", desc: "We define the business model, pricing tiers, and the limits of each plan." },
+          { paso: "Architecture", desc: "We design the multi-tenant schema, APIs, and authentication flow." },
+          { paso: "MVP", desc: "We build the core: auth, tenant management, billing, and dashboard." },
+          { paso: "Iteration", desc: "Feature flags, per-tenant analytics, and onboarding optimization." },
+        ],
+        faq: [
+          {
+            question: "What is a multi-tenant architecture?",
+            answer: "It's a model where a single application instance serves multiple customers (tenants), each with their own isolated data. It's the SaaS industry standard because it reduces operational costs and simplifies updates.",
+          },
+          {
+            question: "How long does it take to develop a B2B SaaS?",
+            answer: "A functional MVP with authentication, tenant management, plan system, and a core module is typically ready in 8-12 weeks. The complexity of your business domain may affect this timeline.",
+          },
+          {
+            question: "Can you integrate payment gateways for Latin America?",
+            answer: "Yes. We work with Stripe for international markets and Mercado Pago for Argentina and Latin America. We implement webhooks to synchronize payment states in real time.",
+          },
+          {
+            question: "How do you handle updates without affecting tenants?",
+            answer: "We use zero-downtime deploys with blue-green deployment or rolling updates. Feature flags allow enabling features per tenant without needing to deploy.",
+          },
+        ],
+      },
+    },
   },
   {
     n: "02",
@@ -80,6 +119,45 @@ export const SERVICES = [
         answer: "Sí, nos adaptamos. Podemos ser el equipo completo o trabajar integrados con tu equipo de desarrollo existente, aportando expertise en arquitectura, frontend o backend según la necesidad.",
       },
     ],
+    i18n: {
+      en: {
+        name: "Digital Products",
+        desc: "Web apps, mobile apps, CRM, ERP, and intranets. Scalable systems that grow with your business from the first commit.",
+        longDesc: "We build complete digital products: from MVP to scalable production version. Responsive web apps, mobile applications, enterprise dashboards, and internal systems. Our approach is iterative — we start with the minimum feature set that delivers value, validate with real users, and scale from there. Every product includes automated testing, CI/CD, and documentation from day one.",
+        entregables: [
+          "Functional MVP with modern stack",
+          "Responsive & accessible UI/UX",
+          "Scalable backend with documented API",
+          "Automated testing (unit + E2E)",
+          "Production deploy with monitoring",
+          "Complete technical documentation",
+        ],
+        proceso: [
+          { paso: "Definition", desc: "We map the problem, users, and product success metrics." },
+          { paso: "Prototyping", desc: "Wireframes and interactive prototype to validate the flow before coding." },
+          { paso: "Development", desc: "2-week sprints with incremental deliverables and demos." },
+          { paso: "Launch", desc: "Deploy, monitoring, post-launch support, and iteration plan." },
+        ],
+        faq: [
+          {
+            question: "What technologies do you use for digital products?",
+            answer: "Our main stack is Next.js with React for the frontend, Node.js for the backend, and PostgreSQL as the database. For mobile, we use React Native or PWA depending on the case. Everything is deployed on Vercel or AWS.",
+          },
+          {
+            question: "What's the difference between an MVP and a full product?",
+            answer: "An MVP (Minimum Viable Product) includes only the essential features to validate the idea with real users. A full product adds secondary features, integrations, performance optimization, and multi-language support.",
+          },
+          {
+            question: "Do you offer maintenance after launch?",
+            answer: "Yes. We offer maintenance plans that include security updates, bug fixes, uptime monitoring, and technical support. We can also iterate with new features.",
+          },
+          {
+            question: "Can you work with an existing in-house team?",
+            answer: "Yes, we adapt. We can be the full team or work integrated with your existing development team, contributing expertise in architecture, frontend, or backend as needed.",
+          },
+        ],
+      },
+    },
   },
   {
     n: "03",
@@ -121,6 +199,45 @@ export const SERVICES = [
         answer: "Sí. Hacemos migración de datos desde spreadsheets, HubSpot, Salesforce, Pipedrive o cualquier sistema que exporte CSV/API. Incluimos limpieza y deduplicación de datos.",
       },
     ],
+    i18n: {
+      en: {
+        name: "CRM & Automation",
+        desc: "CRM implementation and integration, automated workflows, sales pipelines, and tracking dashboards.",
+        longDesc: "We implement custom CRMs or integrate existing solutions with automated workflows. Visual sales pipelines, client tracking, and dashboards with real-time metrics. We specialize in CRM for B2B sales teams: automatic lead scoring, follow-up sequences, WhatsApp Business and calendar integration, and reports that show exactly where each opportunity stands.",
+        entregables: [
+          "Custom CRM or existing platform integration",
+          "Visual sales pipeline with drag-and-drop",
+          "Automated follow-ups and notifications",
+          "Sales metrics dashboard",
+          "Email, WhatsApp & calendar integration",
+          "Exportable reports (PDF, Excel)",
+        ],
+        proceso: [
+          { paso: "Audit", desc: "We analyze your current sales process and identify bottlenecks." },
+          { paso: "Design", desc: "We define the pipeline, fields, automations, and integrations." },
+          { paso: "Implementation", desc: "We configure or develop the CRM with automated workflows." },
+          { paso: "Adoption", desc: "Team training, data migration, and transition support." },
+        ],
+        faq: [
+          {
+            question: "Do you build custom CRMs or integrate existing solutions?",
+            answer: "Both. If your operation needs a highly customized CRM, we build it from scratch. If an existing solution covers 80% of your needs, we integrate and extend it with custom automations.",
+          },
+          {
+            question: "Can you integrate WhatsApp Business with the CRM?",
+            answer: "Yes. We integrate the WhatsApp Business API for automatic notifications, scheduled follow-ups, and tracking messages directly from the CRM pipeline.",
+          },
+          {
+            question: "What kind of automations do you implement?",
+            answer: "We automate lead assignment, email sequences, follow-up reminders, pipeline status updates, report generation, and alerts when an opportunity has been stagnant for too long.",
+          },
+          {
+            question: "Can you migrate data from an existing CRM?",
+            answer: "Yes. We migrate data from spreadsheets, HubSpot, Salesforce, Pipedrive, or any system that exports CSV/API. We include data cleaning and deduplication.",
+          },
+        ],
+      },
+    },
   },
   {
     n: "04",
@@ -162,6 +279,45 @@ export const SERVICES = [
         answer: "Cada flujo incluye manejo de errores con reintentos automáticos, logs detallados y alertas por email o Slack cuando algo falla. Además, n8n guarda el historial de ejecuciones para diagnosticar problemas.",
       },
     ],
+    i18n: {
+      en: {
+        name: "Automation & n8n",
+        desc: "Visual workflows with n8n to integrate tools, orchestrate pipelines, and eliminate repetitive manual work.",
+        longDesc: "We design and implement automation workflows using n8n as the central orchestrator. We connect your existing tools, eliminate manual tasks, and create pipelines that scale without human intervention. n8n is open-source, self-hosted, and gives you full control over your data — no third-party dependency. Ideal for companies that want to automate without vendor lock-in.",
+        entregables: [
+          "Automatable process audit",
+          "n8n workflow design",
+          "External API integration",
+          "Error handling and retries",
+          "Workflow monitoring and alerts",
+          "Workflow documentation",
+        ],
+        proceso: [
+          { paso: "Mapping", desc: "We identify repetitive tasks and processes that consume manual time." },
+          { paso: "Design", desc: "We build workflows in n8n with triggers, conditionals, and error handling." },
+          { paso: "Integration", desc: "We connect APIs, webhooks, databases, and external tools." },
+          { paso: "Monitoring", desc: "We set up alerts and dashboards to monitor workflows in production." },
+        ],
+        faq: [
+          {
+            question: "What is n8n and why choose it over Zapier or Make?",
+            answer: "n8n is an open-source, self-hosted automation platform. Unlike Zapier or Make, your data doesn't pass through third-party servers, there's no execution limit, and workflows can be versioned with Git. For B2B companies with sensitive data, it's the most robust option.",
+          },
+          {
+            question: "What types of processes can be automated?",
+            answer: "Any process that involves moving data between systems: inventory sync, report generation, conditional notifications, client onboarding, invoice processing, data scraping, and ML pipeline orchestration.",
+          },
+          {
+            question: "Where is n8n hosted?",
+            answer: "We deploy it on your infrastructure (AWS, DigitalOcean, or your own VPS) using Docker. You maintain full control over the instance and data. We can also use n8n Cloud if you prefer not to manage infrastructure.",
+          },
+          {
+            question: "What happens if a workflow fails?",
+            answer: "Every workflow includes error handling with automatic retries, detailed logs, and email or Slack alerts when something fails. Additionally, n8n stores execution history for diagnosing issues.",
+          },
+        ],
+      },
+    },
   },
   {
     n: "05",
@@ -203,6 +359,45 @@ export const SERVICES = [
         answer: "Sí. Hacemos migraciones graduales para no interrumpir la operación. Configuramos la nueva infraestructura en paralelo, migramos datos, y hacemos el cutover en un window de mantenimiento coordinado.",
       },
     ],
+    i18n: {
+      en: {
+        name: "Cloud & DevOps",
+        desc: "Cloud infrastructure, CI/CD, IaC, and observability. Secure and scalable deployments without the drama.",
+        longDesc: "We configure and manage cloud infrastructure with DevOps best practices. Automated CI/CD, Infrastructure as Code, monitoring, and observability so your team can focus on the product. We primarily work with AWS and Vercel, and use Terraform so all infrastructure is reproducible, versioned, and auditable. The goal is that every push to main reaches production safely and automatically.",
+        entregables: [
+          "Infrastructure as Code (Terraform / Pulumi)",
+          "CI/CD pipeline (GitHub Actions / GitLab CI)",
+          "Docker containerization + orchestration",
+          "Monitoring and alerts (uptime, performance)",
+          "Automated backups and disaster recovery",
+          "Infrastructure documentation",
+        ],
+        proceso: [
+          { paso: "Assessment", desc: "We evaluate the current infrastructure and identify risks and opportunities." },
+          { paso: "Design", desc: "We define the target architecture with diagrams and cost estimates." },
+          { paso: "Implementation", desc: "We provision infrastructure with IaC and configure CI/CD pipelines." },
+          { paso: "Operations", desc: "Continuous monitoring, alerts, and runbooks for incident response." },
+        ],
+        faq: [
+          {
+            question: "Do you work with AWS, Google Cloud, or Azure?",
+            answer: "Our main expertise is in AWS and Vercel. For simpler projects, we use Vercel + PlanetScale/Supabase. For complex infrastructure, AWS with services like ECS, RDS, S3, CloudFront, and Lambda.",
+          },
+          {
+            question: "What is Infrastructure as Code (IaC)?",
+            answer: "It's the practice of defining all infrastructure (servers, networks, databases) in versioned code files. We use Terraform for this. The advantage is that infrastructure can be reproduced, audited, and recovered automatically.",
+          },
+          {
+            question: "How much does typical cloud infrastructure cost?",
+            answer: "It depends on traffic and complexity. A typical B2B SaaS with fewer than 1,000 active users can run on $50-200 USD/month on AWS. Vercel has a free tier that covers many cases. We actively optimize costs.",
+          },
+          {
+            question: "Can you migrate from traditional hosting to cloud?",
+            answer: "Yes. We do gradual migrations to avoid disrupting operations. We set up the new infrastructure in parallel, migrate data, and do the cutover in a coordinated maintenance window.",
+          },
+        ],
+      },
+    },
   },
   {
     n: "06",
@@ -244,6 +439,45 @@ export const SERVICES = [
         answer: "Podemos definir la estrategia, el calendario editorial y los briefs de contenido. La redacción puede ser nuestra, de tu equipo, o asistida con IA y revisada por humanos. Siempre priorizamos contenido E-E-A-T (Experience, Expertise, Authority, Trust).",
       },
     ],
+    i18n: {
+      en: {
+        name: "SEO & Content",
+        desc: "Technical audits, on-page optimization, content strategy, and programmatic SEO to grow organic traffic.",
+        longDesc: "Technical and content SEO for sites built with modern frameworks like Next.js and React. Complete audits, programmatic SEO to scale landing pages, advanced schema markup, and content strategy aligned with the conversion funnel. We specialize in SEO for JavaScript-heavy sites where traditional techniques don't apply — SSR, ISR, dynamic meta tags, programmatic sitemaps, and Core Web Vitals.",
+        entregables: [
+          "Complete technical SEO audit",
+          "On-page optimization and meta tags",
+          "Schema markup (JSON-LD)",
+          "Content strategy and editorial calendar",
+          "Programmatic SEO for dynamic sites",
+          "Monthly reports with key metrics",
+        ],
+        proceso: [
+          { paso: "Audit", desc: "Technical, on-page, content, and backlink analysis of the current site." },
+          { paso: "Strategy", desc: "Keyword research, content architecture, and programmatic page plan." },
+          { paso: "Implementation", desc: "Technical optimization, schema markup, meta tags, and content." },
+          { paso: "Measurement", desc: "Rankings tracking, organic traffic, and conversions with monthly reports." },
+        ],
+        faq: [
+          {
+            question: "How long does it take to see SEO results?",
+            answer: "Technical SEO (speed, indexing, schema) has impact in weeks. Organic rankings for competitive keywords take 3-6 months. Programmatic SEO can generate long-tail traffic from the first month.",
+          },
+          {
+            question: "What is programmatic SEO?",
+            answer: "It's the automated creation of landing pages optimized for specific searches. For example, generating pages like 'software development in [city]' for each city, with unique content and schema markup. It allows scaling from 10 to 500+ indexed pages.",
+          },
+          {
+            question: "Do you work with sites built in Next.js and React?",
+            answer: "It's our specialty. We understand how Google renders JavaScript, when to use SSR vs SSG, how to handle dynamic meta tags, and how to optimize Core Web Vitals in React applications.",
+          },
+          {
+            question: "Do you include content creation?",
+            answer: "We can define the strategy, editorial calendar, and content briefs. Writing can be done by us, your team, or AI-assisted and human-reviewed. We always prioritize E-E-A-T content (Experience, Expertise, Authority, Trust).",
+          },
+        ],
+      },
+    },
   },
   {
     n: "07",
@@ -285,6 +519,45 @@ export const SERVICES = [
         answer: "Sí, es lo más común. Migramos primero los módulos con más deuda técnica o más valor de negocio, y dejamos el resto funcionando hasta que convenga migrarlo.",
       },
     ],
+    i18n: {
+      en: {
+        name: "Legacy Modernization",
+        desc: "We migrate old systems to modern architectures: microservices, containers, REST/GraphQL APIs.",
+        longDesc: "We migrate legacy systems to modern stack without disrupting operations. We use the strangler fig pattern: instead of rewriting everything at once, we gradually extract features into modern services while the old system keeps running. APIs as an intermediary layer, containers for portability, and regression tests to ensure nothing breaks.",
+        entregables: [
+          "Current system audit",
+          "Gradual migration plan",
+          "REST / GraphQL APIs as intermediary layer",
+          "Service containerization",
+          "Automated regression tests",
+          "Zero-downtime data migration",
+        ],
+        proceso: [
+          { paso: "Audit", desc: "We evaluate the current system, identify technical debt and dependencies." },
+          { paso: "Plan", desc: "We define the migration sequence and intermediary APIs." },
+          { paso: "Extraction", desc: "We migrate modules one by one using the strangler fig pattern." },
+          { paso: "Cutover", desc: "Regression tests, data migration, and legacy decommissioning." },
+        ],
+        faq: [
+          {
+            question: "What is the strangler fig pattern?",
+            answer: "It's a migration strategy where the new system grows around the old one, gradually replacing features. This avoids the risk of a total rewrite and keeps operations running while you migrate.",
+          },
+          {
+            question: "Can you migrate systems built in PHP, .NET, or Java?",
+            answer: "Yes. The source system's language doesn't matter — what we do is expose its features as APIs and gradually replace them with modern services in Node.js / Next.js.",
+          },
+          {
+            question: "How do you guarantee no data is lost during migration?",
+            answer: "We use data migration with cross-validation: data is copied to the new system and records are compared. The cutover is done in a coordinated window with a backup and rollback plan.",
+          },
+          {
+            question: "Can you do a partial migration and keep part of the old system?",
+            answer: "Yes, that's the most common approach. We migrate the modules with the most technical debt or business value first, and leave the rest running until it makes sense to migrate them.",
+          },
+        ],
+      },
+    },
   },
   {
     n: "08",
@@ -326,6 +599,45 @@ export const SERVICES = [
         answer: "Preferimos Playwright por su soporte multi-browser nativo, mejor performance y API más moderna. Pero si el proyecto ya usa Cypress, trabajamos con lo que hay sin forzar una migración innecesaria.",
       },
     ],
+    i18n: {
+      en: {
+        name: "QA & Performance",
+        desc: "E2E, unit, and integration tests. Performance audits and continuous monitoring for bug-free products.",
+        longDesc: "We implement complete testing strategies and performance optimization. Automated tests, Core Web Vitals audits, and continuous monitoring to guarantee product quality. We use Playwright for E2E tests, Jest for unit tests, and Lighthouse CI for performance. The goal is that every deploy has confidence that nothing broke and load times stay within Google's standards.",
+        entregables: [
+          "Unit and integration test suite",
+          "E2E tests with Playwright / Cypress",
+          "Core Web Vitals audit",
+          "LCP, INP & CLS optimization",
+          "Continuous performance monitoring",
+          "Automated QA pipeline in CI",
+        ],
+        proceso: [
+          { paso: "Diagnosis", desc: "We identify product areas without test coverage and performance bottlenecks." },
+          { paso: "Strategy", desc: "We define what to test, with which tools, and performance thresholds." },
+          { paso: "Implementation", desc: "We write tests, configure Lighthouse CI and Sentry." },
+          { paso: "Automation", desc: "We integrate everything into the CI pipeline to run on every PR." },
+        ],
+        faq: [
+          {
+            question: "What are Core Web Vitals?",
+            answer: "They're Google's metrics that measure user experience: LCP (Largest Contentful Paint — load speed), INP (Interaction to Next Paint — responsiveness), and CLS (Cumulative Layout Shift — visual stability). They directly affect SEO.",
+          },
+          {
+            question: "Can you do QA on a product you didn't develop?",
+            answer: "Yes. We do quality and performance audits on any web product, regardless of who built it. We deliver a report with prioritized findings and recommendations.",
+          },
+          {
+            question: "What test coverage do you recommend?",
+            answer: "We don't chase arbitrary percentages. We prioritize tests on critical business paths (checkout, auth, payments) and code that changes frequently. 70-80% coverage on the core is usually a good target.",
+          },
+          {
+            question: "Do you use Playwright or Cypress for E2E?",
+            answer: "We prefer Playwright for its native multi-browser support, better performance, and more modern API. But if the project already uses Cypress, we work with what's there without forcing an unnecessary migration.",
+          },
+        ],
+      },
+    },
   },
   {
     n: "09",
@@ -367,6 +679,45 @@ export const SERVICES = [
         answer: "Sí. Hacemos evoluciones de marca que mantienen el equity existente pero actualizan el sistema visual. También hacemos rebrands completos cuando el posicionamiento cambió y la marca actual ya no comunica.",
       },
     ],
+    i18n: {
+      en: {
+        name: "Branding & Identity",
+        desc: "Naming, logo, visual system, and brand manual. The identity that communicates your value proposition.",
+        longDesc: "We create visual identities that communicate professionalism and trust. From naming to the complete brand manual, including color system, typography, and applications in digital and print. Our approach is functional: the brand has to work in a 16px favicon just as well as in an event banner. We prioritize legibility, consistency, and screen adaptability.",
+        entregables: [
+          "Market and competitor research",
+          "Naming and tagline",
+          "Logo and visual identity system",
+          "Color palette and typography",
+          "Digital brand manual",
+          "Brand templates and applications",
+        ],
+        proceso: [
+          { paso: "Research", desc: "We analyze competitors, positioning, and target audience." },
+          { paso: "Concept", desc: "We propose 2-3 creative directions with moodboards." },
+          { paso: "Design", desc: "We develop the logo, color palette, typography, and visual system." },
+          { paso: "Delivery", desc: "Brand manual, source files, and ready-to-use templates." },
+        ],
+        faq: [
+          {
+            question: "Does the branding service include web design?",
+            answer: "Branding is the base visual system. Web design is a subsequent step that builds on the brand manual. We can do both, but they're separate services so each gets the focus it deserves.",
+          },
+          {
+            question: "How many logo proposals do you present?",
+            answer: "We present 2-3 different conceptual directions. Once a direction is chosen, we include 2 rounds of refinement in the budget.",
+          },
+          {
+            question: "Do you deliver the source files?",
+            answer: "Yes. We deliver the logo in SVG, PNG, PDF, and editable Figma/Illustrator formats. We also include versions for light backgrounds, dark backgrounds, monochrome, and favicon.",
+          },
+          {
+            question: "Can you rebrand an existing brand?",
+            answer: "Yes. We do brand evolutions that maintain existing equity while updating the visual system. We also do complete rebrands when positioning has changed and the current brand no longer communicates effectively.",
+          },
+        ],
+      },
+    },
   },
 ];
 

@@ -1,25 +1,5 @@
-import Link from "next/link";
-
-const SERVICIOS_LINKS = [
-  { href: "/servicios/saas-b2b", label: "Arquitectura B2B SaaS" },
-  { href: "/servicios/crm-automatizacion", label: "CRM & Automatización" },
-  { href: "/servicios/productos-digitales", label: "Productos Digitales" },
-  { href: "/servicios/cloud-devops", label: "Cloud & DevOps" },
-  { href: "/servicios/seo-contenido", label: "SEO & Contenido" },
-];
-
-const EMPRESA_LINKS = [
-  { href: "/nosotros", label: "Nosotros" },
-  { href: "/portafolio", label: "Portafolio" },
-  { href: "/blog", label: "Blog" },
-  { href: "/contacto", label: "Contacto" },
-  { href: "/faq", label: "FAQ" },
-];
-
-const LEGAL_LINKS = [
-  { href: "/terminos-condiciones", label: "Términos y condiciones" },
-  { href: "/privacidad", label: "Privacidad" },
-];
+import { Link } from "@/i18n/navigation";
+import { useTranslations } from "next-intl";
 
 function FooterColumn({ title, links }) {
   return (
@@ -44,6 +24,29 @@ function FooterColumn({ title, links }) {
 }
 
 export default function Footer() {
+  const t = useTranslations("footer");
+
+  const SERVICIOS_LINKS = [
+    { href: "/servicios/saas-b2b", label: t("svcSaas") },
+    { href: "/servicios/crm-automatizacion", label: t("svcCrm") },
+    { href: "/servicios/productos-digitales", label: t("svcProducts") },
+    { href: "/servicios/cloud-devops", label: t("svcCloud") },
+    { href: "/servicios/seo-contenido", label: t("svcSeo") },
+  ];
+
+  const EMPRESA_LINKS = [
+    { href: "/nosotros", label: t("linkAbout") },
+    { href: "/portafolio", label: t("linkPortfolio") },
+    { href: "/blog", label: t("linkBlog") },
+    { href: "/contacto", label: t("linkContact") },
+    { href: "/faq", label: t("linkFaq") },
+  ];
+
+  const LEGAL_LINKS = [
+    { href: "/terminos-condiciones", label: t("linkTerms") },
+    { href: "/privacidad", label: t("linkPrivacy") },
+  ];
+
   return (
     <footer className="border-t border-hairline">
       <div className="max-w-container mx-auto px-8 pt-16 pb-12">
@@ -58,23 +61,22 @@ export default function Footer() {
               </span>
             </Link>
             <p className="text-body-sm text-ink-subtle max-w-[280px] leading-relaxed">
-              Plataformas B2B SaaS, CRM y productos digitales
-              escalables. Desde Buenos Aires y Madrid para Latinoamérica.
+              {t("tagline")}
             </p>
           </div>
 
-          <FooterColumn title="Servicios" links={SERVICIOS_LINKS} />
-          <FooterColumn title="Empresa" links={EMPRESA_LINKS} />
-          <FooterColumn title="Legal" links={LEGAL_LINKS} />
+          <FooterColumn title={t("colServices")} links={SERVICIOS_LINKS} />
+          <FooterColumn title={t("colCompany")} links={EMPRESA_LINKS} />
+          <FooterColumn title={t("colLegal")} links={LEGAL_LINKS} />
         </div>
 
         {/* Bottom bar */}
         <div className="mt-12 pt-6 border-t border-hairline flex flex-col sm:flex-row justify-between items-center gap-3">
           <p className="text-caption text-ink-tertiary">
-            &copy; {new Date().getFullYear()} PairProgramming. Todos los derechos reservados.
+            &copy; {new Date().getFullYear()} {t("copyright")}
           </p>
           <p className="text-caption text-ink-tertiary">
-            Fundado por Esteban Aleart en 2022.
+            {t("founded")}
           </p>
         </div>
       </div>

@@ -1,5 +1,7 @@
-import Link from "next/link";
-import { SERVICES } from "../data/services";
+import { Link } from "@/i18n/navigation";
+import { useTranslations, useLocale } from "next-intl";
+import { SERVICES } from "@/app/data/services";
+import { getLocalizedService } from "@/app/lib/i18n-helpers";
 import {
   Layers, Monitor, LayoutGrid, Code2, Cloud,
   Search, Zap, CheckCircle, Star,
@@ -17,7 +19,7 @@ const ICONS = {
   "09": Star,
 };
 
-function ServiceCard({ n, slug, name, desc }) {
+function ServiceCard({ n, slug, name, desc, viewMore }) {
   const Icon = ICONS[n] || Layers;
 
   return (
@@ -41,13 +43,16 @@ function ServiceCard({ n, slug, name, desc }) {
 
       {/* Link hint */}
       <span className="text-body-sm text-primary font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-200">
-        Ver más →
+        {viewMore}
       </span>
     </Link>
   );
 }
 
 export default function Services() {
+  const t = useTranslations("services");
+  const locale = useLocale();
+
   return (
     <section className="py-section px-8">
       <div className="max-w-container mx-auto">
@@ -55,24 +60,27 @@ export default function Services() {
         <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-6 mb-12">
           <div>
             <span className="eyebrow-mono text-ink-tertiary block mb-3">
-              Lo que hacemos
+              {t("eyebrow")}
             </span>
             <h2 className="display-md text-ink">
-              Servicios que mueven negocios
+              {t("heading")}
             </h2>
           </div>
           <p className="text-body-sm text-ink-subtle max-w-[260px] md:text-right">
-            Desde la idea hasta producción.
+            {t("subtext1")}
             <br />
-            Sin intermediarios, con resultados.
+            {t("subtext2")}
           </p>
         </div>
 
         {/* Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-          {SERVICES.map((s) => (
-            <ServiceCard key={s.n} {...s} />
-          ))}
+          {SERVICES.map((s) => {
+            const localized = getLocalizedService(s, locale);
+            return (
+              <ServiceCard key={s.n} {...localized} viewMore={t("viewMore")} />
+            );
+          })}
         </div>
       </div>
     </section>

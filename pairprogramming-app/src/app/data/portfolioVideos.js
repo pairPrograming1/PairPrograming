@@ -19,6 +19,23 @@ export const portfolioVideos = [
     ],
     categoryColor: "blue",
     gradient: "from-blue-500/20 via-sky-500/10 to-blue-700/20",
+    i18n: {
+      en: {
+        title: "Mi Seguro - Online Insurance Portal",
+        description:
+          "Main portal for the Mi Seguro brand, a digital hub that centralizes access to all insurance products and services. Conversion-oriented design with intuitive user experience, integration with auto and motorcycle verticals, and simplified contracting process.",
+        category: "Insurance",
+        duration: "Production",
+        features: [
+          "Central insurance product hub",
+          "Intuitive navigation between verticals",
+          "Quick multi-product quoting",
+          "Conversion-oriented design",
+          "Integration with leading insurers",
+          "Optimized mobile-first experience",
+        ],
+      },
+    },
   },
   {
     id: 10,
@@ -40,6 +57,23 @@ export const portfolioVideos = [
     ],
     categoryColor: "violet",
     gradient: "from-violet-500/20 via-purple-500/10 to-violet-700/20",
+    i18n: {
+      en: {
+        title: "Tontin - AI Browser Assistant",
+        description:
+          "Browser extension with artificial intelligence that boosts productivity directly on any web page. Integrates the LLaMA 3.3 70B model via Groq for contextual chat, code review on GitHub/GitLab, CV adaptation for job postings, and article summarization. Open source and free.",
+        category: "AI / Productivity",
+        duration: "Production",
+        features: [
+          "AI chat on any web page",
+          "Code review on GitHub/GitLab",
+          "Automatic CV adaptation",
+          "Article reading and summarization",
+          "Full privacy: data stays in your browser",
+          "Open source and free",
+        ],
+      },
+    },
   },
   {
     id: 1,
@@ -61,6 +95,23 @@ export const portfolioVideos = [
     ],
     categoryColor: "blue",
     gradient: "from-blue-600/20 via-cyan-500/10 to-blue-800/20",
+    i18n: {
+      en: {
+        title: "Mi Seguro de Auto - Insurance Quoting Platform",
+        description:
+          "Digital platform for quoting and contracting automotive insurance. Multi-quote engine with insurer integration, operational dashboards, sales process automation, and a complete coverage comparison system with real-time premium calculation.",
+        category: "Insurance",
+        duration: "Production",
+        features: [
+          "Multi-quote engine with 10+ insurers",
+          "Real-time operational dashboards",
+          "Side-by-side coverage comparison",
+          "Automated premium calculation",
+          "100% digital contracting process",
+          "Advanced sales reports",
+        ],
+      },
+    },
   },
   {
     id: 2,
@@ -82,6 +133,23 @@ export const portfolioVideos = [
     ],
     categoryColor: "blue",
     gradient: "from-blue-500/20 via-indigo-500/10 to-blue-700/20",
+    i18n: {
+      en: {
+        title: "Mi Seguro de Moto - Motorcycle Insurance",
+        description:
+          "Specialized platform for motorcycle insurance with instant quoting. Includes coverage comparison, roadside assistance, 100% digital contracting process, and operational management dashboard.",
+        category: "Insurance",
+        duration: "Production",
+        features: [
+          "Instant motorcycle quoting",
+          "Smart coverage comparison",
+          "Payment gateway integration",
+          "Operational management dashboard",
+          "Roadside assistance included",
+          "100% digital end-to-end process",
+        ],
+      },
+    },
   },
   {
     id: 3,
@@ -103,6 +171,23 @@ export const portfolioVideos = [
     ],
     categoryColor: "amber",
     gradient: "from-amber-500/20 via-orange-500/10 to-amber-700/20",
+    i18n: {
+      en: {
+        title: "DoctorCar - Broker Management Platform",
+        description:
+          "Complete management system for insurance brokers. Advanced authentication, operations management, digital documentation, automatic PDF generation with charts, custom reports, and automated business workflows.",
+        category: "Automotive",
+        duration: "Production",
+        features: [
+          "Advanced authentication and roles",
+          "Automatic PDF generation",
+          "Digital documentation management",
+          "Automated business workflows",
+          "Custom reports with charts",
+          "Real-time operations panel",
+        ],
+      },
+    },
   },
   {
     id: 4,
@@ -124,6 +209,23 @@ export const portfolioVideos = [
     ],
     categoryColor: "emerald",
     gradient: "from-emerald-500/20 via-teal-500/10 to-emerald-700/20",
+    i18n: {
+      en: {
+        title: "Segimed - Telemedicine Platform",
+        description:
+          "Comprehensive digital health platform connecting patients with medical professionals. Complete appointment management system, digital medical records, real-time video consultations with WebRTC, instant chat with Socket.io, medical center geolocation with interactive maps, and medical dashboards with data visualization.",
+        category: "Digital Health",
+        duration: "Production",
+        features: [
+          "Real-time video consultations (WebRTC)",
+          "Complete digital medical records",
+          "Instant doctor-patient chat",
+          "Medical center geolocation",
+          "Interactive medical dashboards",
+          "Appointment scheduling and management",
+        ],
+      },
+    },
   },
   {
     id: 5,
@@ -145,6 +247,23 @@ export const portfolioVideos = [
     ],
     categoryColor: "purple",
     gradient: "from-purple-500/20 via-pink-500/10 to-purple-700/20",
+    i18n: {
+      en: {
+        title: "TicketXEvent - Event Platform",
+        description:
+          "Complete event management and ticket sales system. Event creation, online ticket sales, QR code validation, organizer panel, real-time sales reports, payment integration, and quote management.",
+        category: "Events",
+        duration: "Production",
+        features: [
+          "Event creation and management",
+          "QR ticket sales",
+          "Real-time ticket validation",
+          "Complete organizer panel",
+          "Payment gateway integration",
+          "Live sales reports",
+        ],
+      },
+    },
   },
   {
     id: 6,
@@ -166,6 +285,23 @@ export const portfolioVideos = [
     ],
     categoryColor: "cyan",
     gradient: "from-cyan-500/20 via-sky-500/10 to-cyan-700/20",
+    i18n: {
+      en: {
+        title: "Real Estate Portal - Commercial Demo",
+        description:
+          "Modern real estate management platform with advanced property search. Map integration with OpenStreetMap and Leaflet for geolocation, virtual tours, quote management, integrated CRM for agents, and complete admin panel. Scalable system ready for commercialization.",
+        category: "Real Estate",
+        duration: "Active Demo",
+        features: [
+          "Advanced search with filters",
+          "Interactive property maps",
+          "Integrated virtual tours",
+          "CRM for real estate agents",
+          "Quote management",
+          "Complete admin panel",
+        ],
+      },
+    },
   },
   {
     id: 7,
@@ -187,6 +323,23 @@ export const portfolioVideos = [
     ],
     categoryColor: "indigo",
     gradient: "from-indigo-500/20 via-violet-500/10 to-indigo-700/20",
+    i18n: {
+      en: {
+        title: "Lyons CRM - Complete Management System",
+        description:
+          "Complete enterprise CRM with client management, sales pipeline, process automation, advanced reports, and analytics. Interactive dashboard with real-time metrics using Chart.js, customizable modules, automatic report generation, and notification system.",
+        category: "CRM",
+        duration: "Active Demo",
+        features: [
+          "Visual sales pipeline",
+          "Dashboard with real-time metrics",
+          "Process automation",
+          "Automatic report generation",
+          "Customizable modules",
+          "Notification system",
+        ],
+      },
+    },
   },
   {
     id: 8,
@@ -208,6 +361,23 @@ export const portfolioVideos = [
     ],
     categoryColor: "gold",
     gradient: "from-yellow-500/20 via-amber-500/10 to-yellow-700/20",
+    i18n: {
+      en: {
+        title: "Zweifel Capital - Investment Platform",
+        description:
+          "Family office platform specialized in alternative investments for Latin America and Spain. Institutional portal with over 40 years of investment excellence, focus on agriculture, land, and real assets, with global presence in London and Nassau.",
+        category: "Finance",
+        duration: "In Development",
+        features: [
+          "Institutional investment portal",
+          "Financial strategy presentation",
+          "Premium corporate design",
+          "Interactive trajectory timeline",
+          "Scalable multi-country architecture",
+          "Optimized performance (Vercel Edge)",
+        ],
+      },
+    },
   },
   {
     id: 9,
@@ -229,6 +399,23 @@ export const portfolioVideos = [
     ],
     categoryColor: "rose",
     gradient: "from-rose-500/20 via-pink-500/10 to-rose-700/20",
+    i18n: {
+      en: {
+        title: "CarolinaOS - EventTech CRM",
+        description:
+          "Commercial and operational OS for end-to-end management of clients, dates, and events. B2B SaaS platform that centralizes contact management, schedules, logistics, and complete client management workflows for event industry companies.",
+        category: "CRM",
+        duration: "Active Demo",
+        features: [
+          "End-to-end event management",
+          "Integrated client CRM",
+          "Event schedules and calendars",
+          "Real-time notification system",
+          "Centralized operations panel",
+          "Automated workflows",
+        ],
+      },
+    },
   },
   {
     id: 11,
@@ -250,6 +437,23 @@ export const portfolioVideos = [
     ],
     categoryColor: "emerald",
     gradient: "from-emerald-500/20 via-green-500/10 to-emerald-700/20",
+    i18n: {
+      en: {
+        title: "TaskManager - Project Management",
+        description:
+          "Project management and team collaboration platform with Kanban boards, assignee management, and real-time progress tracking. Organize tasks by department, manage team workspaces with role-based invitations, and visualize progress metrics.",
+        category: "Productivity",
+        duration: "Production",
+        features: [
+          "Drag-and-drop Kanban boards",
+          "Task assignment by owner",
+          "Real-time progress metrics",
+          "Collaborative team workspaces",
+          "Role and invitation management",
+          "Department-based organization",
+        ],
+      },
+    },
   },
   {
     id: 12,
@@ -271,6 +475,23 @@ export const portfolioVideos = [
     ],
     categoryColor: "orange",
     gradient: "from-orange-500/20 via-amber-500/10 to-orange-700/20",
+    i18n: {
+      en: {
+        title: "Parábola - Digital Solutions Agency",
+        description:
+          "Web development agency specialized in accessible and premium digital solutions for Latin American entrepreneurs and small businesses. Professional landing pages, complete e-commerce, secure hosting with 24/7 support, and flexible payment model to facilitate SMB digital transformation.",
+        category: "Digital Agency",
+        duration: "Production",
+        features: [
+          "Landing pages with domain included",
+          "Complete e-commerce for online sales",
+          "Secure hosting with 24/7 support",
+          "Digital transformation consulting",
+          "Flexible payment model",
+          "Accessible solutions for SMBs",
+        ],
+      },
+    },
   },
   {
     id: 13,
@@ -292,6 +513,23 @@ export const portfolioVideos = [
     ],
     categoryColor: "cyan",
     gradient: "from-cyan-500/20 via-teal-500/10 to-cyan-700/20",
+    i18n: {
+      en: {
+        title: "NKM - Corporate Platform",
+        description:
+          "High visual impact corporate platform designed to position the NKM brand in the digital market. Institutional site with modern design, optimized user experience, services and solutions presentation, and scalable conversion-oriented architecture.",
+        category: "Corporate",
+        duration: "Production",
+        features: [
+          "High-impact institutional design",
+          "Optimized user experience",
+          "Services and solutions presentation",
+          "Conversion-oriented architecture",
+          "Optimized performance and SEO",
+          "Responsive and accessible on all devices",
+        ],
+      },
+    },
   },
   {
     id: 14,
@@ -313,6 +551,23 @@ export const portfolioVideos = [
     ],
     categoryColor: "indigo",
     gradient: "from-indigo-500/20 via-blue-500/10 to-indigo-700/20",
+    i18n: {
+      en: {
+        title: "Newton Broker - Brokerage Platform",
+        description:
+          "Comprehensive digital platform for brokers that centralizes operations, client, and financial product management. System with advanced control panel, portfolio tracking, brokerage process automation, and real-time reports to maximize operational efficiency.",
+        category: "Finance",
+        duration: "Production",
+        features: [
+          "Broker control panel",
+          "Client portfolio management",
+          "Real-time operations tracking",
+          "Brokerage process automation",
+          "Custom financial reports",
+          "Optimized workflows",
+        ],
+      },
+    },
   },
   {
     id: 16,
@@ -334,5 +589,22 @@ export const portfolioVideos = [
     ],
     categoryColor: "violet",
     gradient: "from-violet-500/20 via-indigo-500/10 to-violet-700/20",
+    i18n: {
+      en: {
+        title: "PairProgramming - Web Development Studio",
+        description:
+          "Our own site. Full-stack web development studio specialized in high-impact digital solutions for the Latin American market. Institutional portfolio with project showcase, contact system, technical blog, and custom development services presentation.",
+        category: "Digital Agency",
+        duration: "Production",
+        features: [
+          "Interactive project portfolio",
+          "Contact and quoting system",
+          "Technical blog and case studies",
+          "Advanced SEO and optimized performance",
+          "Responsive and accessible design",
+          "Analytics tools integration",
+        ],
+      },
+    },
   },
 ];
